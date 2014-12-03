@@ -1,3 +1,2 @@
 #!/bin/sh
-cd /soft/home/etude/Import_FULL
-./IMP_FULL.ksh CGANEW6 CGAWEB_DUMP_FULL.DMP DUMP_FULL_RELEASE
+java -cp kissSwaggerDiff-0.0.1-SNAPSHOT.jar;D:\applis\MAVEN\objis-repository\org\json\json\20140107\json-20140107.jar fr.canalplus.cgaweb.swagger.kissSwaggerDiff.KissSwaggerMainHandler

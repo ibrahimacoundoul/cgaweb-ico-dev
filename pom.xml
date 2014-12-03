@@ -27,10 +27,10 @@
 			<version>20140107</version>
 		</dependency>
 	</dependencies>
-	
-		<profiles>
+
+	<profiles>
 		<profile>
-			<id>manage-kiss-swagger-diff</id>
+			<id>manage-kiss-swagger-prod</id>
 			<activation>
 				<activeByDefault>false</activeByDefault>
 			</activation>
@@ -42,27 +42,47 @@
 						<version>1.2.1</version>
 						<executions>
 							<execution>
-								<id>script-chmod</id>
-                                <!--chmod sur le script d'import dump-->
-                                <phase>compile</phase>
+								<id>kiss-swagger-commit</id>
+								<phase>compile</phase>
 								<goals>
 									<goal>exec</goal>
 								</goals>
 								<configuration>
-									<executable>chmod</executable>
-									<arguments>
-										<argument>+x</argument>
-										<argument>kiss-swagger-check-change.sh</argument>
-									</arguments>
+									<executable>kiss-swagger-check-change.sh</executable>
 								</configuration>
 							</execution>
 						</executions>
-
 					</plugin>
 				</plugins>
 			</build>
 		</profile>
-
-
+		
+	<profile>
+			<id>manage-kiss-swagger-dev</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>exec-maven-plugin</artifactId>
+						<version>1.2.1</version>
+						<executions>
+							<execution>
+								<id>kiss-swagger-commit</id>
+								<phase>compile</phase>
+								<goals>
+									<goal>exec</goal>
+								</goals>
+								<configuration>
+									<executable>kiss-swagger-check-change.bat</executable>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>	
 	</profiles>
 </project>

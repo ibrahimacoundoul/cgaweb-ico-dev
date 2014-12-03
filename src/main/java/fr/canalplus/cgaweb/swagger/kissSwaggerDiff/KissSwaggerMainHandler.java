@@ -19,7 +19,9 @@ public class KissSwaggerMainHandler {
 	public static void manageKissSwaggerApisDiffrences() throws Exception {
 		URL url = new URL(SWAGGER_API_DOCS_BASE_PATH);
 		StringBuffer output = new StringBuffer();
-		try (BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream(), "UTF-8"))) {
+
+		try {
+			BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream(), "UTF-8"));
 			for (String line; (line = reader.readLine()) != null;) {
 				output.append(line);
 			}
@@ -59,7 +61,8 @@ public class KissSwaggerMainHandler {
 	private static String callUrl(String path) throws Exception {
 		URL url = new URL(path);
 		StringBuffer output = new StringBuffer();
-		try (BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream(), "UTF-8"))) {
+		try {
+			BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream(), "UTF-8"));
 			for (String line; (line = reader.readLine()) != null;) {
 				output.append(line);
 			}
