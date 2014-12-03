@@ -27,4 +27,42 @@
 			<version>20140107</version>
 		</dependency>
 	</dependencies>
+	
+		<profiles>
+		<profile>
+			<id>manage-kiss-swagger-diff</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>exec-maven-plugin</artifactId>
+						<version>1.2.1</version>
+						<executions>
+							<execution>
+								<id>script-chmod</id>
+                                <!--chmod sur le script d'import dump-->
+                                <phase>compile</phase>
+								<goals>
+									<goal>exec</goal>
+								</goals>
+								<configuration>
+									<executable>chmod</executable>
+									<arguments>
+										<argument>+x</argument>
+										<argument>kiss-swagger-check-change.sh</argument>
+									</arguments>
+								</configuration>
+							</execution>
+						</executions>
+
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+
+	</profiles>
 </project>
