@@ -157,8 +157,8 @@
 
 <distributionManagement>
 	<repository>
-		<id>nexus-releases</id>
-		<url>http://frcp03vdv0185:8090/nexus/content/repositories/releases</url>
+		<id>nexus-international</id>
+		<url>http://172.23.1.117:8081/nexus/content/repositories/releases</url>
 	</repository>
 </distributionManagement>
 
