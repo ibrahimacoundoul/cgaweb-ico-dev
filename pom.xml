@@ -30,36 +30,6 @@
 
 	<profiles>
 		<profile>
-			<id>release</id>
-			<build>
-				<plugins>
-					<plugin>
-						<artifactId>maven-source-plugin</artifactId>
-						<executions>
-							<execution>
-								<id>attach-sources</id>
-								<goals>
-									<goal>jar</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-					<plugin>
-						<artifactId>maven-javadoc-plugin</artifactId>
-						<executions>
-							<execution>
-								<id>attach-javadocs</id>
-								<goals>
-									<goal>jar</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-
-		<profile>
 			<id>manage-kiss-swagger-prod</id>
 			<activation>
 				<activeByDefault>false</activeByDefault>
@@ -114,47 +84,5 @@
 				</plugins>
 			</build>
 		</profile>
-	</profiles>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.0</version>
-				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-release-plugin</artifactId>
-				<version>2.4.2</version>
-				<configuration>
-					<tagNameFormat>${project.artifactId}-v@{project.version}_Bis</tagNameFormat>
-					<autoVersionSubmodules>true</autoVersionSubmodules>
-					<pushChanges>true</pushChanges>
-					<!-- <releaseVersion>${current.project.release.version}</releaseVersion> 
-						<developmentVersion>${next.dev.project.version}</developmentVersion> -->
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
-
-
-	<scm>
-		<developerConnection>scm:git:git@github.com:ibrahimacoundoul/cgaweb-ico-dev.git</developerConnection>
-		<connection>scm:git:git@github.com:ibrahimacoundoul/cgaweb-ico-dev.git</connection>
-		<url>https://github.com/ibrahimacoundoul/cgaweb-ico-dev</url>
-		<tag>HEAD</tag>
-	</scm>
-
-	<distributionManagement>
-		<repository>
-			<id>nexus-international</id>
-			<url>http://172.23.1.117:8081/nexus/content/repositories/releases</url>
-		</repository>
-	</distributionManagement>
-
+	</profiles>	
 </project>
