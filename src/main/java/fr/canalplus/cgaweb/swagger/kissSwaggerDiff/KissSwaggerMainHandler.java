@@ -15,14 +15,17 @@ import org.json.JSONObject;
 public class KissSwaggerMainHandler {
 
 	public final static String SWAGGER_API_DOCS_BASE_PATH = "http://frcp03vdv0184.cpdev.local:8083/cgawebKissWS/rest/api-docs";
-	public final static String JSON_FILES_DIR_PATH = "D:/applis/GIT/kissSwaggerDiff/src/main/resources";
+	public final static String JSON_FILES_DIR_PATH = "src/main/resources";
+
+	public final static String UTF8_FORMAT = "UTF-8";
+	public final static String JSON_EXTENTION = ".json";
 
 	public static void manageKissSwaggerApisDiffrences() throws Exception {
 		URL url = new URL(SWAGGER_API_DOCS_BASE_PATH);
 		StringBuffer output = new StringBuffer();
 
 		try {
-			BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream(), "UTF-8"));
+			BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream(), UTF8_FORMAT));
 			for (String line; (line = reader.readLine()) != null;) {
 				output.append(line);
 			}
@@ -63,7 +66,7 @@ public class KissSwaggerMainHandler {
 		URL url = new URL(path);
 		StringBuffer output = new StringBuffer();
 		try {
-			BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream(), "UTF-8"));
+			BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream(), UTF8_FORMAT));
 			for (String line; (line = reader.readLine()) != null;) {
 				output.append(line);
 			}
@@ -79,14 +82,20 @@ public class KissSwaggerMainHandler {
 	 * @param response
 	 * @throws Exception
 	 */
+	@SuppressWarnings("deprecation")
 	private static void manageWSResponseFile(String wsPathName, String response) throws Exception {
 
 		ObjectMapper mapper = new ObjectMapper();
 		Object json = mapper.readValue(response, Object.class);
 		String indented = mapper.defaultPrettyPrintingWriter().writeValueAsString(json);
 
-		String fileName = JSON_FILES_DIR_PATH + "/" + wsPathName.substring(9, wsPathName.length()) + ".json";
-		PrintWriter writer = new PrintWriter(fileName, "UTF-8");
+		StringBuffer fileName = new StringBuffer();
+		fileName.append(JSON_FILES_DIR_PATH);
+		fileName.append("/");
+		fileName.append(wsPathName.substring(9, wsPathName.length()));
+		fileName.append(JSON_EXTENTION);
+
+		PrintWriter writer = new PrintWriter(fileName.toString(), UTF8_FORMAT);
 		writer.println(indented);
 		writer.close();
 	}

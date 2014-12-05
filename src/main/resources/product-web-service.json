@@ -470,7 +470,7 @@
         "name" : "broadcastMediaType",
         "description" : "filtre de type de média de diffusion",
         "defaultValue" : "",
-        "required" : true,
+        "required" : false,
         "type" : "string",
         "paramType" : "query",
         "allowMultiple" : false
@@ -478,7 +478,7 @@
         "name" : "commercialOperator",
         "description" : "filtre d'opérateur commercial",
         "defaultValue" : "",
-        "required" : true,
+        "required" : false,
         "type" : "List",
         "paramType" : "query",
         "allowMultiple" : false
