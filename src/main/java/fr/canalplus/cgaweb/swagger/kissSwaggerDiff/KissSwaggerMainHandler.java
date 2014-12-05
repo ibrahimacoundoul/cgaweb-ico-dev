@@ -14,18 +14,18 @@ import org.json.JSONObject;
 
 public class KissSwaggerMainHandler {
 
-	public final static String SWAGGER_API_DOCS_BASE_PATH = "http://frcp03vdv0184.cpdev.local:8083/cgawebKissWS/rest/api-docs";
-	public final static String JSON_FILES_DIR_PATH = "src/main/resources";
+	private final static String KISS_WS_API_DOCS_URL = "http://frcp03vdv0184.cpdev.local:8083/cgawebKissWS/rest/api-docs";
+	private final static String JSON_FILES_DIR_PATH = "src/main/resources";
 
-	public final static String UTF8_FORMAT = "UTF-8";
-	public final static String JSON_EXTENTION = ".json";
+	private final static String UTF_8_FORMAT = "UTF-8";
+	private final static String JSON_EXTENTION = ".json";
 
 	public static void manageKissSwaggerApisDiffrences() throws Exception {
-		URL url = new URL(SWAGGER_API_DOCS_BASE_PATH);
+		URL url = new URL(KISS_WS_API_DOCS_URL);
 		StringBuffer output = new StringBuffer();
 
 		try {
-			BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream(), UTF8_FORMAT));
+			BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream(), UTF_8_FORMAT));
 			for (String line; (line = reader.readLine()) != null;) {
 				output.append(line);
 			}
@@ -49,9 +49,8 @@ public class KissSwaggerMainHandler {
 	}
 
 	private static void callAndHandleWSResponse(String wsPathName) throws Exception {
-		String path = SWAGGER_API_DOCS_BASE_PATH + wsPathName;
+		String path = KISS_WS_API_DOCS_URL + wsPathName;
 		String response = callUrl(path);
-		//update WS json file
 		manageWSResponseFile(wsPathName, response);
 		System.out.println("[" + wsPathName + "] : Response =>" + response + "\n");
 	}
@@ -66,7 +65,7 @@ public class KissSwaggerMainHandler {
 		URL url = new URL(path);
 		StringBuffer output = new StringBuffer();
 		try {
-			BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream(), UTF8_FORMAT));
+			BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream(), UTF_8_FORMAT));
 			for (String line; (line = reader.readLine()) != null;) {
 				output.append(line);
 			}
@@ -77,7 +76,7 @@ public class KissSwaggerMainHandler {
 	}
 
 	/**
-	 * Create a file il not existe et update it contents
+	 * Create or update json file for webservice response
 	 * @param wsPathName
 	 * @param response
 	 * @throws Exception
@@ -95,7 +94,7 @@ public class KissSwaggerMainHandler {
 		fileName.append(wsPathName.substring(9, wsPathName.length()));
 		fileName.append(JSON_EXTENTION);
 
-		PrintWriter writer = new PrintWriter(fileName.toString(), UTF8_FORMAT);
+		PrintWriter writer = new PrintWriter(fileName.toString(), UTF_8_FORMAT);
 		writer.println(indented);
 		writer.close();
 	}
