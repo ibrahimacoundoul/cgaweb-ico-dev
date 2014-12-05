@@ -32,7 +32,7 @@
         "name" : "contactId",
         "description" : "Numéro de contact",
         "defaultValue" : "",
-        "required" : false,
+        "required" : true,
         "type" : "string",
         "paramType" : "query",
         "allowMultiple" : false
@@ -53,7 +53,7 @@
         "paramType" : "query",
         "allowMultiple" : false
       }, {
-        "name" : "zipCode",
+        "name" : "codePostal",
         "description" : "code postal",
         "defaultValue" : "",
         "required" : true,
