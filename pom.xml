@@ -26,6 +26,11 @@
 			<artifactId>json</artifactId>
 			<version>20140107</version>
 		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.13</version>
+		</dependency>
 	</dependencies>
 
 	<profiles>
@@ -84,7 +89,7 @@
 						<artifactId>exec-maven-plugin</artifactId>
 						<version>1.2.1</version>
 						<executions>
-						<execution>
+							<execution>
 								<id>script-chmod</id>
 								<!--chmod sur le script d'import dump -->
 								<phase>compile</phase>

@@ -1,1 +1,265 @@
-{"apiVersion":"1.0","swaggerVersion":"1.2","basePath":"/","resourcePath":"fix this","produces":["application/json"],"apis":[{"path":"/paymentplans/calculate","description":"calculPaymentPlan","operations":[{"method":"POST","summary":"calcul de l'échéancier théorique lors de la souscription d'un nouvel abonné & contrat","notes":"calculPaymentPlan","type":"ResponseWrapper«List«PaymentPlanResult»»","nickname":"calculPaymentPlan","produces":["application/json"],"parameters":[{"name":"userId","description":"Utilisateur effectuant l'opération","defaultValue":"","required":true,"type":"string","paramType":"query","allowMultiple":false},{"name":"distributorId","description":"Numéro de distributeur","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"contactId","description":"Numéro de contact","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"saleDevice","description":"Canal via lequel l'opération est effectuée ","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"salesman","description":"Vendeur ayant effectué la modification","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"paymentPlan","description":"Informations d'échéancier","defaultValue":"","required":true,"type":"PaymentPlan","paramType":"body","allowMultiple":false}],"responseMessages":[{"code":201,"message":"Created"},{"code":404,"message":"Not Found"},{"code":403,"message":"Forbidden"},{"code":401,"message":"Unauthorized"},{"code":200,"message":"OK","responseModel":"ResponseWrapper«List«PaymentPlanResult»»"}],"deprecated":"false"}]}],"models":{"ContractPayment":{"id":"ContractPayment","description":"","extends":"","properties":{"promotions":{"type":"array","items":{"$ref":"PromotionPayment"}},"postalCode":{"type":"string"},"startDate":{"type":"string"},"endDate":{"type":"string"},"personId":{"type":"integer","format":"int64"},"products":{"type":"array","items":{"$ref":"TransverseProductWithFifthCategoryFullInfos"}},"countryId":{"type":"string"},"commercialOperator":{"type":"string"},"broadcastMediaType":{"type":"string"},"origin":{"type":"string"},"duration":{"type":"integer","format":"int32"},"catalog":{"type":"string"},"dateToDate":{"type":"boolean"},"contractId":{"type":"integer","format":"int32"},"renewalSequence":{"type":"integer","format":"int32"},"methodOfPaiement":{"type":"string"}}},"PaymentPlanResultDetail":{"id":"PaymentPlanResultDetail","description":"","extends":"","properties":{"debitpayment":{"type":"string"},"rawprice":{"type":"string"},"product":{"type":"string"}}},"PaymentPlan":{"id":"PaymentPlan","description":"","extends":"","properties":{"contracts":{"type":"array","items":{"$ref":"ContractPayment"}},"firstMonth":{"type":"string"},"lastMonth":{"type":"string"}}},"TransverseProductWithFifthCategoryFullInfos":{"id":"TransverseProductWithFifthCategoryFullInfos","description":"","extends":"","properties":{"productId":{"type":"string"},"genericProduct":{"type":"boolean"},"fifthCategory":{"type":"boolean"},"genericProductBillable":{"type":"boolean"}}},"PaymentPlanResult":{"id":"PaymentPlanResult","description":"","extends":"","properties":{"detail":{"type":"array","items":{"$ref":"PaymentPlanResultDetail"}},"commercialOperator":{"type":"string"},"debitpayment":{"type":"string"},"rawprice":{"type":"string"},"month":{"type":"string"}}},"PromotionPayment":{"id":"PromotionPayment","description":"","extends":"","properties":{"promotionId":{"type":"string"}}},"ResponseWrapper«List«PaymentPlanResult»»":{"id":"ResponseWrapper«List«PaymentPlanResult»»","description":"","extends":"","properties":{"severity":{"type":"string","enum":["WARN","ERROR","FATAL","SUCCESS"]},"returnCode":{"type":"string"},"message":{"type":"string"},"data":{"type":"array","items":{"$ref":"PaymentPlanResult"}}}}}}
+{
+  "apiVersion" : "1.0",
+  "swaggerVersion" : "1.2",
+  "basePath" : "/",
+  "resourcePath" : "fix this",
+  "produces" : [ "application/json" ],
+  "apis" : [ {
+    "path" : "/paymentplans/calculate",
+    "description" : "calculPaymentPlan",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "calcul de l'échéancier théorique lors de la souscription d'un nouvel abonné & contrat",
+      "notes" : "calculPaymentPlan",
+      "type" : "ResponseWrapper«List«PaymentPlanResult»»",
+      "nickname" : "calculPaymentPlan",
+      "produces" : [ "application/json" ],
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "paymentPlan",
+        "description" : "Informations d'échéancier",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "PaymentPlan",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«List«PaymentPlanResult»»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  } ],
+  "models" : {
+    "ContractPayment" : {
+      "id" : "ContractPayment",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "promotions" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "PromotionPayment"
+          }
+        },
+        "postalCode" : {
+          "type" : "string"
+        },
+        "startDate" : {
+          "type" : "string"
+        },
+        "endDate" : {
+          "type" : "string"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "products" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "TransverseProductWithFifthCategoryFullInfos"
+          }
+        },
+        "countryId" : {
+          "type" : "string"
+        },
+        "commercialOperator" : {
+          "type" : "string"
+        },
+        "broadcastMediaType" : {
+          "type" : "string"
+        },
+        "origin" : {
+          "type" : "string"
+        },
+        "duration" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "catalog" : {
+          "type" : "string"
+        },
+        "dateToDate" : {
+          "type" : "boolean"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "renewalSequence" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "methodOfPaiement" : {
+          "type" : "string"
+        }
+      }
+    },
+    "PaymentPlanResultDetail" : {
+      "id" : "PaymentPlanResultDetail",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "debitpayment" : {
+          "type" : "string"
+        },
+        "rawprice" : {
+          "type" : "string"
+        },
+        "product" : {
+          "type" : "string"
+        }
+      }
+    },
+    "PaymentPlan" : {
+      "id" : "PaymentPlan",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "contracts" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ContractPayment"
+          }
+        },
+        "firstMonth" : {
+          "type" : "string"
+        },
+        "lastMonth" : {
+          "type" : "string"
+        }
+      }
+    },
+    "TransverseProductWithFifthCategoryFullInfos" : {
+      "id" : "TransverseProductWithFifthCategoryFullInfos",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "productId" : {
+          "type" : "string"
+        },
+        "genericProduct" : {
+          "type" : "boolean"
+        },
+        "fifthCategory" : {
+          "type" : "boolean"
+        },
+        "genericProductBillable" : {
+          "type" : "boolean"
+        }
+      }
+    },
+    "PaymentPlanResult" : {
+      "id" : "PaymentPlanResult",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "detail" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "PaymentPlanResultDetail"
+          }
+        },
+        "commercialOperator" : {
+          "type" : "string"
+        },
+        "debitpayment" : {
+          "type" : "string"
+        },
+        "rawprice" : {
+          "type" : "string"
+        },
+        "month" : {
+          "type" : "string"
+        }
+      }
+    },
+    "PromotionPayment" : {
+      "id" : "PromotionPayment",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "promotionId" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ResponseWrapper«List«PaymentPlanResult»»" : {
+      "id" : "ResponseWrapper«List«PaymentPlanResult»»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "PaymentPlanResult"
+          }
+        }
+      }
+    }
+  }
+}

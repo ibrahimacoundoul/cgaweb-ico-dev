@@ -1,1 +1,114 @@
-{"apiVersion":"1.0","swaggerVersion":"1.2","basePath":"/","resourcePath":"fix this","apis":[{"path":"/codepostal/creer","description":"createZipCode","operations":[{"method":"PUT","summary":"Création automatique d'un code postal","notes":"createZipCode","type":"ResponseWrapper«object»","nickname":"createZipCode","parameters":[{"name":"userId","description":"Utilisateur effectuant l'opération","defaultValue":"","required":true,"type":"string","paramType":"query","allowMultiple":false},{"name":"distributorId","description":"Numéro de distributeur","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"contactId","description":"Numéro de contact","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"saleDevice","description":"Canal via lequel l'opération est effectuée ","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"salesman","description":"Vendeur ayant effectué la modification","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"zipCode","description":"code postal","defaultValue":"","required":true,"type":"string","paramType":"query","allowMultiple":false},{"name":"commune","description":"commune","defaultValue":"","required":true,"type":"string","paramType":"query","allowMultiple":false}],"responseMessages":[{"code":201,"message":"Created"},{"code":404,"message":"Not Found"},{"code":403,"message":"Forbidden"},{"code":401,"message":"Unauthorized"},{"code":200,"message":"OK","responseModel":"ResponseWrapper«object»"}],"deprecated":"false"}]}],"models":{"ResponseWrapper«object»":{"id":"ResponseWrapper«object»","description":"","extends":"","properties":{"severity":{"type":"string","enum":["WARN","ERROR","FATAL","SUCCESS"]},"returnCode":{"type":"string"},"message":{"type":"string"},"data":{"$ref":"object"}}}}}
+{
+  "apiVersion" : "1.0",
+  "swaggerVersion" : "1.2",
+  "basePath" : "/",
+  "resourcePath" : "fix this",
+  "apis" : [ {
+    "path" : "/codepostal/creer",
+    "description" : "createZipCode",
+    "operations" : [ {
+      "method" : "PUT",
+      "summary" : "Création automatique d'un code postal",
+      "notes" : "createZipCode",
+      "type" : "ResponseWrapper«object»",
+      "nickname" : "createZipCode",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "zipCode",
+        "description" : "code postal",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "commune",
+        "description" : "commune",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«object»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  } ],
+  "models" : {
+    "ResponseWrapper«object»" : {
+      "id" : "ResponseWrapper«object»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "$ref" : "object"
+        }
+      }
+    }
+  }
+}

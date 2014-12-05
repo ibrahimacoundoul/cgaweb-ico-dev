@@ -1,1 +1,735 @@
-{"apiVersion":"1.0","swaggerVersion":"1.2","basePath":"/","resourcePath":"fix this","apis":[{"path":"/ /configurations","description":"getConfigurationDetail","operations":[{"method":"GET","summary":"getConfigurationDetail","notes":"getConfigurationDetail","type":"ResponseWrapper«Configuration»","nickname":"getConfigurationDetail","parameters":[{"name":"userId","description":"Utilisateur effectuant l'opération","defaultValue":"","required":true,"type":"string","paramType":"query","allowMultiple":false},{"name":"equipmentConfig","description":"Nom de la configuration d'équipement","defaultValue":"","required":true,"type":"string","paramType":"query","allowMultiple":false}],"responseMessages":[{"code":404,"message":"Not Found"},{"code":403,"message":"Forbidden"},{"code":401,"message":"Unauthorized"},{"code":200,"message":"OK","responseModel":"ResponseWrapper«Configuration»"}],"deprecated":"false"}]},{"path":"/configurations/accessories","description":"getAccessoriesConfigurations","operations":[{"method":"GET","summary":"Retourner la liste des configurations d'accessoires","notes":"getAccessoriesConfigurations","type":"ResponseWrapper«List«AccessoriesConfigurations»»","nickname":"getAccessoriesConfigurations","parameters":[{"name":"userId","description":"Utilisateur effectuant l'opération","defaultValue":"","required":true,"type":"string","paramType":"query","allowMultiple":false},{"name":"saleDevice","description":"Canal via lequel l'opération est effectuée ","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"broadcastVectorId","description":"filtre de vecteur de diffusion","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"ispId","description":"filtre de fournisseur d'accès au service","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"commercialOperator","description":"filtre d'opérateur commercial","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false}],"responseMessages":[{"code":404,"message":"Not Found"},{"code":403,"message":"Forbidden"},{"code":401,"message":"Unauthorized"},{"code":200,"message":"OK","responseModel":"ResponseWrapper«List«AccessoriesConfigurations»»"}],"deprecated":"false"}]},{"path":"/configurations/search/allowed","description":"getAllowedConfigurations","operations":[{"method":"POST","summary":"getAllowedConfigurations","notes":"getAllowedConfigurations","type":"ResponseWrapper«List«ConfigurationWithProductsEquipments»»","nickname":"getAllowedConfigurations","parameters":[{"name":"userId","description":"Utilisateur effectuant l'opération","defaultValue":"","required":true,"type":"string","paramType":"query","allowMultiple":false},{"name":"distributorId","description":"N° de distributeur","defaultValue":"","required":true,"type":"string","paramType":"query","allowMultiple":false},{"name":"contactId","description":"N° de contact issu de l'application externe des contacts","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"saleDevice","description":"Canal via lequel l'opération est effectuée","defaultValue":"","required":true,"type":"string","paramType":"query","allowMultiple":false},{"name":"salesman","description":"Identifiant du vendeur","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"configurationParameters","description":"configurationParameters","defaultValue":"","required":false,"type":"ConfigurationParameters","paramType":"body","allowMultiple":false}],"responseMessages":[{"code":201,"message":"Created"},{"code":404,"message":"Not Found"},{"code":403,"message":"Forbidden"},{"code":401,"message":"Unauthorized"},{"code":200,"message":"OK","responseModel":"ResponseWrapper«List«ConfigurationWithProductsEquipments»»"}],"deprecated":"false"}]},{"path":"/configurations/search/validate","description":"getConfiguration","operations":[{"method":"POST","summary":"getConfiguration","notes":"getConfiguration","type":"ResponseWrapper«ConfigurationWithProductsEquipments»","nickname":"getConfiguration","parameters":[{"name":"userId","description":"Utilisateur effectuant l'opération","defaultValue":"","required":true,"type":"string","paramType":"query","allowMultiple":false},{"name":"distributorId","description":"Numéro de distributeur","defaultValue":"","required":true,"type":"string","paramType":"query","allowMultiple":false},{"name":"contactId","description":"Numéro de contact","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"saleDevice","description":"Canal via lequel l'opération est effectuée ","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"salesman","description":"Vendeur ayant effectué la modification","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"configurationEquipmentTypesParameters","description":"configurationEquipmentTypesParameters","defaultValue":"","required":false,"type":"ConfigurationEquipmentTypesParameters","paramType":"body","allowMultiple":false}],"responseMessages":[{"code":201,"message":"Created"},{"code":404,"message":"Not Found"},{"code":403,"message":"Forbidden"},{"code":401,"message":"Unauthorized"},{"code":200,"message":"OK","responseModel":"ResponseWrapper«ConfigurationWithProductsEquipments»"}],"deprecated":"false"}]},{"path":"/configurations/{equipmentConfig}","description":"getConfigurationDetailOld","operations":[{"method":"GET","summary":" [deprecated] Utiliser GET /configurations","notes":"getConfigurationDetailOld","type":"ResponseWrapper«Configuration»","nickname":"getConfigurationDetailOld","parameters":[{"name":"userId","description":"Utilisateur effectuant l'opération","defaultValue":"","required":true,"type":"string","paramType":"query","allowMultiple":false},{"name":"equipmentConfig","description":"Nom de la configuration d'équipement","defaultValue":"","required":true,"type":"string","paramType":"path","allowMultiple":false}],"responseMessages":[{"code":404,"message":"Not Found"},{"code":403,"message":"Forbidden"},{"code":401,"message":"Unauthorized"},{"code":200,"message":"OK","responseModel":"ResponseWrapper«Configuration»"}],"deprecated":"false"}]}],"models":{"ConfigurationWithProductsEquipments":{"id":"ConfigurationWithProductsEquipments","description":"","required":["sortOrder","isIspId","configCategoryLabel","configCategory","ispId"],"extends":"","properties":{"sortOrder":{"type":"integer","format":"int32","description":"Colonne de tri"},"isIspId":{"type":"string","description":"Indicateur d'éligibilité auprès d'un FAI"},"configCategoryLabel":{"type":"string","description":"Libellé catégorie permettant de filtrer les configurations matérielles"},"configCategory":{"type":"string","description":"Code catégorie permettant de filtrer les configurations matérielles"},"ispId":{"type":"string","description":"Code du FAI"},"equipmentTypes":{"type":"array","items":{"$ref":"EquipmentTypeConfig"}},"equipmentConfigLabel":{"type":"string"},"firstAmount":{"type":"number","format":"double"},"equipmentConfig":{"type":"string"}}},"Configuration":{"id":"Configuration","description":"","extends":"","properties":{"equipmentTypes":{"type":"array","items":{"$ref":"EquipmentTypeResponse"}},"equipmentConfigLabel":{"type":"string"},"firstAmount":{"type":"number","format":"double"},"equipmentConfig":{"type":"string"}}},"EquipmentTypeOutput":{"id":"EquipmentTypeOutput","description":"","extends":"","properties":{"equipmentType":{"type":"string"},"payableProducts":{"type":"array","items":{"$ref":"PayableProduct"}}}},"EquipmentTypeConfig":{"id":"EquipmentTypeConfig","description":"","extends":"","properties":{"equipmentType":{"type":"string"},"payableProducts":{"type":"array","items":{"$ref":"ProductConfig"}},"subscribedProducts":{"type":"array","items":{"$ref":"ProductConfig"}}}},"EquipmentTypeResponse":{"id":"EquipmentTypeResponse","description":"","extends":"","properties":{"equipmentType":{"type":"string"}}},"ResponseWrapper«List«AccessoriesConfigurations»»":{"id":"ResponseWrapper«List«AccessoriesConfigurations»»","description":"","extends":"","properties":{"severity":{"type":"string","enum":["WARN","ERROR","FATAL","SUCCESS"]},"returnCode":{"type":"string"},"message":{"type":"string"},"data":{"type":"array","items":{"$ref":"AccessoriesConfigurations"}}}},"ConfigurationParameters":{"id":"ConfigurationParameters","description":"","required":["action","broadcastVectorId","ispId","commercialOperator","postalCode","origin","duration","methodOfPayment","startDate","countryId"],"extends":"","properties":{"action":{"type":"string","description":"Type d'action en cours"},"broadcastVectorId":{"type":"string","description":"Identifiant du vecteur de diffusion"},"ispId":{"type":"string","description":"Identifiant du partenaire"},"commercialOperator":{"type":"string","description":"Identifiant de l'opérateur "},"postalCode":{"type":"string","description":"Code postal de l'abonné permettant de déterminé la région"},"origin":{"type":"string","description":"Type de client"},"duration":{"type":"string","description":"Durée de l'abonnement"},"methodOfPayment":{"type":"string","description":"Méthode de paiement de l'abonnement"},"startDate":{"type":"string","description":"Date de début"},"contractId":{"type":"integer","format":"int32","description":"Numéro de contrat"},"personId":{"type":"integer","format":"int64","description":"Identifiant de l'abonné"},"reasonId":{"type":"string","description":"Motif logisitique"},"products":{"type":"array","description":"Liste des produits en cours de souscription","items":{"$ref":"Product"}},"countryId":{"type":"string","description":"Le pays de l'abonné"}}},"ProductConfig":{"id":"ProductConfig","description":"","extends":"","properties":{"productId":{"type":"string"},"deposit":{"type":"boolean"},"listPrice":{"type":"number","format":"double"},"productFamily":{"type":"string"},"rental":{"type":"boolean"}}},"ResponseWrapper«Configuration»":{"id":"ResponseWrapper«Configuration»","description":"","extends":"","properties":{"severity":{"type":"string","enum":["WARN","ERROR","FATAL","SUCCESS"]},"returnCode":{"type":"string"},"message":{"type":"string"},"data":{"$ref":"Configuration"}}},"ResponseWrapper«List«ConfigurationWithProductsEquipments»»":{"id":"ResponseWrapper«List«ConfigurationWithProductsEquipments»»","description":"","extends":"","properties":{"severity":{"type":"string","enum":["WARN","ERROR","FATAL","SUCCESS"]},"returnCode":{"type":"string"},"message":{"type":"string"},"data":{"type":"array","items":{"$ref":"ConfigurationWithProductsEquipments"}}}},"AccessoriesConfigurations":{"id":"AccessoriesConfigurations","description":"","extends":"","properties":{"sortOrder":{"type":"integer","format":"int32"},"isIspId":{"type":"string"},"configCategoryLabel":{"type":"string"},"equipmentConfigLabel":{"type":"string"},"configCategory":{"type":"string"},"ispId":{"type":"string"},"equipmentTypes":{"type":"array","items":{"$ref":"EquipmentTypeOutput"}},"firstAmount":{"type":"number","format":"double"},"equipmentConfig":{"type":"string"}}},"Product":{"id":"Product","description":"","extends":"","properties":{"productId":{"type":"string"}}},"ResponseWrapper«ConfigurationWithProductsEquipments»":{"id":"ResponseWrapper«ConfigurationWithProductsEquipments»","description":"","extends":"","properties":{"severity":{"type":"string","enum":["WARN","ERROR","FATAL","SUCCESS"]},"returnCode":{"type":"string"},"message":{"type":"string"},"data":{"$ref":"ConfigurationWithProductsEquipments"}}},"EquipmentTypeInput":{"id":"EquipmentTypeInput","description":"","extends":"","properties":{"equipmentType":{"type":"string"}}},"ConfigurationEquipmentTypesParameters":{"id":"ConfigurationEquipmentTypesParameters","description":"","extends":"","properties":{"action":{"type":"string"},"equipmentTypes":{"type":"array","items":{"$ref":"EquipmentTypeInput"}},"broadcastVectorId":{"type":"string"},"ispId":{"type":"string"},"commercialOperator":{"type":"string"},"postalCode":{"type":"string"},"origin":{"type":"string"},"duration":{"type":"string"},"methodOfPayment":{"type":"string"},"startDate":{"type":"string"},"countryId":{"type":"string"}}},"PayableProduct":{"id":"PayableProduct","description":"","extends":"","properties":{"productId":{"type":"string"},"listPrice":{"type":"number","format":"double"},"productFamily":{"type":"string"},"deposit":{"type":"boolean"},"rental":{"type":"boolean"},"accessorie":{"type":"boolean"}}}}}
+{
+  "apiVersion" : "1.0",
+  "swaggerVersion" : "1.2",
+  "basePath" : "/",
+  "resourcePath" : "fix this",
+  "apis" : [ {
+    "path" : "/ /configurations",
+    "description" : "getConfigurationDetail",
+    "operations" : [ {
+      "method" : "GET",
+      "summary" : "getConfigurationDetail",
+      "notes" : "getConfigurationDetail",
+      "type" : "ResponseWrapper«Configuration»",
+      "nickname" : "getConfigurationDetail",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "equipmentConfig",
+        "description" : "Nom de la configuration d'équipement",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«Configuration»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/configurations/accessories",
+    "description" : "getAccessoriesConfigurations",
+    "operations" : [ {
+      "method" : "GET",
+      "summary" : "Retourner la liste des configurations d'accessoires",
+      "notes" : "getAccessoriesConfigurations",
+      "type" : "ResponseWrapper«List«AccessoriesConfigurations»»",
+      "nickname" : "getAccessoriesConfigurations",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "broadcastVectorId",
+        "description" : "filtre de vecteur de diffusion",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "ispId",
+        "description" : "filtre de fournisseur d'accès au service",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "commercialOperator",
+        "description" : "filtre d'opérateur commercial",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«List«AccessoriesConfigurations»»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/configurations/search/allowed",
+    "description" : "getAllowedConfigurations",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "getAllowedConfigurations",
+      "notes" : "getAllowedConfigurations",
+      "type" : "ResponseWrapper«List«ConfigurationWithProductsEquipments»»",
+      "nickname" : "getAllowedConfigurations",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "N° de distributeur",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "N° de contact issu de l'application externe des contacts",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Identifiant du vendeur",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "configurationParameters",
+        "description" : "configurationParameters",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "ConfigurationParameters",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«List«ConfigurationWithProductsEquipments»»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/configurations/search/validate",
+    "description" : "getConfiguration",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "getConfiguration",
+      "notes" : "getConfiguration",
+      "type" : "ResponseWrapper«ConfigurationWithProductsEquipments»",
+      "nickname" : "getConfiguration",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "configurationEquipmentTypesParameters",
+        "description" : "configurationEquipmentTypesParameters",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "ConfigurationEquipmentTypesParameters",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«ConfigurationWithProductsEquipments»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/configurations/{equipmentConfig}",
+    "description" : "getConfigurationDetailOld",
+    "operations" : [ {
+      "method" : "GET",
+      "summary" : " [deprecated] Utiliser GET /configurations",
+      "notes" : "getConfigurationDetailOld",
+      "type" : "ResponseWrapper«Configuration»",
+      "nickname" : "getConfigurationDetailOld",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "equipmentConfig",
+        "description" : "Nom de la configuration d'équipement",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "path",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«Configuration»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  } ],
+  "models" : {
+    "ConfigurationWithProductsEquipments" : {
+      "id" : "ConfigurationWithProductsEquipments",
+      "description" : "",
+      "required" : [ "sortOrder", "isIspId", "configCategoryLabel", "configCategory", "ispId" ],
+      "extends" : "",
+      "properties" : {
+        "sortOrder" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "Colonne de tri"
+        },
+        "isIspId" : {
+          "type" : "string",
+          "description" : "Indicateur d'éligibilité auprès d'un FAI"
+        },
+        "configCategoryLabel" : {
+          "type" : "string",
+          "description" : "Libellé catégorie permettant de filtrer les configurations matérielles"
+        },
+        "configCategory" : {
+          "type" : "string",
+          "description" : "Code catégorie permettant de filtrer les configurations matérielles"
+        },
+        "ispId" : {
+          "type" : "string",
+          "description" : "Code du FAI"
+        },
+        "equipmentTypes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "EquipmentTypeConfig"
+          }
+        },
+        "equipmentConfigLabel" : {
+          "type" : "string"
+        },
+        "firstAmount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "equipmentConfig" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Configuration" : {
+      "id" : "Configuration",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "equipmentTypes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "EquipmentTypeResponse"
+          }
+        },
+        "equipmentConfigLabel" : {
+          "type" : "string"
+        },
+        "firstAmount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "equipmentConfig" : {
+          "type" : "string"
+        }
+      }
+    },
+    "EquipmentTypeOutput" : {
+      "id" : "EquipmentTypeOutput",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "equipmentType" : {
+          "type" : "string"
+        },
+        "payableProducts" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "PayableProduct"
+          }
+        }
+      }
+    },
+    "EquipmentTypeConfig" : {
+      "id" : "EquipmentTypeConfig",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "equipmentType" : {
+          "type" : "string"
+        },
+        "payableProducts" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ProductConfig"
+          }
+        },
+        "subscribedProducts" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ProductConfig"
+          }
+        }
+      }
+    },
+    "EquipmentTypeResponse" : {
+      "id" : "EquipmentTypeResponse",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "equipmentType" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ResponseWrapper«List«AccessoriesConfigurations»»" : {
+      "id" : "ResponseWrapper«List«AccessoriesConfigurations»»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "AccessoriesConfigurations"
+          }
+        }
+      }
+    },
+    "ConfigurationParameters" : {
+      "id" : "ConfigurationParameters",
+      "description" : "",
+      "required" : [ "action", "broadcastVectorId", "ispId", "commercialOperator", "postalCode", "origin", "duration", "methodOfPayment", "startDate", "countryId" ],
+      "extends" : "",
+      "properties" : {
+        "action" : {
+          "type" : "string",
+          "description" : "Type d'action en cours"
+        },
+        "broadcastVectorId" : {
+          "type" : "string",
+          "description" : "Identifiant du vecteur de diffusion"
+        },
+        "ispId" : {
+          "type" : "string",
+          "description" : "Identifiant du partenaire"
+        },
+        "commercialOperator" : {
+          "type" : "string",
+          "description" : "Identifiant de l'opérateur "
+        },
+        "postalCode" : {
+          "type" : "string",
+          "description" : "Code postal de l'abonné permettant de déterminé la région"
+        },
+        "origin" : {
+          "type" : "string",
+          "description" : "Type de client"
+        },
+        "duration" : {
+          "type" : "string",
+          "description" : "Durée de l'abonnement"
+        },
+        "methodOfPayment" : {
+          "type" : "string",
+          "description" : "Méthode de paiement de l'abonnement"
+        },
+        "startDate" : {
+          "type" : "string",
+          "description" : "Date de début"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "Numéro de contrat"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "Identifiant de l'abonné"
+        },
+        "reasonId" : {
+          "type" : "string",
+          "description" : "Motif logisitique"
+        },
+        "products" : {
+          "type" : "array",
+          "description" : "Liste des produits en cours de souscription",
+          "items" : {
+            "$ref" : "Product"
+          }
+        },
+        "countryId" : {
+          "type" : "string",
+          "description" : "Le pays de l'abonné"
+        }
+      }
+    },
+    "ProductConfig" : {
+      "id" : "ProductConfig",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "productId" : {
+          "type" : "string"
+        },
+        "deposit" : {
+          "type" : "boolean"
+        },
+        "listPrice" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "productFamily" : {
+          "type" : "string"
+        },
+        "rental" : {
+          "type" : "boolean"
+        }
+      }
+    },
+    "ResponseWrapper«Configuration»" : {
+      "id" : "ResponseWrapper«Configuration»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "$ref" : "Configuration"
+        }
+      }
+    },
+    "ResponseWrapper«List«ConfigurationWithProductsEquipments»»" : {
+      "id" : "ResponseWrapper«List«ConfigurationWithProductsEquipments»»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ConfigurationWithProductsEquipments"
+          }
+        }
+      }
+    },
+    "AccessoriesConfigurations" : {
+      "id" : "AccessoriesConfigurations",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "sortOrder" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "isIspId" : {
+          "type" : "string"
+        },
+        "configCategoryLabel" : {
+          "type" : "string"
+        },
+        "equipmentConfigLabel" : {
+          "type" : "string"
+        },
+        "configCategory" : {
+          "type" : "string"
+        },
+        "ispId" : {
+          "type" : "string"
+        },
+        "equipmentTypes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "EquipmentTypeOutput"
+          }
+        },
+        "firstAmount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "equipmentConfig" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Product" : {
+      "id" : "Product",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "productId" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ResponseWrapper«ConfigurationWithProductsEquipments»" : {
+      "id" : "ResponseWrapper«ConfigurationWithProductsEquipments»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "$ref" : "ConfigurationWithProductsEquipments"
+        }
+      }
+    },
+    "EquipmentTypeInput" : {
+      "id" : "EquipmentTypeInput",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "equipmentType" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ConfigurationEquipmentTypesParameters" : {
+      "id" : "ConfigurationEquipmentTypesParameters",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "action" : {
+          "type" : "string"
+        },
+        "equipmentTypes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "EquipmentTypeInput"
+          }
+        },
+        "broadcastVectorId" : {
+          "type" : "string"
+        },
+        "ispId" : {
+          "type" : "string"
+        },
+        "commercialOperator" : {
+          "type" : "string"
+        },
+        "postalCode" : {
+          "type" : "string"
+        },
+        "origin" : {
+          "type" : "string"
+        },
+        "duration" : {
+          "type" : "string"
+        },
+        "methodOfPayment" : {
+          "type" : "string"
+        },
+        "startDate" : {
+          "type" : "string"
+        },
+        "countryId" : {
+          "type" : "string"
+        }
+      }
+    },
+    "PayableProduct" : {
+      "id" : "PayableProduct",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "productId" : {
+          "type" : "string"
+        },
+        "listPrice" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "productFamily" : {
+          "type" : "string"
+        },
+        "deposit" : {
+          "type" : "boolean"
+        },
+        "rental" : {
+          "type" : "boolean"
+        },
+        "accessorie" : {
+          "type" : "boolean"
+        }
+      }
+    }
+  }
+}

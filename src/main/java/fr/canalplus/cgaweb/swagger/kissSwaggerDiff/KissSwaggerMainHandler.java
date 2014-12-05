@@ -8,6 +8,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.URL;
 
+import org.codehaus.jackson.map.ObjectMapper;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -79,9 +80,14 @@ public class KissSwaggerMainHandler {
 	 * @throws Exception
 	 */
 	private static void manageWSResponseFile(String wsPathName, String response) throws Exception {
+
+		ObjectMapper mapper = new ObjectMapper();
+		Object json = mapper.readValue(response, Object.class);
+		String indented = mapper.defaultPrettyPrintingWriter().writeValueAsString(json);
+
 		String fileName = JSON_FILES_DIR_PATH + "/" + wsPathName.substring(9, wsPathName.length()) + ".json";
 		PrintWriter writer = new PrintWriter(fileName, "UTF-8");
-		writer.println(response);
+		writer.println(indented);
 		writer.close();
 	}
 

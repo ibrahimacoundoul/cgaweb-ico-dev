@@ -1,1 +1,1573 @@
-{"apiVersion":"1.0","swaggerVersion":"1.2","basePath":"/","resourcePath":"fix this","produces":["application/json"],"apis":[{"path":"/paymentmeans/creditcard","description":"updateCreditCardPaymentMean","operations":[{"method":"PUT","summary":"Mise à jour d'une CB","notes":"updateCreditCardPaymentMean","type":"ResponseWrapper«BankCustomer»","nickname":"updateCreditCardPaymentMean","produces":["application/json"],"parameters":[{"name":"userId","description":"Utilisateur effectuant l'opération","defaultValue":"","required":true,"type":"string","paramType":"query","allowMultiple":false},{"name":"personId","description":"Numéro d'abonne","defaultValue":"","required":true,"type":"integer","format":"int64","paramType":"path","allowMultiple":false},{"name":"contractId","description":"Numéro de contrat","defaultValue":"","required":true,"type":"integer","format":"int32","paramType":"query","allowMultiple":false},{"name":"distributorId","description":"Numéro de distributeur","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"contactId","description":"Numéro de contact","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"saleDevice","description":"Canal via lequel l'opération est effectuée ","defaultValue":"","required":true,"type":"string","paramType":"query","allowMultiple":false},{"name":"salesman","description":"Vendeur ayant effectué la modification","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"paymentMean","description":"Informations de carte de credit","defaultValue":"","required":true,"type":"CreditCardPaymentMeansDto","paramType":"body","allowMultiple":false}],"responseMessages":[{"code":201,"message":"Created"},{"code":404,"message":"Not Found"},{"code":403,"message":"Forbidden"},{"code":401,"message":"Unauthorized"},{"code":200,"message":"OK","responseModel":"ResponseWrapper«BankCustomer»"}],"deprecated":"false"}]},{"path":"/paymentmeans/creditcard/check","description":"checkCreditCardEligibility","operations":[{"method":"POST","summary":"Vérification de l’éligibilité commerciale sur la carte banquaire","notes":"checkCreditCardEligibility","type":"ResponseWrapper«EligibilityOut»","nickname":"checkCreditCardEligibility","produces":["application/json"],"parameters":[{"name":"userId","description":"Utilisateur effectuant l'opération","defaultValue":"","required":true,"type":"string","paramType":"query","allowMultiple":false},{"name":"distributorId","description":"Numéro de distributeur","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"contactId","description":"Numéro de contact","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"saleDevice","description":"Canal via lequel l'opération est effectuée ","defaultValue":"","required":true,"type":"string","paramType":"query","allowMultiple":false},{"name":"salesman","description":"Vendeur ayant effectué la modification","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"creditCard","description":"Informations de carte de credit","defaultValue":"","required":true,"type":"CreditCardWithOwner","paramType":"body","allowMultiple":false}],"responseMessages":[{"code":201,"message":"Created"},{"code":404,"message":"Not Found"},{"code":403,"message":"Forbidden"},{"code":401,"message":"Unauthorized"},{"code":200,"message":"OK","responseModel":"ResponseWrapper«EligibilityOut»"}],"deprecated":"false"}]},{"path":"/paymentmeans/iban","description":"updateIbanPaymentMean","operations":[{"method":"PUT","summary":"updateIbanPaymentMean","notes":"updateIbanPaymentMean","type":"ResponseWrapper«object»","nickname":"updateIbanPaymentMean","produces":["application/json"],"parameters":[{"name":"userId","description":"Utilisateur effectuant l'opération","defaultValue":"","required":true,"type":"string","paramType":"query","allowMultiple":false},{"name":"personId","description":"Numéro d'abonne","defaultValue":"","required":true,"type":"integer","format":"int64","paramType":"path","allowMultiple":false},{"name":"contractId","description":"Numéro de contrat","defaultValue":"","required":true,"type":"integer","format":"int32","paramType":"query","allowMultiple":false},{"name":"distributorId","description":"Numéro de distributeur","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"contactId","description":"Numéro de contact","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"saleDevice","description":"Canal via lequel l'opération est effectuée ","defaultValue":"","required":true,"type":"string","paramType":"query","allowMultiple":false},{"name":"salesman","description":"Vendeur ayant effectué la modification","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"updateLinkedContracts","description":"Mettre à jour les contrats liés","defaultValue":"FALSE","required":true,"type":"boolean","paramType":"query","allowMultiple":false},{"name":"paymentIbanMean","description":"Informations de compte bancaire","defaultValue":"","required":true,"type":"PaymentIbanMean","paramType":"body","allowMultiple":false}],"responseMessages":[{"code":201,"message":"Created"},{"code":404,"message":"Not Found"},{"code":403,"message":"Forbidden"},{"code":401,"message":"Unauthorized"},{"code":200,"message":"OK","responseModel":"ResponseWrapper«object»"}],"deprecated":"false"}]},{"path":"/paymentmeans/iban/check","description":"checkIbanEligibility","operations":[{"method":"POST","summary":"Vérification de l’éligibilité commerciale sur l'IBAN","notes":"checkIbanEligibility","type":"ResponseWrapper«EligibilityOut»","nickname":"checkIbanEligibility","produces":["application/json"],"parameters":[{"name":"userId","description":"Utilisateur effectuant l'opération","defaultValue":"","required":true,"type":"string","paramType":"query","allowMultiple":false},{"name":"distributorId","description":"Numéro de distributeur","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"contactId","description":"Numéro de contact","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"saleDevice","description":"Canal via lequel l'opération est effectuée ","defaultValue":"","required":true,"type":"string","paramType":"query","allowMultiple":false},{"name":"salesman","description":"Vendeur ayant effectué la modification","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"iban","description":"Informations de compte bancaire","defaultValue":"","required":true,"type":"Iban","paramType":"body","allowMultiple":false}],"responseMessages":[{"code":201,"message":"Created"},{"code":404,"message":"Not Found"},{"code":403,"message":"Forbidden"},{"code":401,"message":"Unauthorized"},{"code":200,"message":"OK","responseModel":"ResponseWrapper«EligibilityOut»"}],"deprecated":"false"}]},{"path":"/paymentmeans/initcreditcardpayment","description":"initCreditCardPayment","operations":[{"method":"POST","summary":"Obtention d'un numéro de transaction BRED pour paiement ultérieur","notes":"initCreditCardPayment","type":"ResponseWrapper«InitCreditCardPaymentOut»","nickname":"initCreditCardPayment","produces":["application/json"],"parameters":[{"name":"userId","description":"Utilisateur effectuant l'opération","defaultValue":"","required":true,"type":"string","paramType":"query","allowMultiple":false},{"name":"distributorId","description":"Numéro de distributeur","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"contactId","description":"Numéro de contact","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"saleDevice","description":"Canal via lequel l'opération est effectuée ","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"salesman","description":"Vendeur ayant effectué la modification","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"initPaymentIn","description":"Informations de carte de credit","defaultValue":"","required":true,"type":"InitCreditCardPaymentIn","paramType":"body","allowMultiple":false}],"responseMessages":[{"code":201,"message":"Created"},{"code":404,"message":"Not Found"},{"code":403,"message":"Forbidden"},{"code":401,"message":"Unauthorized"},{"code":200,"message":"OK","responseModel":"ResponseWrapper«InitCreditCardPaymentOut»"}],"deprecated":"false"}]},{"path":"/paymentmeans/refundtransaction","description":"createRefundTransaction","operations":[{"method":"POST","summary":"Effectuer un remboursement sur une transaction bancaire","notes":"createRefundTransaction","type":"ResponseWrapper«RefundTransactionResultDto»","nickname":"createRefundTransaction","produces":["application/json"],"parameters":[{"name":"userId","description":"Utilisateur effectuant l'opération","defaultValue":"","required":true,"type":"string","paramType":"query","allowMultiple":false},{"name":"personId","description":"Numéro d'abonne","defaultValue":"","required":true,"type":"integer","format":"int64","paramType":"path","allowMultiple":false},{"name":"contractId","description":"Numéro de contrat","defaultValue":"","required":true,"type":"integer","format":"int32","paramType":"query","allowMultiple":false},{"name":"distributorId","description":"Numéro de distributeur","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"contactId","description":"Numéro de contact","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"saleDevice","description":"Canal via lequel l'opération est effectuée ","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"salesman","description":"Vendeur ayant effectué la modification","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"transactionId","description":"Numero de transaction","defaultValue":"","required":true,"type":"integer","format":"int64","paramType":"query","allowMultiple":false},{"name":"refundTransactionIntputData","description":"Informations de necessaires au remboursement","defaultValue":"","required":true,"type":"RefundTransactionIntputDataDto","paramType":"body","allowMultiple":false}],"responseMessages":[{"code":201,"message":"Created"},{"code":404,"message":"Not Found"},{"code":403,"message":"Forbidden"},{"code":401,"message":"Unauthorized"},{"code":200,"message":"OK","responseModel":"ResponseWrapper«RefundTransactionResultDto»"}],"deprecated":"false"}]},{"path":"/paymentmeans/registeredcb/paymentcb","description":"createRecurrentPayment","operations":[{"method":"POST","summary":"Effectuer un paiement récurrent","notes":"createRecurrentPayment","type":"ResponseWrapper«PaymentResultDto»","nickname":"createRecurrentPayment","produces":["application/json"],"parameters":[{"name":"userId","description":"Utilisateur effectuant l'opération","defaultValue":"","required":true,"type":"string","paramType":"query","allowMultiple":false},{"name":"personId","description":"Numéro d'abonne","defaultValue":"","required":true,"type":"integer","format":"int64","paramType":"path","allowMultiple":false},{"name":"contractId","description":"Numéro de contrat","defaultValue":"","required":true,"type":"integer","format":"int32","paramType":"query","allowMultiple":false},{"name":"distributorId","description":"Numéro de distributeur","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"contactId","description":"Numéro de contact","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"saleDevice","description":"Canal via lequel l'opération est effectuée ","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"salesman","description":"Vendeur ayant effectué la modification","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"recurrentPayment","description":"Informations de paiement recurrent","defaultValue":"","required":true,"type":"RecurrentPaymentDto","paramType":"body","allowMultiple":false}],"responseMessages":[{"code":201,"message":"Created"},{"code":404,"message":"Not Found"},{"code":403,"message":"Forbidden"},{"code":401,"message":"Unauthorized"},{"code":200,"message":"OK","responseModel":"ResponseWrapper«PaymentResultDto»"}],"deprecated":"false"}]},{"path":"/paymentmeans/thirdPayedSubscriptions","description":"getThirdPayedSubscriptions","operations":[{"method":"POST","summary":"Renvoie la liste des contrats qui sont tiers-payés par l'abonné passé en entrée","notes":"getThirdPayedSubscriptions","type":"ResponseWrapper«ThirdPayedSubscriptionsOut»","nickname":"getThirdPayedSubscriptions","produces":["application/json"],"parameters":[{"name":"userId","description":"Utilisateur effectuant l'opération","defaultValue":"","required":true,"type":"string","paramType":"query","allowMultiple":false},{"name":"distributorId","description":"Numéro de distributeur","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"contactId","description":"Numéro de contact","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"saleDevice","description":"Canal via lequel l'opération est effectuée ","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"salesman","description":"Vendeur ayant effectué la modification","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"thirdPayor","description":"Informations de tiers payeur","defaultValue":"","required":true,"type":"ThirdPayor","paramType":"body","allowMultiple":false}],"responseMessages":[{"code":201,"message":"Created"},{"code":404,"message":"Not Found"},{"code":403,"message":"Forbidden"},{"code":401,"message":"Unauthorized"},{"code":200,"message":"OK","responseModel":"ResponseWrapper«ThirdPayedSubscriptionsOut»"}],"deprecated":"false"}]},{"path":"/paymentmeans/validatepayment","description":"createOneShotPayment","operations":[{"method":"POST","summary":"Effectuer un paiement one shot","notes":"createOneShotPayment","type":"ResponseWrapper«PaymentResultDto»","nickname":"createOneShotPayment","produces":["application/json"],"parameters":[{"name":"userId","description":"Utilisateur effectuant l'opération","defaultValue":"","required":true,"type":"string","paramType":"query","allowMultiple":false},{"name":"personId","description":"Numéro d'abonne","defaultValue":"","required":true,"type":"integer","format":"int64","paramType":"path","allowMultiple":false},{"name":"contractId","description":"Numéro de contrat","defaultValue":"","required":true,"type":"integer","format":"int32","paramType":"query","allowMultiple":false},{"name":"distributorId","description":"Numéro de distributeur","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"contactId","description":"Numéro de contact","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"saleDevice","description":"Canal via lequel l'opération est effectuée ","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"salesman","description":"Vendeur ayant effectué la modification","defaultValue":"","required":false,"type":"string","paramType":"query","allowMultiple":false},{"name":"oneShotPayment","description":"Informations de paiement immediat","defaultValue":"","required":true,"type":"OneShotPaymentDto","paramType":"body","allowMultiple":false}],"responseMessages":[{"code":201,"message":"Created"},{"code":404,"message":"Not Found"},{"code":403,"message":"Forbidden"},{"code":401,"message":"Unauthorized"},{"code":200,"message":"OK","responseModel":"ResponseWrapper«PaymentResultDto»"}],"deprecated":"false"}]},{"path":"/persons/contracts/paymentmeans","description":"getPaymentMeans","operations":[{"method":"GET","summary":"Renvoie la liste des moyens de paiement d'un contrat donné","notes":"getPaymentMeans","type":"ResponseWrapper«List«PaymentMeans»»","nickname":"getPaymentMeans","produces":["application/json"],"parameters":[{"name":"userId","description":"Utilisateur effectuant l'opération","defaultValue":"","required":true,"type":"string","paramType":"query","allowMultiple":false},{"name":"personId","description":"Numéro d'abonne","defaultValue":"","required":true,"type":"integer","format":"int64","paramType":"path","allowMultiple":false},{"name":"contractId","description":"Numéro de contrat","defaultValue":"","required":true,"type":"integer","format":"int32","paramType":"query","allowMultiple":false}],"responseMessages":[{"code":404,"message":"Not Found"},{"code":403,"message":"Forbidden"},{"code":401,"message":"Unauthorized"},{"code":200,"message":"OK","responseModel":"ResponseWrapper«List«PaymentMeans»»"}],"deprecated":"false"}]}],"models":{"CreditCardPaymentMeansDto":{"id":"CreditCardPaymentMeansDto","description":"","extends":"","properties":{"email":{"type":"string"},"creditCard":{"$ref":"CreditCardWithOwnerDto"},"transmissionDate":{"type":"string"}}},"ResponseWrapper«object»":{"id":"ResponseWrapper«object»","description":"","extends":"","properties":{"severity":{"type":"string","enum":["WARN","ERROR","FATAL","SUCCESS"]},"returnCode":{"type":"string"},"message":{"type":"string"},"data":{"$ref":"object"}}},"RefundTransactionIntputDataDto":{"id":"RefundTransactionIntputDataDto","description":"","extends":"","properties":{"amount":{"type":"number","format":"double"},"shopId":{"type":"string"},"transmissionDate":{"type":"string"}}},"ResponseWrapper«ThirdPayedSubscriptionsOut»":{"id":"ResponseWrapper«ThirdPayedSubscriptionsOut»","description":"","extends":"","properties":{"severity":{"type":"string","enum":["WARN","ERROR","FATAL","SUCCESS"]},"returnCode":{"type":"string"},"message":{"type":"string"},"data":{"$ref":"ThirdPayedSubscriptionsOut"}}},"PhoneCommon":{"id":"PhoneCommon","description":"","extends":"","properties":{"phoneNumber":{"type":"string"},"phoneType":{"type":"string"}}},"ThirdPayor":{"id":"ThirdPayor","description":"","extends":"","properties":{"personId":{"type":"integer","format":"int64"}}},"PaymentMeans":{"id":"PaymentMeans","description":"","required":["iban","contractId","createdDate"],"extends":"","properties":{"iban":{"type":"string","description":"L'iban"},"bic":{"type":"string"},"creditCard":{"$ref":"CreditCardLight"},"directDebitDate":{"type":"integer","format":"int32","description":"Jour de prélèvement"},"methodOfPayment":{"type":"string"},"contractId":{"type":"integer","format":"int32","description":"Le contrat associé au moyen de paiement"},"createdDate":{"type":"string","description":"Date de création du moyen de paiment, format mm/aa"}}},"PaymentProspect":{"id":"PaymentProspect","description":"","extends":"","properties":{"expiracyDate":{"type":"string"},"iban":{"type":"string"},"bic":{"type":"string"},"cryptogram":{"type":"string"}}},"ResponseWrapper«RefundTransactionResultDto»":{"id":"ResponseWrapper«RefundTransactionResultDto»","description":"","extends":"","properties":{"severity":{"type":"string","enum":["WARN","ERROR","FATAL","SUCCESS"]},"returnCode":{"type":"string"},"message":{"type":"string"},"data":{"$ref":"RefundTransactionResultDto"}}},"InitCreditCardPaymentAuthorizationIn":{"id":"InitCreditCardPaymentAuthorizationIn","description":"","extends":"","properties":{"amount":{"type":"number","format":"double"},"commercialOperator":{"type":"string"},"contractId":{"type":"integer","format":"int32"},"creditCard":{"$ref":"CreditCardWithOwner"},"recurrentCB":{"type":"boolean"}}},"Iban":{"id":"Iban","description":"","extends":"","properties":{"iban":{"type":"string"},"bic":{"type":"string"},"cpays":{"type":"string"}}},"RefundTransactionResultDto":{"id":"RefundTransactionResultDto","description":"","extends":"","properties":{"movementId":{"type":"integer","format":"int64"},"amountRefunded":{"type":"number","format":"double"},"refundTransactionId":{"type":"integer","format":"int64"}}},"ThirdPayedSubscriptionsOut":{"id":"ThirdPayedSubscriptionsOut","description":"","extends":"","properties":{"thirdPayedSubscriptions":{"type":"array","items":{"$ref":"ThirdPayedSubscription"}}}},"ResponseWrapper«PaymentResultDto»":{"id":"ResponseWrapper«PaymentResultDto»","description":"","extends":"","properties":{"severity":{"type":"string","enum":["WARN","ERROR","FATAL","SUCCESS"]},"returnCode":{"type":"string"},"message":{"type":"string"},"data":{"$ref":"PaymentResultDto"}}},"PaymentResultDto":{"id":"PaymentResultDto","description":"","extends":"","properties":{"amount":{"type":"number","format":"double"},"transactionId":{"type":"string"},"numpayonline":{"type":"integer","format":"int64"},"movementId":{"type":"integer","format":"int64"},"authorizationDate":{"type":"string"},"authNumber":{"type":"string"}}},"CreditCardWithOwnerDto":{"id":"CreditCardWithOwnerDto","description":"","extends":"","properties":{"cryptogram":{"type":"string"},"expirationDate":{"type":"string"},"number":{"type":"string"},"owner":{"type":"string"},"type":{"type":"string"}}},"PaymentIbanMean":{"id":"PaymentIbanMean","description":"","extends":"","properties":{"iban":{"type":"string"},"bic":{"type":"string"},"directDebitDate":{"type":"integer","format":"int32"}}},"ResponseWrapper«List«PaymentMeans»»":{"id":"ResponseWrapper«List«PaymentMeans»»","description":"","extends":"","properties":{"severity":{"type":"string","enum":["WARN","ERROR","FATAL","SUCCESS"]},"returnCode":{"type":"string"},"message":{"type":"string"},"data":{"type":"array","items":{"$ref":"PaymentMeans"}}}},"CreditCardWithOwner":{"id":"CreditCardWithOwner","description":"","extends":"","properties":{"cryptogram":{"type":"string"},"expirationDate":{"type":"string"},"number":{"type":"string"},"owner":{"type":"string"},"type":{"type":"string"}}},"InitCreditCardPaymentAuthorizationOut":{"id":"InitCreditCardPaymentAuthorizationOut","description":"","extends":"","properties":{"contractId":{"type":"integer","format":"int32"},"commercialOperator":{"type":"string"},"authorizationNumber":{"type":"string"},"bankCustomerId":{"type":"string"}}},"PersonProspect":{"id":"PersonProspect","description":"","extends":"","properties":{"civility":{"type":"string"},"companyName":{"type":"string"},"companyId":{"type":"string"},"numIdent":{"type":"string"},"subscriberCategory":{"type":"string"},"subscriberSubCategory":{"type":"string"},"lastName":{"type":"string"},"firstName":{"type":"string"}}},"CreditCardLight":{"id":"CreditCardLight","description":"","extends":"","properties":{"expirationDate":{"type":"string"},"type":{"type":"string"},"number":{"type":"string"},"owner":{"type":"string"}}},"EligibilityOut":{"id":"EligibilityOut","description":"","extends":"","properties":{"errorMessages":{"type":"array","items":{"$ref":"ErrorMessage"}},"status":{"type":"string","enum":["OK","WARNING","KO"]}}},"AddressCommon":{"id":"AddressCommon","description":"","extends":"","properties":{"forcingIndicator":{"type":"boolean"},"postalCode":{"type":"string"},"street1":{"type":"string"},"street2":{"type":"string"},"street3":{"type":"string"},"street4":{"type":"string"},"countryId":{"type":"string"},"city":{"type":"string"}}},"InitCreditCardPaymentOut":{"id":"InitCreditCardPaymentOut","description":"","extends":"","properties":{"numabo":{"type":"integer","format":"int64"},"initCreditCardPaymentAuthorizationOuts":{"type":"array","items":{"$ref":"InitCreditCardPaymentAuthorizationOut"}}}},"InitCreditCardProspectIn":{"id":"InitCreditCardProspectIn","description":"","extends":"","properties":{"phones":{"type":"array","items":{"$ref":"PhoneCommon"}},"thirdPayor":{"type":"boolean"},"orderId":{"type":"string"},"person":{"$ref":"PersonProspect"},"email":{"type":"string"},"payment":{"$ref":"PaymentProspect"},"address":{"$ref":"AddressCommon"}}},"InitCreditCardPaymentIn":{"id":"InitCreditCardPaymentIn","description":"","extends":"","properties":{"authorizations":{"type":"array","items":{"$ref":"InitCreditCardPaymentAuthorizationIn"}},"postalCode":{"type":"string"},"personId":{"type":"integer","format":"int64"},"countryId":{"type":"string"},"prospect":{"$ref":"InitCreditCardProspectIn"}}},"OneShotPaymentDto":{"id":"OneShotPaymentDto","description":"","extends":"","properties":{"amount":{"type":"number","format":"double"},"creditCard":{"$ref":"CreditCardWithOwnerDto"},"shopId":{"type":"string"}}},"ResponseWrapper«BankCustomer»":{"id":"ResponseWrapper«BankCustomer»","description":"","extends":"","properties":{"severity":{"type":"string","enum":["WARN","ERROR","FATAL","SUCCESS"]},"returnCode":{"type":"string"},"message":{"type":"string"},"data":{"$ref":"BankCustomer"}}},"ResponseWrapper«EligibilityOut»":{"id":"ResponseWrapper«EligibilityOut»","description":"","extends":"","properties":{"severity":{"type":"string","enum":["WARN","ERROR","FATAL","SUCCESS"]},"returnCode":{"type":"string"},"message":{"type":"string"},"data":{"$ref":"EligibilityOut"}}},"ResponseWrapper«InitCreditCardPaymentOut»":{"id":"ResponseWrapper«InitCreditCardPaymentOut»","description":"","extends":"","properties":{"severity":{"type":"string","enum":["WARN","ERROR","FATAL","SUCCESS"]},"returnCode":{"type":"string"},"message":{"type":"string"},"data":{"$ref":"InitCreditCardPaymentOut"}}},"RecurrentPaymentDto":{"id":"RecurrentPaymentDto","description":"","extends":"","properties":{"amount":{"type":"number","format":"double"},"shopId":{"type":"string"}}},"BankCustomer":{"id":"BankCustomer","description":"","extends":"","properties":{"bankCustomerId":{"type":"integer","format":"int64"},"movementId":{"type":"integer","format":"int64"}}},"ErrorMessage":{"id":"ErrorMessage","description":"","extends":"","properties":{"code":{"type":"string"},"label":{"type":"string"}}},"ThirdPayedSubscription":{"id":"ThirdPayedSubscription","description":"","extends":"","properties":{"personId":{"type":"integer","format":"int64"},"contractId":{"type":"integer","format":"int32"}}}}}
+{
+  "apiVersion" : "1.0",
+  "swaggerVersion" : "1.2",
+  "basePath" : "/",
+  "resourcePath" : "fix this",
+  "produces" : [ "application/json" ],
+  "apis" : [ {
+    "path" : "/paymentmeans/creditcard",
+    "description" : "updateCreditCardPaymentMean",
+    "operations" : [ {
+      "method" : "PUT",
+      "summary" : "Mise à jour d'une CB",
+      "notes" : "updateCreditCardPaymentMean",
+      "type" : "ResponseWrapper«BankCustomer»",
+      "nickname" : "updateCreditCardPaymentMean",
+      "produces" : [ "application/json" ],
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "personId",
+        "description" : "Numéro d'abonne",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contractId",
+        "description" : "Numéro de contrat",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int32",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "paymentMean",
+        "description" : "Informations de carte de credit",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "CreditCardPaymentMeansDto",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«BankCustomer»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/paymentmeans/creditcard/check",
+    "description" : "checkCreditCardEligibility",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "Vérification de l’éligibilité commerciale sur la carte banquaire",
+      "notes" : "checkCreditCardEligibility",
+      "type" : "ResponseWrapper«EligibilityOut»",
+      "nickname" : "checkCreditCardEligibility",
+      "produces" : [ "application/json" ],
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "creditCard",
+        "description" : "Informations de carte de credit",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "CreditCardWithOwner",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«EligibilityOut»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/paymentmeans/iban",
+    "description" : "updateIbanPaymentMean",
+    "operations" : [ {
+      "method" : "PUT",
+      "summary" : "updateIbanPaymentMean",
+      "notes" : "updateIbanPaymentMean",
+      "type" : "ResponseWrapper«object»",
+      "nickname" : "updateIbanPaymentMean",
+      "produces" : [ "application/json" ],
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "personId",
+        "description" : "Numéro d'abonne",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contractId",
+        "description" : "Numéro de contrat",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int32",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "updateLinkedContracts",
+        "description" : "Mettre à jour les contrats liés",
+        "defaultValue" : "FALSE",
+        "required" : true,
+        "type" : "boolean",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "paymentIbanMean",
+        "description" : "Informations de compte bancaire",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "PaymentIbanMean",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«object»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/paymentmeans/iban/check",
+    "description" : "checkIbanEligibility",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "Vérification de l’éligibilité commerciale sur l'IBAN",
+      "notes" : "checkIbanEligibility",
+      "type" : "ResponseWrapper«EligibilityOut»",
+      "nickname" : "checkIbanEligibility",
+      "produces" : [ "application/json" ],
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "iban",
+        "description" : "Informations de compte bancaire",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "Iban",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«EligibilityOut»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/paymentmeans/initcreditcardpayment",
+    "description" : "initCreditCardPayment",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "Obtention d'un numéro de transaction BRED pour paiement ultérieur",
+      "notes" : "initCreditCardPayment",
+      "type" : "ResponseWrapper«InitCreditCardPaymentOut»",
+      "nickname" : "initCreditCardPayment",
+      "produces" : [ "application/json" ],
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "initPaymentIn",
+        "description" : "Informations de carte de credit",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "InitCreditCardPaymentIn",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«InitCreditCardPaymentOut»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/paymentmeans/refundtransaction",
+    "description" : "createRefundTransaction",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "Effectuer un remboursement sur une transaction bancaire",
+      "notes" : "createRefundTransaction",
+      "type" : "ResponseWrapper«RefundTransactionResultDto»",
+      "nickname" : "createRefundTransaction",
+      "produces" : [ "application/json" ],
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "personId",
+        "description" : "Numéro d'abonne",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contractId",
+        "description" : "Numéro de contrat",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int32",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "transactionId",
+        "description" : "Numero de transaction",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "refundTransactionIntputData",
+        "description" : "Informations de necessaires au remboursement",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "RefundTransactionIntputDataDto",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«RefundTransactionResultDto»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/paymentmeans/registeredcb/paymentcb",
+    "description" : "createRecurrentPayment",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "Effectuer un paiement récurrent",
+      "notes" : "createRecurrentPayment",
+      "type" : "ResponseWrapper«PaymentResultDto»",
+      "nickname" : "createRecurrentPayment",
+      "produces" : [ "application/json" ],
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "personId",
+        "description" : "Numéro d'abonne",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contractId",
+        "description" : "Numéro de contrat",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int32",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "recurrentPayment",
+        "description" : "Informations de paiement recurrent",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "RecurrentPaymentDto",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«PaymentResultDto»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/paymentmeans/thirdPayedSubscriptions",
+    "description" : "getThirdPayedSubscriptions",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "Renvoie la liste des contrats qui sont tiers-payés par l'abonné passé en entrée",
+      "notes" : "getThirdPayedSubscriptions",
+      "type" : "ResponseWrapper«ThirdPayedSubscriptionsOut»",
+      "nickname" : "getThirdPayedSubscriptions",
+      "produces" : [ "application/json" ],
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "thirdPayor",
+        "description" : "Informations de tiers payeur",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "ThirdPayor",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«ThirdPayedSubscriptionsOut»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/paymentmeans/validatepayment",
+    "description" : "createOneShotPayment",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "Effectuer un paiement one shot",
+      "notes" : "createOneShotPayment",
+      "type" : "ResponseWrapper«PaymentResultDto»",
+      "nickname" : "createOneShotPayment",
+      "produces" : [ "application/json" ],
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "personId",
+        "description" : "Numéro d'abonne",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contractId",
+        "description" : "Numéro de contrat",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int32",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "oneShotPayment",
+        "description" : "Informations de paiement immediat",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "OneShotPaymentDto",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«PaymentResultDto»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/persons/contracts/paymentmeans",
+    "description" : "getPaymentMeans",
+    "operations" : [ {
+      "method" : "GET",
+      "summary" : "Renvoie la liste des moyens de paiement d'un contrat donné",
+      "notes" : "getPaymentMeans",
+      "type" : "ResponseWrapper«List«PaymentMeans»»",
+      "nickname" : "getPaymentMeans",
+      "produces" : [ "application/json" ],
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "personId",
+        "description" : "Numéro d'abonne",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contractId",
+        "description" : "Numéro de contrat",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int32",
+        "paramType" : "query",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«List«PaymentMeans»»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  } ],
+  "models" : {
+    "CreditCardPaymentMeansDto" : {
+      "id" : "CreditCardPaymentMeansDto",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "email" : {
+          "type" : "string"
+        },
+        "creditCard" : {
+          "$ref" : "CreditCardWithOwnerDto"
+        },
+        "transmissionDate" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ResponseWrapper«object»" : {
+      "id" : "ResponseWrapper«object»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "$ref" : "object"
+        }
+      }
+    },
+    "RefundTransactionIntputDataDto" : {
+      "id" : "RefundTransactionIntputDataDto",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "amount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "shopId" : {
+          "type" : "string"
+        },
+        "transmissionDate" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ResponseWrapper«ThirdPayedSubscriptionsOut»" : {
+      "id" : "ResponseWrapper«ThirdPayedSubscriptionsOut»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "$ref" : "ThirdPayedSubscriptionsOut"
+        }
+      }
+    },
+    "PhoneCommon" : {
+      "id" : "PhoneCommon",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "phoneNumber" : {
+          "type" : "string"
+        },
+        "phoneType" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ThirdPayor" : {
+      "id" : "ThirdPayor",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        }
+      }
+    },
+    "PaymentMeans" : {
+      "id" : "PaymentMeans",
+      "description" : "",
+      "required" : [ "iban", "contractId", "createdDate" ],
+      "extends" : "",
+      "properties" : {
+        "iban" : {
+          "type" : "string",
+          "description" : "L'iban"
+        },
+        "bic" : {
+          "type" : "string"
+        },
+        "creditCard" : {
+          "$ref" : "CreditCardLight"
+        },
+        "directDebitDate" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "Jour de prélèvement"
+        },
+        "methodOfPayment" : {
+          "type" : "string"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "Le contrat associé au moyen de paiement"
+        },
+        "createdDate" : {
+          "type" : "string",
+          "description" : "Date de création du moyen de paiment, format mm/aa"
+        }
+      }
+    },
+    "PaymentProspect" : {
+      "id" : "PaymentProspect",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "expiracyDate" : {
+          "type" : "string"
+        },
+        "iban" : {
+          "type" : "string"
+        },
+        "bic" : {
+          "type" : "string"
+        },
+        "cryptogram" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ResponseWrapper«RefundTransactionResultDto»" : {
+      "id" : "ResponseWrapper«RefundTransactionResultDto»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "$ref" : "RefundTransactionResultDto"
+        }
+      }
+    },
+    "InitCreditCardPaymentAuthorizationIn" : {
+      "id" : "InitCreditCardPaymentAuthorizationIn",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "amount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "commercialOperator" : {
+          "type" : "string"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "creditCard" : {
+          "$ref" : "CreditCardWithOwner"
+        },
+        "recurrentCB" : {
+          "type" : "boolean"
+        }
+      }
+    },
+    "Iban" : {
+      "id" : "Iban",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "iban" : {
+          "type" : "string"
+        },
+        "bic" : {
+          "type" : "string"
+        },
+        "cpays" : {
+          "type" : "string"
+        }
+      }
+    },
+    "RefundTransactionResultDto" : {
+      "id" : "RefundTransactionResultDto",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "movementId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "amountRefunded" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "refundTransactionId" : {
+          "type" : "integer",
+          "format" : "int64"
+        }
+      }
+    },
+    "ThirdPayedSubscriptionsOut" : {
+      "id" : "ThirdPayedSubscriptionsOut",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "thirdPayedSubscriptions" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ThirdPayedSubscription"
+          }
+        }
+      }
+    },
+    "ResponseWrapper«PaymentResultDto»" : {
+      "id" : "ResponseWrapper«PaymentResultDto»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "$ref" : "PaymentResultDto"
+        }
+      }
+    },
+    "PaymentResultDto" : {
+      "id" : "PaymentResultDto",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "amount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "transactionId" : {
+          "type" : "string"
+        },
+        "numpayonline" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "movementId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "authorizationDate" : {
+          "type" : "string"
+        },
+        "authNumber" : {
+          "type" : "string"
+        }
+      }
+    },
+    "CreditCardWithOwnerDto" : {
+      "id" : "CreditCardWithOwnerDto",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "cryptogram" : {
+          "type" : "string"
+        },
+        "expirationDate" : {
+          "type" : "string"
+        },
+        "number" : {
+          "type" : "string"
+        },
+        "owner" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        }
+      }
+    },
+    "PaymentIbanMean" : {
+      "id" : "PaymentIbanMean",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "iban" : {
+          "type" : "string"
+        },
+        "bic" : {
+          "type" : "string"
+        },
+        "directDebitDate" : {
+          "type" : "integer",
+          "format" : "int32"
+        }
+      }
+    },
+    "ResponseWrapper«List«PaymentMeans»»" : {
+      "id" : "ResponseWrapper«List«PaymentMeans»»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "PaymentMeans"
+          }
+        }
+      }
+    },
+    "CreditCardWithOwner" : {
+      "id" : "CreditCardWithOwner",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "cryptogram" : {
+          "type" : "string"
+        },
+        "expirationDate" : {
+          "type" : "string"
+        },
+        "number" : {
+          "type" : "string"
+        },
+        "owner" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        }
+      }
+    },
+    "InitCreditCardPaymentAuthorizationOut" : {
+      "id" : "InitCreditCardPaymentAuthorizationOut",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "commercialOperator" : {
+          "type" : "string"
+        },
+        "authorizationNumber" : {
+          "type" : "string"
+        },
+        "bankCustomerId" : {
+          "type" : "string"
+        }
+      }
+    },
+    "PersonProspect" : {
+      "id" : "PersonProspect",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "civility" : {
+          "type" : "string"
+        },
+        "companyName" : {
+          "type" : "string"
+        },
+        "companyId" : {
+          "type" : "string"
+        },
+        "numIdent" : {
+          "type" : "string"
+        },
+        "subscriberCategory" : {
+          "type" : "string"
+        },
+        "subscriberSubCategory" : {
+          "type" : "string"
+        },
+        "lastName" : {
+          "type" : "string"
+        },
+        "firstName" : {
+          "type" : "string"
+        }
+      }
+    },
+    "CreditCardLight" : {
+      "id" : "CreditCardLight",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "expirationDate" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        },
+        "number" : {
+          "type" : "string"
+        },
+        "owner" : {
+          "type" : "string"
+        }
+      }
+    },
+    "EligibilityOut" : {
+      "id" : "EligibilityOut",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "errorMessages" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ErrorMessage"
+          }
+        },
+        "status" : {
+          "type" : "string",
+          "enum" : [ "OK", "WARNING", "KO" ]
+        }
+      }
+    },
+    "AddressCommon" : {
+      "id" : "AddressCommon",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "forcingIndicator" : {
+          "type" : "boolean"
+        },
+        "postalCode" : {
+          "type" : "string"
+        },
+        "street1" : {
+          "type" : "string"
+        },
+        "street2" : {
+          "type" : "string"
+        },
+        "street3" : {
+          "type" : "string"
+        },
+        "street4" : {
+          "type" : "string"
+        },
+        "countryId" : {
+          "type" : "string"
+        },
+        "city" : {
+          "type" : "string"
+        }
+      }
+    },
+    "InitCreditCardPaymentOut" : {
+      "id" : "InitCreditCardPaymentOut",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "numabo" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "initCreditCardPaymentAuthorizationOuts" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "InitCreditCardPaymentAuthorizationOut"
+          }
+        }
+      }
+    },
+    "InitCreditCardProspectIn" : {
+      "id" : "InitCreditCardProspectIn",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "phones" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "PhoneCommon"
+          }
+        },
+        "thirdPayor" : {
+          "type" : "boolean"
+        },
+        "orderId" : {
+          "type" : "string"
+        },
+        "person" : {
+          "$ref" : "PersonProspect"
+        },
+        "email" : {
+          "type" : "string"
+        },
+        "payment" : {
+          "$ref" : "PaymentProspect"
+        },
+        "address" : {
+          "$ref" : "AddressCommon"
+        }
+      }
+    },
+    "InitCreditCardPaymentIn" : {
+      "id" : "InitCreditCardPaymentIn",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "authorizations" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "InitCreditCardPaymentAuthorizationIn"
+          }
+        },
+        "postalCode" : {
+          "type" : "string"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "countryId" : {
+          "type" : "string"
+        },
+        "prospect" : {
+          "$ref" : "InitCreditCardProspectIn"
+        }
+      }
+    },
+    "OneShotPaymentDto" : {
+      "id" : "OneShotPaymentDto",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "amount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "creditCard" : {
+          "$ref" : "CreditCardWithOwnerDto"
+        },
+        "shopId" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ResponseWrapper«BankCustomer»" : {
+      "id" : "ResponseWrapper«BankCustomer»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "$ref" : "BankCustomer"
+        }
+      }
+    },
+    "ResponseWrapper«EligibilityOut»" : {
+      "id" : "ResponseWrapper«EligibilityOut»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "$ref" : "EligibilityOut"
+        }
+      }
+    },
+    "ResponseWrapper«InitCreditCardPaymentOut»" : {
+      "id" : "ResponseWrapper«InitCreditCardPaymentOut»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "$ref" : "InitCreditCardPaymentOut"
+        }
+      }
+    },
+    "RecurrentPaymentDto" : {
+      "id" : "RecurrentPaymentDto",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "amount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "shopId" : {
+          "type" : "string"
+        }
+      }
+    },
+    "BankCustomer" : {
+      "id" : "BankCustomer",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "bankCustomerId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "movementId" : {
+          "type" : "integer",
+          "format" : "int64"
+        }
+      }
+    },
+    "ErrorMessage" : {
+      "id" : "ErrorMessage",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "code" : {
+          "type" : "string"
+        },
+        "label" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ThirdPayedSubscription" : {
+      "id" : "ThirdPayedSubscription",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        }
+      }
+    }
+  }
+}
