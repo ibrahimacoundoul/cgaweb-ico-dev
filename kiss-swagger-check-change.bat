@@ -3,5 +3,4 @@ REM on ajoute tous les nouveaux fichiers puis commiter et pusher sur la repos gi
 git pull
 git add *
 git commit -am "commit auto des modifications des webservices KISS avec Swagger"
-REM git push --repo https://ibrahimacoundoul:testtest1@github.com/ibrahimacoundoul/cgaweb-ico-dev HEAD:origin
-git push -u origin master
+git push --repo https://ibrahimacoundoul:testtest1@github.com/ibrahimacoundoul/cgaweb-ico-dev
