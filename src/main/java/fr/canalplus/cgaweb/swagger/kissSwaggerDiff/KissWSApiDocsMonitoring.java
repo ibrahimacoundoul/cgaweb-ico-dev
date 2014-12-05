@@ -12,7 +12,7 @@ import org.codehaus.jackson.map.ObjectMapper;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-public class KissSwaggerMainHandler {
+public class KissWSApiDocsMonitoring {
 
 	private final static String KISS_WS_API_DOCS_URL = "http://frcp03vdv0184.cpdev.local:8083/cgawebKissWS/rest/api-docs";
 	private final static String JSON_FILES_DIR_PATH = "src/main/resources";
