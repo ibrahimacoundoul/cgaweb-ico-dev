@@ -18,12 +18,11 @@ public class KissWSApiDocsMonitoring {
 	private final static String JSON_FILES_DIR_PATH = "src/main/resources";
 
 	private final static String UTF_8_FORMAT = "UTF-8";
-	private final static String JSON_EXTENTION = ".json";
+	private final static String JSON_FILES_EXTENTION = ".json";
 
 	public static void manageKissSwaggerApisDiffrences() throws Exception {
 		URL url = new URL(KISS_WS_API_DOCS_URL);
 		StringBuffer output = new StringBuffer();
-
 		try {
 			BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream(), UTF_8_FORMAT));
 			for (String line; (line = reader.readLine()) != null;) {
@@ -32,7 +31,6 @@ public class KissWSApiDocsMonitoring {
 		} catch (Exception e) {
 			throw e;
 		}
-
 		manegeWSApis(output.toString());
 	}
 
@@ -92,7 +90,7 @@ public class KissWSApiDocsMonitoring {
 		fileName.append(JSON_FILES_DIR_PATH);
 		fileName.append("/");
 		fileName.append(wsPathName.substring(9, wsPathName.length()));
-		fileName.append(JSON_EXTENTION);
+		fileName.append(JSON_FILES_EXTENTION);
 
 		PrintWriter writer = new PrintWriter(fileName.toString(), UTF_8_FORMAT);
 		writer.println(indented);
