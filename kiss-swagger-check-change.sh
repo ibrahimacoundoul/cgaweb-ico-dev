@@ -3,9 +3,8 @@
 #cd /d/applis/GIT/kissSwaggerDiff
 #git commit -am "commit auto des fichiers json modifiés 4 déc bis"
 #git push
-
-sudo chmod 777 -R src/main/resources/
-java -cp target/kiss-swagger-monitoring-dep.jar fr.canalplus.cgaweb.swagger.kissSwaggerDiff.KissWSApiDocsMonitoring
+#sudo chmod 777 -R src/main/resources/
+cd /var/lib/jenkins/jobs/ico-dev-build/workspace && java -cp target/kiss-swagger-monitoring-dep.jar fr.canalplus.cgaweb.swagger.kissSwaggerDiff.KissWSApiDocsMonitoring
 #on ajoute tous les nouveaux fichiers puis commiter et pusher sur la repos github 
 #git pull
 #git add *
