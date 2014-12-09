@@ -430,12 +430,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "promotions" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "InternalPromotion"
-          }
-        },
         "contractId" : {
           "type" : "integer",
           "format" : "int32"
@@ -443,6 +437,12 @@
         "personId" : {
           "type" : "integer",
           "format" : "int64"
+        },
+        "promotions" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "InternalPromotion"
+          }
         }
       }
     },
@@ -462,13 +462,13 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "advantageType" : {
-          "type" : "string"
-        },
         "startDate" : {
           "type" : "string"
         },
         "endDate" : {
+          "type" : "string"
+        },
+        "advantageType" : {
           "type" : "string"
         }
       }
@@ -486,20 +486,9 @@
     "InfosSubscriptionContextAndArticles" : {
       "id" : "InfosSubscriptionContextAndArticles",
       "description" : "",
-      "required" : [ "productsId", "contextsousc", "postalCode", "methodOfPayment", "broadcastVectorId", "ispId", "commercialOperator", "countryId", "dateToDate", "broadcastMediaType", "duration", "origin" ],
+      "required" : [ "postalCode", "methodOfPayment", "broadcastVectorId", "ispId", "commercialOperator", "countryId", "dateToDate", "contextsousc", "broadcastMediaType", "productsId", "duration", "origin" ],
       "extends" : "",
       "properties" : {
-        "productsId" : {
-          "type" : "array",
-          "description" : "codes des produits du contrat à souscrire",
-          "items" : {
-            "type" : "string"
-          }
-        },
-        "contextsousc" : {
-          "type" : "string",
-          "description" : "code du contexte de souscription"
-        },
         "postalCode" : {
           "type" : "string",
           "description" : "code postal du contrat à souscrire"
@@ -528,9 +517,20 @@
           "type" : "string",
           "description" : "indicateur de contrat date à date"
         },
+        "contextsousc" : {
+          "type" : "string",
+          "description" : "code du contexte de souscription"
+        },
         "broadcastMediaType" : {
           "type" : "string",
           "description" : "broadcast media type du contrat à souscrire"
+        },
+        "productsId" : {
+          "type" : "array",
+          "description" : "codes des produits du contrat à souscrire",
+          "items" : {
+            "type" : "string"
+          }
         },
         "duration" : {
           "type" : "string",
@@ -547,16 +547,16 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "shortLabel" : {
+        "startDate" : {
+          "type" : "string"
+        },
+        "promotionId" : {
           "type" : "string"
         },
         "enddate" : {
           "type" : "string"
         },
-        "startDate" : {
-          "type" : "string"
-        },
-        "promotionId" : {
+        "shortLabel" : {
           "type" : "string"
         },
         "description" : {
@@ -604,15 +604,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "maxCancelationDateAllowed" : {
-          "type" : "string"
-        },
-        "remainsAdvantages" : {
-          "type" : "boolean"
-        },
-        "removable" : {
-          "type" : "boolean"
-        },
         "advantages" : {
           "type" : "array",
           "items" : {
@@ -625,22 +616,31 @@
         "internalPromotionId" : {
           "type" : "string"
         },
+        "removable" : {
+          "type" : "boolean"
+        },
+        "maxCancelationDateAllowed" : {
+          "type" : "string"
+        },
+        "remainsAdvantages" : {
+          "type" : "boolean"
+        },
         "subType" : {
           "type" : "string"
         },
         "type" : {
           "type" : "string"
         },
-        "shortLabel" : {
+        "startDate" : {
+          "type" : "string"
+        },
+        "promotionId" : {
           "type" : "string"
         },
         "enddate" : {
           "type" : "string"
         },
-        "startDate" : {
-          "type" : "string"
-        },
-        "promotionId" : {
+        "shortLabel" : {
           "type" : "string"
         },
         "description" : {
@@ -674,17 +674,9 @@
     "VoucherCheckOut" : {
       "id" : "VoucherCheckOut",
       "description" : "",
-      "required" : [ "businessToBusiness", "voucherId" ],
+      "required" : [ "voucherId", "businessToBusiness" ],
       "extends" : "",
       "properties" : {
-        "businessToBusiness" : {
-          "type" : "boolean",
-          "description" : "indicateur qui permet de savoir s'il s'agit d'un coupon b2b"
-        },
-        "infosSubscription" : {
-          "$ref" : "InfosSubscriptionContextAndArticles",
-          "description" : "informations de souscriptions dans le cas d'un coupon b2b"
-        },
         "voucherId" : {
           "type" : "string",
           "description" : "code du coupon"
@@ -692,6 +684,14 @@
         "errorMessage" : {
           "type" : "string",
           "description" : "message d'erreur de la validation du coupon"
+        },
+        "businessToBusiness" : {
+          "type" : "boolean",
+          "description" : "indicateur qui permet de savoir s'il s'agit d'un coupon b2b"
+        },
+        "infosSubscription" : {
+          "$ref" : "InfosSubscriptionContextAndArticles",
+          "description" : "informations de souscriptions dans le cas d'un coupon b2b"
         },
         "description" : {
           "type" : "string",

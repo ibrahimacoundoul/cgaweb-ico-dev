@@ -316,12 +316,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "actOfManagemnetId" : {
-          "type" : "string"
-        },
-        "createOnLinkedContract" : {
-          "type" : "boolean"
-        },
         "commentType" : {
           "type" : "string"
         },
@@ -333,11 +327,17 @@
           "type" : "integer",
           "format" : "int64"
         },
+        "freeText" : {
+          "type" : "string"
+        },
         "creationUser" : {
           "type" : "string"
         },
-        "freeText" : {
+        "actOfManagemnetId" : {
           "type" : "string"
+        },
+        "createOnLinkedContract" : {
+          "type" : "boolean"
         }
       }
     },
@@ -366,16 +366,7 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "updateOnLinkedContract" : {
-          "type" : "boolean"
-        },
-        "actOfManagemnetId" : {
-          "type" : "string"
-        },
         "commentType" : {
-          "type" : "string"
-        },
-        "creationUser" : {
           "type" : "string"
         },
         "commentId" : {
@@ -384,6 +375,15 @@
         },
         "freeText" : {
           "type" : "string"
+        },
+        "creationUser" : {
+          "type" : "string"
+        },
+        "actOfManagemnetId" : {
+          "type" : "string"
+        },
+        "updateOnLinkedContract" : {
+          "type" : "boolean"
         }
       }
     },
@@ -406,9 +406,6 @@
         "creationDate" : {
           "type" : "string"
         },
-        "commentLabel" : {
-          "type" : "string"
-        },
         "actOfManagementId" : {
           "type" : "string"
         },
@@ -426,6 +423,9 @@
           "format" : "int64"
         },
         "contactId" : {
+          "type" : "string"
+        },
+        "commentLabel" : {
           "type" : "string"
         }
       }

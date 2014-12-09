@@ -33,6 +33,27 @@
 		</dependency>
 	</dependencies>
 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<finalName>uber</finalName>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+
 	<profiles>
 		<profile>
 			<id>manage-kiss-swagger-prod</id>
@@ -48,7 +69,8 @@
 						<executions>
 							<execution>
 								<id>script-chmod</id>
-								<!--chmod sur le script d'import dump -->
+								<!--chmod sur le script d'excécution, de generation et de comit sur 
+									Github -->
 								<phase>compile</phase>
 								<goals>
 									<goal>exec</goal>
@@ -91,7 +113,8 @@
 						<executions>
 							<execution>
 								<id>script-chmod</id>
-								<!--chmod sur le script d'import dump -->
+								<!--chmod sur le script d'excécution, de generation et de comit sur 
+									Github -->
 								<phase>compile</phase>
 								<goals>
 									<goal>exec</goal>

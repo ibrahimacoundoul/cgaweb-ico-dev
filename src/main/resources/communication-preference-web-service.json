@@ -193,9 +193,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "authorizedAll" : {
-          "type" : "boolean"
-        },
         "operatorId" : {
           "type" : "string"
         },
@@ -204,6 +201,9 @@
           "items" : {
             "$ref" : "SolicitationByChannel"
           }
+        },
+        "authorizedAll" : {
+          "type" : "boolean"
         }
       }
     },
@@ -248,15 +248,15 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
         "solicitations" : {
           "type" : "array",
           "items" : {
             "$ref" : "SolicitationByOperatorRequest"
           }
-        },
-        "personId" : {
-          "type" : "integer",
-          "format" : "int64"
         }
       }
     },

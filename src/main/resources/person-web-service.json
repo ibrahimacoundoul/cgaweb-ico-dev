@@ -1035,15 +1035,6 @@
           "type" : "integer",
           "format" : "int64"
         },
-        "civility" : {
-          "type" : "string"
-        },
-        "companyName" : {
-          "type" : "string"
-        },
-        "companyId" : {
-          "type" : "string"
-        },
         "numIdent" : {
           "type" : "string"
         },
@@ -1053,10 +1044,19 @@
         "subscriberSubCategory" : {
           "type" : "string"
         },
+        "firstName" : {
+          "type" : "string"
+        },
         "lastName" : {
           "type" : "string"
         },
-        "firstName" : {
+        "companyName" : {
+          "type" : "string"
+        },
+        "civility" : {
+          "type" : "string"
+        },
+        "companyId" : {
           "type" : "string"
         }
       }
@@ -1066,21 +1066,8 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "addressId" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "undeliverabilityReason" : {
-          "type" : "string"
-        },
         "startDate" : {
           "type" : "string"
-        },
-        "endDate" : {
-          "type" : "string"
-        },
-        "forcingIndicator" : {
-          "type" : "boolean"
         },
         "personId" : {
           "type" : "integer",
@@ -1095,6 +1082,12 @@
         },
         "countryId" : {
           "type" : "string"
+        },
+        "endDate" : {
+          "type" : "string"
+        },
+        "forcingIndicator" : {
+          "type" : "boolean"
         },
         "city" : {
           "type" : "string"
@@ -1114,6 +1107,13 @@
         "street4" : {
           "type" : "string"
         },
+        "addressId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "undeliverabilityReason" : {
+          "type" : "string"
+        },
         "valid" : {
           "type" : "boolean"
         }
@@ -1124,13 +1124,13 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "identityNumber" : {
-          "type" : "string"
-        },
         "identityType" : {
           "type" : "string"
         },
         "validityDate" : {
+          "type" : "string"
+        },
+        "identityNumber" : {
           "type" : "string"
         }
       }
@@ -1183,12 +1183,12 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "phoneTypeId" : {
-          "type" : "string"
-        },
         "personId" : {
           "type" : "integer",
           "format" : "int64"
+        },
+        "phoneTypeId" : {
+          "type" : "string"
         }
       }
     },
@@ -1197,15 +1197,15 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "phoneId" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
         "phoneNumber" : {
           "type" : "string"
         },
         "phoneType" : {
           "type" : "string"
+        },
+        "phoneId" : {
+          "type" : "integer",
+          "format" : "int64"
         }
       }
     },
@@ -1216,6 +1216,10 @@
       "properties" : {
         "creationDate" : {
           "type" : "string"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
         },
         "userId" : {
           "type" : "string"
@@ -1231,10 +1235,6 @@
         },
         "subscriberSubCategory" : {
           "type" : "string"
-        },
-        "personId" : {
-          "type" : "integer",
-          "format" : "int64"
         },
         "emails" : {
           "type" : "array",
@@ -1322,10 +1322,10 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "emailType" : {
+        "email" : {
           "type" : "string"
         },
-        "email" : {
+        "emailType" : {
           "type" : "string"
         }
       }
@@ -1368,15 +1368,15 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
         "phoneTypeId" : {
           "type" : "string"
         },
         "invalidityReasonId" : {
           "type" : "string"
-        },
-        "personId" : {
-          "type" : "integer",
-          "format" : "int64"
         }
       }
     }

@@ -540,17 +540,17 @@
     "AddressValidateIn" : {
       "id" : "AddressValidateIn",
       "description" : "",
-      "required" : [ "addressTypeId", "personId" ],
+      "required" : [ "personId", "addressTypeId" ],
       "extends" : "",
       "properties" : {
-        "addressTypeId" : {
-          "type" : "string",
-          "description" : "type d'adresse"
-        },
         "personId" : {
           "type" : "integer",
           "format" : "int64",
           "description" : "Id de l’abonné"
+        },
+        "addressTypeId" : {
+          "type" : "string",
+          "description" : "type d'adresse"
         }
       }
     },
@@ -599,21 +599,8 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "addressId" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "undeliverabilityReason" : {
-          "type" : "string"
-        },
         "startDate" : {
           "type" : "string"
-        },
-        "endDate" : {
-          "type" : "string"
-        },
-        "forcingIndicator" : {
-          "type" : "boolean"
         },
         "personId" : {
           "type" : "integer",
@@ -628,6 +615,12 @@
         },
         "countryId" : {
           "type" : "string"
+        },
+        "endDate" : {
+          "type" : "string"
+        },
+        "forcingIndicator" : {
+          "type" : "boolean"
         },
         "city" : {
           "type" : "string"
@@ -645,6 +638,13 @@
           "type" : "string"
         },
         "street4" : {
+          "type" : "string"
+        },
+        "addressId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "undeliverabilityReason" : {
           "type" : "string"
         },
         "valid" : {
@@ -701,45 +701,41 @@
     "AddressInvalidateIn" : {
       "id" : "AddressInvalidateIn",
       "description" : "",
-      "required" : [ "invalidityReasonId", "pndcategory", "addressTypeId", "personId" ],
+      "required" : [ "personId", "invalidityReasonId", "addressTypeId", "pndcategory" ],
       "extends" : "",
       "properties" : {
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "Id de l’abonné"
+        },
         "invalidityReasonId" : {
           "type" : "string",
           "description" : "raison d'invalidation"
-        },
-        "pndcategory" : {
-          "type" : "string",
-          "description" : "Code de la catégorie de NPAI"
         },
         "addressTypeId" : {
           "type" : "string",
           "description" : "Definit le type d'adresse"
         },
-        "personId" : {
-          "type" : "integer",
-          "format" : "int64",
-          "description" : "Id de l’abonné"
+        "pndcategory" : {
+          "type" : "string",
+          "description" : "Code de la catégorie de NPAI"
         }
       }
     },
     "AddressIn" : {
       "id" : "AddressIn",
       "description" : "",
-      "required" : [ "forcingIndicator", "postalCode", "startDate", "personId", "addressType", "street1", "street2", "street3", "street4", "countryId", "city" ],
+      "required" : [ "postalCode", "startDate", "personId", "addressType", "street1", "street2", "street3", "street4", "countryId", "city", "forcingIndicator" ],
       "extends" : "",
       "properties" : {
-        "forcingIndicator" : {
-          "type" : "boolean",
-          "description" : "force l'adresse si celle ci n'est pas vérifiée"
-        },
         "postalCode" : {
           "type" : "string",
           "description" : "Le code postale de la ville"
         },
         "startDate" : {
           "type" : "string",
-          "description" : "date de début de validité de l'adresse, si vide date du jour par défaut"
+          "description" : "date de début de validité de l'adresse, si vide date du jour par défaut Format date attendu yyyymmdd"
         },
         "personId" : {
           "type" : "integer",
@@ -773,6 +769,10 @@
         "city" : {
           "type" : "string",
           "description" : "Le nom de la ville"
+        },
+        "forcingIndicator" : {
+          "type" : "boolean",
+          "description" : "force l'adresse si celle ci n'est pas vérifiée"
         }
       }
     }

@@ -113,40 +113,50 @@
       "extends" : "",
       "properties" : {
         "userId" : {
-          "type" : "string"
+          "type" : "string",
+          "description" : "Utilisateur effectuant l'opération"
         },
         "profile" : {
-          "type" : "string"
+          "type" : "string",
+          "description" : "Role de l'utilisateur"
         },
         "valid" : {
-          "type" : "boolean"
+          "type" : "boolean",
+          "description" : "Utilisateur activé/désactivé"
         },
         "userName" : {
-          "type" : "string"
+          "type" : "string",
+          "description" : "Nom/Prénom de l'utilisateur"
         }
       }
     },
     "UserIn" : {
       "id" : "UserIn",
       "description" : "",
+      "required" : [ "valid", "userId", "profile", "firstName", "lastName" ],
       "extends" : "",
       "properties" : {
         "valid" : {
-          "type" : "boolean"
-        },
-        "organization" : {
-          "type" : "string"
+          "type" : "boolean",
+          "description" : "Utilisateur activé/désactivé"
         },
         "userId" : {
-          "type" : "string"
+          "type" : "string",
+          "description" : "Utilisateur effectuant l'opération"
         },
         "profile" : {
-          "type" : "string"
-        },
-        "lastName" : {
-          "type" : "string"
+          "type" : "string",
+          "description" : "Role de l'utilisateur"
         },
         "firstName" : {
+          "type" : "string",
+          "description" : "Prénom de l'utilisateur"
+        },
+        "lastName" : {
+          "type" : "string",
+          "description" : "Nom de l'utilisateur"
+        },
+        "organization" : {
           "type" : "string"
         }
       }

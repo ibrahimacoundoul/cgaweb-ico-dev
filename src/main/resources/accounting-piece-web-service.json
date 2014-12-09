@@ -204,27 +204,6 @@
         "creationDate" : {
           "type" : "string"
         },
-        "accountingEntryGrpId" : {
-          "type" : "string"
-        },
-        "accountingPostLabel" : {
-          "type" : "string"
-        },
-        "vatRate" : {
-          "type" : "string"
-        },
-        "operatorLabel" : {
-          "type" : "string"
-        },
-        "axe2Account" : {
-          "type" : "string"
-        },
-        "crmLedgerLabel" : {
-          "type" : "string"
-        },
-        "accountingEntryId" : {
-          "type" : "string"
-        },
         "accountingDate" : {
           "type" : "string"
         },
@@ -233,6 +212,18 @@
         },
         "productLabel" : {
           "type" : "string"
+        },
+        "debit" : {
+          "type" : "number",
+          "format" : "float"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
         },
         "operatorId" : {
           "type" : "string"
@@ -255,14 +246,6 @@
         "actOfManagementId" : {
           "type" : "string"
         },
-        "personId" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "contractId" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
         "generalAccountingDetail" : {
           "$ref" : "GeneralAccountingDetail"
         },
@@ -282,12 +265,29 @@
         "rejectLabel" : {
           "type" : "string"
         },
-        "accountingPieceLabel" : {
+        "accountingEntryId" : {
           "type" : "string"
         },
-        "debit" : {
-          "type" : "number",
-          "format" : "float"
+        "crmLedgerLabel" : {
+          "type" : "string"
+        },
+        "accountingPostLabel" : {
+          "type" : "string"
+        },
+        "vatRate" : {
+          "type" : "string"
+        },
+        "operatorLabel" : {
+          "type" : "string"
+        },
+        "axe2Account" : {
+          "type" : "string"
+        },
+        "accountingEntryGrpId" : {
+          "type" : "string"
+        },
+        "accountingPieceLabel" : {
+          "type" : "string"
         },
         "month" : {
           "type" : "string"
@@ -299,10 +299,16 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "crmLedgerLabel" : {
+        "accountingDate" : {
           "type" : "string"
         },
-        "crmOperatorLabel" : {
+        "crmLedgerId" : {
+          "type" : "string"
+        },
+        "crmOperatorId" : {
+          "type" : "string"
+        },
+        "sapOperatorId" : {
           "type" : "string"
         },
         "transfertDate" : {
@@ -314,16 +320,10 @@
             "$ref" : "AccountingEntry"
           }
         },
-        "crmOperatorId" : {
+        "crmOperatorLabel" : {
           "type" : "string"
         },
-        "sapOperatorId" : {
-          "type" : "string"
-        },
-        "accountingDate" : {
-          "type" : "string"
-        },
-        "crmLedgerId" : {
+        "crmLedgerLabel" : {
           "type" : "string"
         },
         "accountingPieceLabel" : {
@@ -359,13 +359,7 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "generalAccount" : {
-          "type" : "string"
-        },
-        "operationalAccount" : {
-          "type" : "string"
-        },
-        "budgetingAccount" : {
+        "sapOperatorId" : {
           "type" : "string"
         },
         "operationalNature" : {
@@ -380,7 +374,13 @@
         "sapLedgerLabel" : {
           "type" : "string"
         },
-        "sapOperatorId" : {
+        "generalAccount" : {
+          "type" : "string"
+        },
+        "operationalAccount" : {
+          "type" : "string"
+        },
+        "budgetingAccount" : {
           "type" : "string"
         }
       }
@@ -390,6 +390,23 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "debit" : {
+          "type" : "number",
+          "format" : "float"
+        },
+        "vatId" : {
+          "type" : "string"
+        },
+        "credit" : {
+          "type" : "number",
+          "format" : "float"
+        },
+        "operationalNature" : {
+          "type" : "string"
+        },
+        "budgetingNature" : {
+          "type" : "string"
+        },
         "generalAccount" : {
           "type" : "string"
         },
@@ -405,23 +422,6 @@
         },
         "axe2Account" : {
           "type" : "string"
-        },
-        "operationalNature" : {
-          "type" : "string"
-        },
-        "budgetingNature" : {
-          "type" : "string"
-        },
-        "vatId" : {
-          "type" : "string"
-        },
-        "credit" : {
-          "type" : "number",
-          "format" : "float"
-        },
-        "debit" : {
-          "type" : "number",
-          "format" : "float"
         }
       }
     }

@@ -235,6 +235,9 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "authorizationNumber" : {
+          "type" : "string"
+        },
         "creditCardType" : {
           "type" : "string"
         },
@@ -245,10 +248,8 @@
           "type" : "string"
         },
         "expirationDate" : {
-          "type" : "string"
-        },
-        "authorizationNumber" : {
-          "type" : "string"
+          "type" : "string",
+          "description" : "Format date attendu yyyymm"
         },
         "owner" : {
           "type" : "string"
@@ -328,15 +329,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "civility" : {
-          "type" : "string"
-        },
-        "companyName" : {
-          "type" : "string"
-        },
-        "companyId" : {
-          "type" : "string"
-        },
         "numIdent" : {
           "type" : "string"
         },
@@ -346,10 +338,19 @@
         "subscriberSubCategory" : {
           "type" : "string"
         },
+        "firstName" : {
+          "type" : "string"
+        },
         "lastName" : {
           "type" : "string"
         },
-        "firstName" : {
+        "companyName" : {
+          "type" : "string"
+        },
+        "civility" : {
+          "type" : "string"
+        },
+        "companyId" : {
           "type" : "string"
         }
       }
@@ -383,7 +384,8 @@
           "type" : "string"
         },
         "expirationDate" : {
-          "type" : "string"
+          "type" : "string",
+          "description" : "Format date attendu yyyymm"
         },
         "number" : {
           "type" : "string"
@@ -414,12 +416,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "phones" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "PhoneCommon"
-          }
-        },
         "commercialOperators" : {
           "type" : "array",
           "uniqueItems" : true,
@@ -445,6 +441,12 @@
         "sponsorId" : {
           "type" : "integer",
           "format" : "int64"
+        },
+        "phones" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "PhoneCommon"
+          }
         },
         "address" : {
           "$ref" : "AddressCommon"
@@ -496,9 +498,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "forcingIndicator" : {
-          "type" : "boolean"
-        },
         "postalCode" : {
           "type" : "string"
         },
@@ -519,6 +518,9 @@
         },
         "city" : {
           "type" : "string"
+        },
+        "forcingIndicator" : {
+          "type" : "boolean"
         }
       }
     },
@@ -550,9 +552,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "cb" : {
-          "$ref" : "CreditCardWithOwner"
-        },
         "iban" : {
           "$ref" : "Iban"
         },
@@ -575,6 +574,9 @@
         },
         "phone" : {
           "$ref" : "EligiblePhoneIn"
+        },
+        "cb" : {
+          "$ref" : "CreditCardWithOwner"
         }
       }
     },

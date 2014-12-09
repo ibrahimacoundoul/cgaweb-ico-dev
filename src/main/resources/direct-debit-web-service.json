@@ -277,12 +277,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "iban" : {
-          "type" : "string"
-        },
-        "bic" : {
-          "type" : "string"
-        },
         "accountingDate" : {
           "type" : "string"
         },
@@ -299,9 +293,18 @@
           "type" : "number",
           "format" : "double"
         },
+        "iban" : {
+          "type" : "string"
+        },
+        "bic" : {
+          "type" : "string"
+        },
         "rejectId" : {
           "type" : "integer",
           "format" : "int32"
+        },
+        "rejectCode" : {
+          "type" : "string"
         },
         "isIntentional" : {
           "type" : "string"
@@ -320,9 +323,6 @@
           "type" : "string"
         },
         "isRepresentable" : {
-          "type" : "string"
-        },
-        "rejectCode" : {
           "type" : "string"
         },
         "month" : {

@@ -1243,11 +1243,11 @@
         "genericProduct" : {
           "type" : "boolean"
         },
-        "technicalOffer" : {
-          "type" : "boolean"
-        },
         "productCategory" : {
           "type" : "string"
+        },
+        "technicalOffer" : {
+          "type" : "boolean"
         },
         "label" : {
           "type" : "string"
@@ -1371,9 +1371,14 @@
     "PNDCategoriesCodeTable" : {
       "id" : "PNDCategoriesCodeTable",
       "description" : "",
-      "required" : [ "marketing", "administration", "numberOfPND" ],
+      "required" : [ "numberOfPND", "marketing", "administration" ],
       "extends" : "",
       "properties" : {
+        "numberOfPND" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "Nombre de retour PND sur cette catégorie pour effectivement invalider l'adresse"
+        },
         "marketing" : {
           "type" : "boolean",
           "description" : "Si '1', indique que cette catégorie est de type marketing"
@@ -1381,11 +1386,6 @@
         "administration" : {
           "type" : "boolean",
           "description" : "Si '1', indique que cette catégorie est de type gestion"
-        },
-        "numberOfPND" : {
-          "type" : "integer",
-          "format" : "int32",
-          "description" : "Nombre de retour PND sur cette catégorie pour effectivement invalider l'adresse"
         },
         "label" : {
           "type" : "string"
@@ -1516,7 +1516,7 @@
             "type" : "string"
           }
         },
-        "isRecurrentCB" : {
+        "isFree" : {
           "type" : "boolean"
         },
         "isCash" : {
@@ -1525,7 +1525,7 @@
         "isDirectDebit" : {
           "type" : "boolean"
         },
-        "isFree" : {
+        "isRecurrentCB" : {
           "type" : "boolean"
         },
         "label" : {
@@ -1616,9 +1616,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "isBankTransfer" : {
-          "type" : "boolean"
-        },
         "isPayment" : {
           "type" : "boolean"
         },
@@ -1635,6 +1632,9 @@
           "type" : "boolean"
         },
         "isRefund" : {
+          "type" : "boolean"
+        },
+        "isBankTransfer" : {
           "type" : "boolean"
         },
         "isMultiple" : {
@@ -1906,25 +1906,25 @@
         "catCliLab" : {
           "type" : "string"
         },
+        "origId" : {
+          "type" : "string"
+        },
         "catCliDetId" : {
           "type" : "string"
         },
         "catCliDetLab" : {
           "type" : "string"
         },
-        "origId" : {
-          "type" : "string"
-        },
         "origLab" : {
           "type" : "string"
-        },
-        "cidentSubCat" : {
-          "$ref" : "CodeIdent"
         },
         "catCliDetVip" : {
           "type" : "boolean"
         },
         "cidentOrig" : {
+          "$ref" : "CodeIdent"
+        },
+        "cidentSubCat" : {
           "$ref" : "CodeIdent"
         }
       }
@@ -1953,7 +1953,7 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "indEngagement" : {
+        "impaye" : {
           "type" : "string"
         },
         "initiativeAbonne" : {
@@ -1962,7 +1962,7 @@
         "initiativeCanal" : {
           "type" : "string"
         },
-        "impaye" : {
+        "indEngagement" : {
           "type" : "string"
         },
         "label" : {

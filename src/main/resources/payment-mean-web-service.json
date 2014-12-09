@@ -77,7 +77,7 @@
         "description" : "Informations de carte de credit",
         "defaultValue" : "",
         "required" : true,
-        "type" : "CreditCardPaymentMeansDto",
+        "type" : "CreditCardPaymentMeansIn",
         "paramType" : "body",
         "allowMultiple" : false
       } ],
@@ -445,7 +445,7 @@
       "method" : "POST",
       "summary" : "Effectuer un remboursement sur une transaction bancaire",
       "notes" : "createRefundTransaction",
-      "type" : "ResponseWrapper«RefundTransactionResultDto»",
+      "type" : "ResponseWrapper«RefundTransactionResultOut»",
       "nickname" : "createRefundTransaction",
       "produces" : [ "application/json" ],
       "parameters" : [ {
@@ -520,7 +520,7 @@
         "description" : "Informations de necessaires au remboursement",
         "defaultValue" : "",
         "required" : true,
-        "type" : "RefundTransactionIntputDataDto",
+        "type" : "RefundTransactionIntputDataIn",
         "paramType" : "body",
         "allowMultiple" : false
       } ],
@@ -539,7 +539,7 @@
       }, {
         "code" : 200,
         "message" : "OK",
-        "responseModel" : "ResponseWrapper«RefundTransactionResultDto»"
+        "responseModel" : "ResponseWrapper«RefundTransactionResultOut»"
       } ],
       "deprecated" : "false"
     } ]
@@ -550,7 +550,7 @@
       "method" : "POST",
       "summary" : "Effectuer un paiement récurrent",
       "notes" : "createRecurrentPayment",
-      "type" : "ResponseWrapper«PaymentResultDto»",
+      "type" : "ResponseWrapper«PaymentResultOut»",
       "nickname" : "createRecurrentPayment",
       "produces" : [ "application/json" ],
       "parameters" : [ {
@@ -616,7 +616,7 @@
         "description" : "Informations de paiement recurrent",
         "defaultValue" : "",
         "required" : true,
-        "type" : "RecurrentPaymentDto",
+        "type" : "RecurrentPaymentIn",
         "paramType" : "body",
         "allowMultiple" : false
       } ],
@@ -635,7 +635,7 @@
       }, {
         "code" : 200,
         "message" : "OK",
-        "responseModel" : "ResponseWrapper«PaymentResultDto»"
+        "responseModel" : "ResponseWrapper«PaymentResultOut»"
       } ],
       "deprecated" : "false"
     } ]
@@ -724,7 +724,7 @@
       "method" : "POST",
       "summary" : "Effectuer un paiement one shot",
       "notes" : "createOneShotPayment",
-      "type" : "ResponseWrapper«PaymentResultDto»",
+      "type" : "ResponseWrapper«PaymentResultOut»",
       "nickname" : "createOneShotPayment",
       "produces" : [ "application/json" ],
       "parameters" : [ {
@@ -790,7 +790,7 @@
         "description" : "Informations de paiement immediat",
         "defaultValue" : "",
         "required" : true,
-        "type" : "OneShotPaymentDto",
+        "type" : "OneShotPaymentIn",
         "paramType" : "body",
         "allowMultiple" : false
       } ],
@@ -809,7 +809,7 @@
       }, {
         "code" : 200,
         "message" : "OK",
-        "responseModel" : "ResponseWrapper«PaymentResultDto»"
+        "responseModel" : "ResponseWrapper«PaymentResultOut»"
       } ],
       "deprecated" : "false"
     } ]
@@ -868,22 +868,6 @@
     } ]
   } ],
   "models" : {
-    "CreditCardPaymentMeansDto" : {
-      "id" : "CreditCardPaymentMeansDto",
-      "description" : "",
-      "extends" : "",
-      "properties" : {
-        "email" : {
-          "type" : "string"
-        },
-        "creditCard" : {
-          "$ref" : "CreditCardWithOwnerDto"
-        },
-        "transmissionDate" : {
-          "type" : "string"
-        }
-      }
-    },
     "ResponseWrapper«object»" : {
       "id" : "ResponseWrapper«object»",
       "description" : "",
@@ -901,23 +885,6 @@
         },
         "data" : {
           "$ref" : "object"
-        }
-      }
-    },
-    "RefundTransactionIntputDataDto" : {
-      "id" : "RefundTransactionIntputDataDto",
-      "description" : "",
-      "extends" : "",
-      "properties" : {
-        "amount" : {
-          "type" : "number",
-          "format" : "double"
-        },
-        "shopId" : {
-          "type" : "string"
-        },
-        "transmissionDate" : {
-          "type" : "string"
         }
       }
     },
@@ -954,6 +921,47 @@
         }
       }
     },
+    "RefundTransactionResultOut" : {
+      "id" : "RefundTransactionResultOut",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "movementId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "amountRefunded" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "refundTransactionId" : {
+          "type" : "integer",
+          "format" : "int64"
+        }
+      }
+    },
+    "CreditCardWithOwnerIn" : {
+      "id" : "CreditCardWithOwnerIn",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "cryptogram" : {
+          "type" : "string"
+        },
+        "expirationDate" : {
+          "type" : "string"
+        },
+        "number" : {
+          "type" : "string"
+        },
+        "owner" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        }
+      }
+    },
     "ThirdPayor" : {
       "id" : "ThirdPayor",
       "description" : "",
@@ -968,7 +976,7 @@
     "PaymentMeans" : {
       "id" : "PaymentMeans",
       "description" : "",
-      "required" : [ "iban", "contractId", "createdDate" ],
+      "required" : [ "iban", "createdDate", "contractId" ],
       "extends" : "",
       "properties" : {
         "iban" : {
@@ -978,13 +986,9 @@
         "bic" : {
           "type" : "string"
         },
-        "creditCard" : {
-          "$ref" : "CreditCardLight"
-        },
-        "directDebitDate" : {
-          "type" : "integer",
-          "format" : "int32",
-          "description" : "Jour de prélèvement"
+        "createdDate" : {
+          "type" : "string",
+          "description" : "Date de création du moyen de paiment, format mm/aa"
         },
         "methodOfPayment" : {
           "type" : "string"
@@ -994,9 +998,27 @@
           "format" : "int32",
           "description" : "Le contrat associé au moyen de paiement"
         },
-        "createdDate" : {
-          "type" : "string",
-          "description" : "Date de création du moyen de paiment, format mm/aa"
+        "creditCard" : {
+          "$ref" : "CreditCardLight"
+        },
+        "directDebitDate" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "Jour de prélèvement"
+        }
+      }
+    },
+    "RecurrentPaymentIn" : {
+      "id" : "RecurrentPaymentIn",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "amount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "shopId" : {
+          "type" : "string"
         }
       }
     },
@@ -1005,9 +1027,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "expiracyDate" : {
-          "type" : "string"
-        },
         "iban" : {
           "type" : "string"
         },
@@ -1016,26 +1035,9 @@
         },
         "cryptogram" : {
           "type" : "string"
-        }
-      }
-    },
-    "ResponseWrapper«RefundTransactionResultDto»" : {
-      "id" : "ResponseWrapper«RefundTransactionResultDto»",
-      "description" : "",
-      "extends" : "",
-      "properties" : {
-        "severity" : {
-          "type" : "string",
-          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
         },
-        "returnCode" : {
+        "expiracyDate" : {
           "type" : "string"
-        },
-        "message" : {
-          "type" : "string"
-        },
-        "data" : {
-          "$ref" : "RefundTransactionResultDto"
         }
       }
     },
@@ -1079,22 +1081,19 @@
         }
       }
     },
-    "RefundTransactionResultDto" : {
-      "id" : "RefundTransactionResultDto",
+    "CreditCardPaymentMeansIn" : {
+      "id" : "CreditCardPaymentMeansIn",
       "description" : "",
       "extends" : "",
       "properties" : {
-        "movementId" : {
-          "type" : "integer",
-          "format" : "int64"
+        "email" : {
+          "type" : "string"
         },
-        "amountRefunded" : {
-          "type" : "number",
-          "format" : "double"
+        "creditCard" : {
+          "$ref" : "CreditCardWithOwnerIn"
         },
-        "refundTransactionId" : {
-          "type" : "integer",
-          "format" : "int64"
+        "transmissionDate" : {
+          "type" : "string"
         }
       }
     },
@@ -1111,8 +1110,8 @@
         }
       }
     },
-    "ResponseWrapper«PaymentResultDto»" : {
-      "id" : "ResponseWrapper«PaymentResultDto»",
+    "ResponseWrapper«RefundTransactionResultOut»" : {
+      "id" : "ResponseWrapper«RefundTransactionResultOut»",
       "description" : "",
       "extends" : "",
       "properties" : {
@@ -1127,12 +1126,32 @@
           "type" : "string"
         },
         "data" : {
-          "$ref" : "PaymentResultDto"
+          "$ref" : "RefundTransactionResultOut"
         }
       }
     },
-    "PaymentResultDto" : {
-      "id" : "PaymentResultDto",
+    "ResponseWrapper«PaymentResultOut»" : {
+      "id" : "ResponseWrapper«PaymentResultOut»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "$ref" : "PaymentResultOut"
+        }
+      }
+    },
+    "OneShotPaymentIn" : {
+      "id" : "OneShotPaymentIn",
       "description" : "",
       "extends" : "",
       "properties" : {
@@ -1140,43 +1159,10 @@
           "type" : "number",
           "format" : "double"
         },
-        "transactionId" : {
-          "type" : "string"
+        "creditCard" : {
+          "$ref" : "CreditCardWithOwnerIn"
         },
-        "numpayonline" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "movementId" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "authorizationDate" : {
-          "type" : "string"
-        },
-        "authNumber" : {
-          "type" : "string"
-        }
-      }
-    },
-    "CreditCardWithOwnerDto" : {
-      "id" : "CreditCardWithOwnerDto",
-      "description" : "",
-      "extends" : "",
-      "properties" : {
-        "cryptogram" : {
-          "type" : "string"
-        },
-        "expirationDate" : {
-          "type" : "string"
-        },
-        "number" : {
-          "type" : "string"
-        },
-        "owner" : {
-          "type" : "string"
-        },
-        "type" : {
+        "shopId" : {
           "type" : "string"
         }
       }
@@ -1194,7 +1180,8 @@
         },
         "directDebitDate" : {
           "type" : "integer",
-          "format" : "int32"
+          "format" : "int32",
+          "description" : "Format date attendu yyyymmdd"
         }
       }
     },
@@ -1230,7 +1217,8 @@
           "type" : "string"
         },
         "expirationDate" : {
-          "type" : "string"
+          "type" : "string",
+          "description" : "Format date attendu yyyymm"
         },
         "number" : {
           "type" : "string"
@@ -1239,6 +1227,51 @@
           "type" : "string"
         },
         "type" : {
+          "type" : "string"
+        }
+      }
+    },
+    "RefundTransactionIntputDataIn" : {
+      "id" : "RefundTransactionIntputDataIn",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "amount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "shopId" : {
+          "type" : "string"
+        },
+        "transmissionDate" : {
+          "type" : "string"
+        }
+      }
+    },
+    "PaymentResultOut" : {
+      "id" : "PaymentResultOut",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "amount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "transactionId" : {
+          "type" : "string"
+        },
+        "numpayonline" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "movementId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "authNumber" : {
+          "type" : "string"
+        },
+        "authorizationDate" : {
           "type" : "string"
         }
       }
@@ -1268,15 +1301,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "civility" : {
-          "type" : "string"
-        },
-        "companyName" : {
-          "type" : "string"
-        },
-        "companyId" : {
-          "type" : "string"
-        },
         "numIdent" : {
           "type" : "string"
         },
@@ -1286,10 +1310,19 @@
         "subscriberSubCategory" : {
           "type" : "string"
         },
+        "firstName" : {
+          "type" : "string"
+        },
         "lastName" : {
           "type" : "string"
         },
-        "firstName" : {
+        "companyName" : {
+          "type" : "string"
+        },
+        "civility" : {
+          "type" : "string"
+        },
+        "companyId" : {
           "type" : "string"
         }
       }
@@ -1335,9 +1368,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "forcingIndicator" : {
-          "type" : "boolean"
-        },
         "postalCode" : {
           "type" : "string"
         },
@@ -1358,6 +1388,9 @@
         },
         "city" : {
           "type" : "string"
+        },
+        "forcingIndicator" : {
+          "type" : "boolean"
         }
       }
     },
@@ -1389,20 +1422,20 @@
             "$ref" : "PhoneCommon"
           }
         },
-        "thirdPayor" : {
-          "type" : "boolean"
+        "person" : {
+          "$ref" : "PersonProspect"
         },
         "orderId" : {
           "type" : "string"
-        },
-        "person" : {
-          "$ref" : "PersonProspect"
         },
         "email" : {
           "type" : "string"
         },
         "payment" : {
           "$ref" : "PaymentProspect"
+        },
+        "thirdPayor" : {
+          "type" : "boolean"
         },
         "address" : {
           "$ref" : "AddressCommon"
@@ -1432,23 +1465,6 @@
         },
         "prospect" : {
           "$ref" : "InitCreditCardProspectIn"
-        }
-      }
-    },
-    "OneShotPaymentDto" : {
-      "id" : "OneShotPaymentDto",
-      "description" : "",
-      "extends" : "",
-      "properties" : {
-        "amount" : {
-          "type" : "number",
-          "format" : "double"
-        },
-        "creditCard" : {
-          "$ref" : "CreditCardWithOwnerDto"
-        },
-        "shopId" : {
-          "type" : "string"
         }
       }
     },
@@ -1509,20 +1525,6 @@
         },
         "data" : {
           "$ref" : "InitCreditCardPaymentOut"
-        }
-      }
-    },
-    "RecurrentPaymentDto" : {
-      "id" : "RecurrentPaymentDto",
-      "description" : "",
-      "extends" : "",
-      "properties" : {
-        "amount" : {
-          "type" : "number",
-          "format" : "double"
-        },
-        "shopId" : {
-          "type" : "string"
         }
       }
     },

@@ -978,18 +978,18 @@
         "creationDate" : {
           "type" : "string"
         },
+        "motiveId" : {
+          "type" : "string"
+        },
+        "creationUser" : {
+          "type" : "string"
+        },
         "statusId" : {
           "type" : "string"
         },
         "actOfManagmentId" : {
           "type" : "integer",
           "format" : "int64"
-        },
-        "motiveId" : {
-          "type" : "string"
-        },
-        "creationUser" : {
-          "type" : "string"
         }
       }
     },
@@ -998,9 +998,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "civility" : {
-          "type" : "string"
-        },
         "postalCode" : {
           "type" : "string"
         },
@@ -1016,16 +1013,19 @@
         "street4" : {
           "type" : "string"
         },
-        "lastName" : {
+        "firstName" : {
           "type" : "string"
         },
-        "firstName" : {
+        "lastName" : {
           "type" : "string"
         },
         "countryId" : {
           "type" : "string"
         },
         "city" : {
+          "type" : "string"
+        },
+        "civility" : {
           "type" : "string"
         }
       }
@@ -1035,12 +1035,12 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "refundCheckInfo" : {
-          "$ref" : "RefundCheckInfo"
-        },
         "actOfManagementId" : {
           "type" : "integer",
           "format" : "int64"
+        },
+        "refundCheckInfo" : {
+          "$ref" : "RefundCheckInfo"
         }
       }
     },
@@ -1049,12 +1049,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "refundingMode" : {
-          "type" : "string"
-        },
-        "refundCheckInfo" : {
-          "$ref" : "RefundCheckInfo"
-        },
         "amount" : {
           "type" : "number",
           "format" : "double"
@@ -1069,6 +1063,12 @@
         },
         "motiveId" : {
           "type" : "string"
+        },
+        "refundingMode" : {
+          "type" : "string"
+        },
+        "refundCheckInfo" : {
+          "$ref" : "RefundCheckInfo"
         },
         "comment" : {
           "type" : "string"
@@ -1111,6 +1111,13 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "motiveId" : {
+          "type" : "string"
+        },
+        "maxamount" : {
+          "type" : "number",
+          "format" : "double"
+        },
         "motiveLabel" : {
           "type" : "string"
         },
@@ -1119,13 +1126,6 @@
           "items" : {
             "type" : "double"
           }
-        },
-        "motiveId" : {
-          "type" : "string"
-        },
-        "maxamount" : {
-          "type" : "number",
-          "format" : "double"
         }
       }
     },
@@ -1218,6 +1218,25 @@
           "type" : "integer",
           "format" : "int64"
         },
+        "amount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "operatorId" : {
+          "type" : "string"
+        },
+        "actOfManagementId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
         "creationUserId" : {
           "type" : "string"
         },
@@ -1229,25 +1248,6 @@
         },
         "chequeId" : {
           "type" : "string"
-        },
-        "amount" : {
-          "type" : "number",
-          "format" : "double"
-        },
-        "operatorId" : {
-          "type" : "string"
-        },
-        "actOfManagementId" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "personId" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "contractId" : {
-          "type" : "integer",
-          "format" : "int32"
         }
       }
     },
@@ -1300,10 +1300,10 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "motiveLabel" : {
+        "motiveId" : {
           "type" : "string"
         },
-        "motiveId" : {
+        "motiveLabel" : {
           "type" : "string"
         }
       }
@@ -1354,10 +1354,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "lettercheckid" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
         "actofmanagmentid" : {
           "type" : "integer",
           "format" : "int64"
@@ -1368,22 +1364,26 @@
         "accountingOperatorId" : {
           "type" : "string"
         },
+        "lettercheckid" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
         "actOfManagmentHistory" : {
           "type" : "array",
           "items" : {
             "$ref" : "ActOfManagmentHistory"
           }
         },
-        "firstName" : {
-          "type" : "string"
-        },
-        "lastName" : {
-          "type" : "string"
-        },
         "postalCode" : {
           "type" : "string"
         },
         "countryId" : {
+          "type" : "string"
+        },
+        "firstName" : {
+          "type" : "string"
+        },
+        "lastName" : {
           "type" : "string"
         },
         "civility" : {
@@ -1457,12 +1457,6 @@
             "$ref" : "Bill"
           }
         },
-        "refundingMode" : {
-          "type" : "string"
-        },
-        "refundCheckInfo" : {
-          "$ref" : "RefundCheckInfo"
-        },
         "amount" : {
           "type" : "number",
           "format" : "double"
@@ -1477,6 +1471,12 @@
         },
         "motiveId" : {
           "type" : "string"
+        },
+        "refundingMode" : {
+          "type" : "string"
+        },
+        "refundCheckInfo" : {
+          "$ref" : "RefundCheckInfo"
         },
         "comment" : {
           "type" : "string"

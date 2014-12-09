@@ -312,26 +312,9 @@
     "ConfigurationWithProductsEquipments" : {
       "id" : "ConfigurationWithProductsEquipments",
       "description" : "",
-      "required" : [ "sortOrder", "isIspId", "configCategoryLabel", "configCategory", "ispId" ],
+      "required" : [ "ispId", "sortOrder", "configCategory", "configCategoryLabel", "isIspId" ],
       "extends" : "",
       "properties" : {
-        "sortOrder" : {
-          "type" : "integer",
-          "format" : "int32",
-          "description" : "Colonne de tri"
-        },
-        "isIspId" : {
-          "type" : "string",
-          "description" : "Indicateur d'éligibilité auprès d'un FAI"
-        },
-        "configCategoryLabel" : {
-          "type" : "string",
-          "description" : "Libellé catégorie permettant de filtrer les configurations matérielles"
-        },
-        "configCategory" : {
-          "type" : "string",
-          "description" : "Code catégorie permettant de filtrer les configurations matérielles"
-        },
         "ispId" : {
           "type" : "string",
           "description" : "Code du FAI"
@@ -342,14 +325,31 @@
             "$ref" : "EquipmentTypeConfig"
           }
         },
-        "equipmentConfigLabel" : {
-          "type" : "string"
+        "sortOrder" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "Colonne de tri"
+        },
+        "configCategory" : {
+          "type" : "string",
+          "description" : "Code catégorie permettant de filtrer les configurations matérielles"
+        },
+        "configCategoryLabel" : {
+          "type" : "string",
+          "description" : "Libellé catégorie permettant de filtrer les configurations matérielles"
+        },
+        "isIspId" : {
+          "type" : "string",
+          "description" : "Indicateur d'éligibilité auprès d'un FAI"
         },
         "firstAmount" : {
           "type" : "number",
           "format" : "double"
         },
         "equipmentConfig" : {
+          "type" : "string"
+        },
+        "equipmentConfigLabel" : {
           "type" : "string"
         }
       }
@@ -365,14 +365,14 @@
             "$ref" : "EquipmentTypeResponse"
           }
         },
-        "equipmentConfigLabel" : {
-          "type" : "string"
-        },
         "firstAmount" : {
           "type" : "number",
           "format" : "double"
         },
         "equipmentConfig" : {
+          "type" : "string"
+        },
+        "equipmentConfigLabel" : {
           "type" : "string"
         }
       }
@@ -488,7 +488,7 @@
         },
         "startDate" : {
           "type" : "string",
-          "description" : "Date de début"
+          "description" : "Date de début Format date attendu yyyymmdd"
         },
         "contractId" : {
           "type" : "integer",
@@ -588,22 +588,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "sortOrder" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
-        "isIspId" : {
-          "type" : "string"
-        },
-        "configCategoryLabel" : {
-          "type" : "string"
-        },
-        "equipmentConfigLabel" : {
-          "type" : "string"
-        },
-        "configCategory" : {
-          "type" : "string"
-        },
         "ispId" : {
           "type" : "string"
         },
@@ -618,6 +602,22 @@
           "format" : "double"
         },
         "equipmentConfig" : {
+          "type" : "string"
+        },
+        "sortOrder" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "equipmentConfigLabel" : {
+          "type" : "string"
+        },
+        "configCategory" : {
+          "type" : "string"
+        },
+        "configCategoryLabel" : {
+          "type" : "string"
+        },
+        "isIspId" : {
           "type" : "string"
         }
       }
@@ -670,12 +670,6 @@
         "action" : {
           "type" : "string"
         },
-        "equipmentTypes" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "EquipmentTypeInput"
-          }
-        },
         "broadcastVectorId" : {
           "type" : "string"
         },
@@ -698,10 +692,17 @@
           "type" : "string"
         },
         "startDate" : {
-          "type" : "string"
+          "type" : "string",
+          "description" : "Format date attendu yyyymmdd"
         },
         "countryId" : {
           "type" : "string"
+        },
+        "equipmentTypes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "EquipmentTypeInput"
+          }
         }
       }
     },

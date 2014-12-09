@@ -279,6 +279,14 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "amount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "rejectId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
         "accountingPostId" : {
           "type" : "string"
         },
@@ -287,14 +295,6 @@
         },
         "vatId" : {
           "type" : "string"
-        },
-        "amount" : {
-          "type" : "number",
-          "format" : "double"
-        },
-        "rejectId" : {
-          "type" : "integer",
-          "format" : "int32"
         },
         "month" : {
           "type" : "string"
@@ -329,16 +329,16 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "actOfManagementId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
         "accountingPieceId" : {
           "type" : "integer",
           "format" : "int64"
         },
         "accountingReadjustedDate" : {
           "$ref" : "date-time"
-        },
-        "actOfManagementId" : {
-          "type" : "integer",
-          "format" : "int64"
         }
       }
     },
@@ -359,7 +359,8 @@
       "extends" : "",
       "properties" : {
         "accountingDate" : {
-          "type" : "string"
+          "type" : "string",
+          "description" : "Format date attendu yyyymmdd"
         },
         "contractId" : {
           "type" : "integer",
@@ -401,17 +402,16 @@
         "creationDate" : {
           "type" : "string"
         },
-        "accountingPieceId" : {
-          "type" : "string"
-        },
-        "statusId" : {
-          "type" : "string"
-        },
-        "creationUserId" : {
-          "type" : "string"
-        },
         "accountingDate" : {
           "type" : "string"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
         },
         "operatorId" : {
           "type" : "string"
@@ -423,15 +423,16 @@
           "type" : "integer",
           "format" : "int64"
         },
-        "personId" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "contractId" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
         "validationDate" : {
+          "type" : "string"
+        },
+        "accountingPieceId" : {
+          "type" : "string"
+        },
+        "creationUserId" : {
+          "type" : "string"
+        },
+        "statusId" : {
           "type" : "string"
         },
         "validationUser" : {

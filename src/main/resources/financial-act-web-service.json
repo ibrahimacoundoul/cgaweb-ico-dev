@@ -409,12 +409,12 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "checkId" : {
-          "type" : "string"
-        },
         "actOfManagementId" : {
           "type" : "integer",
           "format" : "int64"
+        },
+        "checkId" : {
+          "type" : "string"
         }
       }
     },
@@ -470,21 +470,17 @@
           "type" : "integer",
           "format" : "int64"
         },
-        "statusId" : {
-          "type" : "string"
-        },
-        "categoryId" : {
-          "type" : "string"
-        },
-        "creationUserId" : {
-          "type" : "string"
-        },
-        "needChequeId" : {
-          "type" : "boolean"
-        },
         "amount" : {
           "type" : "number",
           "format" : "double"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
         },
         "operatorId" : {
           "type" : "string"
@@ -496,13 +492,17 @@
         "motiveId" : {
           "type" : "string"
         },
-        "personId" : {
-          "type" : "integer",
-          "format" : "int64"
+        "creationUserId" : {
+          "type" : "string"
         },
-        "contractId" : {
-          "type" : "integer",
-          "format" : "int32"
+        "needChequeId" : {
+          "type" : "boolean"
+        },
+        "categoryId" : {
+          "type" : "string"
+        },
+        "statusId" : {
+          "type" : "string"
         }
       }
     },
@@ -534,10 +534,10 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "motiveLabel" : {
+        "motiveId" : {
           "type" : "string"
         },
-        "motiveId" : {
+        "motiveLabel" : {
           "type" : "string"
         }
       }
@@ -568,18 +568,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "statusId" : {
-          "type" : "string"
-        },
-        "categoryId" : {
-          "type" : "string"
-        },
-        "modeId" : {
-          "type" : "string"
-        },
-        "validationuserId" : {
-          "type" : "string"
-        },
         "sendDate" : {
           "type" : "integer",
           "format" : "int64"
@@ -596,6 +584,18 @@
           "type" : "integer",
           "format" : "int64"
         },
+        "validationuserId" : {
+          "type" : "string"
+        },
+        "modeId" : {
+          "type" : "string"
+        },
+        "categoryId" : {
+          "type" : "string"
+        },
+        "statusId" : {
+          "type" : "string"
+        },
         "comment" : {
           "type" : "string"
         },
@@ -603,15 +603,17 @@
           "type" : "integer",
           "format" : "int64"
         },
-        "creationUserId" : {
-          "type" : "string"
-        },
-        "needChequeId" : {
-          "type" : "boolean"
-        },
         "amount" : {
           "type" : "number",
           "format" : "double"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
         },
         "operatorId" : {
           "type" : "string"
@@ -623,13 +625,11 @@
         "motiveId" : {
           "type" : "string"
         },
-        "personId" : {
-          "type" : "integer",
-          "format" : "int64"
+        "creationUserId" : {
+          "type" : "string"
         },
-        "contractId" : {
-          "type" : "integer",
-          "format" : "int32"
+        "needChequeId" : {
+          "type" : "boolean"
         }
       }
     },
@@ -638,23 +638,13 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "categories" : {
-          "type" : "array",
-          "items" : {
-            "type" : "string"
-          }
-        },
-        "motives" : {
-          "type" : "array",
-          "items" : {
-            "type" : "string"
-          }
-        },
         "startDate" : {
-          "type" : "string"
+          "type" : "string",
+          "description" : "Format date attendu yyyymmdd"
         },
         "endDate" : {
-          "type" : "string"
+          "type" : "string",
+          "description" : "Format date attendu yyyymmdd"
         },
         "contractId" : {
           "type" : "integer",
@@ -663,6 +653,18 @@
         "personId" : {
           "type" : "integer",
           "format" : "int64"
+        },
+        "motives" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "categories" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
         },
         "status" : {
           "type" : "array",

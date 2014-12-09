@@ -56,10 +56,10 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "buildNumber" : {
+        "buildDate" : {
           "type" : "string"
         },
-        "buildDate" : {
+        "buildNumber" : {
           "type" : "string"
         },
         "version" : {
@@ -85,10 +85,10 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "sid" : {
+        "updatedDate" : {
           "type" : "string"
         },
-        "updatedDate" : {
+        "sid" : {
           "type" : "string"
         },
         "version" : {

@@ -184,11 +184,12 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "signatureDate" : {
+          "$ref" : "date-time",
+          "description" : "Format date attendu yyyymmdd"
+        },
         "signaturePlace" : {
           "type" : "string"
-        },
-        "signatureDate" : {
-          "$ref" : "date-time"
         },
         "contractId" : {
           "type" : "integer",

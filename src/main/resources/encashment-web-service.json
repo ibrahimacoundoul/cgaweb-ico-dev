@@ -841,17 +841,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "encashmentDate" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "actId" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "encashmentStatus" : {
-          "type" : "string"
-        },
         "amount" : {
           "type" : "number",
           "format" : "double"
@@ -873,6 +862,17 @@
         },
         "encashmentLogicalId" : {
           "type" : "string"
+        },
+        "encashmentStatus" : {
+          "type" : "string"
+        },
+        "encashmentDate" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "actId" : {
+          "type" : "integer",
+          "format" : "int64"
         }
       }
     },
@@ -902,10 +902,12 @@
       "extends" : "",
       "properties" : {
         "startDate" : {
-          "$ref" : "date-time"
+          "$ref" : "date-time",
+          "description" : "Format date attendu yyyymmdd"
         },
         "endDate" : {
-          "$ref" : "date-time"
+          "$ref" : "date-time",
+          "description" : "Format date attendu yyyymmdd"
         },
         "personId" : {
           "type" : "integer",
@@ -1007,19 +1009,21 @@
             "$ref" : "PaymentPerson"
           }
         },
-        "emissionDesk" : {
+        "encashmentimageid" : {
           "type" : "string"
         },
         "validationDate" : {
-          "type" : "string"
+          "type" : "string",
+          "description" : "Format date attendu yyyymmdd"
+        },
+        "bankDepositDate" : {
+          "type" : "string",
+          "description" : "Format date attendu yyyymmdd"
         },
         "cashOrderId" : {
           "type" : "string"
         },
-        "bankDepositDate" : {
-          "type" : "string"
-        },
-        "encashmentimageid" : {
+        "emissionDesk" : {
           "type" : "string"
         },
         "owner" : {
@@ -1056,11 +1060,12 @@
             "$ref" : "PaymentPerson"
           }
         },
-        "bankDepositDate" : {
-          "type" : "string"
-        },
         "encashmentimageid" : {
           "type" : "string"
+        },
+        "bankDepositDate" : {
+          "type" : "string",
+          "description" : "Format date attendu yyyymmdd"
         },
         "owner" : {
           "type" : "string"
@@ -1094,7 +1099,8 @@
           "type" : "string"
         },
         "expirationDate" : {
-          "type" : "string"
+          "type" : "string",
+          "description" : "Format date attendu yyyymm"
         },
         "number" : {
           "type" : "string"
@@ -1175,10 +1181,10 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "motiveLabel" : {
+        "motiveId" : {
           "type" : "string"
         },
-        "motiveId" : {
+        "motiveLabel" : {
           "type" : "string"
         }
       }
@@ -1251,14 +1257,15 @@
             "$ref" : "PaymentPerson"
           }
         },
-        "encashmentimageid" : {
-          "type" : "string"
-        },
         "cmc7" : {
           "type" : "string"
         },
-        "bankDepositDate" : {
+        "encashmentimageid" : {
           "type" : "string"
+        },
+        "bankDepositDate" : {
+          "type" : "string",
+          "description" : "Format date attendu yyyymmdd"
         },
         "owner" : {
           "type" : "string"
@@ -1310,12 +1317,12 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "rejectMotiveLabel" : {
-          "type" : "string"
-        },
         "rejectMotiveId" : {
           "type" : "integer",
           "format" : "int32"
+        },
+        "rejectMotiveLabel" : {
+          "type" : "string"
         }
       }
     },

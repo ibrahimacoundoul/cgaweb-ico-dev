@@ -89,24 +89,26 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "postalCode" : {
+          "type" : "string"
+        },
+        "startDate" : {
+          "type" : "string",
+          "description" : "Format date attendu yyyymmdd"
+        },
+        "endDate" : {
+          "type" : "string",
+          "description" : "Format date attendu yyyymmdd"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
         "promotions" : {
           "type" : "array",
           "items" : {
             "$ref" : "PromotionPayment"
           }
-        },
-        "postalCode" : {
-          "type" : "string"
-        },
-        "startDate" : {
-          "type" : "string"
-        },
-        "endDate" : {
-          "type" : "string"
-        },
-        "personId" : {
-          "type" : "integer",
-          "format" : "int64"
         },
         "products" : {
           "type" : "array",
@@ -177,10 +179,12 @@
           }
         },
         "firstMonth" : {
-          "type" : "string"
+          "type" : "string",
+          "description" : "Format date attendu yyyymmdd"
         },
         "lastMonth" : {
-          "type" : "string"
+          "type" : "string",
+          "description" : "Format date attendu yyyymmdd"
         }
       }
     },
