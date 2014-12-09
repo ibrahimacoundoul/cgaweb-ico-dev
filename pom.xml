@@ -47,7 +47,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<finalName>uber</finalName>
+					<finalName>kiss-swagger-monitoring-dep</finalName>
 				</configuration>
 			</plugin>
 		</plugins>
