@@ -69,8 +69,7 @@
 						<executions>
 							<execution>
 								<id>script-chmod</id>
-								<!--chmod sur le script d'excécution, de generation et de comit sur 
-									Github -->
+								<!--chmod sur le script de generation et de comit sur Github -->
 								<phase>compile</phase>
 								<goals>
 									<goal>exec</goal>
@@ -81,16 +80,6 @@
 										<argument>+x</argument>
 										<argument>kiss-swagger-check-change.sh</argument>
 									</arguments>
-								</configuration>
-							</execution>
-							<execution>
-								<id>kiss-swagger-commit</id>
-								<phase>compile</phase>
-								<goals>
-									<goal>exec</goal>
-								</goals>
-								<configuration>
-									<executable>kiss-swagger-check-change.sh</executable>
 								</configuration>
 							</execution>
 						</executions>
@@ -113,8 +102,7 @@
 						<executions>
 							<execution>
 								<id>script-chmod</id>
-								<!--chmod sur le script d'excécution, de generation et de comit sur 
-									Github -->
+								<!--chmod sur le script de generation et de comit sur Github -->
 								<phase>compile</phase>
 								<goals>
 									<goal>exec</goal>
@@ -125,16 +113,6 @@
 										<argument>+x</argument>
 										<argument>kiss-swagger-check-change.bat</argument>
 									</arguments>
-								</configuration>
-							</execution>
-							<execution>
-								<id>kiss-swagger-commit</id>
-								<phase>compile</phase>
-								<goals>
-									<goal>exec</goal>
-								</goals>
-								<configuration>
-									<executable>kiss-swagger-check-change.bat</executable>
 								</configuration>
 							</execution>
 						</executions>

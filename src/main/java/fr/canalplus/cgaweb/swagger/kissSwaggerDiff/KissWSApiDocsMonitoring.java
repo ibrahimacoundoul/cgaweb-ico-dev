@@ -50,7 +50,6 @@ public class KissWSApiDocsMonitoring {
 		String path = KISS_WS_API_DOCS_URL + wsPathName;
 		String response = callUrl(path);
 		manageWSResponseFile(wsPathName, response);
-		System.out.println("[" + wsPathName + "] : Response =>" + response + "\n");
 	}
 
 	/**
