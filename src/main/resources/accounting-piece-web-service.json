@@ -8,7 +8,7 @@
     "description" : "getAccountingWriting",
     "operations" : [ {
       "method" : "GET",
-      "summary" : "Récupère les écritures comptables à partir des informations d'un abonné",
+      "summary" : "Récupèrer les écritures comptables à partir des informations d'un abonné",
       "notes" : "getAccountingWriting",
       "type" : "ResponseWrapper«List«AccountingWriting»»",
       "nickname" : "getAccountingWriting",
