@@ -9,7 +9,7 @@
     "description" : "getActOfManagement",
     "operations" : [ {
       "method" : "GET",
-      "summary" : "Renvoie le detail du mouvement dont l'id est passé en paramètre",
+      "summary" : "Renvoie les détails du mouvement dont l'id est passé en paramètre",
       "notes" : "getActOfManagement",
       "type" : "ResponseWrapper«ActOfManagementWithDetails»",
       "nickname" : "getActOfManagement",
@@ -161,7 +161,7 @@
         "allowMultiple" : false
       }, {
         "name" : "saleDevice",
-        "description" : "Canal via lequel l'opération est effectuée",
+        "description" : "Canal par lequel l'opération est effectuée",
         "defaultValue" : "",
         "required" : false,
         "type" : "string",

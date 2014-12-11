@@ -93,7 +93,7 @@
     "description" : "getAccountingPiece",
     "operations" : [ {
       "method" : "GET",
-      "summary" : "Récupère les écritures comptables à partir d'un numéro d'une pièce comptable ",
+      "summary" : "Récupèrer les écritures comptables à partir d'un numéro d'une pièce comptable ",
       "notes" : "getAccountingPiece",
       "type" : "ResponseWrapper«AccountingPiece»",
       "nickname" : "getAccountingPiece",
@@ -150,7 +150,7 @@
         "allowMultiple" : false
       }, {
         "name" : "accountingPieceId",
-        "description" : "numero de piece comptable",
+        "description" : "numéro de pièce comptable",
         "defaultValue" : "",
         "required" : true,
         "type" : "integer",

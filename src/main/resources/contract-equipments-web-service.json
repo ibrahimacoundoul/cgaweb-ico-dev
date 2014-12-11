@@ -10,7 +10,7 @@
     "description" : "getEquipmentDetails",
     "operations" : [ {
       "method" : "GET",
-      "summary" : "Afficher les détails d'un équipement (il peut être lié à plusieurs contrats)",
+      "summary" : "Afficher les détails d'un équipement, il peut être lié à plusieurs contrats",
       "notes" : "getEquipmentDetails",
       "type" : "ResponseWrapper«List«ContractEquipmentDetailsResponse»»",
       "nickname" : "getEquipmentDetails",
@@ -1119,7 +1119,7 @@
         "allowMultiple" : false
       }, {
         "name" : "saleDevice",
-        "description" : "Canal via lequel l'opération est effectuée ",
+        "description" : "Canal par lequel l'opération est effectuée ",
         "defaultValue" : "",
         "required" : false,
         "type" : "string",
