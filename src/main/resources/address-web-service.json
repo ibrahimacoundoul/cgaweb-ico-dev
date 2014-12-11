@@ -602,6 +602,12 @@
         "startDate" : {
           "type" : "string"
         },
+        "endDate" : {
+          "type" : "string"
+        },
+        "forcingIndicator" : {
+          "type" : "boolean"
+        },
         "personId" : {
           "type" : "integer",
           "format" : "int64"
@@ -615,12 +621,6 @@
         },
         "countryId" : {
           "type" : "string"
-        },
-        "endDate" : {
-          "type" : "string"
-        },
-        "forcingIndicator" : {
-          "type" : "boolean"
         },
         "city" : {
           "type" : "string"

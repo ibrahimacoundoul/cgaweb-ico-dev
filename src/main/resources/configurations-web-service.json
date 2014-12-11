@@ -312,7 +312,7 @@
     "ConfigurationWithProductsEquipments" : {
       "id" : "ConfigurationWithProductsEquipments",
       "description" : "",
-      "required" : [ "ispId", "sortOrder", "configCategory", "configCategoryLabel", "isIspId" ],
+      "required" : [ "ispId", "sortOrder", "isIspId", "configCategoryLabel", "configCategory" ],
       "extends" : "",
       "properties" : {
         "ispId" : {
@@ -330,24 +330,24 @@
           "format" : "int32",
           "description" : "Colonne de tri"
         },
-        "configCategory" : {
+        "isIspId" : {
           "type" : "string",
-          "description" : "Code catégorie permettant de filtrer les configurations matérielles"
+          "description" : "Indicateur d'éligibilité auprès d'un FAI"
         },
         "configCategoryLabel" : {
           "type" : "string",
           "description" : "Libellé catégorie permettant de filtrer les configurations matérielles"
         },
-        "isIspId" : {
+        "configCategory" : {
           "type" : "string",
-          "description" : "Indicateur d'éligibilité auprès d'un FAI"
+          "description" : "Code catégorie permettant de filtrer les configurations matérielles"
+        },
+        "equipmentConfig" : {
+          "type" : "string"
         },
         "firstAmount" : {
           "type" : "number",
           "format" : "double"
-        },
-        "equipmentConfig" : {
-          "type" : "string"
         },
         "equipmentConfigLabel" : {
           "type" : "string"
@@ -365,12 +365,12 @@
             "$ref" : "EquipmentTypeResponse"
           }
         },
+        "equipmentConfig" : {
+          "type" : "string"
+        },
         "firstAmount" : {
           "type" : "number",
           "format" : "double"
-        },
-        "equipmentConfig" : {
-          "type" : "string"
         },
         "equipmentConfigLabel" : {
           "type" : "string"
@@ -591,6 +591,9 @@
         "ispId" : {
           "type" : "string"
         },
+        "equipmentConfig" : {
+          "type" : "string"
+        },
         "equipmentTypes" : {
           "type" : "array",
           "items" : {
@@ -601,23 +604,20 @@
           "type" : "number",
           "format" : "double"
         },
-        "equipmentConfig" : {
-          "type" : "string"
-        },
         "sortOrder" : {
           "type" : "integer",
           "format" : "int32"
         },
-        "equipmentConfigLabel" : {
+        "isIspId" : {
           "type" : "string"
         },
-        "configCategory" : {
+        "equipmentConfigLabel" : {
           "type" : "string"
         },
         "configCategoryLabel" : {
           "type" : "string"
         },
-        "isIspId" : {
+        "configCategory" : {
           "type" : "string"
         }
       }
@@ -724,10 +724,10 @@
         "deposit" : {
           "type" : "boolean"
         },
-        "rental" : {
+        "accessorie" : {
           "type" : "boolean"
         },
-        "accessorie" : {
+        "rental" : {
           "type" : "boolean"
         }
       }

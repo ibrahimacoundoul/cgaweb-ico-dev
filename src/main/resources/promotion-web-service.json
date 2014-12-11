@@ -486,9 +486,13 @@
     "InfosSubscriptionContextAndArticles" : {
       "id" : "InfosSubscriptionContextAndArticles",
       "description" : "",
-      "required" : [ "postalCode", "methodOfPayment", "broadcastVectorId", "ispId", "commercialOperator", "countryId", "dateToDate", "contextsousc", "broadcastMediaType", "productsId", "duration", "origin" ],
+      "required" : [ "contextsousc", "postalCode", "methodOfPayment", "broadcastVectorId", "ispId", "commercialOperator", "countryId", "dateToDate", "broadcastMediaType", "productsId", "duration", "origin" ],
       "extends" : "",
       "properties" : {
+        "contextsousc" : {
+          "type" : "string",
+          "description" : "code du contexte de souscription"
+        },
         "postalCode" : {
           "type" : "string",
           "description" : "code postal du contrat à souscrire"
@@ -516,10 +520,6 @@
         "dateToDate" : {
           "type" : "string",
           "description" : "indicateur de contrat date à date"
-        },
-        "contextsousc" : {
-          "type" : "string",
-          "description" : "code du contexte de souscription"
         },
         "broadcastMediaType" : {
           "type" : "string",
@@ -553,10 +553,10 @@
         "promotionId" : {
           "type" : "string"
         },
-        "enddate" : {
+        "shortLabel" : {
           "type" : "string"
         },
-        "shortLabel" : {
+        "enddate" : {
           "type" : "string"
         },
         "description" : {
@@ -616,8 +616,8 @@
         "internalPromotionId" : {
           "type" : "string"
         },
-        "removable" : {
-          "type" : "boolean"
+        "subType" : {
+          "type" : "string"
         },
         "maxCancelationDateAllowed" : {
           "type" : "string"
@@ -625,8 +625,8 @@
         "remainsAdvantages" : {
           "type" : "boolean"
         },
-        "subType" : {
-          "type" : "string"
+        "removable" : {
+          "type" : "boolean"
         },
         "type" : {
           "type" : "string"
@@ -637,10 +637,10 @@
         "promotionId" : {
           "type" : "string"
         },
-        "enddate" : {
+        "shortLabel" : {
           "type" : "string"
         },
-        "shortLabel" : {
+        "enddate" : {
           "type" : "string"
         },
         "description" : {

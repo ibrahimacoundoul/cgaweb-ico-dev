@@ -2407,16 +2407,16 @@
         "authorizationNumber" : {
           "type" : "string"
         },
-        "creditCardType" : {
-          "type" : "string"
-        },
-        "creditCardNumber" : {
-          "type" : "string"
-        },
         "expirationDate" : {
           "type" : "string"
         },
         "cryptogram" : {
+          "type" : "string"
+        },
+        "creditCardType" : {
+          "type" : "string"
+        },
+        "creditCardNumber" : {
           "type" : "string"
         },
         "owner" : {
@@ -2435,13 +2435,13 @@
         "methodOfPayment" : {
           "type" : "string"
         },
-        "methodOfPaymentLabel" : {
-          "type" : "string"
-        },
         "modificationUser" : {
           "type" : "string"
         },
         "modificationDate" : {
+          "type" : "string"
+        },
+        "methodOfPaymentLabel" : {
           "type" : "string"
         }
       }
@@ -2451,6 +2451,12 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "iban" : {
+          "type" : "string"
+        },
+        "bic" : {
+          "type" : "string"
+        },
         "accountingDate" : {
           "type" : "string"
         },
@@ -2467,25 +2473,9 @@
           "type" : "number",
           "format" : "double"
         },
-        "iban" : {
-          "type" : "string"
-        },
-        "bic" : {
-          "type" : "string"
-        },
         "rejectId" : {
           "type" : "integer",
           "format" : "int32"
-        },
-        "rejectCode" : {
-          "type" : "string"
-        },
-        "isIntentional" : {
-          "type" : "string"
-        },
-        "directDebitId" : {
-          "type" : "integer",
-          "format" : "int64"
         },
         "directDebitTypeLabel" : {
           "type" : "string"
@@ -2497,7 +2487,17 @@
           "type" : "string"
         },
         "isRepresentable" : {
+          "type" : "boolean"
+        },
+        "rejectCode" : {
           "type" : "string"
+        },
+        "isIntentional" : {
+          "type" : "boolean"
+        },
+        "directDebitId" : {
+          "type" : "integer",
+          "format" : "int64"
         },
         "month" : {
           "type" : "string"
@@ -2548,13 +2548,13 @@
         "commercialLabel" : {
           "type" : "string"
         },
+        "productCategory" : {
+          "type" : "string"
+        },
         "themeId" : {
           "type" : "string"
         },
         "productType" : {
-          "type" : "string"
-        },
-        "productCategory" : {
           "type" : "string"
         }
       }
@@ -2570,6 +2570,10 @@
         "commercialOperator" : {
           "type" : "string"
         },
+        "cancellationDate" : {
+          "type" : "string",
+          "description" : "Format date attendu yyyymmdd"
+        },
         "contractId" : {
           "type" : "integer",
           "format" : "int32"
@@ -2577,10 +2581,6 @@
         "personId" : {
           "type" : "integer",
           "format" : "int64"
-        },
-        "cancellationDate" : {
-          "type" : "string",
-          "description" : "Format date attendu yyyymmdd"
         },
         "cancellationReason" : {
           "type" : "string"
@@ -2612,9 +2612,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "authorizationNumber" : {
-          "type" : "string"
-        },
         "creditCardType" : {
           "type" : "string"
         },
@@ -2628,6 +2625,9 @@
           "type" : "string",
           "description" : "Format date attendu yyyymm"
         },
+        "authorizationNumber" : {
+          "type" : "string"
+        },
         "owner" : {
           "type" : "string"
         }
@@ -2638,10 +2638,10 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "equipmentType" : {
+        "equipmentId" : {
           "type" : "string"
         },
-        "equipmentId" : {
+        "equipmentType" : {
           "type" : "string"
         }
       }
@@ -2651,6 +2651,10 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "actOfManagementId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
         "personId" : {
           "type" : "integer",
           "format" : "int64"
@@ -2658,10 +2662,6 @@
         "contractId" : {
           "type" : "integer",
           "format" : "int32"
-        },
-        "actOfManagementId" : {
-          "type" : "integer",
-          "format" : "int64"
         },
         "actOfManagementCode" : {
           "type" : "string"
@@ -2711,15 +2711,15 @@
             "$ref" : "Equipment"
           }
         },
-        "equipmentConfig" : {
-          "type" : "string"
-        },
         "transactionId" : {
           "type" : "string"
         },
         "shipmentFees" : {
           "type" : "number",
           "format" : "double"
+        },
+        "equipmentConfig" : {
+          "type" : "string"
         },
         "reasonId" : {
           "type" : "string"
@@ -2811,6 +2811,21 @@
         "startDate" : {
           "type" : "string"
         },
+        "products" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ProductOwned"
+          }
+        },
+        "userId" : {
+          "type" : "string"
+        },
+        "endDate" : {
+          "type" : "string"
+        },
+        "cancellationDate" : {
+          "type" : "string"
+        },
         "ccatalogue" : {
           "type" : "string"
         },
@@ -2837,28 +2852,13 @@
         "commercialOperator" : {
           "type" : "string"
         },
-        "products" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "ProductOwned"
-          }
-        },
-        "userId" : {
-          "type" : "string"
-        },
-        "endDate" : {
-          "type" : "string"
-        },
-        "cancellationDate" : {
-          "type" : "string"
-        },
         "cancellationReason" : {
           "type" : "string"
         },
         "broadcastMediaType" : {
           "type" : "string"
         },
-        "updateUser" : {
+        "contractStatus" : {
           "type" : "string"
         },
         "equipmentConfig" : {
@@ -2883,9 +2883,6 @@
         "isReactivable" : {
           "type" : "boolean"
         },
-        "contractStatus" : {
-          "type" : "string"
-        },
         "contractActivity" : {
           "type" : "string"
         },
@@ -2906,6 +2903,9 @@
           "format" : "int64"
         },
         "distributorId" : {
+          "type" : "string"
+        },
+        "updateUser" : {
           "type" : "string"
         },
         "duration" : {
@@ -2995,6 +2995,21 @@
         "startDate" : {
           "type" : "string"
         },
+        "products" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ProductOwned"
+          }
+        },
+        "userId" : {
+          "type" : "string"
+        },
+        "endDate" : {
+          "type" : "string"
+        },
+        "cancellationDate" : {
+          "type" : "string"
+        },
         "ccatalogue" : {
           "type" : "string"
         },
@@ -3018,28 +3033,13 @@
         "commercialOperator" : {
           "type" : "string"
         },
-        "products" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "ProductOwned"
-          }
-        },
-        "userId" : {
-          "type" : "string"
-        },
-        "endDate" : {
-          "type" : "string"
-        },
-        "cancellationDate" : {
-          "type" : "string"
-        },
         "cancellationReason" : {
           "type" : "string"
         },
         "broadcastMediaType" : {
           "type" : "string"
         },
-        "updateUser" : {
+        "contractStatus" : {
           "type" : "string"
         },
         "equipmentConfig" : {
@@ -3070,9 +3070,6 @@
         "isReactivable" : {
           "type" : "boolean"
         },
-        "contractStatus" : {
-          "type" : "string"
-        },
         "contractActivity" : {
           "type" : "string"
         },
@@ -3098,6 +3095,9 @@
         "distributorId" : {
           "type" : "string"
         },
+        "updateUser" : {
+          "type" : "string"
+        },
         "duration" : {
           "type" : "integer",
           "format" : "int32"
@@ -3115,6 +3115,10 @@
         "commercialOperator" : {
           "type" : "string"
         },
+        "cancellationDate" : {
+          "type" : "string",
+          "description" : "Format date attendu yyyymmdd"
+        },
         "contractId" : {
           "type" : "integer",
           "format" : "int32"
@@ -3122,10 +3126,6 @@
         "personId" : {
           "type" : "integer",
           "format" : "int64"
-        },
-        "cancellationDate" : {
-          "type" : "string",
-          "description" : "Format date attendu yyyymmdd"
         },
         "cancellationReason" : {
           "type" : "string"
@@ -3162,9 +3162,6 @@
           "type" : "integer",
           "format" : "int32"
         },
-        "authorizationNumber" : {
-          "type" : "string"
-        },
         "creditCardType" : {
           "type" : "string"
         },
@@ -3177,6 +3174,9 @@
         "expirationDate" : {
           "type" : "string",
           "description" : "Format date attendu yyyymm"
+        },
+        "authorizationNumber" : {
+          "type" : "string"
         },
         "owner" : {
           "type" : "string"
@@ -3194,6 +3194,12 @@
         "startDate" : {
           "type" : "string"
         },
+        "userId" : {
+          "type" : "string"
+        },
+        "endDate" : {
+          "type" : "string"
+        },
         "personId" : {
           "type" : "integer",
           "format" : "int64"
@@ -3205,16 +3211,10 @@
         "commercialOperator" : {
           "type" : "string"
         },
-        "userId" : {
-          "type" : "string"
-        },
-        "endDate" : {
-          "type" : "string"
-        },
         "broadcastMediaType" : {
           "type" : "string"
         },
-        "updateUser" : {
+        "contractStatus" : {
           "type" : "string"
         },
         "signatureDate" : {
@@ -3227,13 +3227,13 @@
           "type" : "integer",
           "format" : "int32"
         },
-        "contractStatus" : {
-          "type" : "string"
-        },
         "fullValidationStatus" : {
           "type" : "string"
         },
         "distributorId" : {
+          "type" : "string"
+        },
+        "updateUser" : {
           "type" : "string"
         },
         "duration" : {
@@ -3401,13 +3401,13 @@
         "digitalMandate" : {
           "type" : "boolean"
         },
-        "sendContract" : {
-          "type" : "boolean"
-        },
         "sendMandate" : {
           "type" : "boolean"
         },
         "digitalContract" : {
+          "type" : "boolean"
+        },
+        "sendContract" : {
           "type" : "boolean"
         }
       }
@@ -3550,15 +3550,15 @@
           "type" : "number",
           "format" : "double"
         },
+        "unpaid" : {
+          "type" : "number",
+          "format" : "double"
+        },
         "pendingCredit" : {
           "type" : "number",
           "format" : "double"
         },
         "pendingRefund" : {
-          "type" : "number",
-          "format" : "double"
-        },
-        "unpaid" : {
           "type" : "number",
           "format" : "double"
         }
@@ -3610,6 +3610,9 @@
         "commercialOperator" : {
           "type" : "string"
         },
+        "payment" : {
+          "$ref" : "PaymentMeans"
+        },
         "origin" : {
           "type" : "string"
         },
@@ -3626,15 +3629,12 @@
           "type" : "integer",
           "format" : "int32"
         },
-        "payment" : {
-          "$ref" : "PaymentMeans"
-        },
-        "freeMethodOfPaymentReason" : {
-          "type" : "string"
-        },
         "sponsorId" : {
           "type" : "integer",
           "format" : "int64"
+        },
+        "freeMethodOfPaymentReason" : {
+          "type" : "string"
         }
       }
     },
@@ -3697,6 +3697,21 @@
         "startDate" : {
           "type" : "string"
         },
+        "products" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ProductOwned"
+          }
+        },
+        "userId" : {
+          "type" : "string"
+        },
+        "endDate" : {
+          "type" : "string"
+        },
+        "cancellationDate" : {
+          "type" : "string"
+        },
         "ccatalogue" : {
           "type" : "string"
         },
@@ -3720,28 +3735,13 @@
         "commercialOperator" : {
           "type" : "string"
         },
-        "products" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "ProductOwned"
-          }
-        },
-        "userId" : {
-          "type" : "string"
-        },
-        "endDate" : {
-          "type" : "string"
-        },
-        "cancellationDate" : {
-          "type" : "string"
-        },
         "cancellationReason" : {
           "type" : "string"
         },
         "broadcastMediaType" : {
           "type" : "string"
         },
-        "updateUser" : {
+        "contractStatus" : {
           "type" : "string"
         },
         "equipmentConfig" : {
@@ -3778,9 +3778,6 @@
         "commercialOperatorLabel" : {
           "type" : "string"
         },
-        "contractStatus" : {
-          "type" : "string"
-        },
         "contractActivity" : {
           "type" : "string"
         },
@@ -3807,6 +3804,9 @@
           "type" : "boolean"
         },
         "distributorId" : {
+          "type" : "string"
+        },
+        "updateUser" : {
           "type" : "string"
         },
         "duration" : {
@@ -3948,6 +3948,12 @@
         "startDate" : {
           "type" : "string"
         },
+        "endDate" : {
+          "type" : "string"
+        },
+        "cancellationDate" : {
+          "type" : "string"
+        },
         "personId" : {
           "type" : "integer",
           "format" : "int64"
@@ -3968,16 +3974,13 @@
         "commercialOperator" : {
           "type" : "string"
         },
-        "endDate" : {
-          "type" : "string"
-        },
-        "cancellationDate" : {
-          "type" : "string"
-        },
         "cancellationReason" : {
           "type" : "string"
         },
         "broadcastMediaType" : {
+          "type" : "string"
+        },
+        "contractStatus" : {
           "type" : "string"
         },
         "financialIncidentInProgress" : {
@@ -4012,9 +4015,6 @@
           "type" : "string"
         },
         "ongoingCancellationCreationDate" : {
-          "type" : "string"
-        },
-        "contractStatus" : {
           "type" : "string"
         },
         "contractActivity" : {
@@ -4168,10 +4168,10 @@
         "commercialLabel" : {
           "type" : "string"
         },
-        "productType" : {
+        "productCategory" : {
           "type" : "string"
         },
-        "productCategory" : {
+        "productType" : {
           "type" : "string"
         }
       }

@@ -277,6 +277,12 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "iban" : {
+          "type" : "string"
+        },
+        "bic" : {
+          "type" : "string"
+        },
         "accountingDate" : {
           "type" : "string"
         },
@@ -293,25 +299,9 @@
           "type" : "number",
           "format" : "double"
         },
-        "iban" : {
-          "type" : "string"
-        },
-        "bic" : {
-          "type" : "string"
-        },
         "rejectId" : {
           "type" : "integer",
           "format" : "int32"
-        },
-        "rejectCode" : {
-          "type" : "string"
-        },
-        "isIntentional" : {
-          "type" : "string"
-        },
-        "directDebitId" : {
-          "type" : "integer",
-          "format" : "int64"
         },
         "directDebitTypeLabel" : {
           "type" : "string"
@@ -323,7 +313,17 @@
           "type" : "string"
         },
         "isRepresentable" : {
+          "type" : "boolean"
+        },
+        "rejectCode" : {
           "type" : "string"
+        },
+        "isIntentional" : {
+          "type" : "boolean"
+        },
+        "directDebitId" : {
+          "type" : "integer",
+          "format" : "int64"
         },
         "month" : {
           "type" : "string"

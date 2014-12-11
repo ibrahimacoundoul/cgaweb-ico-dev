@@ -930,13 +930,13 @@
           "type" : "integer",
           "format" : "int64"
         },
-        "amountRefunded" : {
-          "type" : "number",
-          "format" : "double"
-        },
         "refundTransactionId" : {
           "type" : "integer",
           "format" : "int64"
+        },
+        "amountRefunded" : {
+          "type" : "number",
+          "format" : "double"
         }
       }
     },
@@ -976,7 +976,7 @@
     "PaymentMeans" : {
       "id" : "PaymentMeans",
       "description" : "",
-      "required" : [ "iban", "createdDate", "contractId" ],
+      "required" : [ "iban", "contractId", "createdDate" ],
       "extends" : "",
       "properties" : {
         "iban" : {
@@ -986,9 +986,8 @@
         "bic" : {
           "type" : "string"
         },
-        "createdDate" : {
-          "type" : "string",
-          "description" : "Date de création du moyen de paiment, format mm/aa"
+        "creditCard" : {
+          "$ref" : "CreditCardLight"
         },
         "methodOfPayment" : {
           "type" : "string"
@@ -998,13 +997,14 @@
           "format" : "int32",
           "description" : "Le contrat associé au moyen de paiement"
         },
-        "creditCard" : {
-          "$ref" : "CreditCardLight"
-        },
         "directDebitDate" : {
           "type" : "integer",
           "format" : "int32",
           "description" : "Jour de prélèvement"
+        },
+        "createdDate" : {
+          "type" : "string",
+          "description" : "Date de création du moyen de paiment, format mm/aa"
         }
       }
     },
@@ -1316,13 +1316,13 @@
         "lastName" : {
           "type" : "string"
         },
-        "companyName" : {
-          "type" : "string"
-        },
         "civility" : {
           "type" : "string"
         },
         "companyId" : {
+          "type" : "string"
+        },
+        "companyName" : {
           "type" : "string"
         }
       }
@@ -1422,9 +1422,6 @@
             "$ref" : "PhoneCommon"
           }
         },
-        "person" : {
-          "$ref" : "PersonProspect"
-        },
         "orderId" : {
           "type" : "string"
         },
@@ -1433,6 +1430,9 @@
         },
         "payment" : {
           "$ref" : "PaymentProspect"
+        },
+        "person" : {
+          "$ref" : "PersonProspect"
         },
         "thirdPayor" : {
           "type" : "boolean"
@@ -1533,11 +1533,11 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "bankCustomerId" : {
+        "movementId" : {
           "type" : "integer",
           "format" : "int64"
         },
-        "movementId" : {
+        "bankCustomerId" : {
           "type" : "integer",
           "format" : "int64"
         }

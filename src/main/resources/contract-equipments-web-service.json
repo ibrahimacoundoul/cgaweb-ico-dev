@@ -1168,9 +1168,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "newequipmentType" : {
-          "type" : "string"
-        },
         "newequipmentId" : {
           "type" : "string"
         },
@@ -1178,6 +1175,9 @@
           "type" : "string"
         },
         "oldequipmentId" : {
+          "type" : "string"
+        },
+        "newequipmentType" : {
           "type" : "string"
         }
       }
@@ -1268,12 +1268,12 @@
           "type" : "integer",
           "format" : "int64"
         },
-        "equipmentConfig" : {
-          "type" : "string"
-        },
         "shipmentFees" : {
           "type" : "number",
           "format" : "double"
+        },
+        "equipmentConfig" : {
+          "type" : "string"
         },
         "reasonId" : {
           "type" : "string"
@@ -1297,10 +1297,10 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "equipmentType" : {
+        "equipmentId" : {
           "type" : "string"
         },
-        "equipmentId" : {
+        "equipmentType" : {
           "type" : "string"
         }
       }
@@ -1324,10 +1324,10 @@
           "type" : "integer",
           "format" : "int64"
         },
-        "equipmentConfig" : {
+        "transactionId" : {
           "type" : "string"
         },
-        "transactionId" : {
+        "equipmentConfig" : {
           "type" : "string"
         },
         "reasonId" : {
@@ -1351,9 +1351,6 @@
           "type" : "integer",
           "format" : "int64"
         },
-        "equipmentConfig" : {
-          "type" : "string"
-        },
         "transactionId" : {
           "type" : "string"
         },
@@ -1363,6 +1360,9 @@
         "shipmentFees" : {
           "type" : "number",
           "format" : "double"
+        },
+        "equipmentConfig" : {
+          "type" : "string"
         },
         "reasonId" : {
           "type" : "string"
@@ -1523,10 +1523,6 @@
         "logisticReason" : {
           "type" : "string"
         },
-        "sortOrder" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
         "reasonLabel" : {
           "type" : "string"
         },
@@ -1536,6 +1532,10 @@
         "isDisplayable" : {
           "type" : "integer",
           "format" : "int32"
+        },
+        "sortOrder" : {
+          "type" : "integer",
+          "format" : "int64"
         }
       }
     },
@@ -1634,6 +1634,9 @@
         "creationDate" : {
           "type" : "string"
         },
+        "userId" : {
+          "type" : "string"
+        },
         "personId" : {
           "type" : "integer",
           "format" : "int64"
@@ -1646,9 +1649,6 @@
           "type" : "string"
         },
         "ispId" : {
-          "type" : "string"
-        },
-        "userId" : {
           "type" : "string"
         },
         "broadcastMediaType" : {
@@ -1783,10 +1783,6 @@
           "format" : "int64",
           "description" : "Id de l'abonné"
         },
-        "equipmentConfig" : {
-          "type" : "string",
-          "description" : "Code de la configuration d'accessoires"
-        },
         "creditCard" : {
           "$ref" : "CreditCardWithOwner"
         },
@@ -1794,6 +1790,10 @@
           "type" : "number",
           "format" : "double",
           "description" : "Montant des frais d'expédition"
+        },
+        "equipmentConfig" : {
+          "type" : "string",
+          "description" : "Code de la configuration d'accessoires"
         },
         "affectationType" : {
           "type" : "string",

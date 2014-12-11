@@ -1906,13 +1906,16 @@
         "catCliLab" : {
           "type" : "string"
         },
-        "origId" : {
-          "type" : "string"
+        "cidentSubCat" : {
+          "$ref" : "CodeIdent"
         },
         "catCliDetId" : {
           "type" : "string"
         },
         "catCliDetLab" : {
+          "type" : "string"
+        },
+        "origId" : {
           "type" : "string"
         },
         "origLab" : {
@@ -1922,9 +1925,6 @@
           "type" : "boolean"
         },
         "cidentOrig" : {
-          "$ref" : "CodeIdent"
-        },
-        "cidentSubCat" : {
           "$ref" : "CodeIdent"
         }
       }

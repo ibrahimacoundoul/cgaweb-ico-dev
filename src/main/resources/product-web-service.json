@@ -1777,9 +1777,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "commercialOperator" : {
-          "type" : "string"
-        },
         "products" : {
           "type" : "array",
           "items" : {
@@ -1794,6 +1791,9 @@
           "items" : {
             "$ref" : "PromotionLight"
           }
+        },
+        "commercialOperator" : {
+          "type" : "string"
         },
         "vouchers" : {
           "type" : "array",
@@ -1956,13 +1956,13 @@
         "dateToDate" : {
           "type" : "boolean"
         },
+        "broadCastVertorId" : {
+          "type" : "string"
+        },
         "pays" : {
           "type" : "string"
         },
         "broadCastMediaType" : {
-          "type" : "string"
-        },
-        "broadCastVertorId" : {
           "type" : "string"
         },
         "duration" : {
@@ -2019,19 +2019,19 @@
         "startDate" : {
           "type" : "string"
         },
+        "endDate" : {
+          "type" : "string"
+        },
         "label" : {
           "type" : "string"
         },
         "vintageCatalog" : {
           "type" : "string"
         },
-        "endDate" : {
-          "type" : "string"
-        },
-        "defaultCatalog" : {
+        "limitedVersion" : {
           "type" : "boolean"
         },
-        "limitedVersion" : {
+        "defaultCatalog" : {
           "type" : "boolean"
         }
       }
@@ -2129,12 +2129,12 @@
         "category" : {
           "type" : "string"
         },
+        "voucherId" : {
+          "type" : "string"
+        },
         "contractId" : {
           "type" : "integer",
           "format" : "int32"
-        },
-        "voucherId" : {
-          "type" : "string"
         },
         "voucherLabel" : {
           "type" : "string"
@@ -2187,6 +2187,9 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "startDate" : {
+          "type" : "string"
+        },
         "productId" : {
           "type" : "string"
         },
@@ -2194,7 +2197,7 @@
           "type" : "number",
           "format" : "double"
         },
-        "startDate" : {
+        "endDate" : {
           "type" : "string"
         },
         "fifthCategory" : {
@@ -2221,20 +2224,17 @@
             "type" : "string"
           }
         },
-        "endDate" : {
-          "type" : "string"
-        },
         "amountToBePaid" : {
           "type" : "number",
           "format" : "double"
+        },
+        "productCategory" : {
+          "type" : "string"
         },
         "themeId" : {
           "type" : "string"
         },
         "productType" : {
-          "type" : "string"
-        },
-        "productCategory" : {
           "type" : "string"
         }
       }
@@ -2306,10 +2306,13 @@
           "type" : "integer",
           "format" : "int32"
         },
+        "startDate" : {
+          "type" : "string"
+        },
         "productId" : {
           "type" : "string"
         },
-        "startDate" : {
+        "endDate" : {
           "type" : "string"
         },
         "fifthCategory" : {
@@ -2324,9 +2327,6 @@
         "genericProduct" : {
           "type" : "boolean"
         },
-        "endDate" : {
-          "type" : "string"
-        },
         "includedProducts" : {
           "type" : "array",
           "items" : {
@@ -2339,13 +2339,13 @@
             "type" : "string"
           }
         },
+        "productCategory" : {
+          "type" : "string"
+        },
         "themeId" : {
           "type" : "string"
         },
         "productType" : {
-          "type" : "string"
-        },
-        "productCategory" : {
           "type" : "string"
         },
         "technicalIds" : {
@@ -2409,13 +2409,13 @@
         "countryId" : {
           "type" : "string"
         },
+        "crossOperators" : {
+          "type" : "boolean"
+        },
         "postalcode" : {
           "type" : "string"
         },
         "linkedContract" : {
-          "type" : "boolean"
-        },
-        "crossOperators" : {
           "type" : "boolean"
         }
       }
@@ -2526,6 +2526,9 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "startDate" : {
+          "type" : "string"
+        },
         "productId" : {
           "type" : "string"
         },
@@ -2533,7 +2536,7 @@
           "type" : "number",
           "format" : "double"
         },
-        "startDate" : {
+        "endDate" : {
           "type" : "string"
         },
         "fifthCategory" : {
@@ -2557,9 +2560,6 @@
             "type" : "string"
           }
         },
-        "endDate" : {
-          "type" : "string"
-        },
         "includedProducts" : {
           "type" : "array",
           "items" : {
@@ -2576,13 +2576,13 @@
           "type" : "number",
           "format" : "double"
         },
+        "productCategory" : {
+          "type" : "string"
+        },
         "themeId" : {
           "type" : "string"
         },
         "productType" : {
-          "type" : "string"
-        },
-        "productCategory" : {
           "type" : "string"
         }
       }

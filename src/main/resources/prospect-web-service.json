@@ -4,6 +4,83 @@
   "basePath" : "/",
   "resourcePath" : "fix this",
   "apis" : [ {
+    "path" : "/prospect",
+    "description" : "updateProspect",
+    "operations" : [ {
+      "method" : "PUT",
+      "summary" : "mise à jour d'un prospect",
+      "notes" : "updateProspect",
+      "type" : "ResponseWrapper«ProspectOut»",
+      "nickname" : "updateProspect",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "prospectIn",
+        "description" : "Informations de prospect",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "ProspectUpdateIn",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«ProspectOut»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
     "path" : "/prospect/newProspect",
     "description" : "newProspect",
     "operations" : [ {
@@ -82,6 +159,41 @@
     } ]
   } ],
   "models" : {
+    "PersonToUpdate" : {
+      "id" : "PersonToUpdate",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "numIdent" : {
+          "type" : "string"
+        },
+        "subscriberCategory" : {
+          "type" : "string"
+        },
+        "subscriberSubCategory" : {
+          "type" : "string"
+        },
+        "firstName" : {
+          "type" : "string"
+        },
+        "lastName" : {
+          "type" : "string"
+        },
+        "civility" : {
+          "type" : "string"
+        },
+        "companyId" : {
+          "type" : "string"
+        },
+        "companyName" : {
+          "type" : "string"
+        }
+      }
+    },
     "PhoneCommon" : {
       "id" : "PhoneCommon",
       "description" : "",
@@ -100,15 +212,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "phones" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "PhoneCommon"
-          }
-        },
-        "person" : {
-          "$ref" : "PersonProspect"
-        },
         "orderId" : {
           "type" : "string"
         },
@@ -118,8 +221,17 @@
         "payment" : {
           "$ref" : "PaymentProspect"
         },
+        "person" : {
+          "$ref" : "PersonProspect"
+        },
         "thirdPayor" : {
           "type" : "boolean"
+        },
+        "phones" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "PhoneCommon"
+          }
         },
         "address" : {
           "$ref" : "AddressCommon"
@@ -145,17 +257,45 @@
         }
       }
     },
+    "ProspectUpdateIn" : {
+      "id" : "ProspectUpdateIn",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "email" : {
+          "type" : "string"
+        },
+        "payment" : {
+          "$ref" : "PaymentProspect"
+        },
+        "person" : {
+          "$ref" : "PersonToUpdate"
+        },
+        "thirdPayor" : {
+          "type" : "boolean"
+        },
+        "phones" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "PhoneCommon"
+          }
+        },
+        "address" : {
+          "$ref" : "AddressCommon"
+        }
+      }
+    },
     "ProspectOut" : {
       "id" : "ProspectOut",
       "description" : "",
       "extends" : "",
       "properties" : {
+        "orderId" : {
+          "type" : "string"
+        },
         "personId" : {
           "type" : "integer",
           "format" : "int64"
-        },
-        "orderId" : {
-          "type" : "string"
         }
       }
     },
@@ -179,13 +319,13 @@
         "lastName" : {
           "type" : "string"
         },
-        "companyName" : {
-          "type" : "string"
-        },
         "civility" : {
           "type" : "string"
         },
         "companyId" : {
+          "type" : "string"
+        },
+        "companyName" : {
           "type" : "string"
         }
       }

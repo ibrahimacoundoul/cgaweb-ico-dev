@@ -327,10 +327,10 @@
           "type" : "integer",
           "format" : "int64"
         },
-        "freeText" : {
+        "creationUser" : {
           "type" : "string"
         },
-        "creationUser" : {
+        "freeText" : {
           "type" : "string"
         },
         "actOfManagemnetId" : {
@@ -369,6 +369,9 @@
         "commentType" : {
           "type" : "string"
         },
+        "creationUser" : {
+          "type" : "string"
+        },
         "commentId" : {
           "type" : "integer",
           "format" : "int64"
@@ -376,14 +379,11 @@
         "freeText" : {
           "type" : "string"
         },
-        "creationUser" : {
-          "type" : "string"
+        "updateOnLinkedContract" : {
+          "type" : "boolean"
         },
         "actOfManagemnetId" : {
           "type" : "string"
-        },
-        "updateOnLinkedContract" : {
-          "type" : "boolean"
         }
       }
     },

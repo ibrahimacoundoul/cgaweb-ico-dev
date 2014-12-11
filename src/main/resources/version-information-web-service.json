@@ -85,10 +85,10 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "updatedDate" : {
+        "sid" : {
           "type" : "string"
         },
-        "sid" : {
+        "updatedDate" : {
           "type" : "string"
         },
         "version" : {

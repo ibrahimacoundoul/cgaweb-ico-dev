@@ -1064,11 +1064,11 @@
         "motiveId" : {
           "type" : "string"
         },
-        "refundingMode" : {
-          "type" : "string"
-        },
         "refundCheckInfo" : {
           "$ref" : "RefundCheckInfo"
+        },
+        "refundingMode" : {
+          "type" : "string"
         },
         "comment" : {
           "type" : "string"
@@ -1222,6 +1222,13 @@
           "type" : "number",
           "format" : "double"
         },
+        "operatorId" : {
+          "type" : "string"
+        },
+        "actOfManagementId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
         "personId" : {
           "type" : "integer",
           "format" : "int64"
@@ -1230,23 +1237,16 @@
           "type" : "integer",
           "format" : "int32"
         },
-        "operatorId" : {
+        "creationUserId" : {
           "type" : "string"
         },
-        "actOfManagementId" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "creationUserId" : {
+        "chequeId" : {
           "type" : "string"
         },
         "initMotiveId" : {
           "type" : "string"
         },
         "opposeMotiveId" : {
-          "type" : "string"
-        },
-        "chequeId" : {
           "type" : "string"
         }
       }
@@ -1354,6 +1354,10 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "lettercheckid" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
         "actofmanagmentid" : {
           "type" : "integer",
           "format" : "int64"
@@ -1364,21 +1368,11 @@
         "accountingOperatorId" : {
           "type" : "string"
         },
-        "lettercheckid" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
         "actOfManagmentHistory" : {
           "type" : "array",
           "items" : {
             "$ref" : "ActOfManagmentHistory"
           }
-        },
-        "postalCode" : {
-          "type" : "string"
-        },
-        "countryId" : {
-          "type" : "string"
         },
         "firstName" : {
           "type" : "string"
@@ -1387,6 +1381,12 @@
           "type" : "string"
         },
         "civility" : {
+          "type" : "string"
+        },
+        "postalCode" : {
+          "type" : "string"
+        },
+        "countryId" : {
           "type" : "string"
         },
         "city" : {
@@ -1472,11 +1472,11 @@
         "motiveId" : {
           "type" : "string"
         },
-        "refundingMode" : {
-          "type" : "string"
-        },
         "refundCheckInfo" : {
           "$ref" : "RefundCheckInfo"
+        },
+        "refundingMode" : {
+          "type" : "string"
         },
         "comment" : {
           "type" : "string"

@@ -377,17 +377,17 @@
           "type" : "integer",
           "format" : "int64"
         },
-        "accountingPieceLabel" : {
-          "type" : "string"
-        },
-        "crmLedgerId" : {
-          "type" : "string"
-        },
         "entries" : {
           "type" : "array",
           "items" : {
             "$ref" : "ManualAccountingEntry"
           }
+        },
+        "accountingPieceLabel" : {
+          "type" : "string"
+        },
+        "crmLedgerId" : {
+          "type" : "string"
         },
         "comment" : {
           "type" : "string"
@@ -405,14 +405,6 @@
         "accountingDate" : {
           "type" : "string"
         },
-        "personId" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "contractId" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
         "operatorId" : {
           "type" : "string"
         },
@@ -423,16 +415,18 @@
           "type" : "integer",
           "format" : "int64"
         },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
         "validationDate" : {
           "type" : "string"
         },
-        "accountingPieceId" : {
-          "type" : "string"
-        },
-        "creationUserId" : {
-          "type" : "string"
-        },
-        "statusId" : {
+        "accountingPieceLabel" : {
           "type" : "string"
         },
         "validationUser" : {
@@ -444,7 +438,13 @@
             "$ref" : "ManualAccountingEntry"
           }
         },
-        "accountingPieceLabel" : {
+        "statusId" : {
+          "type" : "string"
+        },
+        "accountingPieceId" : {
+          "type" : "string"
+        },
+        "creationUserId" : {
           "type" : "string"
         },
         "comment" : {

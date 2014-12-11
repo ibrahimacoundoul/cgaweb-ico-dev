@@ -1050,13 +1050,13 @@
         "lastName" : {
           "type" : "string"
         },
-        "companyName" : {
-          "type" : "string"
-        },
         "civility" : {
           "type" : "string"
         },
         "companyId" : {
+          "type" : "string"
+        },
+        "companyName" : {
           "type" : "string"
         }
       }
@@ -1068,6 +1068,12 @@
       "properties" : {
         "startDate" : {
           "type" : "string"
+        },
+        "endDate" : {
+          "type" : "string"
+        },
+        "forcingIndicator" : {
+          "type" : "boolean"
         },
         "personId" : {
           "type" : "integer",
@@ -1082,12 +1088,6 @@
         },
         "countryId" : {
           "type" : "string"
-        },
-        "endDate" : {
-          "type" : "string"
-        },
-        "forcingIndicator" : {
-          "type" : "boolean"
         },
         "city" : {
           "type" : "string"
@@ -1124,13 +1124,13 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "identityType" : {
+        "identityNumber" : {
           "type" : "string"
         },
         "validityDate" : {
           "type" : "string"
         },
-        "identityNumber" : {
+        "identityType" : {
           "type" : "string"
         }
       }
@@ -1143,12 +1143,12 @@
         "invalidityReason" : {
           "type" : "string"
         },
+        "emailType" : {
+          "type" : "string"
+        },
         "personId" : {
           "type" : "integer",
           "format" : "int64"
-        },
-        "emailType" : {
-          "type" : "string"
         }
       }
     },
@@ -1217,10 +1217,6 @@
         "creationDate" : {
           "type" : "string"
         },
-        "personId" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
         "userId" : {
           "type" : "string"
         },
@@ -1230,22 +1226,13 @@
         "lastName" : {
           "type" : "string"
         },
+        "numIdent" : {
+          "type" : "string"
+        },
         "subscriberCategory" : {
           "type" : "string"
         },
         "subscriberSubCategory" : {
-          "type" : "string"
-        },
-        "emails" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "Email"
-          }
-        },
-        "civility" : {
-          "type" : "string"
-        },
-        "numIdent" : {
           "type" : "string"
         },
         "companyName" : {
@@ -1253,6 +1240,19 @@
         },
         "companyId" : {
           "type" : "string"
+        },
+        "civility" : {
+          "type" : "string"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "emails" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "Email"
+          }
         },
         "addresses" : {
           "type" : "array",
@@ -1308,12 +1308,12 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "emailType" : {
+          "type" : "string"
+        },
         "personId" : {
           "type" : "integer",
           "format" : "int64"
-        },
-        "emailType" : {
-          "type" : "string"
         }
       }
     },
