@@ -193,6 +193,9 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "authorizedAll" : {
+          "type" : "boolean"
+        },
         "operatorId" : {
           "type" : "string"
         },
@@ -201,9 +204,6 @@
           "items" : {
             "$ref" : "SolicitationByChannel"
           }
-        },
-        "authorizedAll" : {
-          "type" : "boolean"
         }
       }
     },

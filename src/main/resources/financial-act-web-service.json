@@ -534,10 +534,10 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "motiveId" : {
+        "motiveLabel" : {
           "type" : "string"
         },
-        "motiveLabel" : {
+        "motiveId" : {
           "type" : "string"
         }
       }
@@ -587,13 +587,13 @@
         "statusId" : {
           "type" : "string"
         },
-        "categoryId" : {
-          "type" : "string"
-        },
         "modeId" : {
           "type" : "string"
         },
         "validationuserId" : {
+          "type" : "string"
+        },
+        "categoryId" : {
           "type" : "string"
         },
         "comment" : {
@@ -654,13 +654,13 @@
           "type" : "integer",
           "format" : "int64"
         },
-        "categories" : {
+        "motives" : {
           "type" : "array",
           "items" : {
             "type" : "string"
           }
         },
-        "motives" : {
+        "categories" : {
           "type" : "array",
           "items" : {
             "type" : "string"

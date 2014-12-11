@@ -320,17 +320,17 @@
     "ActOfManagementOut" : {
       "id" : "ActOfManagementOut",
       "description" : "",
-      "required" : [ "actOfManagementId", "actOfManagementCode" ],
+      "required" : [ "actOfManagementCode", "actOfManagementId" ],
       "extends" : "",
       "properties" : {
+        "actOfManagementCode" : {
+          "type" : "string",
+          "description" : "Code du mouvement"
+        },
         "actOfManagementId" : {
           "type" : "integer",
           "format" : "int64",
           "description" : "Id du mouvement"
-        },
-        "actOfManagementCode" : {
-          "type" : "string",
-          "description" : "Code du mouvement"
         }
       }
     },
@@ -391,12 +391,15 @@
         "mediaType" : {
           "type" : "string"
         },
+        "salesman" : {
+          "type" : "string"
+        },
+        "cancellationUser" : {
+          "type" : "string"
+        },
         "actOfManagementId" : {
           "type" : "integer",
           "format" : "int64"
-        },
-        "cancellationDate" : {
-          "type" : "string"
         },
         "personId" : {
           "type" : "integer",
@@ -406,6 +409,9 @@
           "type" : "integer",
           "format" : "int32"
         },
+        "cancellationDate" : {
+          "type" : "string"
+        },
         "renewalSequence" : {
           "type" : "integer",
           "format" : "int32"
@@ -413,16 +419,13 @@
         "creationUser" : {
           "type" : "string"
         },
+        "distributorId" : {
+          "type" : "string"
+        },
         "saleDevice" : {
           "type" : "string"
         },
         "contactId" : {
-          "type" : "string"
-        },
-        "cancellationUser" : {
-          "type" : "string"
-        },
-        "salesman" : {
           "type" : "string"
         },
         "actOfManagementFamilyType" : {
@@ -433,16 +436,13 @@
         },
         "actOfManagementType" : {
           "type" : "string"
-        },
-        "distributorId" : {
-          "type" : "string"
         }
       }
     },
     "ActOfManagementSearch" : {
       "id" : "ActOfManagementSearch",
       "description" : "",
-      "required" : [ "creationDate", "mediaType", "actOfManagementId", "cancellationDate", "personId", "contractId", "renewalSequence", "creationUser", "saleDevice", "contactId", "cancellationUser", "salesman", "actOfManagementType", "distributorId" ],
+      "required" : [ "creationDate", "mediaType", "salesman", "cancellationUser", "actOfManagementId", "personId", "contractId", "cancellationDate", "renewalSequence", "creationUser", "distributorId", "saleDevice", "contactId", "actOfManagementType" ],
       "extends" : "",
       "properties" : {
         "creationDate" : {
@@ -454,15 +454,18 @@
           "type" : "string",
           "description" : "Type de communication lié au mouvement"
         },
+        "salesman" : {
+          "type" : "string",
+          "description" : "Id du vendeur lié au mouvement"
+        },
+        "cancellationUser" : {
+          "type" : "string",
+          "description" : "Utilisateur ayant annulé le mouvement"
+        },
         "actOfManagementId" : {
           "type" : "integer",
           "format" : "int64",
           "description" : "Id du mouvement"
-        },
-        "cancellationDate" : {
-          "type" : "integer",
-          "format" : "int64",
-          "description" : "Date d'annulation du mouvement"
         },
         "personId" : {
           "type" : "integer",
@@ -474,6 +477,11 @@
           "format" : "int32",
           "description" : "N° de contrat"
         },
+        "cancellationDate" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "Date d'annulation du mouvement"
+        },
         "renewalSequence" : {
           "type" : "integer",
           "format" : "int32",
@@ -483,6 +491,10 @@
           "type" : "string",
           "description" : "User ayant créé le mouvement"
         },
+        "distributorId" : {
+          "type" : "string",
+          "description" : "Identification du distributeur"
+        },
         "saleDevice" : {
           "type" : "string",
           "description" : "Canal de vente utilisé lors de l'acte de gestion"
@@ -490,14 +502,6 @@
         "contactId" : {
           "type" : "string",
           "description" : "Identifiant du contact"
-        },
-        "cancellationUser" : {
-          "type" : "string",
-          "description" : "Utilisateur ayant annulé le mouvement"
-        },
-        "salesman" : {
-          "type" : "string",
-          "description" : "Id du vendeur lié au mouvement"
         },
         "actOfManagementFamilyType" : {
           "type" : "string"
@@ -508,10 +512,6 @@
         "actOfManagementType" : {
           "type" : "string",
           "description" : "Typologie du mouvement"
-        },
-        "distributorId" : {
-          "type" : "string",
-          "description" : "Identification du distributeur"
         }
       }
     },
@@ -547,6 +547,12 @@
           "type" : "integer",
           "format" : "int64"
         },
+        "actOfManagementCode" : {
+          "type" : "string"
+        },
+        "cancellationUser" : {
+          "type" : "string"
+        },
         "actOfManagementId" : {
           "type" : "integer",
           "format" : "int64"
@@ -562,6 +568,9 @@
         "creationUser" : {
           "type" : "string"
         },
+        "distributorId" : {
+          "type" : "string"
+        },
         "saleDevice" : {
           "type" : "string"
         },
@@ -572,22 +581,13 @@
         "contactId" : {
           "type" : "string"
         },
-        "cancellationUser" : {
-          "type" : "string"
-        },
-        "salesMan" : {
-          "type" : "string"
-        },
         "listOfChanges" : {
           "type" : "array",
           "items" : {
             "$ref" : "ActOfManagementChange"
           }
         },
-        "distributorId" : {
-          "type" : "string"
-        },
-        "actOfManagementCode" : {
+        "salesMan" : {
           "type" : "string"
         }
       }

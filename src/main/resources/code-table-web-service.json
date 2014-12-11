@@ -1240,14 +1240,14 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "technicalOffer" : {
+          "type" : "boolean"
+        },
         "genericProduct" : {
           "type" : "boolean"
         },
         "productCategory" : {
           "type" : "string"
-        },
-        "technicalOffer" : {
-          "type" : "boolean"
         },
         "label" : {
           "type" : "string"
@@ -1324,11 +1324,11 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "isActive" : {
-          "type" : "boolean"
-        },
         "directDebitStatuts" : {
           "type" : "string"
+        },
+        "isActive" : {
+          "type" : "boolean"
         },
         "label" : {
           "type" : "string"
@@ -1371,14 +1371,9 @@
     "PNDCategoriesCodeTable" : {
       "id" : "PNDCategoriesCodeTable",
       "description" : "",
-      "required" : [ "numberOfPND", "marketing", "administration" ],
+      "required" : [ "marketing", "administration", "numberOfPND" ],
       "extends" : "",
       "properties" : {
-        "numberOfPND" : {
-          "type" : "integer",
-          "format" : "int32",
-          "description" : "Nombre de retour PND sur cette catégorie pour effectivement invalider l'adresse"
-        },
         "marketing" : {
           "type" : "boolean",
           "description" : "Si '1', indique que cette catégorie est de type marketing"
@@ -1386,6 +1381,11 @@
         "administration" : {
           "type" : "boolean",
           "description" : "Si '1', indique que cette catégorie est de type gestion"
+        },
+        "numberOfPND" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "Nombre de retour PND sur cette catégorie pour effectivement invalider l'adresse"
         },
         "label" : {
           "type" : "string"
@@ -1504,6 +1504,18 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "isCash" : {
+          "type" : "boolean"
+        },
+        "isDirectDebit" : {
+          "type" : "boolean"
+        },
+        "isFree" : {
+          "type" : "boolean"
+        },
+        "isRecurrentCB" : {
+          "type" : "boolean"
+        },
         "authorizedDurations" : {
           "type" : "array",
           "items" : {
@@ -1515,18 +1527,6 @@
           "items" : {
             "type" : "string"
           }
-        },
-        "isFree" : {
-          "type" : "boolean"
-        },
-        "isCash" : {
-          "type" : "boolean"
-        },
-        "isDirectDebit" : {
-          "type" : "boolean"
-        },
-        "isRecurrentCB" : {
-          "type" : "boolean"
         },
         "label" : {
           "type" : "string"
@@ -1616,6 +1616,18 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "isRefund" : {
+          "type" : "boolean"
+        },
+        "isMultiple" : {
+          "type" : "boolean"
+        },
+        "isCashOrder" : {
+          "type" : "boolean"
+        },
+        "isBankTransfer" : {
+          "type" : "boolean"
+        },
         "isPayment" : {
           "type" : "boolean"
         },
@@ -1629,18 +1641,6 @@
           "type" : "boolean"
         },
         "isScratchCard" : {
-          "type" : "boolean"
-        },
-        "isRefund" : {
-          "type" : "boolean"
-        },
-        "isBankTransfer" : {
-          "type" : "boolean"
-        },
-        "isMultiple" : {
-          "type" : "boolean"
-        },
-        "isCashOrder" : {
           "type" : "boolean"
         },
         "label" : {
@@ -1900,18 +1900,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "catCliId" : {
-          "type" : "string"
-        },
-        "catCliLab" : {
-          "type" : "string"
-        },
-        "cidentSubCat" : {
-          "$ref" : "CodeIdent"
-        },
-        "catCliDetId" : {
-          "type" : "string"
-        },
         "catCliDetLab" : {
           "type" : "string"
         },
@@ -1926,6 +1914,18 @@
         },
         "cidentOrig" : {
           "$ref" : "CodeIdent"
+        },
+        "cidentSubCat" : {
+          "$ref" : "CodeIdent"
+        },
+        "catCliId" : {
+          "type" : "string"
+        },
+        "catCliLab" : {
+          "type" : "string"
+        },
+        "catCliDetId" : {
+          "type" : "string"
         }
       }
     },
@@ -1934,10 +1934,10 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "deposit" : {
+        "rental" : {
           "type" : "boolean"
         },
-        "rental" : {
+        "deposit" : {
           "type" : "boolean"
         },
         "label" : {

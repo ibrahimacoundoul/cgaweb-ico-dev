@@ -212,6 +212,9 @@
             "$ref" : "Equipment"
           }
         },
+        "person" : {
+          "$ref" : "PersonToSubscribe"
+        },
         "orderId" : {
           "type" : "string"
         },
@@ -221,15 +224,15 @@
         "payment" : {
           "$ref" : "PaymentToSubscribe"
         },
-        "person" : {
-          "$ref" : "PersonToSubscribe"
-        },
         "shipmentFees" : {
           "type" : "number",
           "format" : "double"
         },
         "equipmentConfig" : {
           "type" : "string"
+        },
+        "forceConfirmedContract" : {
+          "type" : "boolean"
         },
         "affectationType" : {
           "type" : "string"
@@ -238,9 +241,6 @@
           "type" : "boolean"
         },
         "skipShipmentFees" : {
-          "type" : "boolean"
-        },
-        "forceConfirmedContract" : {
           "type" : "boolean"
         },
         "address" : {
@@ -286,6 +286,9 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "authorizationNumber" : {
+          "type" : "string"
+        },
         "creditCardType" : {
           "type" : "string"
         },
@@ -298,9 +301,6 @@
         "expirationDate" : {
           "type" : "string",
           "description" : "Format date attendu yyyymm"
-        },
-        "authorizationNumber" : {
-          "type" : "string"
         },
         "owner" : {
           "type" : "string"
@@ -360,6 +360,15 @@
           "type" : "integer",
           "format" : "int64"
         },
+        "companyName" : {
+          "type" : "string"
+        },
+        "civility" : {
+          "type" : "string"
+        },
+        "companyId" : {
+          "type" : "string"
+        },
         "numIdent" : {
           "type" : "string"
         },
@@ -373,15 +382,6 @@
           "type" : "string"
         },
         "lastName" : {
-          "type" : "string"
-        },
-        "civility" : {
-          "type" : "string"
-        },
-        "companyId" : {
-          "type" : "string"
-        },
-        "companyName" : {
           "type" : "string"
         }
       }
@@ -454,6 +454,9 @@
         "postalCode" : {
           "type" : "string"
         },
+        "forcingIndicator" : {
+          "type" : "boolean"
+        },
         "street1" : {
           "type" : "string"
         },
@@ -471,9 +474,6 @@
         },
         "city" : {
           "type" : "string"
-        },
-        "forcingIndicator" : {
-          "type" : "boolean"
         }
       }
     },
@@ -485,6 +485,9 @@
         "action" : {
           "type" : "string"
         },
+        "freeMethodOfPaymentReason" : {
+          "type" : "string"
+        },
         "broadcastVectorId" : {
           "type" : "string"
         },
@@ -493,9 +496,6 @@
         },
         "commercialOperator" : {
           "type" : "string"
-        },
-        "payment" : {
-          "$ref" : "PaymentMeans"
         },
         "origin" : {
           "type" : "string"
@@ -520,6 +520,9 @@
           "type" : "integer",
           "format" : "int32"
         },
+        "payment" : {
+          "$ref" : "PaymentMeans"
+        },
         "products" : {
           "type" : "array",
           "items" : {
@@ -529,9 +532,6 @@
         "sponsorId" : {
           "type" : "integer",
           "format" : "int64"
-        },
-        "freeMethodOfPaymentReason" : {
-          "type" : "string"
         }
       }
     },
@@ -546,12 +546,12 @@
             "$ref" : "ContractOut"
           }
         },
-        "orderId" : {
-          "type" : "string"
-        },
         "personId" : {
           "type" : "integer",
           "format" : "int64"
+        },
+        "orderId" : {
+          "type" : "string"
         },
         "shipmentFees" : {
           "type" : "number",

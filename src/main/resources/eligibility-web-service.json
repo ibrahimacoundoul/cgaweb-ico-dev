@@ -235,6 +235,9 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "authorizationNumber" : {
+          "type" : "string"
+        },
         "creditCardType" : {
           "type" : "string"
         },
@@ -247,9 +250,6 @@
         "expirationDate" : {
           "type" : "string",
           "description" : "Format date attendu yyyymm"
-        },
-        "authorizationNumber" : {
-          "type" : "string"
         },
         "owner" : {
           "type" : "string"
@@ -329,6 +329,15 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "companyName" : {
+          "type" : "string"
+        },
+        "civility" : {
+          "type" : "string"
+        },
+        "companyId" : {
+          "type" : "string"
+        },
         "numIdent" : {
           "type" : "string"
         },
@@ -342,15 +351,6 @@
           "type" : "string"
         },
         "lastName" : {
-          "type" : "string"
-        },
-        "civility" : {
-          "type" : "string"
-        },
-        "companyId" : {
-          "type" : "string"
-        },
-        "companyName" : {
           "type" : "string"
         }
       }
@@ -416,12 +416,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "email" : {
-          "type" : "string"
-        },
-        "payment" : {
-          "$ref" : "PaymentMeans"
-        },
         "commercialOperators" : {
           "type" : "array",
           "uniqueItems" : true,
@@ -438,15 +432,21 @@
             "$ref" : "Equipment"
           }
         },
-        "sponsorId" : {
-          "type" : "integer",
-          "format" : "int64"
+        "email" : {
+          "type" : "string"
+        },
+        "payment" : {
+          "$ref" : "PaymentMeans"
         },
         "phones" : {
           "type" : "array",
           "items" : {
             "$ref" : "PhoneCommon"
           }
+        },
+        "sponsorId" : {
+          "type" : "integer",
+          "format" : "int64"
         },
         "address" : {
           "$ref" : "AddressCommon"
@@ -501,6 +501,9 @@
         "postalCode" : {
           "type" : "string"
         },
+        "forcingIndicator" : {
+          "type" : "boolean"
+        },
         "street1" : {
           "type" : "string"
         },
@@ -518,9 +521,6 @@
         },
         "city" : {
           "type" : "string"
-        },
-        "forcingIndicator" : {
-          "type" : "boolean"
         }
       }
     },
@@ -555,15 +555,18 @@
         "iban" : {
           "$ref" : "Iban"
         },
-        "email" : {
-          "type" : "string"
-        },
         "commercialOperators" : {
           "type" : "array",
           "uniqueItems" : true,
           "items" : {
             "type" : "string"
           }
+        },
+        "email" : {
+          "type" : "string"
+        },
+        "cb" : {
+          "$ref" : "CreditCardWithOwner"
         },
         "sponsorId" : {
           "type" : "integer",
@@ -574,9 +577,6 @@
         },
         "phone" : {
           "$ref" : "EligiblePhoneIn"
-        },
-        "cb" : {
-          "$ref" : "CreditCardWithOwner"
         }
       }
     },

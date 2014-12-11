@@ -863,14 +863,14 @@
         "encashmentLogicalId" : {
           "type" : "string"
         },
-        "encashmentDate" : {
+        "actId" : {
           "type" : "integer",
           "format" : "int64"
         },
         "encashmentStatus" : {
           "type" : "string"
         },
-        "actId" : {
+        "encashmentDate" : {
           "type" : "integer",
           "format" : "int64"
         }
@@ -1015,6 +1015,9 @@
         "emissionDesk" : {
           "type" : "string"
         },
+        "encashmentimageid" : {
+          "type" : "string"
+        },
         "validationDate" : {
           "type" : "string",
           "description" : "Format date attendu yyyymmdd"
@@ -1022,9 +1025,6 @@
         "bankDepositDate" : {
           "type" : "string",
           "description" : "Format date attendu yyyymmdd"
-        },
-        "encashmentimageid" : {
-          "type" : "string"
         },
         "owner" : {
           "type" : "string"
@@ -1060,12 +1060,12 @@
             "$ref" : "PaymentPerson"
           }
         },
+        "encashmentimageid" : {
+          "type" : "string"
+        },
         "bankDepositDate" : {
           "type" : "string",
           "description" : "Format date attendu yyyymmdd"
-        },
-        "encashmentimageid" : {
-          "type" : "string"
         },
         "owner" : {
           "type" : "string"
@@ -1181,10 +1181,10 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "motiveId" : {
+        "motiveLabel" : {
           "type" : "string"
         },
-        "motiveLabel" : {
+        "motiveId" : {
           "type" : "string"
         }
       }
@@ -1317,12 +1317,12 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "rejectMotiveLabel" : {
+          "type" : "string"
+        },
         "rejectMotiveId" : {
           "type" : "integer",
           "format" : "int32"
-        },
-        "rejectMotiveLabel" : {
-          "type" : "string"
         }
       }
     },

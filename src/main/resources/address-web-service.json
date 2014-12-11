@@ -523,17 +523,17 @@
     "ActOfManagementOut" : {
       "id" : "ActOfManagementOut",
       "description" : "",
-      "required" : [ "actOfManagementId", "actOfManagementCode" ],
+      "required" : [ "actOfManagementCode", "actOfManagementId" ],
       "extends" : "",
       "properties" : {
+        "actOfManagementCode" : {
+          "type" : "string",
+          "description" : "Code du mouvement"
+        },
         "actOfManagementId" : {
           "type" : "integer",
           "format" : "int64",
           "description" : "Id du mouvement"
-        },
-        "actOfManagementCode" : {
-          "type" : "string",
-          "description" : "Code du mouvement"
         }
       }
     },
@@ -602,11 +602,15 @@
         "startDate" : {
           "type" : "string"
         },
-        "endDate" : {
+        "addressId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "undeliverabilityReason" : {
           "type" : "string"
         },
-        "forcingIndicator" : {
-          "type" : "boolean"
+        "endDate" : {
+          "type" : "string"
         },
         "personId" : {
           "type" : "integer",
@@ -621,6 +625,9 @@
         },
         "countryId" : {
           "type" : "string"
+        },
+        "forcingIndicator" : {
+          "type" : "boolean"
         },
         "city" : {
           "type" : "string"
@@ -638,13 +645,6 @@
           "type" : "string"
         },
         "street4" : {
-          "type" : "string"
-        },
-        "addressId" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "undeliverabilityReason" : {
           "type" : "string"
         },
         "valid" : {
@@ -701,17 +701,13 @@
     "AddressInvalidateIn" : {
       "id" : "AddressInvalidateIn",
       "description" : "",
-      "required" : [ "personId", "invalidityReasonId", "addressTypeId", "pndcategory" ],
+      "required" : [ "personId", "addressTypeId", "pndcategory", "invalidityReasonId" ],
       "extends" : "",
       "properties" : {
         "personId" : {
           "type" : "integer",
           "format" : "int64",
           "description" : "Id de l’abonné"
-        },
-        "invalidityReasonId" : {
-          "type" : "string",
-          "description" : "raison d'invalidation"
         },
         "addressTypeId" : {
           "type" : "string",
@@ -720,13 +716,17 @@
         "pndcategory" : {
           "type" : "string",
           "description" : "Code de la catégorie de NPAI"
+        },
+        "invalidityReasonId" : {
+          "type" : "string",
+          "description" : "raison d'invalidation"
         }
       }
     },
     "AddressIn" : {
       "id" : "AddressIn",
       "description" : "",
-      "required" : [ "postalCode", "startDate", "personId", "addressType", "street1", "street2", "street3", "street4", "countryId", "city", "forcingIndicator" ],
+      "required" : [ "postalCode", "startDate", "personId", "forcingIndicator", "addressType", "street1", "street2", "street3", "street4", "countryId", "city" ],
       "extends" : "",
       "properties" : {
         "postalCode" : {
@@ -741,6 +741,10 @@
           "type" : "integer",
           "format" : "int64",
           "description" : "Id de l’abonné"
+        },
+        "forcingIndicator" : {
+          "type" : "boolean",
+          "description" : "force l'adresse si celle ci n'est pas vérifiée"
         },
         "addressType" : {
           "type" : "string",
@@ -769,10 +773,6 @@
         "city" : {
           "type" : "string",
           "description" : "Le nom de la ville"
-        },
-        "forcingIndicator" : {
-          "type" : "boolean",
-          "description" : "force l'adresse si celle ci n'est pas vérifiée"
         }
       }
     }

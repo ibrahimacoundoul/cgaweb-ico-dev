@@ -1168,6 +1168,9 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "newequipmentType" : {
+          "type" : "string"
+        },
         "newequipmentId" : {
           "type" : "string"
         },
@@ -1175,9 +1178,6 @@
           "type" : "string"
         },
         "oldequipmentId" : {
-          "type" : "string"
-        },
-        "newequipmentType" : {
           "type" : "string"
         }
       }
@@ -1433,6 +1433,9 @@
           "type" : "number",
           "format" : "double"
         },
+        "techDiagId" : {
+          "type" : "string"
+        },
         "reasonId" : {
           "type" : "string"
         },
@@ -1444,9 +1447,6 @@
         },
         "skipShipmentFees" : {
           "type" : "boolean"
-        },
-        "techDiagId" : {
-          "type" : "string"
         }
       }
     },
@@ -1699,13 +1699,13 @@
         "transactionId" : {
           "type" : "string"
         },
+        "techDiagId" : {
+          "type" : "string"
+        },
         "reasonId" : {
           "type" : "string"
         },
         "logisticReason" : {
-          "type" : "string"
-        },
-        "techDiagId" : {
           "type" : "string"
         }
       }
@@ -1791,6 +1791,10 @@
           "format" : "double",
           "description" : "Montant des frais d'expédition"
         },
+        "skipFees" : {
+          "type" : "boolean",
+          "description" : "Permet d'indiquer que le montant de l'accessoire est gratuit"
+        },
         "equipmentConfig" : {
           "type" : "string",
           "description" : "Code de la configuration d'accessoires"
@@ -1809,10 +1813,6 @@
         },
         "indPrel" : {
           "type" : "boolean"
-        },
-        "skipFees" : {
-          "type" : "boolean",
-          "description" : "Permet d'indiquer que le montant de l'accessoire est gratuit"
         }
       }
     },
@@ -1845,16 +1845,16 @@
           "type" : "integer",
           "format" : "int64"
         },
-        "reasonId" : {
-          "type" : "string"
-        },
-        "logisticReason" : {
+        "techDiagId" : {
           "type" : "string"
         },
         "restitutionType" : {
           "type" : "string"
         },
-        "techDiagId" : {
+        "reasonId" : {
+          "type" : "string"
+        },
+        "logisticReason" : {
           "type" : "string"
         }
       }

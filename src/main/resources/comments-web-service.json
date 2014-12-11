@@ -327,17 +327,17 @@
           "type" : "integer",
           "format" : "int64"
         },
-        "creationUser" : {
-          "type" : "string"
-        },
-        "freeText" : {
-          "type" : "string"
-        },
         "actOfManagemnetId" : {
           "type" : "string"
         },
         "createOnLinkedContract" : {
           "type" : "boolean"
+        },
+        "creationUser" : {
+          "type" : "string"
+        },
+        "freeText" : {
+          "type" : "string"
         }
       }
     },
@@ -369,6 +369,12 @@
         "commentType" : {
           "type" : "string"
         },
+        "actOfManagemnetId" : {
+          "type" : "string"
+        },
+        "updateOnLinkedContract" : {
+          "type" : "boolean"
+        },
         "creationUser" : {
           "type" : "string"
         },
@@ -377,12 +383,6 @@
           "format" : "int64"
         },
         "freeText" : {
-          "type" : "string"
-        },
-        "updateOnLinkedContract" : {
-          "type" : "boolean"
-        },
-        "actOfManagemnetId" : {
           "type" : "string"
         }
       }
@@ -409,18 +409,18 @@
         "actOfManagementId" : {
           "type" : "string"
         },
-        "freeText" : {
-          "type" : "string"
-        },
-        "creationUser" : {
-          "type" : "string"
-        },
         "commentType" : {
           "type" : "string"
         },
         "commentId" : {
           "type" : "integer",
           "format" : "int64"
+        },
+        "freeText" : {
+          "type" : "string"
+        },
+        "creationUser" : {
+          "type" : "string"
         },
         "contactId" : {
           "type" : "string"

@@ -303,6 +303,13 @@
           "type" : "integer",
           "format" : "int32"
         },
+        "isIntentional" : {
+          "type" : "boolean"
+        },
+        "directDebitId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
         "directDebitTypeLabel" : {
           "type" : "string"
         },
@@ -317,13 +324,6 @@
         },
         "rejectCode" : {
           "type" : "string"
-        },
-        "isIntentional" : {
-          "type" : "boolean"
-        },
-        "directDebitId" : {
-          "type" : "integer",
-          "format" : "int64"
         },
         "month" : {
           "type" : "string"

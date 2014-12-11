@@ -1786,14 +1786,14 @@
         "validated" : {
           "type" : "boolean"
         },
+        "commercialOperator" : {
+          "type" : "string"
+        },
         "promotions" : {
           "type" : "array",
           "items" : {
             "$ref" : "PromotionLight"
           }
-        },
-        "commercialOperator" : {
-          "type" : "string"
         },
         "vouchers" : {
           "type" : "array",
@@ -1928,10 +1928,10 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "errorMessage" : {
+        "errorMessageLabel" : {
           "type" : "string"
         },
-        "errorMessageLabel" : {
+        "errorMessage" : {
           "type" : "string"
         }
       }
@@ -1941,6 +1941,15 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "pays" : {
+          "type" : "string"
+        },
+        "broadCastMediaType" : {
+          "type" : "string"
+        },
+        "broadCastVertorId" : {
+          "type" : "string"
+        },
         "postalCode" : {
           "type" : "string"
         },
@@ -1955,15 +1964,6 @@
         },
         "dateToDate" : {
           "type" : "boolean"
-        },
-        "broadCastVertorId" : {
-          "type" : "string"
-        },
-        "pays" : {
-          "type" : "string"
-        },
-        "broadCastMediaType" : {
-          "type" : "string"
         },
         "duration" : {
           "type" : "string"
@@ -2019,6 +2019,12 @@
         "startDate" : {
           "type" : "string"
         },
+        "defaultCatalog" : {
+          "type" : "boolean"
+        },
+        "limitedVersion" : {
+          "type" : "boolean"
+        },
         "endDate" : {
           "type" : "string"
         },
@@ -2027,12 +2033,6 @@
         },
         "vintageCatalog" : {
           "type" : "string"
-        },
-        "limitedVersion" : {
-          "type" : "boolean"
-        },
-        "defaultCatalog" : {
-          "type" : "boolean"
         }
       }
     },
@@ -2129,17 +2129,17 @@
         "category" : {
           "type" : "string"
         },
-        "voucherId" : {
+        "voucherLabel" : {
+          "type" : "string"
+        },
+        "marketingCampaignId" : {
           "type" : "string"
         },
         "contractId" : {
           "type" : "integer",
           "format" : "int32"
         },
-        "voucherLabel" : {
-          "type" : "string"
-        },
-        "marketingCampaignId" : {
+        "voucherId" : {
           "type" : "string"
         }
       }
@@ -2309,6 +2309,12 @@
         "startDate" : {
           "type" : "string"
         },
+        "technicalIds" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ProductTechnicalIds"
+          }
+        },
         "productId" : {
           "type" : "string"
         },
@@ -2347,12 +2353,6 @@
         },
         "productType" : {
           "type" : "string"
-        },
-        "technicalIds" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "ProductTechnicalIds"
-          }
         }
       }
     },
@@ -2406,17 +2406,17 @@
           "type" : "integer",
           "format" : "int64"
         },
-        "countryId" : {
-          "type" : "string"
-        },
-        "crossOperators" : {
-          "type" : "boolean"
-        },
         "postalcode" : {
           "type" : "string"
         },
         "linkedContract" : {
           "type" : "boolean"
+        },
+        "crossOperators" : {
+          "type" : "boolean"
+        },
+        "countryId" : {
+          "type" : "string"
         }
       }
     },

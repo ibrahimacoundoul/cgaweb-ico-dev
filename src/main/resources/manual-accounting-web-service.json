@@ -329,16 +329,16 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "actOfManagementId" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
         "accountingPieceId" : {
           "type" : "integer",
           "format" : "int64"
         },
         "accountingReadjustedDate" : {
           "$ref" : "date-time"
+        },
+        "actOfManagementId" : {
+          "type" : "integer",
+          "format" : "int64"
         }
       }
     },
@@ -373,10 +373,6 @@
         "operatorId" : {
           "type" : "string"
         },
-        "actOfManagementId" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
         "entries" : {
           "type" : "array",
           "items" : {
@@ -389,6 +385,10 @@
         "crmLedgerId" : {
           "type" : "string"
         },
+        "actOfManagementId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
         "comment" : {
           "type" : "string"
         }
@@ -400,6 +400,9 @@
       "extends" : "",
       "properties" : {
         "creationDate" : {
+          "type" : "string"
+        },
+        "accountingPieceId" : {
           "type" : "string"
         },
         "accountingDate" : {
@@ -423,10 +426,16 @@
           "type" : "integer",
           "format" : "int32"
         },
+        "accountingPieceLabel" : {
+          "type" : "string"
+        },
         "validationDate" : {
           "type" : "string"
         },
-        "accountingPieceLabel" : {
+        "statusId" : {
+          "type" : "string"
+        },
+        "creationUserId" : {
           "type" : "string"
         },
         "validationUser" : {
@@ -437,15 +446,6 @@
           "items" : {
             "$ref" : "ManualAccountingEntry"
           }
-        },
-        "statusId" : {
-          "type" : "string"
-        },
-        "accountingPieceId" : {
-          "type" : "string"
-        },
-        "creationUserId" : {
-          "type" : "string"
         },
         "comment" : {
           "type" : "string"

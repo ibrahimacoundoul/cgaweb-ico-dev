@@ -148,6 +148,9 @@
           "type" : "string",
           "description" : "Role de l'utilisateur"
         },
+        "organization" : {
+          "type" : "string"
+        },
         "firstName" : {
           "type" : "string",
           "description" : "Prénom de l'utilisateur"
@@ -155,9 +158,6 @@
         "lastName" : {
           "type" : "string",
           "description" : "Nom de l'utilisateur"
-        },
-        "organization" : {
-          "type" : "string"
         }
       }
     }

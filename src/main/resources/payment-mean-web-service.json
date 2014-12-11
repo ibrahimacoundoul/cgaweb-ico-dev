@@ -986,9 +986,6 @@
         "bic" : {
           "type" : "string"
         },
-        "creditCard" : {
-          "$ref" : "CreditCardLight"
-        },
         "methodOfPayment" : {
           "type" : "string"
         },
@@ -997,14 +994,17 @@
           "format" : "int32",
           "description" : "Le contrat associé au moyen de paiement"
         },
+        "createdDate" : {
+          "type" : "string",
+          "description" : "Date de création du moyen de paiment, format mm/aa"
+        },
+        "creditCard" : {
+          "$ref" : "CreditCardLight"
+        },
         "directDebitDate" : {
           "type" : "integer",
           "format" : "int32",
           "description" : "Jour de prélèvement"
-        },
-        "createdDate" : {
-          "type" : "string",
-          "description" : "Date de création du moyen de paiment, format mm/aa"
         }
       }
     },
@@ -1301,6 +1301,15 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "companyName" : {
+          "type" : "string"
+        },
+        "civility" : {
+          "type" : "string"
+        },
+        "companyId" : {
+          "type" : "string"
+        },
         "numIdent" : {
           "type" : "string"
         },
@@ -1314,15 +1323,6 @@
           "type" : "string"
         },
         "lastName" : {
-          "type" : "string"
-        },
-        "civility" : {
-          "type" : "string"
-        },
-        "companyId" : {
-          "type" : "string"
-        },
-        "companyName" : {
           "type" : "string"
         }
       }
@@ -1371,6 +1371,9 @@
         "postalCode" : {
           "type" : "string"
         },
+        "forcingIndicator" : {
+          "type" : "boolean"
+        },
         "street1" : {
           "type" : "string"
         },
@@ -1388,9 +1391,6 @@
         },
         "city" : {
           "type" : "string"
-        },
-        "forcingIndicator" : {
-          "type" : "boolean"
         }
       }
     },
@@ -1399,15 +1399,15 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "numabo" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
         "initCreditCardPaymentAuthorizationOuts" : {
           "type" : "array",
           "items" : {
             "$ref" : "InitCreditCardPaymentAuthorizationOut"
           }
+        },
+        "numabo" : {
+          "type" : "integer",
+          "format" : "int64"
         }
       }
     },
@@ -1422,6 +1422,9 @@
             "$ref" : "PhoneCommon"
           }
         },
+        "person" : {
+          "$ref" : "PersonProspect"
+        },
         "orderId" : {
           "type" : "string"
         },
@@ -1430,9 +1433,6 @@
         },
         "payment" : {
           "$ref" : "PaymentProspect"
-        },
-        "person" : {
-          "$ref" : "PersonProspect"
         },
         "thirdPayor" : {
           "type" : "boolean"
@@ -1460,11 +1460,11 @@
           "type" : "integer",
           "format" : "int64"
         },
-        "countryId" : {
-          "type" : "string"
-        },
         "prospect" : {
           "$ref" : "InitCreditCardProspectIn"
+        },
+        "countryId" : {
+          "type" : "string"
         }
       }
     },

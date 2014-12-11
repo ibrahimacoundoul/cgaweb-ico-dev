@@ -952,17 +952,17 @@
     "ActOfManagementOut" : {
       "id" : "ActOfManagementOut",
       "description" : "",
-      "required" : [ "actOfManagementId", "actOfManagementCode" ],
+      "required" : [ "actOfManagementCode", "actOfManagementId" ],
       "extends" : "",
       "properties" : {
+        "actOfManagementCode" : {
+          "type" : "string",
+          "description" : "Code du mouvement"
+        },
         "actOfManagementId" : {
           "type" : "integer",
           "format" : "int64",
           "description" : "Id du mouvement"
-        },
-        "actOfManagementCode" : {
-          "type" : "string",
-          "description" : "Code du mouvement"
         }
       }
     },
@@ -1035,6 +1035,15 @@
           "type" : "integer",
           "format" : "int64"
         },
+        "companyName" : {
+          "type" : "string"
+        },
+        "civility" : {
+          "type" : "string"
+        },
+        "companyId" : {
+          "type" : "string"
+        },
         "numIdent" : {
           "type" : "string"
         },
@@ -1049,15 +1058,6 @@
         },
         "lastName" : {
           "type" : "string"
-        },
-        "civility" : {
-          "type" : "string"
-        },
-        "companyId" : {
-          "type" : "string"
-        },
-        "companyName" : {
-          "type" : "string"
         }
       }
     },
@@ -1069,11 +1069,15 @@
         "startDate" : {
           "type" : "string"
         },
-        "endDate" : {
+        "addressId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "undeliverabilityReason" : {
           "type" : "string"
         },
-        "forcingIndicator" : {
-          "type" : "boolean"
+        "endDate" : {
+          "type" : "string"
         },
         "personId" : {
           "type" : "integer",
@@ -1088,6 +1092,9 @@
         },
         "countryId" : {
           "type" : "string"
+        },
+        "forcingIndicator" : {
+          "type" : "boolean"
         },
         "city" : {
           "type" : "string"
@@ -1107,13 +1114,6 @@
         "street4" : {
           "type" : "string"
         },
-        "addressId" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "undeliverabilityReason" : {
-          "type" : "string"
-        },
         "valid" : {
           "type" : "boolean"
         }
@@ -1124,13 +1124,13 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "identityType" : {
+          "type" : "string"
+        },
         "identityNumber" : {
           "type" : "string"
         },
         "validityDate" : {
-          "type" : "string"
-        },
-        "identityType" : {
           "type" : "string"
         }
       }
@@ -1143,12 +1143,12 @@
         "invalidityReason" : {
           "type" : "string"
         },
-        "emailType" : {
-          "type" : "string"
-        },
         "personId" : {
           "type" : "integer",
           "format" : "int64"
+        },
+        "emailType" : {
+          "type" : "string"
         }
       }
     },
@@ -1217,49 +1217,6 @@
         "creationDate" : {
           "type" : "string"
         },
-        "userId" : {
-          "type" : "string"
-        },
-        "firstName" : {
-          "type" : "string"
-        },
-        "lastName" : {
-          "type" : "string"
-        },
-        "numIdent" : {
-          "type" : "string"
-        },
-        "subscriberCategory" : {
-          "type" : "string"
-        },
-        "subscriberSubCategory" : {
-          "type" : "string"
-        },
-        "companyName" : {
-          "type" : "string"
-        },
-        "companyId" : {
-          "type" : "string"
-        },
-        "civility" : {
-          "type" : "string"
-        },
-        "personId" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "emails" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "Email"
-          }
-        },
-        "addresses" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "Address"
-          }
-        },
         "birthDate" : {
           "type" : "string"
         },
@@ -1279,6 +1236,49 @@
           }
         },
         "futursAddresses" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "Address"
+          }
+        },
+        "userId" : {
+          "type" : "string"
+        },
+        "firstName" : {
+          "type" : "string"
+        },
+        "lastName" : {
+          "type" : "string"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "numIdent" : {
+          "type" : "string"
+        },
+        "subscriberCategory" : {
+          "type" : "string"
+        },
+        "subscriberSubCategory" : {
+          "type" : "string"
+        },
+        "companyName" : {
+          "type" : "string"
+        },
+        "companyId" : {
+          "type" : "string"
+        },
+        "civility" : {
+          "type" : "string"
+        },
+        "emails" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "Email"
+          }
+        },
+        "addresses" : {
           "type" : "array",
           "items" : {
             "$ref" : "Address"
@@ -1308,12 +1308,12 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "emailType" : {
-          "type" : "string"
-        },
         "personId" : {
           "type" : "integer",
           "format" : "int64"
+        },
+        "emailType" : {
+          "type" : "string"
         }
       }
     },

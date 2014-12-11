@@ -695,14 +695,14 @@
           "type" : "string",
           "description" : "Format date attendu yyyymmdd"
         },
-        "countryId" : {
-          "type" : "string"
-        },
         "equipmentTypes" : {
           "type" : "array",
           "items" : {
             "$ref" : "EquipmentTypeInput"
           }
+        },
+        "countryId" : {
+          "type" : "string"
         }
       }
     },
@@ -711,6 +711,9 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "rental" : {
+          "type" : "boolean"
+        },
         "productId" : {
           "type" : "string"
         },
@@ -725,9 +728,6 @@
           "type" : "boolean"
         },
         "accessorie" : {
-          "type" : "boolean"
-        },
-        "rental" : {
           "type" : "boolean"
         }
       }

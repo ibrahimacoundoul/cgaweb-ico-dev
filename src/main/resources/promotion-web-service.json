@@ -486,13 +486,9 @@
     "InfosSubscriptionContextAndArticles" : {
       "id" : "InfosSubscriptionContextAndArticles",
       "description" : "",
-      "required" : [ "contextsousc", "postalCode", "methodOfPayment", "broadcastVectorId", "ispId", "commercialOperator", "countryId", "dateToDate", "broadcastMediaType", "productsId", "duration", "origin" ],
+      "required" : [ "postalCode", "methodOfPayment", "broadcastVectorId", "ispId", "commercialOperator", "countryId", "dateToDate", "contextsousc", "broadcastMediaType", "productsId", "duration", "origin" ],
       "extends" : "",
       "properties" : {
-        "contextsousc" : {
-          "type" : "string",
-          "description" : "code du contexte de souscription"
-        },
         "postalCode" : {
           "type" : "string",
           "description" : "code postal du contrat à souscrire"
@@ -520,6 +516,10 @@
         "dateToDate" : {
           "type" : "string",
           "description" : "indicateur de contrat date à date"
+        },
+        "contextsousc" : {
+          "type" : "string",
+          "description" : "code du contexte de souscription"
         },
         "broadcastMediaType" : {
           "type" : "string",
@@ -553,10 +553,10 @@
         "promotionId" : {
           "type" : "string"
         },
-        "shortLabel" : {
+        "enddate" : {
           "type" : "string"
         },
-        "enddate" : {
+        "shortLabel" : {
           "type" : "string"
         },
         "description" : {
@@ -637,10 +637,10 @@
         "promotionId" : {
           "type" : "string"
         },
-        "shortLabel" : {
+        "enddate" : {
           "type" : "string"
         },
-        "enddate" : {
+        "shortLabel" : {
           "type" : "string"
         },
         "description" : {

@@ -252,10 +252,10 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "motiveId" : {
+        "motiveLabel" : {
           "type" : "string"
         },
-        "motiveLabel" : {
+        "motiveId" : {
           "type" : "string"
         }
       }
