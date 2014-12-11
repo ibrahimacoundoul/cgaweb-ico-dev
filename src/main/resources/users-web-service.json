@@ -44,7 +44,7 @@
     "description" : "createOrUpdateUser",
     "operations" : [ {
       "method" : "PUT",
-      "summary" : "création / mise à jour d'un utilisateur",
+      "summary" : "création / mise à jour d'un utilisateurs",
       "notes" : "createOrUpdateUser",
       "type" : "ResponseWrapper«UserOut»",
       "nickname" : "createOrUpdateUser",
@@ -146,7 +146,7 @@
         },
         "profile" : {
           "type" : "string",
-          "description" : "Rôle de l'utilisateur"
+          "description" : "Role de l'utilisateur"
         },
         "firstName" : {
           "type" : "string",
