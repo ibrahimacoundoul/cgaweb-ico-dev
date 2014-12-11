@@ -82,6 +82,16 @@
 									</arguments>
 								</configuration>
 							</execution>
+							<execution>
+								<id>kiss-swagger-commit</id>
+								<phase>compile</phase>
+								<goals>
+									<goal>exec</goal>
+								</goals>
+								<configuration>
+									<executable>kiss-swagger-check-change.sh</executable>
+								</configuration>
+							</execution>
 						</executions>
 					</plugin>
 				</plugins>

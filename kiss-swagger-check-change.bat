@@ -5,5 +5,5 @@ java -cp target\kiss-swagger-monitoring-dep.jar fr.canalplus.cgaweb.swagger.kiss
 REM on ajoute tous les nouveaux fichiers puis commiter et pusher sur la repos github 
 git pull
 git add *
-git commit -am "commit auto des modifications des webservices KISS avec Swagger"
+git commit -am "commit auto des modifications des webservices KISS avec Swagger (.bat)"
 git push --repo https://ibrahimacoundoul:testtest1@github.com/ibrahimacoundoul/cgaweb-ico-dev
