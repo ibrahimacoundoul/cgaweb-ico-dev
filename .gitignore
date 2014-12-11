@@ -2,3 +2,5 @@
 /.project
 /.classpath
 /target
+/kiss-swagger-check-change.sh
+/kiss-swagger-check-change.bat
