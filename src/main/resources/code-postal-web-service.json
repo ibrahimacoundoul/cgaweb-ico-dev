@@ -8,7 +8,7 @@
     "description" : "createZipCode",
     "operations" : [ {
       "method" : "PUT",
-      "summary" : "Création automatique d'un code postal",
+      "summary" : "Création automatique d'un zip code",
       "notes" : "createZipCode",
       "type" : "ResponseWrapper«object»",
       "nickname" : "createZipCode",
@@ -46,7 +46,7 @@
         "allowMultiple" : false
       }, {
         "name" : "salesman",
-        "description" : "Vendeur ayant effectué la modification",
+        "description" : "Vendeur ayant effectué les modifications",
         "defaultValue" : "",
         "required" : false,
         "type" : "string",
