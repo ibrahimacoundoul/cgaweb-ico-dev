@@ -9,7 +9,7 @@
     "description" : "getActOfManagement",
     "operations" : [ {
       "method" : "GET",
-      "summary" : "Renvoie le detail du mouvement dont l'identifiant est passé en paramètre",
+      "summary" : "Renvoie le detail du mouvement dont l'id est passé en paramètre",
       "notes" : "getActOfManagement",
       "type" : "ResponseWrapper«ActOfManagementWithDetails»",
       "nickname" : "getActOfManagement",
@@ -58,7 +58,7 @@
       "nickname" : "getLinkedActOfManagement",
       "parameters" : [ {
         "name" : "linkedActOfManagementId",
-        "description" : "ID that links the movements toto",
+        "description" : "ID that links the movements",
         "defaultValue" : "",
         "required" : true,
         "type" : "integer",
@@ -104,7 +104,7 @@
         "description" : "ID that links the movements",
         "defaultValue" : "",
         "required" : true,
-        "type" : "integer zzzz",
+        "type" : "integer",
         "format" : "int64",
         "paramType" : "path",
         "allowMultiple" : false
