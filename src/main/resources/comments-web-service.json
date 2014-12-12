@@ -62,21 +62,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«CommentInsertOrUpdateOut»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -139,21 +126,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«CommentInsertOrUpdateOut»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -218,18 +192,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«Comment»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -294,18 +258,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«Comment»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -316,6 +270,12 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "actOfManagemnetId" : {
+          "type" : "string"
+        },
+        "createOnLinkedContract" : {
+          "type" : "boolean"
+        },
         "commentType" : {
           "type" : "string"
         },
@@ -326,12 +286,6 @@
         "personId" : {
           "type" : "integer",
           "format" : "int64"
-        },
-        "actOfManagemnetId" : {
-          "type" : "string"
-        },
-        "createOnLinkedContract" : {
-          "type" : "boolean"
         },
         "creationUser" : {
           "type" : "string"
@@ -366,14 +320,14 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "commentType" : {
-          "type" : "string"
-        },
         "actOfManagemnetId" : {
           "type" : "string"
         },
         "updateOnLinkedContract" : {
           "type" : "boolean"
+        },
+        "commentType" : {
+          "type" : "string"
         },
         "creationUser" : {
           "type" : "string"
@@ -409,18 +363,18 @@
         "actOfManagementId" : {
           "type" : "string"
         },
+        "freeText" : {
+          "type" : "string"
+        },
+        "creationUser" : {
+          "type" : "string"
+        },
         "commentType" : {
           "type" : "string"
         },
         "commentId" : {
           "type" : "integer",
           "format" : "int64"
-        },
-        "freeText" : {
-          "type" : "string"
-        },
-        "creationUser" : {
-          "type" : "string"
         },
         "contactId" : {
           "type" : "string"

@@ -62,21 +62,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«SubscriptionOut»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER , ERR_BIZ_COMMON_INVALID_DISTRIBUTOR , ERR_BIZ_COMMON_INVALID_SALESMAN , ERR_BIZ_COMMON_INVALID_DISTRIBUTOR_SALESMAN , ERR_BIZ_COMMON_INVALID_SALEDEVICE , ERR_BIZ_ADRESS_INVALID_SALEDEVICE_FOR_COUNTRY , ERR_BIZ_SUBSCRIPTION_PHONE_INVALID_NUMBER , ERR_BIZ_SUBSCRIPTION_PHONE_UNREFERENCED_COUNTRY , ERR_BIZ_CREDIT_CARD_ALREADY_USE , ELIGIBILITY_SUBSCRIPTION_KO , ERR_BIZ_LOGISTICS_INVALID_CONFIGURATION_ID , ERR_BIZ_LOGISTICS_INVALID_AFFECTATION_TYPE , ERR_BIZ_MANDATE_INVALID_MODPAYMENT , ERR_BIZ_SUBSCRIPTION_INSUFFICIENT_DATA_FOR_MAEACALL"
       } ],
       "deprecated" : "false"
     } ]
@@ -139,21 +126,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«SubscriptionIn»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER , "
       } ],
       "deprecated" : "false"
     } ]
@@ -212,11 +186,17 @@
             "$ref" : "Equipment"
           }
         },
-        "person" : {
-          "$ref" : "PersonToSubscribe"
+        "skipPaymentOnAccount" : {
+          "type" : "boolean"
+        },
+        "forceConfirmedContract" : {
+          "type" : "boolean"
         },
         "orderId" : {
           "type" : "string"
+        },
+        "person" : {
+          "$ref" : "PersonToSubscribe"
         },
         "email" : {
           "type" : "string"
@@ -230,9 +210,6 @@
         },
         "equipmentConfig" : {
           "type" : "string"
-        },
-        "forceConfirmedContract" : {
-          "type" : "boolean"
         },
         "affectationType" : {
           "type" : "string"
@@ -257,52 +234,6 @@
           "type" : "string"
         },
         "phoneType" : {
-          "type" : "string"
-        }
-      }
-    },
-    "PaymentMeans" : {
-      "id" : "PaymentMeans",
-      "description" : "",
-      "extends" : "",
-      "properties" : {
-        "directDebitDate" : {
-          "type" : "string"
-        },
-        "creditCard" : {
-          "$ref" : "CreditCard"
-        },
-        "thirdPayorId" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "directDebit" : {
-          "$ref" : "DirectDebit"
-        }
-      }
-    },
-    "CreditCard" : {
-      "id" : "CreditCard",
-      "description" : "",
-      "extends" : "",
-      "properties" : {
-        "authorizationNumber" : {
-          "type" : "string"
-        },
-        "creditCardType" : {
-          "type" : "string"
-        },
-        "creditCardNumber" : {
-          "type" : "string"
-        },
-        "cryptogram" : {
-          "type" : "string"
-        },
-        "expirationDate" : {
-          "type" : "string",
-          "description" : "Format date attendu yyyymm"
-        },
-        "owner" : {
           "type" : "string"
         }
       }
@@ -360,10 +291,10 @@
           "type" : "integer",
           "format" : "int64"
         },
-        "companyName" : {
+        "civility" : {
           "type" : "string"
         },
-        "civility" : {
+        "companyName" : {
           "type" : "string"
         },
         "companyId" : {
@@ -386,6 +317,26 @@
         }
       }
     },
+    "PaymentMeansSubscription" : {
+      "id" : "PaymentMeansSubscription",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "directDebitDate" : {
+          "type" : "string"
+        },
+        "thirdPayorId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "directDebit" : {
+          "$ref" : "DirectDebit"
+        },
+        "bankCustomerId" : {
+          "type" : "string"
+        }
+      }
+    },
     "PaymentToSubscribe" : {
       "id" : "PaymentToSubscribe",
       "description" : "",
@@ -395,8 +346,9 @@
           "type" : "number",
           "format" : "double"
         },
-        "creditCard" : {
-          "$ref" : "CreditCard"
+        "authorizationNumber" : {
+          "type" : "integer",
+          "format" : "int64"
         }
       }
     },
@@ -451,11 +403,11 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "postalCode" : {
-          "type" : "string"
-        },
         "forcingIndicator" : {
           "type" : "boolean"
+        },
+        "postalCode" : {
+          "type" : "string"
         },
         "street1" : {
           "type" : "string"
@@ -483,9 +435,6 @@
       "extends" : "",
       "properties" : {
         "action" : {
-          "type" : "string"
-        },
-        "freeMethodOfPaymentReason" : {
           "type" : "string"
         },
         "broadcastVectorId" : {
@@ -521,7 +470,7 @@
           "format" : "int32"
         },
         "payment" : {
-          "$ref" : "PaymentMeans"
+          "$ref" : "PaymentMeansSubscription"
         },
         "products" : {
           "type" : "array",
@@ -532,6 +481,9 @@
         "sponsorId" : {
           "type" : "integer",
           "format" : "int64"
+        },
+        "freeMethodOfPaymentReason" : {
+          "type" : "string"
         }
       }
     },
@@ -546,12 +498,12 @@
             "$ref" : "ContractOut"
           }
         },
+        "orderId" : {
+          "type" : "string"
+        },
         "personId" : {
           "type" : "integer",
           "format" : "int64"
-        },
-        "orderId" : {
-          "type" : "string"
         },
         "shipmentFees" : {
           "type" : "number",

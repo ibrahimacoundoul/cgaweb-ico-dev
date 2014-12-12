@@ -72,21 +72,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«object»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -158,21 +145,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«object»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -235,21 +209,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«Person»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -269,7 +230,7 @@
         "required" : true,
         "type" : "integer",
         "format" : "int64",
-        "paramType" : "path",
+        "paramType" : "query",
         "allowMultiple" : false
       }, {
         "name" : "userId",
@@ -305,18 +266,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«Person»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -389,21 +340,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«EligibilityOut»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -466,21 +404,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«ActOfManagementOut»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -543,21 +468,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«ActOfManagementOut»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -620,21 +532,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«ActOfManagementOut»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -697,21 +596,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«ActOfManagementOut»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -776,21 +662,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«EligibilityOut»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -846,18 +719,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«Person»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -929,21 +792,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«object»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -952,17 +802,17 @@
     "ActOfManagementOut" : {
       "id" : "ActOfManagementOut",
       "description" : "",
-      "required" : [ "actOfManagementCode", "actOfManagementId" ],
+      "required" : [ "actOfManagementId", "actOfManagementCode" ],
       "extends" : "",
       "properties" : {
-        "actOfManagementCode" : {
-          "type" : "string",
-          "description" : "Code du mouvement"
-        },
         "actOfManagementId" : {
           "type" : "integer",
           "format" : "int64",
           "description" : "Id du mouvement"
+        },
+        "actOfManagementCode" : {
+          "type" : "string",
+          "description" : "Code du mouvement"
         }
       }
     },
@@ -1035,10 +885,10 @@
           "type" : "integer",
           "format" : "int64"
         },
-        "companyName" : {
+        "civility" : {
           "type" : "string"
         },
-        "civility" : {
+        "companyName" : {
           "type" : "string"
         },
         "companyId" : {
@@ -1069,15 +919,11 @@
         "startDate" : {
           "type" : "string"
         },
-        "addressId" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "undeliverabilityReason" : {
-          "type" : "string"
-        },
         "endDate" : {
           "type" : "string"
+        },
+        "forcingIndicator" : {
+          "type" : "boolean"
         },
         "personId" : {
           "type" : "integer",
@@ -1092,9 +938,6 @@
         },
         "countryId" : {
           "type" : "string"
-        },
-        "forcingIndicator" : {
-          "type" : "boolean"
         },
         "city" : {
           "type" : "string"
@@ -1113,6 +956,13 @@
         },
         "street4" : {
           "type" : "string"
+        },
+        "undeliverabilityReason" : {
+          "type" : "string"
+        },
+        "addressId" : {
+          "type" : "integer",
+          "format" : "int64"
         },
         "valid" : {
           "type" : "boolean"
@@ -1183,12 +1033,12 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "phoneTypeId" : {
+          "type" : "string"
+        },
         "personId" : {
           "type" : "integer",
           "format" : "int64"
-        },
-        "phoneTypeId" : {
-          "type" : "string"
         }
       }
     },
@@ -1200,12 +1050,12 @@
         "phoneNumber" : {
           "type" : "string"
         },
-        "phoneType" : {
-          "type" : "string"
-        },
         "phoneId" : {
           "type" : "integer",
           "format" : "int64"
+        },
+        "phoneType" : {
+          "type" : "string"
         }
       }
     },
@@ -1216,6 +1066,49 @@
       "properties" : {
         "creationDate" : {
           "type" : "string"
+        },
+        "userId" : {
+          "type" : "string"
+        },
+        "firstName" : {
+          "type" : "string"
+        },
+        "lastName" : {
+          "type" : "string"
+        },
+        "subscriberCategory" : {
+          "type" : "string"
+        },
+        "subscriberSubCategory" : {
+          "type" : "string"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "emails" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "Email"
+          }
+        },
+        "civility" : {
+          "type" : "string"
+        },
+        "numIdent" : {
+          "type" : "string"
+        },
+        "companyName" : {
+          "type" : "string"
+        },
+        "companyId" : {
+          "type" : "string"
+        },
+        "addresses" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "Address"
+          }
         },
         "birthDate" : {
           "type" : "string"
@@ -1236,49 +1129,6 @@
           }
         },
         "futursAddresses" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "Address"
-          }
-        },
-        "userId" : {
-          "type" : "string"
-        },
-        "firstName" : {
-          "type" : "string"
-        },
-        "lastName" : {
-          "type" : "string"
-        },
-        "personId" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "numIdent" : {
-          "type" : "string"
-        },
-        "subscriberCategory" : {
-          "type" : "string"
-        },
-        "subscriberSubCategory" : {
-          "type" : "string"
-        },
-        "companyName" : {
-          "type" : "string"
-        },
-        "companyId" : {
-          "type" : "string"
-        },
-        "civility" : {
-          "type" : "string"
-        },
-        "emails" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "Email"
-          }
-        },
-        "addresses" : {
           "type" : "array",
           "items" : {
             "$ref" : "Address"
@@ -1322,10 +1172,10 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "email" : {
+        "emailType" : {
           "type" : "string"
         },
-        "emailType" : {
+        "email" : {
           "type" : "string"
         }
       }
@@ -1368,15 +1218,15 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "personId" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
         "phoneTypeId" : {
           "type" : "string"
         },
         "invalidityReasonId" : {
           "type" : "string"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
         }
       }
     }

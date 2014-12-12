@@ -46,18 +46,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«boolean»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER, ERR_BIZ_COMMON_INVALID_SALEDEVICE, ERR_BIZ_COMMON_INVALID_SALEDEVICE, ERR_BIZ_COMMON_INVALID_SALESMAN, ERR_BIZ_COMMON_INVALID_DISTRIBUTOR_SALESMAN, "
       } ],
       "deprecated" : "false"
     } ]

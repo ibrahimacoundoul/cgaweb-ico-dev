@@ -32,18 +32,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«ActOfManagementWithDetails»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -75,18 +65,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ActOfManagementOut»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -118,18 +98,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ActOfManagementOut»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -193,21 +163,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ActOfManagementSearch»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -248,18 +205,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ActOfManagement»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -300,18 +247,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ActOfManagement»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -320,17 +257,17 @@
     "ActOfManagementOut" : {
       "id" : "ActOfManagementOut",
       "description" : "",
-      "required" : [ "actOfManagementCode", "actOfManagementId" ],
+      "required" : [ "actOfManagementId", "actOfManagementCode" ],
       "extends" : "",
       "properties" : {
-        "actOfManagementCode" : {
-          "type" : "string",
-          "description" : "Code du mouvement"
-        },
         "actOfManagementId" : {
           "type" : "integer",
           "format" : "int64",
           "description" : "Id du mouvement"
+        },
+        "actOfManagementCode" : {
+          "type" : "string",
+          "description" : "Code du mouvement"
         }
       }
     },
@@ -356,6 +293,10 @@
       "required" : [ "startDate", "personId" ],
       "extends" : "",
       "properties" : {
+        "actOfManagementFamily" : {
+          "type" : "string",
+          "description" : "Indique sur quelle famille de type de mouvement filtrer"
+        },
         "startDate" : {
           "$ref" : "date-time",
           "description" : "Indique le début d’intervalle de sélection au format yyyymmdd"
@@ -373,10 +314,6 @@
           "type" : "integer",
           "format" : "int64",
           "description" : "ID de l'abonné concerné"
-        },
-        "actOfManagementFamily" : {
-          "type" : "string",
-          "description" : "Indique sur quelle famille de type de mouvement filtrer"
         }
       }
     },
@@ -391,15 +328,12 @@
         "mediaType" : {
           "type" : "string"
         },
-        "salesman" : {
-          "type" : "string"
-        },
-        "cancellationUser" : {
-          "type" : "string"
-        },
         "actOfManagementId" : {
           "type" : "integer",
           "format" : "int64"
+        },
+        "cancellationDate" : {
+          "type" : "string"
         },
         "personId" : {
           "type" : "integer",
@@ -409,17 +343,11 @@
           "type" : "integer",
           "format" : "int32"
         },
-        "cancellationDate" : {
-          "type" : "string"
-        },
         "renewalSequence" : {
           "type" : "integer",
           "format" : "int32"
         },
         "creationUser" : {
-          "type" : "string"
-        },
-        "distributorId" : {
           "type" : "string"
         },
         "saleDevice" : {
@@ -428,13 +356,22 @@
         "contactId" : {
           "type" : "string"
         },
-        "actOfManagementFamilyType" : {
+        "distributorId" : {
+          "type" : "string"
+        },
+        "cancellationUser" : {
+          "type" : "string"
+        },
+        "salesman" : {
+          "type" : "string"
+        },
+        "actOfManagementType" : {
           "type" : "string"
         },
         "changes" : {
           "$ref" : "ActOfManagementDetail"
         },
-        "actOfManagementType" : {
+        "actOfManagementFamilyType" : {
           "type" : "string"
         }
       }
@@ -442,7 +379,7 @@
     "ActOfManagementSearch" : {
       "id" : "ActOfManagementSearch",
       "description" : "",
-      "required" : [ "creationDate", "mediaType", "salesman", "cancellationUser", "actOfManagementId", "personId", "contractId", "cancellationDate", "renewalSequence", "creationUser", "distributorId", "saleDevice", "contactId", "actOfManagementType" ],
+      "required" : [ "creationDate", "mediaType", "actOfManagementId", "cancellationDate", "personId", "contractId", "renewalSequence", "creationUser", "saleDevice", "contactId", "distributorId", "cancellationUser", "salesman", "actOfManagementType" ],
       "extends" : "",
       "properties" : {
         "creationDate" : {
@@ -454,18 +391,15 @@
           "type" : "string",
           "description" : "Type de communication lié au mouvement"
         },
-        "salesman" : {
-          "type" : "string",
-          "description" : "Id du vendeur lié au mouvement"
-        },
-        "cancellationUser" : {
-          "type" : "string",
-          "description" : "Utilisateur ayant annulé le mouvement"
-        },
         "actOfManagementId" : {
           "type" : "integer",
           "format" : "int64",
           "description" : "Id du mouvement"
+        },
+        "cancellationDate" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "Date d'annulation du mouvement"
         },
         "personId" : {
           "type" : "integer",
@@ -477,11 +411,6 @@
           "format" : "int32",
           "description" : "N° de contrat"
         },
-        "cancellationDate" : {
-          "type" : "integer",
-          "format" : "int64",
-          "description" : "Date d'annulation du mouvement"
-        },
         "renewalSequence" : {
           "type" : "integer",
           "format" : "int32",
@@ -491,10 +420,6 @@
           "type" : "string",
           "description" : "User ayant créé le mouvement"
         },
-        "distributorId" : {
-          "type" : "string",
-          "description" : "Identification du distributeur"
-        },
         "saleDevice" : {
           "type" : "string",
           "description" : "Canal de vente utilisé lors de l'acte de gestion"
@@ -503,15 +428,27 @@
           "type" : "string",
           "description" : "Identifiant du contact"
         },
-        "actOfManagementFamilyType" : {
-          "type" : "string"
+        "distributorId" : {
+          "type" : "string",
+          "description" : "Identification du distributeur"
         },
-        "changes" : {
-          "$ref" : "ActOfManagementDetail"
+        "cancellationUser" : {
+          "type" : "string",
+          "description" : "Utilisateur ayant annulé le mouvement"
+        },
+        "salesman" : {
+          "type" : "string",
+          "description" : "Id du vendeur lié au mouvement"
         },
         "actOfManagementType" : {
           "type" : "string",
           "description" : "Typologie du mouvement"
+        },
+        "changes" : {
+          "$ref" : "ActOfManagementDetail"
+        },
+        "actOfManagementFamilyType" : {
+          "type" : "string"
         }
       }
     },
@@ -547,12 +484,6 @@
           "type" : "integer",
           "format" : "int64"
         },
-        "actOfManagementCode" : {
-          "type" : "string"
-        },
-        "cancellationUser" : {
-          "type" : "string"
-        },
         "actOfManagementId" : {
           "type" : "integer",
           "format" : "int64"
@@ -568,9 +499,6 @@
         "creationUser" : {
           "type" : "string"
         },
-        "distributorId" : {
-          "type" : "string"
-        },
         "saleDevice" : {
           "type" : "string"
         },
@@ -581,14 +509,23 @@
         "contactId" : {
           "type" : "string"
         },
+        "distributorId" : {
+          "type" : "string"
+        },
+        "cancellationUser" : {
+          "type" : "string"
+        },
+        "actOfManagementCode" : {
+          "type" : "string"
+        },
+        "salesMan" : {
+          "type" : "string"
+        },
         "listOfChanges" : {
           "type" : "array",
           "items" : {
             "$ref" : "ActOfManagementChange"
           }
-        },
-        "salesMan" : {
-          "type" : "string"
         }
       }
     },

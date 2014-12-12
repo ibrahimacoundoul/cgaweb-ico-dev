@@ -73,18 +73,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«AccountingWriting»»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER , ERR_BIZ_SUBSCRIPTION_INVALID_SUBSCRIBER , ERR_BIZ_WS_SUBSCRIBER_OR_CONTRACT_ID_UNKNOWN , ERR_BIZ_WS_GEN_ILLEGAL_ARG_ERROR"
       } ],
       "deprecated" : "false"
     } ]
@@ -116,18 +106,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«AccountingPiece»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER ,ERR_TECH_GEN_NULL_ARGUMENT , ERR_BIZ_GEN_RESOURCE_NOT_EXIST"
       } ],
       "deprecated" : "false"
     } ]
@@ -159,18 +139,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«AccountingPiece»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER , ERR_TECH_GEN_NULL_ARGUMENT, ERR_BIZ_GEN_RESOURCE_NOT_EXIST"
       } ],
       "deprecated" : "false"
     } ]
@@ -204,13 +174,16 @@
         "creationDate" : {
           "type" : "string"
         },
-        "accountingDate" : {
+        "accountingPieceLabel" : {
           "type" : "string"
         },
         "productId" : {
           "type" : "string"
         },
         "productLabel" : {
+          "type" : "string"
+        },
+        "accountingDate" : {
           "type" : "string"
         },
         "operatorId" : {
@@ -247,9 +220,6 @@
         },
         "generalAccountingDetail" : {
           "$ref" : "GeneralAccountingDetail"
-        },
-        "accountingPieceLabel" : {
-          "type" : "string"
         },
         "creationUser" : {
           "type" : "string"
@@ -299,13 +269,13 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "accountingPieceLabel" : {
+          "type" : "string"
+        },
         "accountingDate" : {
           "type" : "string"
         },
         "crmLedgerId" : {
-          "type" : "string"
-        },
-        "accountingPieceLabel" : {
           "type" : "string"
         },
         "crmLedgerLabel" : {
@@ -359,15 +329,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "sapOperatorId" : {
-          "type" : "string"
-        },
-        "generalAccount" : {
-          "type" : "string"
-        },
-        "operationalAccount" : {
-          "type" : "string"
-        },
         "budgetingAccount" : {
           "type" : "string"
         },
@@ -381,6 +342,15 @@
           "type" : "string"
         },
         "sapLedgerLabel" : {
+          "type" : "string"
+        },
+        "generalAccount" : {
+          "type" : "string"
+        },
+        "operationalAccount" : {
+          "type" : "string"
+        },
+        "sapOperatorId" : {
           "type" : "string"
         }
       }
@@ -397,23 +367,6 @@
           "type" : "number",
           "format" : "float"
         },
-        "debit" : {
-          "type" : "number",
-          "format" : "float"
-        },
-        "vatRate" : {
-          "type" : "number",
-          "format" : "float"
-        },
-        "axe2Account" : {
-          "type" : "string"
-        },
-        "generalAccount" : {
-          "type" : "string"
-        },
-        "operationalAccount" : {
-          "type" : "string"
-        },
         "budgetingAccount" : {
           "type" : "string"
         },
@@ -421,6 +374,23 @@
           "type" : "string"
         },
         "budgetingNature" : {
+          "type" : "string"
+        },
+        "debit" : {
+          "type" : "number",
+          "format" : "float"
+        },
+        "generalAccount" : {
+          "type" : "string"
+        },
+        "operationalAccount" : {
+          "type" : "string"
+        },
+        "vatRate" : {
+          "type" : "number",
+          "format" : "float"
+        },
+        "axe2Account" : {
           "type" : "string"
         }
       }

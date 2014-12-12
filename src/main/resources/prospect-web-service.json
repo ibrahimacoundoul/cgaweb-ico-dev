@@ -139,21 +139,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«ProspectOut»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER, ERR_BIZ_COMMON_INVALID_USER, ERR_BIZ_ADRESS_INVALID_SALEDEVICE_FOR_COUNTRY, ERR_BIZ_SUBSCRIPTION_PHONE_INVALID_NUMBER, ERR_BIZ_SUBSCRIPTION_PHONE_UNREFERENCED_COUNTRY, INVALID_CONTACT_DETAILS, "
       } ],
       "deprecated" : "false"
     } ]
@@ -168,10 +155,10 @@
           "type" : "integer",
           "format" : "int64"
         },
-        "companyName" : {
+        "civility" : {
           "type" : "string"
         },
-        "civility" : {
+        "companyName" : {
           "type" : "string"
         },
         "companyId" : {
@@ -212,11 +199,17 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "person" : {
-          "$ref" : "PersonProspect"
+        "phones" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "PhoneCommon"
+          }
         },
         "orderId" : {
           "type" : "string"
+        },
+        "person" : {
+          "$ref" : "PersonProspect"
         },
         "email" : {
           "type" : "string"
@@ -226,12 +219,6 @@
         },
         "thirdPayor" : {
           "type" : "boolean"
-        },
-        "phones" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "PhoneCommon"
-          }
         },
         "address" : {
           "$ref" : "AddressCommon"
@@ -249,11 +236,9 @@
         "bic" : {
           "type" : "string"
         },
-        "cryptogram" : {
-          "type" : "string"
-        },
-        "expiracyDate" : {
-          "type" : "string"
+        "directDebitDate" : {
+          "type" : "integer",
+          "format" : "int32"
         }
       }
     },
@@ -262,6 +247,12 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "phones" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "PhoneCommon"
+          }
+        },
         "person" : {
           "$ref" : "PersonToUpdate"
         },
@@ -274,12 +265,6 @@
         "thirdPayor" : {
           "type" : "boolean"
         },
-        "phones" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "PhoneCommon"
-          }
-        },
         "address" : {
           "$ref" : "AddressCommon"
         }
@@ -290,12 +275,12 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "orderId" : {
+          "type" : "string"
+        },
         "personId" : {
           "type" : "integer",
           "format" : "int64"
-        },
-        "orderId" : {
-          "type" : "string"
         }
       }
     },
@@ -304,10 +289,10 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "companyName" : {
+        "civility" : {
           "type" : "string"
         },
-        "civility" : {
+        "companyName" : {
           "type" : "string"
         },
         "companyId" : {
@@ -335,11 +320,11 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "postalCode" : {
-          "type" : "string"
-        },
         "forcingIndicator" : {
           "type" : "boolean"
+        },
+        "postalCode" : {
+          "type" : "string"
         },
         "street1" : {
           "type" : "string"

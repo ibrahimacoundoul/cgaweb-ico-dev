@@ -64,21 +64,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«GlobalEligibilityOut»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER, ERR_BIZ_COMMON_INVALID_SALEDEVICE, ERR_BIZ_COMMON_INVALID_COMMERCIAL_OPERATOR, FAIL_TO_FIND_DUPLICATE_PERSON, "
       } ],
       "deprecated" : "false"
     } ]
@@ -142,21 +129,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«GlobalEligibilityOut2»"
+        "code" : 510,
+        "message" : " "
       } ],
       "deprecated" : "false"
     } ]
@@ -235,9 +209,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "authorizationNumber" : {
-          "type" : "string"
-        },
         "creditCardType" : {
           "type" : "string"
         },
@@ -250,6 +221,9 @@
         "expirationDate" : {
           "type" : "string",
           "description" : "Format date attendu yyyymm"
+        },
+        "authorizationNumber" : {
+          "type" : "string"
         },
         "owner" : {
           "type" : "string"
@@ -329,10 +303,10 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "companyName" : {
+        "civility" : {
           "type" : "string"
         },
-        "civility" : {
+        "companyName" : {
           "type" : "string"
         },
         "companyId" : {
@@ -416,6 +390,12 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "phones" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "PhoneCommon"
+          }
+        },
         "commercialOperators" : {
           "type" : "array",
           "uniqueItems" : true,
@@ -437,12 +417,6 @@
         },
         "payment" : {
           "$ref" : "PaymentMeans"
-        },
-        "phones" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "PhoneCommon"
-          }
         },
         "sponsorId" : {
           "type" : "integer",
@@ -498,11 +472,11 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "postalCode" : {
-          "type" : "string"
-        },
         "forcingIndicator" : {
           "type" : "boolean"
+        },
+        "postalCode" : {
+          "type" : "string"
         },
         "street1" : {
           "type" : "string"
@@ -552,6 +526,9 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "cb" : {
+          "$ref" : "CreditCardWithOwner"
+        },
         "iban" : {
           "$ref" : "Iban"
         },
@@ -564,9 +541,6 @@
         },
         "email" : {
           "type" : "string"
-        },
-        "cb" : {
-          "$ref" : "CreditCardWithOwner"
         },
         "sponsorId" : {
           "type" : "integer",

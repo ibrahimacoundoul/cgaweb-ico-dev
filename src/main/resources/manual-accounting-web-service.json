@@ -64,21 +64,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«ManualAccountingEntriesResultOut»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER , "
       } ],
       "deprecated" : "false"
     } ]
@@ -159,18 +146,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ManualAccountingEntriesSearchOut»»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER , "
       } ],
       "deprecated" : "false"
     } ]
@@ -234,21 +211,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«object»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER , "
       } ],
       "deprecated" : "false"
     } ]
@@ -329,16 +293,16 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "actOfManagementId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
         "accountingPieceId" : {
           "type" : "integer",
           "format" : "int64"
         },
         "accountingReadjustedDate" : {
           "$ref" : "date-time"
-        },
-        "actOfManagementId" : {
-          "type" : "integer",
-          "format" : "int64"
         }
       }
     },
@@ -358,6 +322,18 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "accountingPieceLabel" : {
+          "type" : "string"
+        },
+        "crmLedgerId" : {
+          "type" : "string"
+        },
+        "entries" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ManualAccountingEntry"
+          }
+        },
         "accountingDate" : {
           "type" : "string",
           "description" : "Format date attendu yyyymmdd"
@@ -371,18 +347,6 @@
           "format" : "int64"
         },
         "operatorId" : {
-          "type" : "string"
-        },
-        "entries" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "ManualAccountingEntry"
-          }
-        },
-        "accountingPieceLabel" : {
-          "type" : "string"
-        },
-        "crmLedgerId" : {
           "type" : "string"
         },
         "actOfManagementId" : {
@@ -402,7 +366,7 @@
         "creationDate" : {
           "type" : "string"
         },
-        "accountingPieceId" : {
+        "accountingPieceLabel" : {
           "type" : "string"
         },
         "accountingDate" : {
@@ -426,16 +390,7 @@
           "type" : "integer",
           "format" : "int32"
         },
-        "accountingPieceLabel" : {
-          "type" : "string"
-        },
         "validationDate" : {
-          "type" : "string"
-        },
-        "statusId" : {
-          "type" : "string"
-        },
-        "creationUserId" : {
           "type" : "string"
         },
         "validationUser" : {
@@ -446,6 +401,15 @@
           "items" : {
             "$ref" : "ManualAccountingEntry"
           }
+        },
+        "accountingPieceId" : {
+          "type" : "string"
+        },
+        "statusId" : {
+          "type" : "string"
+        },
+        "creationUserId" : {
+          "type" : "string"
         },
         "comment" : {
           "type" : "string"

@@ -40,18 +40,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ContractFromPerson»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -114,21 +104,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«object»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -191,21 +168,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ModificationOut»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -236,18 +200,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«BroadcastVector»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -288,18 +242,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«string»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -340,18 +284,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«ContractBalanceOut»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -400,18 +334,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«string»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -452,18 +376,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«Contract»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -526,21 +440,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«Contract»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -603,21 +504,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«Contract»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -680,21 +568,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«object»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -757,21 +632,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ModificationOut»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -834,21 +696,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«object»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -897,18 +746,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ProductLight»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -939,21 +778,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«PaymentModeHistoryOut»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -1016,21 +842,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ModificationOut»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -1093,21 +906,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ModificationOut»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -1170,21 +970,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ModificationOut»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -1225,18 +1012,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«ContractScheduledActions»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -1299,21 +1076,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«SignedContract»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -1376,21 +1140,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«SignedContract»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -1422,18 +1173,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ContractSummary»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -1522,21 +1263,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«Suspensions»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -1609,21 +1337,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«Suspensions»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -1686,21 +1401,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«object»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -1741,18 +1443,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«PersonUnpaid»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -1823,21 +1515,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«VoucherOut»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -1900,21 +1579,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«object»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -1946,18 +1612,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ContractFromPerson»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -1989,18 +1645,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ContractSummary»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -2041,18 +1687,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«ContractFromPersonContract»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -2101,18 +1737,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«string»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -2153,18 +1779,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«Contract»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -2213,18 +1829,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ProductLight»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -2265,18 +1871,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«ContractScheduledActions»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -2404,13 +2000,13 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "authorizationNumber" : {
+        "cryptogram" : {
           "type" : "string"
         },
         "expirationDate" : {
           "type" : "string"
         },
-        "cryptogram" : {
+        "authorizationNumber" : {
           "type" : "string"
         },
         "creditCardNumber" : {
@@ -2432,6 +2028,9 @@
         "payment" : {
           "$ref" : "PaymentModeHistory"
         },
+        "methodOfPayment" : {
+          "type" : "string"
+        },
         "modificationUser" : {
           "type" : "string"
         },
@@ -2439,9 +2038,6 @@
           "type" : "string"
         },
         "methodOfPaymentLabel" : {
-          "type" : "string"
-        },
-        "methodOfPayment" : {
           "type" : "string"
         }
       }
@@ -2457,12 +2053,6 @@
         "bic" : {
           "type" : "string"
         },
-        "accountingDate" : {
-          "type" : "string"
-        },
-        "directDebitTypeId" : {
-          "type" : "string"
-        },
         "detail" : {
           "type" : "array",
           "items" : {
@@ -2473,9 +2063,18 @@
           "type" : "number",
           "format" : "double"
         },
+        "accountingDate" : {
+          "type" : "string"
+        },
+        "directDebitTypeId" : {
+          "type" : "string"
+        },
         "rejectId" : {
           "type" : "integer",
           "format" : "int32"
+        },
+        "rejectCode" : {
+          "type" : "string"
         },
         "isIntentional" : {
           "type" : "boolean"
@@ -2495,9 +2094,6 @@
         },
         "isRepresentable" : {
           "type" : "boolean"
-        },
-        "rejectCode" : {
-          "type" : "string"
         },
         "month" : {
           "type" : "string"
@@ -2548,13 +2144,13 @@
         "commercialLabel" : {
           "type" : "string"
         },
+        "productType" : {
+          "type" : "string"
+        },
         "productCategory" : {
           "type" : "string"
         },
         "themeId" : {
-          "type" : "string"
-        },
-        "productType" : {
           "type" : "string"
         }
       }
@@ -2570,6 +2166,10 @@
         "commercialOperator" : {
           "type" : "string"
         },
+        "cancellationDate" : {
+          "type" : "string",
+          "description" : "Format date attendu yyyymmdd"
+        },
         "contractId" : {
           "type" : "integer",
           "format" : "int32"
@@ -2577,10 +2177,6 @@
         "personId" : {
           "type" : "integer",
           "format" : "int64"
-        },
-        "cancellationDate" : {
-          "type" : "string",
-          "description" : "Format date attendu yyyymmdd"
         },
         "cancellationReason" : {
           "type" : "string"
@@ -2612,9 +2208,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "authorizationNumber" : {
-          "type" : "string"
-        },
         "creditCardType" : {
           "type" : "string"
         },
@@ -2627,6 +2220,9 @@
         "expirationDate" : {
           "type" : "string",
           "description" : "Format date attendu yyyymm"
+        },
+        "authorizationNumber" : {
+          "type" : "string"
         },
         "owner" : {
           "type" : "string"
@@ -2651,9 +2247,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "actOfManagementCode" : {
-          "type" : "string"
-        },
         "actOfManagementId" : {
           "type" : "integer",
           "format" : "int64"
@@ -2665,6 +2258,9 @@
         "contractId" : {
           "type" : "integer",
           "format" : "int32"
+        },
+        "actOfManagementCode" : {
+          "type" : "string"
         }
       }
     },
@@ -2766,6 +2362,12 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "logistics" : {
+          "$ref" : "LogisticsIn"
+        },
+        "paymentCreditCard" : {
+          "$ref" : "CreditCard"
+        },
         "workingDate" : {
           "type" : "string",
           "description" : "Format date attendu yyyymmdd"
@@ -2779,12 +2381,6 @@
           "items" : {
             "$ref" : "ContractModification"
           }
-        },
-        "logistics" : {
-          "$ref" : "LogisticsIn"
-        },
-        "paymentCreditCard" : {
-          "$ref" : "CreditCard"
         },
         "vouchers" : {
           "type" : "array",
@@ -2811,34 +2407,6 @@
         "startDate" : {
           "type" : "string"
         },
-        "updateUser" : {
-          "type" : "string"
-        },
-        "freeCancellationDate" : {
-          "$ref" : "date-time"
-        },
-        "isReactivable" : {
-          "type" : "boolean"
-        },
-        "contractActivity" : {
-          "type" : "string"
-        },
-        "fullValidationStatus" : {
-          "type" : "string"
-        },
-        "nonRenewalReason" : {
-          "type" : "string"
-        },
-        "cancellationUser" : {
-          "type" : "string"
-        },
-        "suspensionDate" : {
-          "type" : "string"
-        },
-        "thirdPartyPayerId" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
         "products" : {
           "type" : "array",
           "items" : {
@@ -2849,6 +2417,9 @@
           "type" : "string"
         },
         "endDate" : {
+          "type" : "string"
+        },
+        "cancellationDate" : {
           "type" : "string"
         },
         "ccatalogue" : {
@@ -2877,9 +2448,6 @@
         "commercialOperator" : {
           "type" : "string"
         },
-        "cancellationDate" : {
-          "type" : "string"
-        },
         "cancellationReason" : {
           "type" : "string"
         },
@@ -2908,6 +2476,34 @@
         "distributorId" : {
           "type" : "string"
         },
+        "updateUser" : {
+          "type" : "string"
+        },
+        "isReactivable" : {
+          "type" : "boolean"
+        },
+        "contractActivity" : {
+          "type" : "string"
+        },
+        "fullValidationStatus" : {
+          "type" : "string"
+        },
+        "nonRenewalReason" : {
+          "type" : "string"
+        },
+        "cancellationUser" : {
+          "type" : "string"
+        },
+        "freeCancellationDate" : {
+          "$ref" : "date-time"
+        },
+        "suspensionDate" : {
+          "type" : "string"
+        },
+        "thirdPartyPayerId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
         "duration" : {
           "type" : "integer",
           "format" : "int32"
@@ -2916,42 +2512,6 @@
           "type" : "string"
         },
         "active" : {
-          "type" : "boolean"
-        },
-        "majorProductId" : {
-          "type" : "string"
-        },
-        "mainCommentText" : {
-          "type" : "string"
-        },
-        "mainCommentDate" : {
-          "type" : "string"
-        },
-        "methodOfPaymentLabel" : {
-          "type" : "string"
-        },
-        "mainActOfManagementId" : {
-          "type" : "string"
-        },
-        "mainActOfManagementDate" : {
-          "type" : "string"
-        },
-        "ongoingCancellationDate" : {
-          "type" : "string"
-        },
-        "ongoingCancellationCreationDate" : {
-          "type" : "string"
-        },
-        "originLabel" : {
-          "type" : "string"
-        },
-        "commercialOperatorLabel" : {
-          "type" : "string"
-        },
-        "reactivableAfterRegul" : {
-          "type" : "boolean"
-        },
-        "digitalSignature" : {
           "type" : "boolean"
         },
         "amount" : {
@@ -2967,6 +2527,42 @@
         },
         "ongoingCancellation" : {
           "type" : "boolean"
+        },
+        "originLabel" : {
+          "type" : "string"
+        },
+        "commercialOperatorLabel" : {
+          "type" : "string"
+        },
+        "reactivableAfterRegul" : {
+          "type" : "boolean"
+        },
+        "digitalSignature" : {
+          "type" : "boolean"
+        },
+        "mainCommentText" : {
+          "type" : "string"
+        },
+        "mainCommentDate" : {
+          "type" : "string"
+        },
+        "ongoingCancellationDate" : {
+          "type" : "string"
+        },
+        "methodOfPaymentLabel" : {
+          "type" : "string"
+        },
+        "mainActOfManagementId" : {
+          "type" : "string"
+        },
+        "mainActOfManagementDate" : {
+          "type" : "string"
+        },
+        "ongoingCancellationCreationDate" : {
+          "type" : "string"
+        },
+        "majorProductId" : {
+          "type" : "string"
         }
       }
     },
@@ -2995,40 +2591,6 @@
         "startDate" : {
           "type" : "string"
         },
-        "updateUser" : {
-          "type" : "string"
-        },
-        "ongoingCancellationDate" : {
-          "type" : "string"
-        },
-        "freeCancellationDate" : {
-          "$ref" : "date-time"
-        },
-        "isReactivable" : {
-          "type" : "boolean"
-        },
-        "contractActivity" : {
-          "type" : "string"
-        },
-        "fullValidationStatus" : {
-          "type" : "string"
-        },
-        "nonRenewalReason" : {
-          "type" : "string"
-        },
-        "cancellationUser" : {
-          "type" : "string"
-        },
-        "suspensionDate" : {
-          "type" : "string"
-        },
-        "thirdPartyPayerId" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "digitalSignature" : {
-          "type" : "boolean"
-        },
         "products" : {
           "type" : "array",
           "items" : {
@@ -3039,6 +2601,9 @@
           "type" : "string"
         },
         "endDate" : {
+          "type" : "string"
+        },
+        "cancellationDate" : {
           "type" : "string"
         },
         "ccatalogue" : {
@@ -3062,9 +2627,6 @@
           "format" : "int32"
         },
         "commercialOperator" : {
-          "type" : "string"
-        },
-        "cancellationDate" : {
           "type" : "string"
         },
         "cancellationReason" : {
@@ -3092,11 +2654,45 @@
         "freeMethodOfPaymentReason" : {
           "type" : "string"
         },
+        "ongoingCancellation" : {
+          "type" : "boolean"
+        },
         "distributorId" : {
           "type" : "string"
         },
-        "ongoingCancellation" : {
+        "updateUser" : {
+          "type" : "string"
+        },
+        "isReactivable" : {
           "type" : "boolean"
+        },
+        "contractActivity" : {
+          "type" : "string"
+        },
+        "fullValidationStatus" : {
+          "type" : "string"
+        },
+        "nonRenewalReason" : {
+          "type" : "string"
+        },
+        "cancellationUser" : {
+          "type" : "string"
+        },
+        "freeCancellationDate" : {
+          "$ref" : "date-time"
+        },
+        "suspensionDate" : {
+          "type" : "string"
+        },
+        "thirdPartyPayerId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "digitalSignature" : {
+          "type" : "boolean"
+        },
+        "ongoingCancellationDate" : {
+          "type" : "string"
         },
         "duration" : {
           "type" : "integer",
@@ -3115,6 +2711,10 @@
         "commercialOperator" : {
           "type" : "string"
         },
+        "cancellationDate" : {
+          "type" : "string",
+          "description" : "Format date attendu yyyymmdd"
+        },
         "contractId" : {
           "type" : "integer",
           "format" : "int32"
@@ -3122,10 +2722,6 @@
         "personId" : {
           "type" : "integer",
           "format" : "int64"
-        },
-        "cancellationDate" : {
-          "type" : "string",
-          "description" : "Format date attendu yyyymmdd"
         },
         "cancellationReason" : {
           "type" : "string"
@@ -3158,9 +2754,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "authorizationNumber" : {
-          "type" : "string"
-        },
         "contractId" : {
           "type" : "integer",
           "format" : "int32"
@@ -3178,6 +2771,9 @@
           "type" : "string",
           "description" : "Format date attendu yyyymm"
         },
+        "authorizationNumber" : {
+          "type" : "string"
+        },
         "owner" : {
           "type" : "string"
         }
@@ -3192,12 +2788,6 @@
           "type" : "string"
         },
         "startDate" : {
-          "type" : "string"
-        },
-        "updateUser" : {
-          "type" : "string"
-        },
-        "fullValidationStatus" : {
           "type" : "string"
         },
         "userId" : {
@@ -3234,6 +2824,12 @@
           "format" : "int32"
         },
         "distributorId" : {
+          "type" : "string"
+        },
+        "updateUser" : {
+          "type" : "string"
+        },
+        "fullValidationStatus" : {
           "type" : "string"
         },
         "duration" : {
@@ -3401,13 +2997,13 @@
         "digitalMandate" : {
           "type" : "boolean"
         },
-        "digitalContract" : {
-          "type" : "boolean"
-        },
         "sendContract" : {
           "type" : "boolean"
         },
         "sendMandate" : {
+          "type" : "boolean"
+        },
+        "digitalContract" : {
           "type" : "boolean"
         }
       }
@@ -3488,12 +3084,12 @@
             "$ref" : "ContractRenewal"
           }
         },
+        "paymentCreditCard" : {
+          "$ref" : "CreditCard"
+        },
         "personId" : {
           "type" : "integer",
           "format" : "int64"
-        },
-        "paymentCreditCard" : {
-          "$ref" : "CreditCard"
         }
       }
     },
@@ -3538,18 +3134,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "unpaid" : {
-          "type" : "number",
-          "format" : "double"
-        },
-        "pendingCredit" : {
-          "type" : "number",
-          "format" : "double"
-        },
-        "pendingRefund" : {
-          "type" : "number",
-          "format" : "double"
-        },
         "balance" : {
           "type" : "number",
           "format" : "double"
@@ -3559,6 +3143,18 @@
           "format" : "double"
         },
         "deposit" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "unpaid" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "pendingCredit" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "pendingRefund" : {
           "type" : "number",
           "format" : "double"
         }
@@ -3601,9 +3197,6 @@
         "action" : {
           "type" : "string"
         },
-        "freeMethodOfPaymentReason" : {
-          "type" : "string"
-        },
         "broadcastVectorId" : {
           "type" : "string"
         },
@@ -3635,6 +3228,9 @@
         "sponsorId" : {
           "type" : "integer",
           "format" : "int64"
+        },
+        "freeMethodOfPaymentReason" : {
+          "type" : "string"
         }
       }
     },
@@ -3697,49 +3293,6 @@
         "startDate" : {
           "type" : "string"
         },
-        "updateUser" : {
-          "type" : "string"
-        },
-        "methodOfPaymentLabel" : {
-          "type" : "string"
-        },
-        "freeCancellationDate" : {
-          "$ref" : "date-time"
-        },
-        "isReactivable" : {
-          "type" : "boolean"
-        },
-        "originLabel" : {
-          "type" : "string"
-        },
-        "commercialOperatorLabel" : {
-          "type" : "string"
-        },
-        "contractActivity" : {
-          "type" : "string"
-        },
-        "fullValidationStatus" : {
-          "type" : "string"
-        },
-        "nonRenewalReason" : {
-          "type" : "string"
-        },
-        "cancellationUser" : {
-          "type" : "string"
-        },
-        "suspensionDate" : {
-          "type" : "string"
-        },
-        "thirdPartyPayerId" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "reactivableAfterRegul" : {
-          "type" : "boolean"
-        },
-        "digitalSignature" : {
-          "type" : "boolean"
-        },
         "products" : {
           "type" : "array",
           "items" : {
@@ -3750,6 +3303,9 @@
           "type" : "string"
         },
         "endDate" : {
+          "type" : "string"
+        },
+        "cancellationDate" : {
           "type" : "string"
         },
         "ccatalogue" : {
@@ -3773,9 +3329,6 @@
           "format" : "int32"
         },
         "commercialOperator" : {
-          "type" : "string"
-        },
-        "cancellationDate" : {
           "type" : "string"
         },
         "cancellationReason" : {
@@ -3803,11 +3356,54 @@
         "freeMethodOfPaymentReason" : {
           "type" : "string"
         },
+        "ongoingCancellation" : {
+          "type" : "boolean"
+        },
         "distributorId" : {
           "type" : "string"
         },
-        "ongoingCancellation" : {
+        "updateUser" : {
+          "type" : "string"
+        },
+        "isReactivable" : {
           "type" : "boolean"
+        },
+        "originLabel" : {
+          "type" : "string"
+        },
+        "commercialOperatorLabel" : {
+          "type" : "string"
+        },
+        "contractActivity" : {
+          "type" : "string"
+        },
+        "fullValidationStatus" : {
+          "type" : "string"
+        },
+        "nonRenewalReason" : {
+          "type" : "string"
+        },
+        "cancellationUser" : {
+          "type" : "string"
+        },
+        "freeCancellationDate" : {
+          "$ref" : "date-time"
+        },
+        "suspensionDate" : {
+          "type" : "string"
+        },
+        "thirdPartyPayerId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "reactivableAfterRegul" : {
+          "type" : "boolean"
+        },
+        "digitalSignature" : {
+          "type" : "boolean"
+        },
+        "methodOfPaymentLabel" : {
+          "type" : "string"
         },
         "duration" : {
           "type" : "integer",
@@ -3948,37 +3544,10 @@
         "startDate" : {
           "type" : "string"
         },
-        "majorProductId" : {
-          "type" : "string"
-        },
-        "mainCommentText" : {
-          "type" : "string"
-        },
-        "mainCommentDate" : {
-          "type" : "string"
-        },
-        "mainActOfManagementId" : {
-          "type" : "string"
-        },
-        "mainActOfManagementDate" : {
-          "type" : "string"
-        },
-        "ongoingCancellationDate" : {
-          "type" : "string"
-        },
-        "ongoingCancellationCreationDate" : {
-          "type" : "string"
-        },
-        "contractActivity" : {
-          "type" : "string"
-        },
-        "fullValidationStatus" : {
-          "type" : "string"
-        },
-        "suspensionDate" : {
-          "type" : "string"
-        },
         "endDate" : {
+          "type" : "string"
+        },
+        "cancellationDate" : {
           "type" : "string"
         },
         "personId" : {
@@ -3999,9 +3568,6 @@
           "type" : "string"
         },
         "commercialOperator" : {
-          "type" : "string"
-        },
-        "cancellationDate" : {
           "type" : "string"
         },
         "cancellationReason" : {
@@ -4025,6 +3591,36 @@
         },
         "ongoingCancellation" : {
           "type" : "boolean"
+        },
+        "contractActivity" : {
+          "type" : "string"
+        },
+        "fullValidationStatus" : {
+          "type" : "string"
+        },
+        "suspensionDate" : {
+          "type" : "string"
+        },
+        "mainCommentText" : {
+          "type" : "string"
+        },
+        "mainCommentDate" : {
+          "type" : "string"
+        },
+        "ongoingCancellationDate" : {
+          "type" : "string"
+        },
+        "mainActOfManagementId" : {
+          "type" : "string"
+        },
+        "mainActOfManagementDate" : {
+          "type" : "string"
+        },
+        "ongoingCancellationCreationDate" : {
+          "type" : "string"
+        },
+        "majorProductId" : {
+          "type" : "string"
         },
         "origin" : {
           "type" : "string"
@@ -4168,10 +3764,10 @@
         "commercialLabel" : {
           "type" : "string"
         },
-        "productCategory" : {
+        "productType" : {
           "type" : "string"
         },
-        "productType" : {
+        "productCategory" : {
           "type" : "string"
         }
       }
@@ -4181,6 +3777,18 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "nextSuspensionDate" : {
+          "type" : "string"
+        },
+        "nextCancellationDate" : {
+          "type" : "string"
+        },
+        "nextSuspensionEndDate" : {
+          "type" : "string"
+        },
+        "lastSuspensionDate" : {
+          "type" : "string"
+        },
         "nextModificationOffer" : {
           "type" : "string"
         },
@@ -4206,18 +3814,6 @@
           "type" : "string"
         },
         "nextCancellationReason" : {
-          "type" : "string"
-        },
-        "nextSuspensionDate" : {
-          "type" : "string"
-        },
-        "nextCancellationDate" : {
-          "type" : "string"
-        },
-        "nextSuspensionEndDate" : {
-          "type" : "string"
-        },
-        "lastSuspensionDate" : {
           "type" : "string"
         }
       }

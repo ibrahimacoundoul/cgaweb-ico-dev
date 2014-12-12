@@ -64,21 +64,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«PaymentPlanResult»»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER, ERR_BIZ_WS_FIRSTMONTH_CAN_NOT_BE_AFTER_LASTMONTH, ERR_BIZ_OFFER_INVALID_CATALOG, ERR_BIZ_OFFER_INVALID_COMMERCIAL_OPERATOR, INVALID_COUNTRY_POSTAL_CODE, ERR_BIZ_SUBSCRIPTION_BROADCASTMEDIATYPE_UNKNOWN, ERR_BIZ_SUBSCRIPTION_INVALID_COMMERCIALOPERATOR, ERR_BIZ_SUBSCRIPTION_INVALID_DURATION, ERR_BIZ_SUBSCRIPTION_INVALID_ORIGIN, ERR_BIZ_SUBSCRIPTION_INVALID_METHODOFPAYMENT, "
       } ],
       "deprecated" : "false"
     } ]

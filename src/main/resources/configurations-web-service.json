@@ -4,7 +4,7 @@
   "basePath" : "/",
   "resourcePath" : "fix this",
   "apis" : [ {
-    "path" : "/ /configurations",
+    "path" : "/configurations",
     "description" : "getConfigurationDetail",
     "operations" : [ {
       "method" : "GET",
@@ -30,18 +30,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«Configuration»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -96,18 +86,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«AccessoriesConfigurations»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -170,21 +150,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ConfigurationWithProductsEquipments»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -247,21 +214,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«ConfigurationWithProductsEquipments»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -292,18 +246,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«Configuration»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -312,7 +256,7 @@
     "ConfigurationWithProductsEquipments" : {
       "id" : "ConfigurationWithProductsEquipments",
       "description" : "",
-      "required" : [ "ispId", "sortOrder", "isIspId", "configCategoryLabel", "configCategory" ],
+      "required" : [ "ispId", "sortOrder", "configCategory", "isIspId", "configCategoryLabel" ],
       "extends" : "",
       "properties" : {
         "ispId" : {
@@ -330,6 +274,10 @@
           "format" : "int32",
           "description" : "Colonne de tri"
         },
+        "configCategory" : {
+          "type" : "string",
+          "description" : "Code catégorie permettant de filtrer les configurations matérielles"
+        },
         "isIspId" : {
           "type" : "string",
           "description" : "Indicateur d'éligibilité auprès d'un FAI"
@@ -337,10 +285,6 @@
         "configCategoryLabel" : {
           "type" : "string",
           "description" : "Libellé catégorie permettant de filtrer les configurations matérielles"
-        },
-        "configCategory" : {
-          "type" : "string",
-          "description" : "Code catégorie permettant de filtrer les configurations matérielles"
         },
         "equipmentConfig" : {
           "type" : "string"
@@ -608,6 +552,9 @@
           "type" : "integer",
           "format" : "int32"
         },
+        "configCategory" : {
+          "type" : "string"
+        },
         "isIspId" : {
           "type" : "string"
         },
@@ -615,9 +562,6 @@
           "type" : "string"
         },
         "configCategoryLabel" : {
-          "type" : "string"
-        },
-        "configCategory" : {
           "type" : "string"
         }
       }
@@ -670,6 +614,12 @@
         "action" : {
           "type" : "string"
         },
+        "equipmentTypes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "EquipmentTypeInput"
+          }
+        },
         "broadcastVectorId" : {
           "type" : "string"
         },
@@ -695,12 +645,6 @@
           "type" : "string",
           "description" : "Format date attendu yyyymmdd"
         },
-        "equipmentTypes" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "EquipmentTypeInput"
-          }
-        },
         "countryId" : {
           "type" : "string"
         }
@@ -711,9 +655,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "rental" : {
-          "type" : "boolean"
-        },
         "productId" : {
           "type" : "string"
         },
@@ -728,6 +669,9 @@
           "type" : "boolean"
         },
         "accessorie" : {
+          "type" : "boolean"
+        },
+        "rental" : {
           "type" : "boolean"
         }
       }
