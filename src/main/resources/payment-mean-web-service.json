@@ -9,7 +9,7 @@
     "description" : "updateCreditCardPaymentMean",
     "operations" : [ {
       "method" : "PUT",
-      "summary" : "Mise à jour d'une CB",
+      "summary" : "Mise à jour d'une Carte bancaire",
       "notes" : "updateCreditCardPaymentMean",
       "type" : "ResponseWrapper«BankCustomer»",
       "nickname" : "updateCreditCardPaymentMean",
