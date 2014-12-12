@@ -16,7 +16,7 @@
       "produces" : [ "application/json" ],
       "parameters" : [ {
         "name" : "userId",
-        "description" : "Utilisateur effectuant l'opération",
+        "description" : "Utilisateur qui a effecté l'opération",
         "defaultValue" : "",
         "required" : true,
         "type" : "string",
@@ -74,7 +74,7 @@
         "allowMultiple" : false
       }, {
         "name" : "paymentMean",
-        "description" : "Informations de carte de credit",
+        "description" : "Informations de la carte de credit",
         "defaultValue" : "",
         "required" : true,
         "type" : "CreditCardPaymentMeansIn",
@@ -105,7 +105,7 @@
     "description" : "checkCreditCardEligibility",
     "operations" : [ {
       "method" : "POST",
-      "summary" : "Vérification de l’éligibilité commerciale sur la carte banquaire",
+      "summary" : "Vérification de l’éligibilité commerciale sur la carte bancaire",
       "notes" : "checkCreditCardEligibility",
       "type" : "ResponseWrapper«EligibilityOut»",
       "nickname" : "checkCreditCardEligibility",
