@@ -64,21 +64,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«object»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -110,18 +97,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«Address»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -169,18 +146,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«Address»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -244,21 +211,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«object»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -321,21 +275,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ActOfManagementOut»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -398,21 +339,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ActOfManagementOut»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -460,18 +388,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«Address»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -503,18 +421,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«Address»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -523,34 +431,34 @@
     "ActOfManagementOut" : {
       "id" : "ActOfManagementOut",
       "description" : "",
-      "required" : [ "actOfManagementCode", "actOfManagementId" ],
+      "required" : [ "actOfManagementId", "actOfManagementCode" ],
       "extends" : "",
       "properties" : {
-        "actOfManagementCode" : {
-          "type" : "string",
-          "description" : "Code du mouvement"
-        },
         "actOfManagementId" : {
           "type" : "integer",
           "format" : "int64",
           "description" : "Id du mouvement"
+        },
+        "actOfManagementCode" : {
+          "type" : "string",
+          "description" : "Code du mouvement"
         }
       }
     },
     "AddressValidateIn" : {
       "id" : "AddressValidateIn",
       "description" : "",
-      "required" : [ "personId", "addressTypeId" ],
+      "required" : [ "addressTypeId", "personId" ],
       "extends" : "",
       "properties" : {
+        "addressTypeId" : {
+          "type" : "string",
+          "description" : "type d'adresse"
+        },
         "personId" : {
           "type" : "integer",
           "format" : "int64",
           "description" : "Id de l’abonné"
-        },
-        "addressTypeId" : {
-          "type" : "string",
-          "description" : "type d'adresse"
         }
       }
     },
@@ -602,15 +510,11 @@
         "startDate" : {
           "type" : "string"
         },
-        "addressId" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "undeliverabilityReason" : {
-          "type" : "string"
-        },
         "endDate" : {
           "type" : "string"
+        },
+        "forcingIndicator" : {
+          "type" : "boolean"
         },
         "personId" : {
           "type" : "integer",
@@ -625,9 +529,6 @@
         },
         "countryId" : {
           "type" : "string"
-        },
-        "forcingIndicator" : {
-          "type" : "boolean"
         },
         "city" : {
           "type" : "string"
@@ -646,6 +547,13 @@
         },
         "street4" : {
           "type" : "string"
+        },
+        "undeliverabilityReason" : {
+          "type" : "string"
+        },
+        "addressId" : {
+          "type" : "integer",
+          "format" : "int64"
         },
         "valid" : {
           "type" : "boolean"
@@ -701,34 +609,38 @@
     "AddressInvalidateIn" : {
       "id" : "AddressInvalidateIn",
       "description" : "",
-      "required" : [ "personId", "addressTypeId", "pndcategory", "invalidityReasonId" ],
+      "required" : [ "pndcategory", "addressTypeId", "invalidityReasonId", "personId" ],
       "extends" : "",
       "properties" : {
-        "personId" : {
-          "type" : "integer",
-          "format" : "int64",
-          "description" : "Id de l’abonné"
+        "pndcategory" : {
+          "type" : "string",
+          "description" : "Code de la catégorie de NPAI"
         },
         "addressTypeId" : {
           "type" : "string",
           "description" : "Definit le type d'adresse"
         },
-        "pndcategory" : {
-          "type" : "string",
-          "description" : "Code de la catégorie de NPAI"
-        },
         "invalidityReasonId" : {
           "type" : "string",
           "description" : "raison d'invalidation"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "Id de l’abonné"
         }
       }
     },
     "AddressIn" : {
       "id" : "AddressIn",
       "description" : "",
-      "required" : [ "postalCode", "startDate", "personId", "forcingIndicator", "addressType", "street1", "street2", "street3", "street4", "countryId", "city" ],
+      "required" : [ "forcingIndicator", "postalCode", "startDate", "personId", "addressType", "street1", "street2", "street3", "street4", "countryId", "city" ],
       "extends" : "",
       "properties" : {
+        "forcingIndicator" : {
+          "type" : "boolean",
+          "description" : "force l'adresse si celle ci n'est pas vérifiée"
+        },
         "postalCode" : {
           "type" : "string",
           "description" : "Le code postale de la ville"
@@ -741,10 +653,6 @@
           "type" : "integer",
           "format" : "int64",
           "description" : "Id de l’abonné"
-        },
-        "forcingIndicator" : {
-          "type" : "boolean",
-          "description" : "force l'adresse si celle ci n'est pas vérifiée"
         },
         "addressType" : {
           "type" : "string",

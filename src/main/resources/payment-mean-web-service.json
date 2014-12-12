@@ -82,21 +82,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«BankCustomer»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -155,26 +142,13 @@
         "description" : "Informations de carte de credit",
         "defaultValue" : "",
         "required" : true,
-        "type" : "CreditCardWithOwner",
+        "type" : "CreditCardCheckIn",
         "paramType" : "body",
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«EligibilityOut»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -264,21 +238,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«object»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -342,21 +303,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«EligibilityOut»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -420,21 +368,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«InitCreditCardPaymentOut»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -525,21 +460,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«RefundTransactionResultOut»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -621,21 +543,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«PaymentResultOut»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -699,21 +608,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«ThirdPayedSubscriptionsOut»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -795,21 +691,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«PaymentResultOut»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -851,18 +734,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«PaymentMeans»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -930,13 +803,13 @@
           "type" : "integer",
           "format" : "int64"
         },
-        "refundTransactionId" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
         "amountRefunded" : {
           "type" : "number",
           "format" : "double"
+        },
+        "refundTransactionId" : {
+          "type" : "integer",
+          "format" : "int64"
         }
       }
     },
@@ -986,6 +859,9 @@
         "bic" : {
           "type" : "string"
         },
+        "creditCard" : {
+          "$ref" : "CreditCardLight"
+        },
         "methodOfPayment" : {
           "type" : "string"
         },
@@ -994,17 +870,14 @@
           "format" : "int32",
           "description" : "Le contrat associé au moyen de paiement"
         },
-        "createdDate" : {
-          "type" : "string",
-          "description" : "Date de création du moyen de paiment, format mm/aa"
-        },
-        "creditCard" : {
-          "$ref" : "CreditCardLight"
-        },
         "directDebitDate" : {
           "type" : "integer",
           "format" : "int32",
           "description" : "Jour de prélèvement"
+        },
+        "createdDate" : {
+          "type" : "string",
+          "description" : "Date de création du moyen de paiment, format mm/aa"
         }
       }
     },
@@ -1033,11 +906,9 @@
         "bic" : {
           "type" : "string"
         },
-        "cryptogram" : {
-          "type" : "string"
-        },
-        "expiracyDate" : {
-          "type" : "string"
+        "directDebitDate" : {
+          "type" : "integer",
+          "format" : "int32"
         }
       }
     },
@@ -1077,6 +948,28 @@
           "type" : "string"
         },
         "cpays" : {
+          "type" : "string"
+        }
+      }
+    },
+    "CreditCardCheckIn" : {
+      "id" : "CreditCardCheckIn",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "cryptogram" : {
+          "type" : "string"
+        },
+        "expirationDate" : {
+          "type" : "string"
+        },
+        "number" : {
+          "type" : "string"
+        },
+        "owner" : {
+          "type" : "string"
+        },
+        "type" : {
           "type" : "string"
         }
       }
@@ -1159,11 +1052,11 @@
           "type" : "number",
           "format" : "double"
         },
-        "creditCard" : {
-          "$ref" : "CreditCardWithOwnerIn"
-        },
         "shopId" : {
           "type" : "string"
+        },
+        "creditCard" : {
+          "$ref" : "CreditCardWithOwnerIn"
         }
       }
     },
@@ -1268,10 +1161,10 @@
           "type" : "integer",
           "format" : "int64"
         },
-        "authNumber" : {
+        "authorizationDate" : {
           "type" : "string"
         },
-        "authorizationDate" : {
+        "authNumber" : {
           "type" : "string"
         }
       }
@@ -1289,7 +1182,8 @@
           "type" : "string"
         },
         "authorizationNumber" : {
-          "type" : "string"
+          "type" : "integer",
+          "format" : "int64"
         },
         "bankCustomerId" : {
           "type" : "string"
@@ -1301,10 +1195,10 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "companyName" : {
+        "civility" : {
           "type" : "string"
         },
-        "civility" : {
+        "companyName" : {
           "type" : "string"
         },
         "companyId" : {
@@ -1368,11 +1262,11 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "postalCode" : {
-          "type" : "string"
-        },
         "forcingIndicator" : {
           "type" : "boolean"
+        },
+        "postalCode" : {
+          "type" : "string"
         },
         "street1" : {
           "type" : "string"
@@ -1399,15 +1293,15 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "numabo" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
         "initCreditCardPaymentAuthorizationOuts" : {
           "type" : "array",
           "items" : {
             "$ref" : "InitCreditCardPaymentAuthorizationOut"
           }
-        },
-        "numabo" : {
-          "type" : "integer",
-          "format" : "int64"
         }
       }
     },
@@ -1422,11 +1316,11 @@
             "$ref" : "PhoneCommon"
           }
         },
-        "person" : {
-          "$ref" : "PersonProspect"
-        },
         "orderId" : {
           "type" : "string"
+        },
+        "person" : {
+          "$ref" : "PersonProspect"
         },
         "email" : {
           "type" : "string"
@@ -1453,15 +1347,15 @@
             "$ref" : "InitCreditCardPaymentAuthorizationIn"
           }
         },
+        "prospect" : {
+          "$ref" : "InitCreditCardProspectIn"
+        },
         "postalCode" : {
           "type" : "string"
         },
         "personId" : {
           "type" : "integer",
           "format" : "int64"
-        },
-        "prospect" : {
-          "$ref" : "InitCreditCardProspectIn"
         },
         "countryId" : {
           "type" : "string"
@@ -1533,11 +1427,11 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "movementId" : {
+        "bankCustomerId" : {
           "type" : "integer",
           "format" : "int64"
         },
-        "bankCustomerId" : {
+        "movementId" : {
           "type" : "integer",
           "format" : "int64"
         }

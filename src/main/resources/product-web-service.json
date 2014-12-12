@@ -80,18 +80,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«VintageCatalog»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -245,18 +235,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ProductContract»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -410,18 +390,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ProductBestSpecialOffer»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -575,18 +545,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ProductDetailOLD»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -724,18 +684,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ProductContract»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -873,18 +823,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ProductDetailOLD»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -957,18 +897,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«VintageCatalog»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -1016,18 +946,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«VoucherCampaign»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -1090,21 +1010,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ProductContract»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -1224,18 +1131,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ProductContract»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -1266,18 +1163,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«OperatorDefaultValues»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -1324,18 +1211,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ProductEditorial»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -1398,21 +1275,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ProductDetail»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -1532,18 +1396,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ProductDetailOLD»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -1606,21 +1460,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«ValidatedCatalog»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -1675,18 +1516,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«VintageCatalog»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -1786,14 +1617,14 @@
         "validated" : {
           "type" : "boolean"
         },
-        "commercialOperator" : {
-          "type" : "string"
-        },
         "promotions" : {
           "type" : "array",
           "items" : {
             "$ref" : "PromotionLight"
           }
+        },
+        "commercialOperator" : {
+          "type" : "string"
         },
         "vouchers" : {
           "type" : "array",
@@ -1928,10 +1759,10 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "errorMessageLabel" : {
+        "errorMessage" : {
           "type" : "string"
         },
-        "errorMessage" : {
+        "errorMessageLabel" : {
           "type" : "string"
         }
       }
@@ -1941,15 +1772,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "pays" : {
-          "type" : "string"
-        },
-        "broadCastMediaType" : {
-          "type" : "string"
-        },
-        "broadCastVertorId" : {
-          "type" : "string"
-        },
         "postalCode" : {
           "type" : "string"
         },
@@ -1964,6 +1786,15 @@
         },
         "dateToDate" : {
           "type" : "boolean"
+        },
+        "pays" : {
+          "type" : "string"
+        },
+        "broadCastMediaType" : {
+          "type" : "string"
+        },
+        "broadCastVertorId" : {
+          "type" : "string"
         },
         "duration" : {
           "type" : "string"
@@ -2019,12 +1850,6 @@
         "startDate" : {
           "type" : "string"
         },
-        "defaultCatalog" : {
-          "type" : "boolean"
-        },
-        "limitedVersion" : {
-          "type" : "boolean"
-        },
         "endDate" : {
           "type" : "string"
         },
@@ -2033,6 +1858,12 @@
         },
         "vintageCatalog" : {
           "type" : "string"
+        },
+        "defaultCatalog" : {
+          "type" : "boolean"
+        },
+        "limitedVersion" : {
+          "type" : "boolean"
         }
       }
     },
@@ -2129,17 +1960,17 @@
         "category" : {
           "type" : "string"
         },
-        "voucherLabel" : {
-          "type" : "string"
-        },
-        "marketingCampaignId" : {
+        "voucherId" : {
           "type" : "string"
         },
         "contractId" : {
           "type" : "integer",
           "format" : "int32"
         },
-        "voucherId" : {
+        "voucherLabel" : {
+          "type" : "string"
+        },
+        "marketingCampaignId" : {
           "type" : "string"
         }
       }
@@ -2228,13 +2059,13 @@
           "type" : "number",
           "format" : "double"
         },
+        "productType" : {
+          "type" : "string"
+        },
         "productCategory" : {
           "type" : "string"
         },
         "themeId" : {
-          "type" : "string"
-        },
-        "productType" : {
           "type" : "string"
         }
       }
@@ -2309,12 +2140,6 @@
         "startDate" : {
           "type" : "string"
         },
-        "technicalIds" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "ProductTechnicalIds"
-          }
-        },
         "productId" : {
           "type" : "string"
         },
@@ -2345,14 +2170,20 @@
             "type" : "string"
           }
         },
+        "productType" : {
+          "type" : "string"
+        },
         "productCategory" : {
           "type" : "string"
         },
         "themeId" : {
           "type" : "string"
         },
-        "productType" : {
-          "type" : "string"
+        "technicalIds" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ProductTechnicalIds"
+          }
         }
       }
     },
@@ -2398,14 +2229,6 @@
             "$ref" : "ProductContractIn"
           }
         },
-        "contractId" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
-        "personId" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
         "postalcode" : {
           "type" : "string"
         },
@@ -2414,6 +2237,14 @@
         },
         "crossOperators" : {
           "type" : "boolean"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
         },
         "countryId" : {
           "type" : "string"
@@ -2576,13 +2407,13 @@
           "type" : "number",
           "format" : "double"
         },
+        "productType" : {
+          "type" : "string"
+        },
         "productCategory" : {
           "type" : "string"
         },
         "themeId" : {
-          "type" : "string"
-        },
-        "productType" : {
           "type" : "string"
         }
       }

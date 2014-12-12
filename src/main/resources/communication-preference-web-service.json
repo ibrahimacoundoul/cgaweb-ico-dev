@@ -5,6 +5,39 @@
   "resourcePath" : "fix this",
   "apis" : [ {
     "path" : "/persons/solicitations",
+    "description" : "getCommunicationPreferences",
+    "operations" : [ {
+      "method" : "GET",
+      "summary" : "Renvoie les canaux autorisés et interdits par opérateur pour un abonné",
+      "notes" : "getCommunicationPreferences",
+      "type" : "ResponseWrapper«List«SolicitationByOperator»»",
+      "nickname" : "getCommunicationPreferences",
+      "parameters" : [ {
+        "name" : "personId",
+        "description" : "personId",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER , "
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/persons/solicitations",
     "description" : "postCommunicationPreference",
     "operations" : [ {
       "method" : "POST",
@@ -62,64 +95,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«object»"
-      } ],
-      "deprecated" : "false"
-    } ]
-  }, {
-    "path" : "/persons/solicitations",
-    "description" : "getCommunicationPreferences",
-    "operations" : [ {
-      "method" : "GET",
-      "summary" : "Renvoie les canaux autorisés et interdits par opérateur pour un abonné",
-      "notes" : "getCommunicationPreferences",
-      "type" : "ResponseWrapper«List«SolicitationByOperator»»",
-      "nickname" : "getCommunicationPreferences",
-      "parameters" : [ {
-        "name" : "personId",
-        "description" : "personId",
-        "defaultValue" : "",
-        "required" : true,
-        "type" : "integer",
-        "format" : "int64",
-        "paramType" : "query",
-        "allowMultiple" : false
-      }, {
-        "name" : "userId",
-        "description" : "Utilisateur effectuant l'opération",
-        "defaultValue" : "",
-        "required" : true,
-        "type" : "string",
-        "paramType" : "query",
-        "allowMultiple" : false
-      } ],
-      "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«SolicitationByOperator»»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER , "
       } ],
       "deprecated" : "false"
     } ]
@@ -151,18 +128,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«SolicitationByOperator»»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER , "
       } ],
       "deprecated" : "false"
     } ]
@@ -193,9 +160,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "authorizedAll" : {
-          "type" : "boolean"
-        },
         "operatorId" : {
           "type" : "string"
         },
@@ -204,6 +168,9 @@
           "items" : {
             "$ref" : "SolicitationByChannel"
           }
+        },
+        "authorizedAll" : {
+          "type" : "boolean"
         }
       }
     },
@@ -248,15 +215,15 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "personId" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
         "solicitations" : {
           "type" : "array",
           "items" : {
             "$ref" : "SolicitationByOperatorRequest"
           }
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
         }
       }
     },

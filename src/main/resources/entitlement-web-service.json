@@ -72,21 +72,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«object»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER, ERR_BIZ_SUBSCRIPTION_INVALID_SUBSCRIBER, ERR_BIZ_WS_SUBSCRIBER_OR_CONTRACT_ID_UNKNOWN , ERR_BIZ_SUBSCRIPTION_SUSPENDED_CONTRACT "
       } ],
       "deprecated" : "false"
     } ]
@@ -159,21 +146,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«object»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER, ERR_BIZ_SUBSCRIPTION_INVALID_SUBSCRIBER, ERR_BIZ_WS_SUBSCRIBER_OR_CONTRACT_ID_UNKNOWN , ERR_BIZ_SUBSCRIPTION_SUSPENDED_CONTRACT "
       } ],
       "deprecated" : "false"
     } ]

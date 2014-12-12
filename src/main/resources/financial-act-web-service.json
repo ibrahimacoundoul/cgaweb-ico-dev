@@ -62,21 +62,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«long»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -140,18 +127,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«Motive»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -214,21 +191,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«FinancialActResult»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -307,18 +271,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«FinancialActToValidateOut»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -384,21 +338,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«object»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -534,10 +475,10 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "motiveLabel" : {
+        "motiveId" : {
           "type" : "string"
         },
-        "motiveId" : {
+        "motiveLabel" : {
           "type" : "string"
         }
       }
@@ -587,13 +528,13 @@
         "statusId" : {
           "type" : "string"
         },
+        "categoryId" : {
+          "type" : "string"
+        },
         "modeId" : {
           "type" : "string"
         },
         "validationuserId" : {
-          "type" : "string"
-        },
-        "categoryId" : {
           "type" : "string"
         },
         "comment" : {
@@ -638,6 +579,18 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "categories" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "motives" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
         "startDate" : {
           "type" : "string",
           "description" : "Format date attendu yyyymmdd"
@@ -653,18 +606,6 @@
         "personId" : {
           "type" : "integer",
           "format" : "int64"
-        },
-        "motives" : {
-          "type" : "array",
-          "items" : {
-            "type" : "string"
-          }
-        },
-        "categories" : {
-          "type" : "array",
-          "items" : {
-            "type" : "string"
-          }
         },
         "status" : {
           "type" : "array",

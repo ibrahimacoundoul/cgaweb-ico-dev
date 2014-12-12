@@ -22,18 +22,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ActOfManagementFamilyTypeCodeTable»»"
+        "code" : 510,
+        "message" : " "
       } ],
       "deprecated" : "false"
     } ]
@@ -64,18 +54,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«AffectationTypesCodeTable»»"
+        "code" : 510,
+        "message" : " "
       } ],
       "deprecated" : "false"
     } ]
@@ -98,18 +78,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«string»»"
+        "code" : 510,
+        "message" : " "
       } ],
       "deprecated" : "false"
     } ]
@@ -140,18 +110,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«CancellationCodeTable»»"
+        "code" : 510,
+        "message" : " "
       } ],
       "deprecated" : "false"
     } ]
@@ -174,18 +134,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«CivilityCodeTable»»"
+        "code" : 510,
+        "message" : " "
       } ],
       "deprecated" : "false"
     } ]
@@ -208,18 +158,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«CommentCodeTable»»"
+        "code" : 510,
+        "message" : " "
       } ],
       "deprecated" : "false"
     } ]
@@ -242,18 +182,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«CommunicationOperatorCodeTable»»"
+        "code" : 510,
+        "message" : " "
       } ],
       "deprecated" : "false"
     } ]
@@ -276,18 +206,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ConfigurationCategoryCodeTable»»"
+        "code" : 510,
+        "message" : " "
       } ],
       "deprecated" : "false"
     } ]
@@ -310,18 +230,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ActiviteCodeTable»»"
+        "code" : 510,
+        "message" : " "
       } ],
       "deprecated" : "false"
     } ]
@@ -352,18 +262,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«CustomerSubCategorie»»"
+        "code" : 510,
+        "message" : " "
       } ],
       "deprecated" : "false"
     } ]
@@ -386,18 +286,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«EquipmentTypeCodeTable»»"
+        "code" : 510,
+        "message" : " "
       } ],
       "deprecated" : "false"
     } ]
@@ -420,18 +310,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«FaiCodeTable»»"
+        "code" : 510,
+        "message" : " "
       } ],
       "deprecated" : "false"
     } ]
@@ -454,18 +334,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«CategoryCodeTable»»"
+        "code" : 510,
+        "message" : " "
       } ],
       "deprecated" : "false"
     } ]
@@ -488,18 +358,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«FinancialModeCodeTable»»"
+        "code" : 510,
+        "message" : " "
       } ],
       "deprecated" : "false"
     } ]
@@ -554,18 +414,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«GroupSupportCodeTable»»"
+        "code" : 510,
+        "message" : " "
       } ],
       "deprecated" : "false"
     } ]
@@ -588,18 +438,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ManualFeeCodeTable»»"
+        "code" : 510,
+        "message" : " "
       } ],
       "deprecated" : "false"
     } ]
@@ -630,18 +470,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«CodeTable»»"
+        "code" : 510,
+        "message" : " "
       } ],
       "deprecated" : "false"
     } ]
@@ -664,18 +494,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«PaymentTypeCodeTable»»"
+        "code" : 510,
+        "message" : " "
       } ],
       "deprecated" : "false"
     } ]
@@ -698,18 +518,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«PNDCategoriesCodeTable»»"
+        "code" : 510,
+        "message" : " "
       } ],
       "deprecated" : "false"
     } ]
@@ -732,18 +542,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ProductCategoryCodeTable»»"
+        "code" : 510,
+        "message" : " "
       } ],
       "deprecated" : "false"
     } ]
@@ -766,18 +566,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ProductCodeTable»»"
+        "code" : 510,
+        "message" : " "
       } ],
       "deprecated" : "false"
     } ]
@@ -800,18 +590,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ProductThemeCodeTable»»"
+        "code" : 510,
+        "message" : " "
       } ],
       "deprecated" : "false"
     } ]
@@ -834,18 +614,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«RejectionCodeTable»»"
+        "code" : 510,
+        "message" : " "
       } ],
       "deprecated" : "false"
     } ]
@@ -868,18 +638,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«SaleDeviceCodeTable»»"
+        "code" : 510,
+        "message" : " "
       } ],
       "deprecated" : "false"
     } ]
@@ -902,18 +662,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«SupportCodeTable»»"
+        "code" : 510,
+        "message" : " "
       } ],
       "deprecated" : "false"
     } ]
@@ -944,18 +694,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«CodeTable»»"
+        "code" : 510,
+        "message" : " "
       } ],
       "deprecated" : "false"
     } ]
@@ -1240,14 +980,14 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "technicalOffer" : {
-          "type" : "boolean"
-        },
         "genericProduct" : {
           "type" : "boolean"
         },
         "productCategory" : {
           "type" : "string"
+        },
+        "technicalOffer" : {
+          "type" : "boolean"
         },
         "label" : {
           "type" : "string"
@@ -1324,11 +1064,11 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "directDebitStatuts" : {
-          "type" : "string"
-        },
         "isActive" : {
           "type" : "boolean"
+        },
+        "directDebitStatuts" : {
+          "type" : "string"
         },
         "label" : {
           "type" : "string"
@@ -1371,9 +1111,14 @@
     "PNDCategoriesCodeTable" : {
       "id" : "PNDCategoriesCodeTable",
       "description" : "",
-      "required" : [ "marketing", "administration", "numberOfPND" ],
+      "required" : [ "numberOfPND", "marketing", "administration" ],
       "extends" : "",
       "properties" : {
+        "numberOfPND" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "Nombre de retour PND sur cette catégorie pour effectivement invalider l'adresse"
+        },
         "marketing" : {
           "type" : "boolean",
           "description" : "Si '1', indique que cette catégorie est de type marketing"
@@ -1381,11 +1126,6 @@
         "administration" : {
           "type" : "boolean",
           "description" : "Si '1', indique que cette catégorie est de type gestion"
-        },
-        "numberOfPND" : {
-          "type" : "integer",
-          "format" : "int32",
-          "description" : "Nombre de retour PND sur cette catégorie pour effectivement invalider l'adresse"
         },
         "label" : {
           "type" : "string"
@@ -1504,18 +1244,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "isCash" : {
-          "type" : "boolean"
-        },
-        "isDirectDebit" : {
-          "type" : "boolean"
-        },
-        "isFree" : {
-          "type" : "boolean"
-        },
-        "isRecurrentCB" : {
-          "type" : "boolean"
-        },
         "authorizedDurations" : {
           "type" : "array",
           "items" : {
@@ -1527,6 +1255,18 @@
           "items" : {
             "type" : "string"
           }
+        },
+        "isCash" : {
+          "type" : "boolean"
+        },
+        "isDirectDebit" : {
+          "type" : "boolean"
+        },
+        "isRecurrentCB" : {
+          "type" : "boolean"
+        },
+        "isFree" : {
+          "type" : "boolean"
         },
         "label" : {
           "type" : "string"
@@ -1619,12 +1359,6 @@
         "isRefund" : {
           "type" : "boolean"
         },
-        "isMultiple" : {
-          "type" : "boolean"
-        },
-        "isCashOrder" : {
-          "type" : "boolean"
-        },
         "isBankTransfer" : {
           "type" : "boolean"
         },
@@ -1641,6 +1375,12 @@
           "type" : "boolean"
         },
         "isScratchCard" : {
+          "type" : "boolean"
+        },
+        "isMultiple" : {
+          "type" : "boolean"
+        },
+        "isCashOrder" : {
           "type" : "boolean"
         },
         "label" : {
@@ -1900,6 +1640,15 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "catCliId" : {
+          "type" : "string"
+        },
+        "catCliLab" : {
+          "type" : "string"
+        },
+        "catCliDetId" : {
+          "type" : "string"
+        },
         "catCliDetLab" : {
           "type" : "string"
         },
@@ -1917,15 +1666,6 @@
         },
         "cidentSubCat" : {
           "$ref" : "CodeIdent"
-        },
-        "catCliId" : {
-          "type" : "string"
-        },
-        "catCliLab" : {
-          "type" : "string"
-        },
-        "catCliDetId" : {
-          "type" : "string"
         }
       }
     },
@@ -1934,10 +1674,10 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "rental" : {
+        "deposit" : {
           "type" : "boolean"
         },
-        "deposit" : {
+        "rental" : {
           "type" : "boolean"
         },
         "label" : {
