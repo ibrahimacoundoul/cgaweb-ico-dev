@@ -1,0 +1,58 @@
+{
+  "apiVersion" : "1.0",
+  "swaggerVersion" : "1.2",
+  "basePath" : "/",
+  "resourcePath" : "fix this",
+  "apis" : [ {
+    "path" : "/caches/flush",
+    "description" : "flushCaches",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "Flusher les caches",
+      "notes" : "flushCaches",
+      "type" : "ResponseWrapper«object»",
+      "nickname" : "flushCaches",
+      "parameters" : [ ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«object»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  } ],
+  "models" : {
+    "ResponseWrapper«object»" : {
+      "id" : "ResponseWrapper«object»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "$ref" : "object"
+        }
+      }
+    }
+  }
+}

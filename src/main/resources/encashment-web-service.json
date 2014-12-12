@@ -1,0 +1,1353 @@
+{
+  "apiVersion" : "1.0",
+  "swaggerVersion" : "1.2",
+  "basePath" : "/",
+  "resourcePath" : "fix this",
+  "apis" : [ {
+    "path" : "/encashment/banktransfer",
+    "description" : "bankTransferEncashment",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "Encaissement par transfert",
+      "notes" : "bankTransferEncashment",
+      "type" : "ResponseWrapper«EncashementOut»",
+      "nickname" : "bankTransferEncashment",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "bankTransfer",
+        "description" : "Information d'encaissement par transfert",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "BankTransfer",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«EncashementOut»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/encashment/cancel",
+    "description" : "cancelEncashment",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "Annulation de paiement",
+      "notes" : "cancelEncashment",
+      "type" : "ResponseWrapper«object»",
+      "nickname" : "cancelEncashment",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "encashmentId",
+        "description" : "Numero d'encaissement",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "actOfManagementId",
+        "description" : "numero de mouvement",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "query",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«object»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/encashment/cashorder",
+    "description" : "cashOrderEncashment",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "Encaissement par mandat",
+      "notes" : "cashOrderEncashment",
+      "type" : "ResponseWrapper«EncashementOut»",
+      "nickname" : "cashOrderEncashment",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "cashOrder",
+        "description" : "Information de mandat",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "CashOrder",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«EncashementOut»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/encashment/cheque",
+    "description" : "chequeEncashment",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "Encaissement par chèque français",
+      "notes" : "chequeEncashment",
+      "type" : "ResponseWrapper«EncashementOut»",
+      "nickname" : "chequeEncashment",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "check",
+        "description" : "Information d'encaissement par cheque francais",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "FrenchCheck",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«EncashementOut»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/encashment/creditcard",
+    "description" : "creditCardEncashment",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "Encaissement par carte bancaire",
+      "notes" : "creditCardEncashment",
+      "type" : "ResponseWrapper«EncashementOut»",
+      "nickname" : "creditCardEncashment",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "creditCardEncashment",
+        "description" : "Information d'encaissement par carte bancaire",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "CreditCardEncashment",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«EncashementOut»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/encashment/dispatch",
+    "description" : "partialTransfer",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "Transfert partiel",
+      "notes" : "partialTransfer",
+      "type" : "ResponseWrapper«List«long»»",
+      "nickname" : "partialTransfer",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "partialTransferTarget",
+        "description" : "Information de transfert partiel",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "PartialTransferTarget",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«List«long»»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/encashment/foreigncheque",
+    "description" : "foreignChequeEncashment",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "Encaissement par chèque étranger",
+      "notes" : "foreignChequeEncashment",
+      "type" : "ResponseWrapper«EncashementOut»",
+      "nickname" : "foreignChequeEncashment",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "check",
+        "description" : "Information d'encaissement par cheque etranger",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "ForeignCheck",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«EncashementOut»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/encashment/motives",
+    "description" : "getEncashmentMotives",
+    "operations" : [ {
+      "method" : "GET",
+      "summary" : "Motif d'encaissement",
+      "notes" : "getEncashmentMotives",
+      "type" : "ResponseWrapper«List«Motive»»",
+      "nickname" : "getEncashmentMotives",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "userId",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«List«Motive»»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/encashment/reject",
+    "description" : "rejectEncashment",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "Rejet de paiement",
+      "notes" : "rejectEncashment",
+      "type" : "ResponseWrapper«long»",
+      "nickname" : "rejectEncashment",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "rejectEncashmentIn",
+        "description" : "Information de rejet",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "RejectEncashmentIn",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«long»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/encashment/reject/motives",
+    "description" : "getRejectEncashmentMotives",
+    "operations" : [ {
+      "method" : "GET",
+      "summary" : "Motif de rejet de paiement",
+      "notes" : "getRejectEncashmentMotives",
+      "type" : "ResponseWrapper«List«RejectMotives»»",
+      "nickname" : "getRejectEncashmentMotives",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "encashmentId",
+        "description" : "Numero d'encaissement",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "actOfManagementId",
+        "description" : "numero de mouvement",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "query",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«List«RejectMotives»»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/encashment/search",
+    "description" : "searchEncashments",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "Recherche des encaissements",
+      "notes" : "searchEncashments",
+      "type" : "ResponseWrapper«List«EncashmentResult»»",
+      "nickname" : "searchEncashments",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "request",
+        "description" : "Information d'encaissement",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "EncashmentRequest",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«List«EncashmentResult»»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  } ],
+  "models" : {
+    "ResponseWrapper«List«long»»" : {
+      "id" : "ResponseWrapper«List«long»»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "type" : "array",
+          "items" : {
+            "type" : "long"
+          }
+        }
+      }
+    },
+    "PaymentPerson" : {
+      "id" : "PaymentPerson",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "amount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        }
+      }
+    },
+    "EncashmentResult" : {
+      "id" : "EncashmentResult",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "amount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "encashmentId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "encashmentType" : {
+          "type" : "string"
+        },
+        "encashmentLogicalId" : {
+          "type" : "string"
+        },
+        "actId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "encashmentStatus" : {
+          "type" : "string"
+        },
+        "encashmentDate" : {
+          "type" : "integer",
+          "format" : "int64"
+        }
+      }
+    },
+    "ResponseWrapper«object»" : {
+      "id" : "ResponseWrapper«object»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "$ref" : "object"
+        }
+      }
+    },
+    "EncashmentRequest" : {
+      "id" : "EncashmentRequest",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "startDate" : {
+          "$ref" : "date-time",
+          "description" : "Format date attendu yyyymmdd"
+        },
+        "endDate" : {
+          "$ref" : "date-time",
+          "description" : "Format date attendu yyyymmdd"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "encashmentType" : {
+          "type" : "string"
+        },
+        "encashmentLogicalId" : {
+          "type" : "string"
+        }
+      }
+    },
+    "CreditCardEncashment" : {
+      "id" : "CreditCardEncashment",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "dispatch" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "PaymentPerson"
+          }
+        },
+        "creditCard" : {
+          "$ref" : "CreditCardWithOwner"
+        },
+        "amount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "motiveId" : {
+          "type" : "string"
+        },
+        "comment" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ResponseWrapper«List«RejectMotives»»" : {
+      "id" : "ResponseWrapper«List«RejectMotives»»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "RejectMotives"
+          }
+        }
+      }
+    },
+    "ResponseWrapper«EncashementOut»" : {
+      "id" : "ResponseWrapper«EncashementOut»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "$ref" : "EncashementOut"
+        }
+      }
+    },
+    "CashOrder" : {
+      "id" : "CashOrder",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "dispatch" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "PaymentPerson"
+          }
+        },
+        "cashOrderId" : {
+          "type" : "string"
+        },
+        "emissionDesk" : {
+          "type" : "string"
+        },
+        "encashmentimageid" : {
+          "type" : "string"
+        },
+        "validationDate" : {
+          "type" : "string",
+          "description" : "Format date attendu yyyymmdd"
+        },
+        "bankDepositDate" : {
+          "type" : "string",
+          "description" : "Format date attendu yyyymmdd"
+        },
+        "owner" : {
+          "type" : "string"
+        },
+        "amount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "motiveId" : {
+          "type" : "string"
+        },
+        "comment" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ForeignCheck" : {
+      "id" : "ForeignCheck",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "dispatch" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "PaymentPerson"
+          }
+        },
+        "encashmentimageid" : {
+          "type" : "string"
+        },
+        "bankDepositDate" : {
+          "type" : "string",
+          "description" : "Format date attendu yyyymmdd"
+        },
+        "owner" : {
+          "type" : "string"
+        },
+        "amount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "motiveId" : {
+          "type" : "string"
+        },
+        "comment" : {
+          "type" : "string"
+        }
+      }
+    },
+    "CreditCardWithOwner" : {
+      "id" : "CreditCardWithOwner",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "cryptogram" : {
+          "type" : "string"
+        },
+        "expirationDate" : {
+          "type" : "string",
+          "description" : "Format date attendu yyyymm"
+        },
+        "number" : {
+          "type" : "string"
+        },
+        "owner" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ResponseWrapper«List«EncashmentResult»»" : {
+      "id" : "ResponseWrapper«List«EncashmentResult»»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "EncashmentResult"
+          }
+        }
+      }
+    },
+    "BankTransfer" : {
+      "id" : "BankTransfer",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "dispatch" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "PaymentPerson"
+          }
+        },
+        "encashmentimageid" : {
+          "type" : "string"
+        },
+        "bankTransferId" : {
+          "type" : "string"
+        },
+        "owner" : {
+          "type" : "string"
+        },
+        "amount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "motiveId" : {
+          "type" : "string"
+        },
+        "comment" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Motive" : {
+      "id" : "Motive",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "motiveLabel" : {
+          "type" : "string"
+        },
+        "motiveId" : {
+          "type" : "string"
+        }
+      }
+    },
+    "EncashementOut" : {
+      "id" : "EncashementOut",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "actOfManagementId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "encashmentId" : {
+          "type" : "integer",
+          "format" : "int64"
+        }
+      }
+    },
+    "ResponseWrapper«long»" : {
+      "id" : "ResponseWrapper«long»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "type" : "integer",
+          "format" : "int64"
+        }
+      }
+    },
+    "PartialTransferTarget" : {
+      "id" : "PartialTransferTarget",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "dispatch" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "PaymentPerson"
+          }
+        },
+        "encashmentId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "actOfManagementId" : {
+          "type" : "integer",
+          "format" : "int64"
+        }
+      }
+    },
+    "FrenchCheck" : {
+      "id" : "FrenchCheck",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "dispatch" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "PaymentPerson"
+          }
+        },
+        "encashmentimageid" : {
+          "type" : "string"
+        },
+        "cmc7" : {
+          "type" : "string"
+        },
+        "bankDepositDate" : {
+          "type" : "string",
+          "description" : "Format date attendu yyyymmdd"
+        },
+        "owner" : {
+          "type" : "string"
+        },
+        "amount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "motiveId" : {
+          "type" : "string"
+        },
+        "comment" : {
+          "type" : "string"
+        }
+      }
+    },
+    "RejectEncashmentIn" : {
+      "id" : "RejectEncashmentIn",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "encashmentId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "rejectMotiveId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "actOfManagementId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "comment" : {
+          "type" : "string"
+        }
+      }
+    },
+    "RejectMotives" : {
+      "id" : "RejectMotives",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "rejectMotiveLabel" : {
+          "type" : "string"
+        },
+        "rejectMotiveId" : {
+          "type" : "integer",
+          "format" : "int32"
+        }
+      }
+    },
+    "ResponseWrapper«List«Motive»»" : {
+      "id" : "ResponseWrapper«List«Motive»»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "Motive"
+          }
+        }
+      }
+    }
+  }
+}

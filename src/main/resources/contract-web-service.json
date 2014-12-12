@@ -1,0 +1,4272 @@
+{
+  "apiVersion" : "1.0",
+  "swaggerVersion" : "1.2",
+  "basePath" : "/",
+  "resourcePath" : "fix this",
+  "apis" : [ {
+    "path" : "/contracts",
+    "description" : "getContracts",
+    "operations" : [ {
+      "method" : "GET",
+      "summary" : "Liste/Détail des contrats d'un abonné",
+      "notes" : "getContracts",
+      "type" : "ResponseWrapper«List«ContractFromPerson»»",
+      "nickname" : "getContracts",
+      "parameters" : [ {
+        "name" : "personId",
+        "description" : "Numéro d'abonne",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contractId",
+        "description" : "Numéro de contrat",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "integer",
+        "format" : "int32",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«List«ContractFromPerson»»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/contracts/activate",
+    "description" : "activateContract",
+    "operations" : [ {
+      "method" : "PUT",
+      "summary" : "Activation d'un contrat en attente",
+      "notes" : "activateContract",
+      "type" : "ResponseWrapper«object»",
+      "nickname" : "activateContract",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "refContract",
+        "description" : "refContract",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "RefContract",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«object»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/contracts/addOption",
+    "description" : "addOption",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "Ajout d'une option",
+      "notes" : "addOption",
+      "type" : "ResponseWrapper«List«ModificationOut»»",
+      "nickname" : "addOption",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "optionIn",
+        "description" : "optionIn",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "OptionIn",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«List«ModificationOut»»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/contracts/authorizedbroadcastvectormodification",
+    "description" : "getAuthorizedBroadcastVectorModification",
+    "operations" : [ {
+      "method" : "GET",
+      "summary" : "Liste des changements de vecteur possibles",
+      "notes" : "getAuthorizedBroadcastVectorModification",
+      "type" : "ResponseWrapper«List«BroadcastVector»»",
+      "nickname" : "getAuthorizedBroadcastVectorModification",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "broadcastVectorId",
+        "description" : "broadcastVectorId",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«List«BroadcastVector»»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/contracts/authorizedcrosses",
+    "description" : "getCrossableCommercialOperator",
+    "operations" : [ {
+      "method" : "GET",
+      "summary" : "Détermination des opérateurs commerciaux vers lesquels il est possible de definir un CROSS",
+      "notes" : "getCrossableCommercialOperator",
+      "type" : "ResponseWrapper«List«string»»",
+      "nickname" : "getCrossableCommercialOperator",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "personId",
+        "description" : "Numéro d'abonne",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contractId",
+        "description" : "contractId",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int32",
+        "paramType" : "query",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«List«string»»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/contracts/balances",
+    "description" : "getBalanceAmouts",
+    "operations" : [ {
+      "method" : "GET",
+      "summary" : "Remonter les différents soldes abonnés calculer à la date du jour",
+      "notes" : "getBalanceAmouts",
+      "type" : "ResponseWrapper«ContractBalanceOut»",
+      "nickname" : "getBalanceAmouts",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "personId",
+        "description" : "Numéro d'abonne",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contractId",
+        "description" : "contractId",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "integer",
+        "format" : "int32",
+        "paramType" : "query",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«ContractBalanceOut»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/contracts/cancellation/date",
+    "description" : "computeCancellationDate",
+    "operations" : [ {
+      "method" : "GET",
+      "summary" : "Calcul de la date de résiliation de contrat d'un abonné",
+      "notes" : "computeCancellationDate",
+      "type" : "ResponseWrapper«string»",
+      "nickname" : "computeCancellationDate",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "personId",
+        "description" : "Numéro d'abonne",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contractId",
+        "description" : "Numéro de contrat",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int32",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "cancellationReason",
+        "description" : "motif de resiliation",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«string»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/contracts/cancellation/detected",
+    "description" : "detectCancellationRequest",
+    "operations" : [ {
+      "method" : "GET",
+      "summary" : "Détection de la résiliation de contrat d'un abonné",
+      "notes" : "detectCancellationRequest",
+      "type" : "ResponseWrapper«Contract»",
+      "nickname" : "detectCancellationRequest",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "personId",
+        "description" : "Numéro d'abonne",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contractId",
+        "description" : "Numéro de contrat",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int32",
+        "paramType" : "query",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«Contract»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/contracts/cancellations",
+    "description" : "recordCancellation",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "Résiliation de contrat d'un abonné",
+      "notes" : "recordCancellation",
+      "type" : "ResponseWrapper«Contract»",
+      "nickname" : "recordCancellation",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "cancellationContract",
+        "description" : "information de contrat à resilier",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "CancellationContractRequest",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«Contract»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/contracts/cancellations/delete",
+    "description" : "cancelCancellation",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "Annule la résiliation d'un contrat",
+      "notes" : "cancelCancellation",
+      "type" : "ResponseWrapper«Contract»",
+      "nickname" : "cancelCancellation",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "cancellationContract",
+        "description" : "information de contrat dont annuler la resiliation",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "CancelCancellationContractRequest",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«Contract»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/contracts/documentsend",
+    "description" : "postDocumentSend",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "Envoi de contrat/mandat automatique par canal de vente",
+      "notes" : "postDocumentSend",
+      "type" : "ResponseWrapper«object»",
+      "nickname" : "postDocumentSend",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contracts",
+        "description" : "contracts",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "ContractMandat",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«object»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/contracts/modification",
+    "description" : "modify",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "Modification d'offre / Cross / Changement de mode de paiement / Réabonnement / Changement de vecteur / Upgrade",
+      "notes" : "modify",
+      "type" : "ResponseWrapper«List«ModificationOut»»",
+      "nickname" : "modify",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "modificationIn",
+        "description" : "modificationIn",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "ModificationIn",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«List«ModificationOut»»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/contracts/modification/validate",
+    "description" : "validateModification",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "Validation de la modification d'offre / Cross / Changement de mode de paiement / Réabonnement / Changement de vecteur / Upgrade",
+      "notes" : "validateModification",
+      "type" : "ResponseWrapper«object»",
+      "nickname" : "validateModification",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "modificationIn",
+        "description" : "modificationIn",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "ModificationIn",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«object»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/contracts/ownedproducts",
+    "description" : "getContractProducts",
+    "operations" : [ {
+      "method" : "GET",
+      "summary" : "return the owned products list of a contract",
+      "notes" : "getContractProducts",
+      "type" : "ResponseWrapper«List«ProductLight»»",
+      "nickname" : "getContractProducts",
+      "parameters" : [ {
+        "name" : "personId",
+        "description" : "Numéro d'abonne",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contractId",
+        "description" : "Numéro de contrat",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int32",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "selectedDate",
+        "description" : "selectedDate",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«List«ProductLight»»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/contracts/paymentModeHistory",
+    "description" : "getContractPaymentModeHistory",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "Historique des modes de paiement",
+      "notes" : "getContractPaymentModeHistory",
+      "type" : "ResponseWrapper«List«PaymentModeHistoryOut»»",
+      "nickname" : "getContractPaymentModeHistory",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contractIn",
+        "description" : "contractIn",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "ContractIn",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«List«PaymentModeHistoryOut»»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/contracts/quickrenewal",
+    "description" : "quickRenewal",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "Reabonnement rapide de canalPlay",
+      "notes" : "quickRenewal",
+      "type" : "ResponseWrapper«List«ModificationOut»»",
+      "nickname" : "quickRenewal",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "renewal",
+        "description" : "renewal",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "RenewalIn",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«List«ModificationOut»»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/contracts/quickrenewal/validate",
+    "description" : "quickRenewalValidate",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "validation du reabonnement rapide de canalPlay",
+      "notes" : "quickRenewalValidate",
+      "type" : "ResponseWrapper«List«ModificationOut»»",
+      "nickname" : "quickRenewalValidate",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "renewal",
+        "description" : "renewal",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "RenewalIn",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«List«ModificationOut»»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/contracts/removeOption",
+    "description" : "removeOption",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "Retrait d'une option",
+      "notes" : "removeOption",
+      "type" : "ResponseWrapper«List«ModificationOut»»",
+      "nickname" : "removeOption",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "optionIn",
+        "description" : "optionIn",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "OptionIn",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«List«ModificationOut»»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/contracts/scheduledactions",
+    "description" : "getContractScheduledActions",
+    "operations" : [ {
+      "method" : "GET",
+      "summary" : "Liste des interruptions d'un contrat",
+      "notes" : "getContractScheduledActions",
+      "type" : "ResponseWrapper«ContractScheduledActions»",
+      "nickname" : "getContractScheduledActions",
+      "parameters" : [ {
+        "name" : "personId",
+        "description" : "Numéro d'abonne",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contractId",
+        "description" : "Numéro de contrat",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int32",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«ContractScheduledActions»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/contracts/sign",
+    "description" : "signContract",
+    "operations" : [ {
+      "method" : "PUT",
+      "summary" : "Signer un contrat",
+      "notes" : "signContract",
+      "type" : "ResponseWrapper«SignedContract»",
+      "nickname" : "signContract",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "signatureIn",
+        "description" : "signatureIn",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "SignatureIn",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«SignedContract»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/contracts/sign/cancel",
+    "description" : "unsignContract",
+    "operations" : [ {
+      "method" : "PUT",
+      "summary" : "Supprimer la signature d'un contrat",
+      "notes" : "unsignContract",
+      "type" : "ResponseWrapper«SignedContract»",
+      "nickname" : "unsignContract",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contract",
+        "description" : "contract",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "ContractIn",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«SignedContract»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/contracts/summary",
+    "description" : "getContractSummaries",
+    "operations" : [ {
+      "method" : "GET",
+      "summary" : "Liste synthétique des contrats d'un abonné",
+      "notes" : "getContractSummaries",
+      "type" : "ResponseWrapper«List«ContractSummary»»",
+      "nickname" : "getContractSummaries",
+      "parameters" : [ {
+        "name" : "personId",
+        "description" : "Numéro d'abonne",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«List«ContractSummary»»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/contracts/suspensions",
+    "description" : "createContractSuspensions",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "Créer une nouvelle suspension d'un contrat",
+      "notes" : "createContractSuspensions",
+      "type" : "ResponseWrapper«Suspensions»",
+      "nickname" : "createContractSuspensions",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "personId",
+        "description" : "Numéro d'abonne",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contractId",
+        "description" : "Numéro de contrat",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int32",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "durationId",
+        "description" : "durationId",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "startDate",
+        "description" : "suspensionStartDate",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«Suspensions»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/contracts/suspensions/delete",
+    "description" : "deleteContractSuspensions",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "Supprimer une suspension d'un contrat",
+      "notes" : "deleteContractSuspensions",
+      "type" : "ResponseWrapper«Suspensions»",
+      "nickname" : "deleteContractSuspensions",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "personId",
+        "description" : "Numéro d'abonne",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contractId",
+        "description" : "Numéro de contrat",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int32",
+        "paramType" : "query",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«Suspensions»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/contracts/unpaid",
+    "description" : "regularizeSubscriberUnpaids",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "Régularisation des impayés d'un abonné",
+      "notes" : "regularizeSubscriberUnpaids",
+      "type" : "ResponseWrapper«object»",
+      "nickname" : "regularizeSubscriberUnpaids",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "personUnpaidToRegularize",
+        "description" : "informations d'abonné pour la régularisation",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "PersonUnpaidToRegularize",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«object»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/contracts/unpaid",
+    "description" : "getSubscriberUnpaids",
+    "operations" : [ {
+      "method" : "GET",
+      "summary" : "Liste des impayés d'un abonné",
+      "notes" : "getSubscriberUnpaids",
+      "type" : "ResponseWrapper«PersonUnpaid»",
+      "nickname" : "getSubscriberUnpaids",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "personId",
+        "description" : "Numéro d'abonne",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contractId",
+        "description" : "Numéro de contrat",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int32",
+        "paramType" : "query",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«PersonUnpaid»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/contracts/vouchers",
+    "description" : "insertVouchers",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "insertion d'une liste de coupons",
+      "notes" : "insertVouchers",
+      "type" : "ResponseWrapper«VoucherOut»",
+      "nickname" : "insertVouchers",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "simulate",
+        "description" : "simulate",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "boolean",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "voucherToInsert",
+        "description" : "voucherToInsert",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "VoucherToInsert",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«VoucherOut»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/contracts/vouchers/delete",
+    "description" : "deleteVoucher",
+    "operations" : [ {
+      "method" : "PUT",
+      "summary" : "suppression d'un coupon",
+      "notes" : "deleteVoucher",
+      "type" : "ResponseWrapper«object»",
+      "nickname" : "deleteVoucher",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "voucherToDelete",
+        "description" : "voucherToDelete",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "VoucherToDelete",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«object»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/persons/{personId}/contracts",
+    "description" : "getContractsOld",
+    "operations" : [ {
+      "method" : "GET",
+      "summary" : " [deprecated] Utiliser GET /contracts ",
+      "notes" : "getContractsOld",
+      "type" : "ResponseWrapper«List«ContractFromPerson»»",
+      "nickname" : "getContractsOld",
+      "parameters" : [ {
+        "name" : "personId",
+        "description" : "Numéro d'abonne",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "path",
+        "allowMultiple" : false
+      }, {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«List«ContractFromPerson»»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/persons/{personId}/contracts/summary",
+    "description" : "getContractSummariesOld",
+    "operations" : [ {
+      "method" : "GET",
+      "summary" : " [deprecated] Utiliser GET /contracts/summary",
+      "notes" : "getContractSummariesOld",
+      "type" : "ResponseWrapper«List«ContractSummary»»",
+      "nickname" : "getContractSummariesOld",
+      "parameters" : [ {
+        "name" : "personId",
+        "description" : "Numéro d'abonne",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "path",
+        "allowMultiple" : false
+      }, {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«List«ContractSummary»»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/persons/{personId}/contracts/{contractId}",
+    "description" : "getContractOld",
+    "operations" : [ {
+      "method" : "GET",
+      "summary" : " [deprecated] Utiliser GET /contracts",
+      "notes" : "getContractOld",
+      "type" : "ResponseWrapper«ContractFromPersonContract»",
+      "nickname" : "getContractOld",
+      "parameters" : [ {
+        "name" : "personId",
+        "description" : "Numéro d'abonne",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "path",
+        "allowMultiple" : false
+      }, {
+        "name" : "contractId",
+        "description" : "Numéro de contrat",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int32",
+        "paramType" : "path",
+        "allowMultiple" : false
+      }, {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«ContractFromPersonContract»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/persons/{personId}/contracts/{contractId}/cancellation/date",
+    "description" : "computeCancellationDateOld",
+    "operations" : [ {
+      "method" : "GET",
+      "summary" : " [deprecated] Utiliser GET /contracts/cancellation/date",
+      "notes" : "computeCancellationDateOld",
+      "type" : "ResponseWrapper«string»",
+      "nickname" : "computeCancellationDateOld",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "personId",
+        "description" : "Numéro d'abonne",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "path",
+        "allowMultiple" : false
+      }, {
+        "name" : "contractId",
+        "description" : "Numéro de contrat",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int32",
+        "paramType" : "path",
+        "allowMultiple" : false
+      }, {
+        "name" : "cancellationReason",
+        "description" : "motif de resiliation",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«string»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/persons/{personId}/contracts/{contractId}/cancellation/detected",
+    "description" : "detectCancellationRequestOld",
+    "operations" : [ {
+      "method" : "GET",
+      "summary" : " [deprecated] Utiliser GET /contracts/cancellation/detected",
+      "notes" : "detectCancellationRequestOld",
+      "type" : "ResponseWrapper«Contract»",
+      "nickname" : "detectCancellationRequestOld",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "personId",
+        "description" : "Numéro d'abonne",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "path",
+        "allowMultiple" : false
+      }, {
+        "name" : "contractId",
+        "description" : "Numéro de contrat",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int32",
+        "paramType" : "path",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«Contract»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/persons/{personId}/contracts/{contractId}/ownedproducts",
+    "description" : "getContractProductsOld",
+    "operations" : [ {
+      "method" : "GET",
+      "summary" : " [deprecated] Utiliser GET /contracts/ownedproducts",
+      "notes" : "getContractProductsOld",
+      "type" : "ResponseWrapper«List«ProductLight»»",
+      "nickname" : "getContractProductsOld",
+      "parameters" : [ {
+        "name" : "personId",
+        "description" : "Numéro d'abonne",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "path",
+        "allowMultiple" : false
+      }, {
+        "name" : "contractId",
+        "description" : "Numéro de contrat",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int32",
+        "paramType" : "path",
+        "allowMultiple" : false
+      }, {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "selectedDate",
+        "description" : "selectedDate",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«List«ProductLight»»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/persons/{personId}/contracts/{contractId}/scheduledActions",
+    "description" : "getContractScheduledActionsOld",
+    "operations" : [ {
+      "method" : "GET",
+      "summary" : " [deprecated]  GET /contracts/scheduledactions",
+      "notes" : "getContractScheduledActionsOld",
+      "type" : "ResponseWrapper«ContractScheduledActions»",
+      "nickname" : "getContractScheduledActionsOld",
+      "parameters" : [ {
+        "name" : "personId",
+        "description" : "Numéro d'abonne",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "path",
+        "allowMultiple" : false
+      }, {
+        "name" : "contractId",
+        "description" : "Numéro de contrat",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int32",
+        "paramType" : "path",
+        "allowMultiple" : false
+      }, {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«ContractScheduledActions»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  } ],
+  "models" : {
+    "ResponseWrapper«Suspensions»" : {
+      "id" : "ResponseWrapper«Suspensions»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "$ref" : "Suspensions"
+        }
+      }
+    },
+    "ResponseWrapper«List«PaymentModeHistoryOut»»" : {
+      "id" : "ResponseWrapper«List«PaymentModeHistoryOut»»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "PaymentModeHistoryOut"
+          }
+        }
+      }
+    },
+    "ContractIn" : {
+      "id" : "ContractIn",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        }
+      }
+    },
+    "PaymentPlanResultDetail" : {
+      "id" : "PaymentPlanResultDetail",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "debitpayment" : {
+          "type" : "string"
+        },
+        "rawprice" : {
+          "type" : "string"
+        },
+        "product" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ResponseWrapper«List«string»»" : {
+      "id" : "ResponseWrapper«List«string»»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "ResponseWrapper«object»" : {
+      "id" : "ResponseWrapper«object»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "$ref" : "object"
+        }
+      }
+    },
+    "CreditCardHistoricOut" : {
+      "id" : "CreditCardHistoricOut",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "authorizationNumber" : {
+          "type" : "string"
+        },
+        "expirationDate" : {
+          "type" : "string"
+        },
+        "cryptogram" : {
+          "type" : "string"
+        },
+        "creditCardNumber" : {
+          "type" : "string"
+        },
+        "creditCardType" : {
+          "type" : "string"
+        },
+        "owner" : {
+          "type" : "string"
+        }
+      }
+    },
+    "PaymentModeHistoryOut" : {
+      "id" : "PaymentModeHistoryOut",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "payment" : {
+          "$ref" : "PaymentModeHistory"
+        },
+        "modificationUser" : {
+          "type" : "string"
+        },
+        "modificationDate" : {
+          "type" : "string"
+        },
+        "methodOfPaymentLabel" : {
+          "type" : "string"
+        },
+        "methodOfPayment" : {
+          "type" : "string"
+        }
+      }
+    },
+    "DirectDebitResult" : {
+      "id" : "DirectDebitResult",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "iban" : {
+          "type" : "string"
+        },
+        "bic" : {
+          "type" : "string"
+        },
+        "accountingDate" : {
+          "type" : "string"
+        },
+        "directDebitTypeId" : {
+          "type" : "string"
+        },
+        "detail" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ProductDetail"
+          }
+        },
+        "amount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "rejectId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "isIntentional" : {
+          "type" : "boolean"
+        },
+        "directDebitId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "directDebitTypeLabel" : {
+          "type" : "string"
+        },
+        "rejectLabel" : {
+          "type" : "string"
+        },
+        "rejectDate" : {
+          "type" : "string"
+        },
+        "isRepresentable" : {
+          "type" : "boolean"
+        },
+        "rejectCode" : {
+          "type" : "string"
+        },
+        "month" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ResponseWrapper«List«BroadcastVector»»" : {
+      "id" : "ResponseWrapper«List«BroadcastVector»»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "BroadcastVector"
+          }
+        }
+      }
+    },
+    "ProductOwned" : {
+      "id" : "ProductOwned",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "productId" : {
+          "type" : "string"
+        },
+        "amount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "fifthCategory" : {
+          "type" : "boolean"
+        },
+        "label" : {
+          "type" : "string"
+        },
+        "commercialLabel" : {
+          "type" : "string"
+        },
+        "productCategory" : {
+          "type" : "string"
+        },
+        "themeId" : {
+          "type" : "string"
+        },
+        "productType" : {
+          "type" : "string"
+        }
+      }
+    },
+    "CancelCancellationContractRequest" : {
+      "id" : "CancelCancellationContractRequest",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "unpaidCancelCancellation" : {
+          "type" : "boolean"
+        },
+        "commercialOperator" : {
+          "type" : "string"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "cancellationDate" : {
+          "type" : "string",
+          "description" : "Format date attendu yyyymmdd"
+        },
+        "cancellationReason" : {
+          "type" : "string"
+        }
+      }
+    },
+    "PaymentMeans" : {
+      "id" : "PaymentMeans",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "directDebitDate" : {
+          "type" : "string"
+        },
+        "creditCard" : {
+          "$ref" : "CreditCard"
+        },
+        "thirdPayorId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "directDebit" : {
+          "$ref" : "DirectDebit"
+        }
+      }
+    },
+    "CreditCard" : {
+      "id" : "CreditCard",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "authorizationNumber" : {
+          "type" : "string"
+        },
+        "creditCardType" : {
+          "type" : "string"
+        },
+        "creditCardNumber" : {
+          "type" : "string"
+        },
+        "cryptogram" : {
+          "type" : "string"
+        },
+        "expirationDate" : {
+          "type" : "string",
+          "description" : "Format date attendu yyyymm"
+        },
+        "owner" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Equipment" : {
+      "id" : "Equipment",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "equipmentId" : {
+          "type" : "string"
+        },
+        "equipmentType" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ModificationOut" : {
+      "id" : "ModificationOut",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "actOfManagementCode" : {
+          "type" : "string"
+        },
+        "actOfManagementId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        }
+      }
+    },
+    "ResponseWrapper«PersonUnpaid»" : {
+      "id" : "ResponseWrapper«PersonUnpaid»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "$ref" : "PersonUnpaid"
+        }
+      }
+    },
+    "LogisticsIn" : {
+      "id" : "LogisticsIn",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "equipments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "Equipment"
+          }
+        },
+        "returnedEquipments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "Equipment"
+          }
+        },
+        "equipmentsToBeReturned" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "Equipment"
+          }
+        },
+        "transactionId" : {
+          "type" : "string"
+        },
+        "shipmentFees" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "equipmentConfig" : {
+          "type" : "string"
+        },
+        "reasonId" : {
+          "type" : "string"
+        },
+        "logisticReason" : {
+          "type" : "string"
+        },
+        "affectationType" : {
+          "type" : "string"
+        },
+        "skipAvailabilityFees" : {
+          "type" : "boolean"
+        },
+        "skipShipmentFees" : {
+          "type" : "boolean"
+        }
+      }
+    },
+    "ResponseWrapper«List«ModificationOut»»" : {
+      "id" : "ResponseWrapper«List«ModificationOut»»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ModificationOut"
+          }
+        }
+      }
+    },
+    "ModificationIn" : {
+      "id" : "ModificationIn",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "workingDate" : {
+          "type" : "string",
+          "description" : "Format date attendu yyyymmdd"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "contracts" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ContractModification"
+          }
+        },
+        "logistics" : {
+          "$ref" : "LogisticsIn"
+        },
+        "paymentCreditCard" : {
+          "$ref" : "CreditCard"
+        },
+        "vouchers" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "VoucherLight"
+          }
+        },
+        "modificationReason" : {
+          "type" : "string"
+        },
+        "personModification" : {
+          "$ref" : "PersonModification"
+        }
+      }
+    },
+    "Contract" : {
+      "id" : "Contract",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "creationDate" : {
+          "type" : "string"
+        },
+        "startDate" : {
+          "type" : "string"
+        },
+        "updateUser" : {
+          "type" : "string"
+        },
+        "freeCancellationDate" : {
+          "$ref" : "date-time"
+        },
+        "isReactivable" : {
+          "type" : "boolean"
+        },
+        "contractActivity" : {
+          "type" : "string"
+        },
+        "fullValidationStatus" : {
+          "type" : "string"
+        },
+        "nonRenewalReason" : {
+          "type" : "string"
+        },
+        "cancellationUser" : {
+          "type" : "string"
+        },
+        "suspensionDate" : {
+          "type" : "string"
+        },
+        "thirdPartyPayerId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "products" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ProductOwned"
+          }
+        },
+        "userId" : {
+          "type" : "string"
+        },
+        "endDate" : {
+          "type" : "string"
+        },
+        "ccatalogue" : {
+          "type" : "string"
+        },
+        "linkedContracts" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "RefContract"
+          }
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "methodOfPayment" : {
+          "type" : "string"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "ispId" : {
+          "type" : "string"
+        },
+        "commercialOperator" : {
+          "type" : "string"
+        },
+        "cancellationDate" : {
+          "type" : "string"
+        },
+        "cancellationReason" : {
+          "type" : "string"
+        },
+        "broadcastMediaType" : {
+          "type" : "string"
+        },
+        "contractStatus" : {
+          "type" : "string"
+        },
+        "equipmentConfig" : {
+          "type" : "string"
+        },
+        "financialIncidentInProgress" : {
+          "type" : "boolean"
+        },
+        "signatureDate" : {
+          "type" : "string"
+        },
+        "renewalSequence" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "freeMethodOfPaymentReason" : {
+          "type" : "string"
+        },
+        "distributorId" : {
+          "type" : "string"
+        },
+        "duration" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "origin" : {
+          "type" : "string"
+        },
+        "active" : {
+          "type" : "boolean"
+        },
+        "majorProductId" : {
+          "type" : "string"
+        },
+        "mainCommentText" : {
+          "type" : "string"
+        },
+        "mainCommentDate" : {
+          "type" : "string"
+        },
+        "methodOfPaymentLabel" : {
+          "type" : "string"
+        },
+        "mainActOfManagementId" : {
+          "type" : "string"
+        },
+        "mainActOfManagementDate" : {
+          "type" : "string"
+        },
+        "ongoingCancellationDate" : {
+          "type" : "string"
+        },
+        "ongoingCancellationCreationDate" : {
+          "type" : "string"
+        },
+        "originLabel" : {
+          "type" : "string"
+        },
+        "commercialOperatorLabel" : {
+          "type" : "string"
+        },
+        "reactivableAfterRegul" : {
+          "type" : "boolean"
+        },
+        "digitalSignature" : {
+          "type" : "boolean"
+        },
+        "amount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "broadcastVectorId" : {
+          "type" : "string"
+        },
+        "balance" : {
+          "type" : "number",
+          "format" : "float"
+        },
+        "ongoingCancellation" : {
+          "type" : "boolean"
+        }
+      }
+    },
+    "VoucherLight" : {
+      "id" : "VoucherLight",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "voucherId" : {
+          "type" : "string",
+          "description" : "code du coupon"
+        }
+      }
+    },
+    "ContractFromPerson" : {
+      "id" : "ContractFromPerson",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "creationDate" : {
+          "type" : "string"
+        },
+        "active" : {
+          "type" : "boolean"
+        },
+        "startDate" : {
+          "type" : "string"
+        },
+        "updateUser" : {
+          "type" : "string"
+        },
+        "ongoingCancellationDate" : {
+          "type" : "string"
+        },
+        "freeCancellationDate" : {
+          "$ref" : "date-time"
+        },
+        "isReactivable" : {
+          "type" : "boolean"
+        },
+        "contractActivity" : {
+          "type" : "string"
+        },
+        "fullValidationStatus" : {
+          "type" : "string"
+        },
+        "nonRenewalReason" : {
+          "type" : "string"
+        },
+        "cancellationUser" : {
+          "type" : "string"
+        },
+        "suspensionDate" : {
+          "type" : "string"
+        },
+        "thirdPartyPayerId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "digitalSignature" : {
+          "type" : "boolean"
+        },
+        "products" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ProductOwned"
+          }
+        },
+        "userId" : {
+          "type" : "string"
+        },
+        "endDate" : {
+          "type" : "string"
+        },
+        "ccatalogue" : {
+          "type" : "string"
+        },
+        "linkedContracts" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "RefContract"
+          }
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "methodOfPayment" : {
+          "type" : "string"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "commercialOperator" : {
+          "type" : "string"
+        },
+        "cancellationDate" : {
+          "type" : "string"
+        },
+        "cancellationReason" : {
+          "type" : "string"
+        },
+        "broadcastMediaType" : {
+          "type" : "string"
+        },
+        "contractStatus" : {
+          "type" : "string"
+        },
+        "equipmentConfig" : {
+          "type" : "string"
+        },
+        "financialIncidentInProgress" : {
+          "type" : "boolean"
+        },
+        "signatureDate" : {
+          "type" : "string"
+        },
+        "renewalSequence" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "freeMethodOfPaymentReason" : {
+          "type" : "string"
+        },
+        "distributorId" : {
+          "type" : "string"
+        },
+        "ongoingCancellation" : {
+          "type" : "boolean"
+        },
+        "duration" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "origin" : {
+          "type" : "string"
+        }
+      }
+    },
+    "CancellationContractRequest" : {
+      "id" : "CancellationContractRequest",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "commercialOperator" : {
+          "type" : "string"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "cancellationDate" : {
+          "type" : "string",
+          "description" : "Format date attendu yyyymmdd"
+        },
+        "cancellationReason" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ContractMandat" : {
+      "id" : "ContractMandat",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "workingDate" : {
+          "type" : "string",
+          "description" : "Format date attendu yyyymmdd"
+        },
+        "contracts" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ContractMandatContract"
+          }
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        }
+      }
+    },
+    "ContractRenewal" : {
+      "id" : "ContractRenewal",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "authorizationNumber" : {
+          "type" : "string"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "creditCardType" : {
+          "type" : "string"
+        },
+        "creditCardNumber" : {
+          "type" : "string"
+        },
+        "cryptogram" : {
+          "type" : "string"
+        },
+        "expirationDate" : {
+          "type" : "string",
+          "description" : "Format date attendu yyyymm"
+        },
+        "owner" : {
+          "type" : "string"
+        }
+      }
+    },
+    "SignedContract" : {
+      "id" : "SignedContract",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "creationDate" : {
+          "type" : "string"
+        },
+        "startDate" : {
+          "type" : "string"
+        },
+        "updateUser" : {
+          "type" : "string"
+        },
+        "fullValidationStatus" : {
+          "type" : "string"
+        },
+        "userId" : {
+          "type" : "string"
+        },
+        "endDate" : {
+          "type" : "string"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "commercialOperator" : {
+          "type" : "string"
+        },
+        "broadcastMediaType" : {
+          "type" : "string"
+        },
+        "contractStatus" : {
+          "type" : "string"
+        },
+        "signatureDate" : {
+          "type" : "string"
+        },
+        "methodOfPaiement" : {
+          "type" : "string"
+        },
+        "renewalSequence" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "distributorId" : {
+          "type" : "string"
+        },
+        "duration" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "origin" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ResponseWrapper«ContractFromPersonContract»" : {
+      "id" : "ResponseWrapper«ContractFromPersonContract»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "$ref" : "ContractFromPersonContract"
+        }
+      }
+    },
+    "PersonUnpaid" : {
+      "id" : "PersonUnpaid",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "details" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "DirectDebitResult"
+          }
+        },
+        "globalAmountTobePaid" : {
+          "type" : "number",
+          "format" : "double"
+        }
+      }
+    },
+    "PersonUnpaidToRegularize" : {
+      "id" : "PersonUnpaidToRegularize",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "details" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "PersonUnpaidDetail"
+          }
+        },
+        "amount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "creditCard" : {
+          "$ref" : "CreditCardWithOwner"
+        }
+      }
+    },
+    "ResponseWrapper«SignedContract»" : {
+      "id" : "ResponseWrapper«SignedContract»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "$ref" : "SignedContract"
+        }
+      }
+    },
+    "RefContract" : {
+      "id" : "RefContract",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "commercialOperator" : {
+          "type" : "string"
+        }
+      }
+    },
+    "PersonUnpaidDetail" : {
+      "id" : "PersonUnpaidDetail",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "amount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "product" : {
+          "type" : "string"
+        },
+        "referenceDate" : {
+          "type" : "string",
+          "description" : "Format date attendu yyyymmdd"
+        },
+        "checkable" : {
+          "type" : "boolean"
+        }
+      }
+    },
+    "ResponseWrapper«string»" : {
+      "id" : "ResponseWrapper«string»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ContractMandatContract" : {
+      "id" : "ContractMandatContract",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "digitalMandate" : {
+          "type" : "boolean"
+        },
+        "digitalContract" : {
+          "type" : "boolean"
+        },
+        "sendContract" : {
+          "type" : "boolean"
+        },
+        "sendMandate" : {
+          "type" : "boolean"
+        }
+      }
+    },
+    "VoucherToInsert" : {
+      "id" : "VoucherToInsert",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "vouchers" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "VoucherLight"
+          }
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        }
+      }
+    },
+    "DirectDebitHistoricOut" : {
+      "id" : "DirectDebitHistoricOut",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "iban" : {
+          "type" : "string"
+        },
+        "bic" : {
+          "type" : "string"
+        }
+      }
+    },
+    "PaymentPlanResult" : {
+      "id" : "PaymentPlanResult",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "detail" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "PaymentPlanResultDetail"
+          }
+        },
+        "commercialOperator" : {
+          "type" : "string"
+        },
+        "debitpayment" : {
+          "type" : "string"
+        },
+        "rawprice" : {
+          "type" : "string"
+        },
+        "month" : {
+          "type" : "string"
+        }
+      }
+    },
+    "RenewalIn" : {
+      "id" : "RenewalIn",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "vouchers" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "VoucherLight"
+          }
+        },
+        "contracts" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ContractRenewal"
+          }
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "paymentCreditCard" : {
+          "$ref" : "CreditCard"
+        }
+      }
+    },
+    "CreditCardWithOwner" : {
+      "id" : "CreditCardWithOwner",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "cryptogram" : {
+          "type" : "string"
+        },
+        "expirationDate" : {
+          "type" : "string",
+          "description" : "Format date attendu yyyymm"
+        },
+        "number" : {
+          "type" : "string"
+        },
+        "owner" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        }
+      }
+    },
+    "DirectDebit" : {
+      "id" : "DirectDebit",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "iban" : {
+          "type" : "string"
+        },
+        "bic" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ContractBalanceOut" : {
+      "id" : "ContractBalanceOut",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "unpaid" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "pendingCredit" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "pendingRefund" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "balance" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "currentDirectDebit" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "deposit" : {
+          "type" : "number",
+          "format" : "double"
+        }
+      }
+    },
+    "ResponseWrapper«List«ContractSummary»»" : {
+      "id" : "ResponseWrapper«List«ContractSummary»»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ContractSummary"
+          }
+        }
+      }
+    },
+    "ContractModification" : {
+      "id" : "ContractModification",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "products" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ProductWithFifthCategory"
+          }
+        },
+        "action" : {
+          "type" : "string"
+        },
+        "freeMethodOfPaymentReason" : {
+          "type" : "string"
+        },
+        "broadcastVectorId" : {
+          "type" : "string"
+        },
+        "ispId" : {
+          "type" : "string"
+        },
+        "commercialOperator" : {
+          "type" : "string"
+        },
+        "origin" : {
+          "type" : "string"
+        },
+        "duration" : {
+          "type" : "string"
+        },
+        "methodOfPayment" : {
+          "type" : "string"
+        },
+        "catalog" : {
+          "type" : "string"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "payment" : {
+          "$ref" : "PaymentMeans"
+        },
+        "sponsorId" : {
+          "type" : "integer",
+          "format" : "int64"
+        }
+      }
+    },
+    "ProductWithFifthCategory" : {
+      "id" : "ProductWithFifthCategory",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "productId" : {
+          "type" : "string"
+        }
+      }
+    },
+    "VoucherOut" : {
+      "id" : "VoucherOut",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "promotions" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "PromotionLight"
+          }
+        },
+        "vouchers" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "VoucherLight"
+          }
+        },
+        "paymentPlans" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "PaymentPlanResult"
+          }
+        }
+      }
+    },
+    "BroadcastVector" : {
+      "id" : "BroadcastVector",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "broadcastVectorId" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ContractFromPersonContract" : {
+      "id" : "ContractFromPersonContract",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "creationDate" : {
+          "type" : "string"
+        },
+        "active" : {
+          "type" : "boolean"
+        },
+        "startDate" : {
+          "type" : "string"
+        },
+        "updateUser" : {
+          "type" : "string"
+        },
+        "methodOfPaymentLabel" : {
+          "type" : "string"
+        },
+        "freeCancellationDate" : {
+          "$ref" : "date-time"
+        },
+        "isReactivable" : {
+          "type" : "boolean"
+        },
+        "originLabel" : {
+          "type" : "string"
+        },
+        "commercialOperatorLabel" : {
+          "type" : "string"
+        },
+        "contractActivity" : {
+          "type" : "string"
+        },
+        "fullValidationStatus" : {
+          "type" : "string"
+        },
+        "nonRenewalReason" : {
+          "type" : "string"
+        },
+        "cancellationUser" : {
+          "type" : "string"
+        },
+        "suspensionDate" : {
+          "type" : "string"
+        },
+        "thirdPartyPayerId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "reactivableAfterRegul" : {
+          "type" : "boolean"
+        },
+        "digitalSignature" : {
+          "type" : "boolean"
+        },
+        "products" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ProductOwned"
+          }
+        },
+        "userId" : {
+          "type" : "string"
+        },
+        "endDate" : {
+          "type" : "string"
+        },
+        "ccatalogue" : {
+          "type" : "string"
+        },
+        "linkedContracts" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "RefContract"
+          }
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "methodOfPayment" : {
+          "type" : "string"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "commercialOperator" : {
+          "type" : "string"
+        },
+        "cancellationDate" : {
+          "type" : "string"
+        },
+        "cancellationReason" : {
+          "type" : "string"
+        },
+        "broadcastMediaType" : {
+          "type" : "string"
+        },
+        "contractStatus" : {
+          "type" : "string"
+        },
+        "equipmentConfig" : {
+          "type" : "string"
+        },
+        "financialIncidentInProgress" : {
+          "type" : "boolean"
+        },
+        "signatureDate" : {
+          "type" : "string"
+        },
+        "renewalSequence" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "freeMethodOfPaymentReason" : {
+          "type" : "string"
+        },
+        "distributorId" : {
+          "type" : "string"
+        },
+        "ongoingCancellation" : {
+          "type" : "boolean"
+        },
+        "duration" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "origin" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ResponseWrapper«List«ProductLight»»" : {
+      "id" : "ResponseWrapper«List«ProductLight»»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ProductLight"
+          }
+        }
+      }
+    },
+    "ProductDetail" : {
+      "id" : "ProductDetail",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "productId" : {
+          "type" : "string"
+        },
+        "amount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "productLabel" : {
+          "type" : "string"
+        },
+        "rawamount" : {
+          "type" : "number",
+          "format" : "double"
+        }
+      }
+    },
+    "ResponseWrapper«ContractScheduledActions»" : {
+      "id" : "ResponseWrapper«ContractScheduledActions»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "$ref" : "ContractScheduledActions"
+        }
+      }
+    },
+    "ResponseWrapper«ContractBalanceOut»" : {
+      "id" : "ResponseWrapper«ContractBalanceOut»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "$ref" : "ContractBalanceOut"
+        }
+      }
+    },
+    "Suspensions" : {
+      "id" : "Suspensions",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "startDate" : {
+          "type" : "string"
+        },
+        "durationId" : {
+          "type" : "string"
+        },
+        "duration" : {
+          "type" : "integer",
+          "format" : "int32"
+        }
+      }
+    },
+    "VoucherToDelete" : {
+      "id" : "VoucherToDelete",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "voucherId" : {
+          "type" : "string"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        }
+      }
+    },
+    "ContractSummary" : {
+      "id" : "ContractSummary",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "active" : {
+          "type" : "boolean"
+        },
+        "startDate" : {
+          "type" : "string"
+        },
+        "majorProductId" : {
+          "type" : "string"
+        },
+        "mainCommentText" : {
+          "type" : "string"
+        },
+        "mainCommentDate" : {
+          "type" : "string"
+        },
+        "mainActOfManagementId" : {
+          "type" : "string"
+        },
+        "mainActOfManagementDate" : {
+          "type" : "string"
+        },
+        "ongoingCancellationDate" : {
+          "type" : "string"
+        },
+        "ongoingCancellationCreationDate" : {
+          "type" : "string"
+        },
+        "contractActivity" : {
+          "type" : "string"
+        },
+        "fullValidationStatus" : {
+          "type" : "string"
+        },
+        "suspensionDate" : {
+          "type" : "string"
+        },
+        "endDate" : {
+          "type" : "string"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "methodOfPayment" : {
+          "type" : "string"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "broadcastVectorId" : {
+          "type" : "string"
+        },
+        "ispId" : {
+          "type" : "string"
+        },
+        "commercialOperator" : {
+          "type" : "string"
+        },
+        "cancellationDate" : {
+          "type" : "string"
+        },
+        "cancellationReason" : {
+          "type" : "string"
+        },
+        "broadcastMediaType" : {
+          "type" : "string"
+        },
+        "contractStatus" : {
+          "type" : "string"
+        },
+        "financialIncidentInProgress" : {
+          "type" : "boolean"
+        },
+        "balance" : {
+          "type" : "number",
+          "format" : "float"
+        },
+        "freeMethodOfPaymentReason" : {
+          "type" : "string"
+        },
+        "ongoingCancellation" : {
+          "type" : "boolean"
+        },
+        "origin" : {
+          "type" : "string"
+        }
+      }
+    },
+    "PromotionLight" : {
+      "id" : "PromotionLight",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "promotionId" : {
+          "type" : "string"
+        },
+        "promotionLabel" : {
+          "type" : "string"
+        }
+      }
+    },
+    "PersonModification" : {
+      "id" : "PersonModification",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "numIdent" : {
+          "type" : "string"
+        },
+        "subscriberCategory" : {
+          "type" : "string"
+        },
+        "subscriberSubCategory" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ResponseWrapper«List«ContractFromPerson»»" : {
+      "id" : "ResponseWrapper«List«ContractFromPerson»»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ContractFromPerson"
+          }
+        }
+      }
+    },
+    "ResponseWrapper«VoucherOut»" : {
+      "id" : "ResponseWrapper«VoucherOut»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "$ref" : "VoucherOut"
+        }
+      }
+    },
+    "ResponseWrapper«Contract»" : {
+      "id" : "ResponseWrapper«Contract»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "$ref" : "Contract"
+        }
+      }
+    },
+    "PaymentModeHistory" : {
+      "id" : "PaymentModeHistory",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "directDebit" : {
+          "$ref" : "DirectDebitHistoricOut"
+        },
+        "creditCard" : {
+          "$ref" : "CreditCardHistoricOut"
+        },
+        "directDebitDate" : {
+          "type" : "string"
+        },
+        "thirdPayorId" : {
+          "type" : "integer",
+          "format" : "int64"
+        }
+      }
+    },
+    "ProductLight" : {
+      "id" : "ProductLight",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "productId" : {
+          "type" : "string"
+        },
+        "amount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "fifthCategory" : {
+          "type" : "boolean"
+        },
+        "label" : {
+          "type" : "string"
+        },
+        "commercialLabel" : {
+          "type" : "string"
+        },
+        "productCategory" : {
+          "type" : "string"
+        },
+        "productType" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ContractScheduledActions" : {
+      "id" : "ContractScheduledActions",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "nextModificationOffer" : {
+          "type" : "string"
+        },
+        "offersNextModificationOffer" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ProductWithFifthCategory"
+          }
+        },
+        "nextSubscriptionRenewal" : {
+          "type" : "string"
+        },
+        "offersNextSubscriptionRenewal" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ProductWithFifthCategory"
+          }
+        },
+        "lastCancellationDate" : {
+          "type" : "string"
+        },
+        "lastCancellationReason" : {
+          "type" : "string"
+        },
+        "nextCancellationReason" : {
+          "type" : "string"
+        },
+        "nextSuspensionDate" : {
+          "type" : "string"
+        },
+        "nextCancellationDate" : {
+          "type" : "string"
+        },
+        "nextSuspensionEndDate" : {
+          "type" : "string"
+        },
+        "lastSuspensionDate" : {
+          "type" : "string"
+        }
+      }
+    },
+    "SignatureIn" : {
+      "id" : "SignatureIn",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "workingDate" : {
+          "type" : "string",
+          "description" : "Format date attendu yyyymmdd"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        }
+      }
+    },
+    "OptionIn" : {
+      "id" : "OptionIn",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "productId" : {
+          "type" : "string"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "fifthCategory" : {
+          "type" : "boolean"
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "vouchers" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "VoucherLight"
+          }
+        }
+      }
+    }
+  }
+}

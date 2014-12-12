@@ -1,0 +1,450 @@
+{
+  "apiVersion" : "1.0",
+  "swaggerVersion" : "1.2",
+  "basePath" : "/",
+  "resourcePath" : "fix this",
+  "apis" : [ {
+    "path" : "/directdebit",
+    "description" : "getDirectDebit",
+    "operations" : [ {
+      "method" : "GET",
+      "summary" : "Renvoie les prélèvements d'un client",
+      "notes" : "getDirectDebit",
+      "type" : "ResponseWrapper«List«DirectDebitResult»»",
+      "nickname" : "getDirectDebit",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "personId",
+        "description" : "Numéro d'abonne",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contractId",
+        "description" : "Numéro de contrat",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int32",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "withDetail",
+        "description" : "Renvoyer les details",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "boolean",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "directDebitId",
+        "description" : "Numero de debit direct",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "startDate",
+        "description" : "filtre de date de debut",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "endDate",
+        "description" : "filtre de date de fin",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«List«DirectDebitResult»»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/directdebit/forecast",
+    "description" : "getForecastedDirectDebit",
+    "operations" : [ {
+      "method" : "GET",
+      "summary" : "Renvoie les prélèvements prévisionnels d'un client",
+      "notes" : "getForecastedDirectDebit",
+      "type" : "ResponseWrapper«List«ForecastedDirectDebitOut»»",
+      "nickname" : "getForecastedDirectDebit",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "personId",
+        "description" : "Numéro d'abonne",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contractId",
+        "description" : "Numéro de contrat",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int32",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "withDetail",
+        "description" : "Renvoyer les details",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "boolean",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "startDate",
+        "description" : "filtre de date de debut",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "endDate",
+        "description" : "filtre de date de fin",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«List«ForecastedDirectDebitOut»»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/directdebit/penalty",
+    "description" : "insertDirectDebitPenalty",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "Insère les pénalités de rejet",
+      "notes" : "insertDirectDebitPenalty",
+      "type" : "ResponseWrapper«object»",
+      "nickname" : "insertDirectDebitPenalty",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "feeId",
+        "description" : "numero de Frais",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "directDebitId",
+        "description" : "Numero de debit direct",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "query",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«object»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  } ],
+  "models" : {
+    "ResponseWrapper«object»" : {
+      "id" : "ResponseWrapper«object»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "$ref" : "object"
+        }
+      }
+    },
+    "DirectDebitResult" : {
+      "id" : "DirectDebitResult",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "iban" : {
+          "type" : "string"
+        },
+        "bic" : {
+          "type" : "string"
+        },
+        "accountingDate" : {
+          "type" : "string"
+        },
+        "directDebitTypeId" : {
+          "type" : "string"
+        },
+        "detail" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ProductDetail"
+          }
+        },
+        "amount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "rejectId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "isIntentional" : {
+          "type" : "boolean"
+        },
+        "directDebitId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "directDebitTypeLabel" : {
+          "type" : "string"
+        },
+        "rejectLabel" : {
+          "type" : "string"
+        },
+        "rejectDate" : {
+          "type" : "string"
+        },
+        "isRepresentable" : {
+          "type" : "boolean"
+        },
+        "rejectCode" : {
+          "type" : "string"
+        },
+        "month" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ResponseWrapper«List«ForecastedDirectDebitOut»»" : {
+      "id" : "ResponseWrapper«List«ForecastedDirectDebitOut»»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ForecastedDirectDebitOut"
+          }
+        }
+      }
+    },
+    "ResponseWrapper«List«DirectDebitResult»»" : {
+      "id" : "ResponseWrapper«List«DirectDebitResult»»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "DirectDebitResult"
+          }
+        }
+      }
+    },
+    "ProductDetail" : {
+      "id" : "ProductDetail",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "productId" : {
+          "type" : "string"
+        },
+        "amount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "productLabel" : {
+          "type" : "string"
+        },
+        "rawamount" : {
+          "type" : "number",
+          "format" : "double"
+        }
+      }
+    },
+    "ForecastedDirectDebitDetailOut" : {
+      "id" : "ForecastedDirectDebitDetailOut",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "productId" : {
+          "type" : "string"
+        },
+        "amount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "productLabel" : {
+          "type" : "string"
+        },
+        "productCategory" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ForecastedDirectDebitOut" : {
+      "id" : "ForecastedDirectDebitOut",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "accountingDate" : {
+          "type" : "string"
+        },
+        "directDebitTypeId" : {
+          "type" : "string"
+        },
+        "detail" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ForecastedDirectDebitDetailOut"
+          }
+        },
+        "amount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "directDebitTypeLabel" : {
+          "type" : "string"
+        },
+        "month" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

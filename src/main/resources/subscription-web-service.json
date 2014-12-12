@@ -1,0 +1,571 @@
+{
+  "apiVersion" : "1.0",
+  "swaggerVersion" : "1.2",
+  "basePath" : "/",
+  "resourcePath" : "fix this",
+  "apis" : [ {
+    "path" : "/subscription/newSubscription",
+    "description" : "newSubscription",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "réalise une nouvelle souscription: abonné & abonnement",
+      "notes" : "newSubscription",
+      "type" : "ResponseWrapper«SubscriptionOut»",
+      "nickname" : "newSubscription",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "subscriptionIn",
+        "description" : "Informations de souscription",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "SubscriptionIn",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«SubscriptionOut»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/subscription/validate",
+    "description" : "subscriptionValidation",
+    "operations" : [ {
+      "method" : "POST",
+      "summary" : "validation souscription",
+      "notes" : "subscriptionValidation",
+      "type" : "ResponseWrapper«SubscriptionIn»",
+      "nickname" : "subscriptionValidation",
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "distributorId",
+        "description" : "Numéro de distributeur",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "contactId",
+        "description" : "Numéro de contact",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "saleDevice",
+        "description" : "Canal via lequel l'opération est effectuée ",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "salesman",
+        "description" : "Vendeur ayant effectué la modification",
+        "defaultValue" : "",
+        "required" : false,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      }, {
+        "name" : "subscriptionIn",
+        "description" : "Informations de souscription",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "SubscriptionIn",
+        "paramType" : "body",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 201,
+        "message" : "Created"
+      }, {
+        "code" : 404,
+        "message" : "Not Found"
+      }, {
+        "code" : 403,
+        "message" : "Forbidden"
+      }, {
+        "code" : 401,
+        "message" : "Unauthorized"
+      }, {
+        "code" : 200,
+        "message" : "OK",
+        "responseModel" : "ResponseWrapper«SubscriptionIn»"
+      } ],
+      "deprecated" : "false"
+    } ]
+  } ],
+  "models" : {
+    "ContractOut" : {
+      "id" : "ContractOut",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "amount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "commercialOperator" : {
+          "type" : "string"
+        },
+        "contractStatus" : {
+          "type" : "string"
+        },
+        "transactionId" : {
+          "type" : "string"
+        }
+      }
+    },
+    "SubscriptionIn" : {
+      "id" : "SubscriptionIn",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "phones" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "PhoneCommon"
+          }
+        },
+        "contracts" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ContractToSubscribe"
+          }
+        },
+        "vouchers" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "VoucherLight"
+          }
+        },
+        "equipments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "Equipment"
+          }
+        },
+        "person" : {
+          "$ref" : "PersonToSubscribe"
+        },
+        "orderId" : {
+          "type" : "string"
+        },
+        "email" : {
+          "type" : "string"
+        },
+        "payment" : {
+          "$ref" : "PaymentToSubscribe"
+        },
+        "shipmentFees" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "equipmentConfig" : {
+          "type" : "string"
+        },
+        "forceConfirmedContract" : {
+          "type" : "boolean"
+        },
+        "affectationType" : {
+          "type" : "string"
+        },
+        "skipAvailabilityFees" : {
+          "type" : "boolean"
+        },
+        "skipShipmentFees" : {
+          "type" : "boolean"
+        },
+        "address" : {
+          "$ref" : "AddressCommon"
+        }
+      }
+    },
+    "PhoneCommon" : {
+      "id" : "PhoneCommon",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "phoneNumber" : {
+          "type" : "string"
+        },
+        "phoneType" : {
+          "type" : "string"
+        }
+      }
+    },
+    "PaymentMeans" : {
+      "id" : "PaymentMeans",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "directDebitDate" : {
+          "type" : "string"
+        },
+        "creditCard" : {
+          "$ref" : "CreditCard"
+        },
+        "thirdPayorId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "directDebit" : {
+          "$ref" : "DirectDebit"
+        }
+      }
+    },
+    "CreditCard" : {
+      "id" : "CreditCard",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "authorizationNumber" : {
+          "type" : "string"
+        },
+        "creditCardType" : {
+          "type" : "string"
+        },
+        "creditCardNumber" : {
+          "type" : "string"
+        },
+        "cryptogram" : {
+          "type" : "string"
+        },
+        "expirationDate" : {
+          "type" : "string",
+          "description" : "Format date attendu yyyymm"
+        },
+        "owner" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Equipment" : {
+      "id" : "Equipment",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "equipmentId" : {
+          "type" : "string"
+        },
+        "equipmentType" : {
+          "type" : "string"
+        }
+      }
+    },
+    "VoucherLight" : {
+      "id" : "VoucherLight",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "voucherId" : {
+          "type" : "string",
+          "description" : "code du coupon"
+        }
+      }
+    },
+    "ResponseWrapper«SubscriptionOut»" : {
+      "id" : "ResponseWrapper«SubscriptionOut»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "$ref" : "SubscriptionOut"
+        }
+      }
+    },
+    "PersonToSubscribe" : {
+      "id" : "PersonToSubscribe",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "companyName" : {
+          "type" : "string"
+        },
+        "civility" : {
+          "type" : "string"
+        },
+        "companyId" : {
+          "type" : "string"
+        },
+        "numIdent" : {
+          "type" : "string"
+        },
+        "subscriberCategory" : {
+          "type" : "string"
+        },
+        "subscriberSubCategory" : {
+          "type" : "string"
+        },
+        "firstName" : {
+          "type" : "string"
+        },
+        "lastName" : {
+          "type" : "string"
+        }
+      }
+    },
+    "PaymentToSubscribe" : {
+      "id" : "PaymentToSubscribe",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "amount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "creditCard" : {
+          "$ref" : "CreditCard"
+        }
+      }
+    },
+    "ResponseWrapper«SubscriptionIn»" : {
+      "id" : "ResponseWrapper«SubscriptionIn»",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "severity" : {
+          "type" : "string",
+          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
+        },
+        "returnCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "data" : {
+          "$ref" : "SubscriptionIn"
+        }
+      }
+    },
+    "DirectDebit" : {
+      "id" : "DirectDebit",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "iban" : {
+          "type" : "string"
+        },
+        "bic" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ProductWithFifthCategory" : {
+      "id" : "ProductWithFifthCategory",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "productId" : {
+          "type" : "string"
+        },
+        "fifthCategory" : {
+          "type" : "boolean"
+        }
+      }
+    },
+    "AddressCommon" : {
+      "id" : "AddressCommon",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "postalCode" : {
+          "type" : "string"
+        },
+        "forcingIndicator" : {
+          "type" : "boolean"
+        },
+        "street1" : {
+          "type" : "string"
+        },
+        "street2" : {
+          "type" : "string"
+        },
+        "street3" : {
+          "type" : "string"
+        },
+        "street4" : {
+          "type" : "string"
+        },
+        "countryId" : {
+          "type" : "string"
+        },
+        "city" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ContractToSubscribe" : {
+      "id" : "ContractToSubscribe",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "action" : {
+          "type" : "string"
+        },
+        "freeMethodOfPaymentReason" : {
+          "type" : "string"
+        },
+        "broadcastVectorId" : {
+          "type" : "string"
+        },
+        "ispId" : {
+          "type" : "string"
+        },
+        "commercialOperator" : {
+          "type" : "string"
+        },
+        "origin" : {
+          "type" : "string"
+        },
+        "duration" : {
+          "type" : "string"
+        },
+        "methodOfPayment" : {
+          "type" : "string"
+        },
+        "catalog" : {
+          "type" : "string"
+        },
+        "dateToDate" : {
+          "type" : "boolean"
+        },
+        "startDate" : {
+          "type" : "string",
+          "description" : "Format date attendu yyyymmdd"
+        },
+        "contractId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "payment" : {
+          "$ref" : "PaymentMeans"
+        },
+        "products" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ProductWithFifthCategory"
+          }
+        },
+        "sponsorId" : {
+          "type" : "integer",
+          "format" : "int64"
+        }
+      }
+    },
+    "SubscriptionOut" : {
+      "id" : "SubscriptionOut",
+      "description" : "",
+      "extends" : "",
+      "properties" : {
+        "contracts" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ContractOut"
+          }
+        },
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "orderId" : {
+          "type" : "string"
+        },
+        "shipmentFees" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "availabilityFees" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "firstAmount" : {
+          "type" : "number",
+          "format" : "double"
+        }
+      }
+    }
+  }
+}
