@@ -9,7 +9,7 @@
     "description" : "createOrUpdateUser",
     "operations" : [ {
       "method" : "PUT",
-      "summary" : "création / MAJ d'un utilisateurs",
+      "summary" : "création / mise à jour d'un utilisateurs",
       "notes" : "createOrUpdateUser",
       "type" : "ResponseWrapper«UserOut»",
       "nickname" : "createOrUpdateUser",
@@ -42,7 +42,7 @@
     "description" : "getUser",
     "operations" : [ {
       "method" : "GET",
-      "summary" : "récupérer les informations d'un user",
+      "summary" : "récupérer les informations d'un utilisateur",
       "notes" : "getUser",
       "type" : "ResponseWrapper«UserOut»",
       "nickname" : "getUser",
@@ -130,7 +130,7 @@
         },
         "firstName" : {
           "type" : "string",
-          "description" : "Prénom de l'user"
+          "description" : "Prénom de l'utilisateur"
         },
         "lastName" : {
           "type" : "string",

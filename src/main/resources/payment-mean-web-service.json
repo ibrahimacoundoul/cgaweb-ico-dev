@@ -9,14 +9,14 @@
     "description" : "updateCreditCardPaymentMean",
     "operations" : [ {
       "method" : "PUT",
-      "summary" : "Mise à jour d'une Carte bancaire",
+      "summary" : "Mise à jour d'une CB",
       "notes" : "updateCreditCardPaymentMean",
       "type" : "ResponseWrapper«BankCustomer»",
       "nickname" : "updateCreditCardPaymentMean",
       "produces" : [ "application/json" ],
       "parameters" : [ {
         "name" : "userId",
-        "description" : "Utilisateur qui a effecté l'opération",
+        "description" : "Utilisateur effectuant l'opération",
         "defaultValue" : "",
         "required" : true,
         "type" : "string",
@@ -74,7 +74,7 @@
         "allowMultiple" : false
       }, {
         "name" : "paymentMean",
-        "description" : "Informations de la carte de credit",
+        "description" : "Informations de carte de credit",
         "defaultValue" : "",
         "required" : true,
         "type" : "CreditCardPaymentMeansIn",
@@ -92,7 +92,7 @@
     "description" : "checkCreditCardEligibility",
     "operations" : [ {
       "method" : "POST",
-      "summary" : "Vérification de l’éligibilité commerciale sur la carte bancaire",
+      "summary" : "Vérification de l’éligibilité commerciale sur la carte banquaire",
       "notes" : "checkCreditCardEligibility",
       "type" : "ResponseWrapper«EligibilityOut»",
       "nickname" : "checkCreditCardEligibility",
