@@ -117,9 +117,6 @@
           "type" : "boolean",
           "description" : "Utilisateur activé/désactivé"
         },
-        "organization" : {
-          "type" : "string"
-        },
         "userId" : {
           "type" : "string",
           "description" : "Utilisateur effectuant l'opération"
@@ -135,6 +132,9 @@
         "lastName" : {
           "type" : "string",
           "description" : "Nom de l'utilisateur"
+        },
+        "organization" : {
+          "type" : "string"
         }
       }
     }

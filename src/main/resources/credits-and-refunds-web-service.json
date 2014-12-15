@@ -827,9 +827,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "civility" : {
-          "type" : "string"
-        },
         "postalCode" : {
           "type" : "string"
         },
@@ -856,6 +853,9 @@
         },
         "city" : {
           "type" : "string"
+        },
+        "civility" : {
+          "type" : "string"
         }
       }
     },
@@ -864,12 +864,12 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "refundCheckInfo" : {
-          "$ref" : "RefundCheckInfo"
-        },
         "actOfManagementId" : {
           "type" : "integer",
           "format" : "int64"
+        },
+        "refundCheckInfo" : {
+          "$ref" : "RefundCheckInfo"
         }
       }
     },
@@ -878,12 +878,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "refundingMode" : {
-          "type" : "string"
-        },
-        "refundCheckInfo" : {
-          "$ref" : "RefundCheckInfo"
-        },
         "amount" : {
           "type" : "number",
           "format" : "double"
@@ -898,6 +892,12 @@
         },
         "motiveId" : {
           "type" : "string"
+        },
+        "refundingMode" : {
+          "type" : "string"
+        },
+        "refundCheckInfo" : {
+          "$ref" : "RefundCheckInfo"
         },
         "comment" : {
           "type" : "string"
@@ -1069,13 +1069,13 @@
         "creationUserId" : {
           "type" : "string"
         },
-        "initMotiveId" : {
-          "type" : "string"
-        },
         "opposeMotiveId" : {
           "type" : "string"
         },
         "chequeId" : {
+          "type" : "string"
+        },
+        "initMotiveId" : {
           "type" : "string"
         }
       }
@@ -1194,14 +1194,14 @@
         "checkid" : {
           "type" : "string"
         },
-        "accountingOperatorId" : {
-          "type" : "string"
-        },
         "actOfManagmentHistory" : {
           "type" : "array",
           "items" : {
             "$ref" : "ActOfManagmentHistory"
           }
+        },
+        "accountingOperatorId" : {
+          "type" : "string"
         },
         "firstName" : {
           "type" : "string"
@@ -1286,12 +1286,6 @@
             "$ref" : "Bill"
           }
         },
-        "refundingMode" : {
-          "type" : "string"
-        },
-        "refundCheckInfo" : {
-          "$ref" : "RefundCheckInfo"
-        },
         "amount" : {
           "type" : "number",
           "format" : "double"
@@ -1306,6 +1300,12 @@
         },
         "motiveId" : {
           "type" : "string"
+        },
+        "refundingMode" : {
+          "type" : "string"
+        },
+        "refundCheckInfo" : {
+          "$ref" : "RefundCheckInfo"
         },
         "comment" : {
           "type" : "string"

@@ -885,15 +885,6 @@
           "type" : "integer",
           "format" : "int64"
         },
-        "civility" : {
-          "type" : "string"
-        },
-        "companyName" : {
-          "type" : "string"
-        },
-        "companyId" : {
-          "type" : "string"
-        },
         "numIdent" : {
           "type" : "string"
         },
@@ -907,6 +898,15 @@
           "type" : "string"
         },
         "lastName" : {
+          "type" : "string"
+        },
+        "civility" : {
+          "type" : "string"
+        },
+        "companyName" : {
+          "type" : "string"
+        },
+        "companyId" : {
           "type" : "string"
         }
       }
@@ -1033,12 +1033,12 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "phoneTypeId" : {
-          "type" : "string"
-        },
         "personId" : {
           "type" : "integer",
           "format" : "int64"
+        },
+        "phoneTypeId" : {
+          "type" : "string"
         }
       }
     },
@@ -1050,12 +1050,12 @@
         "phoneNumber" : {
           "type" : "string"
         },
+        "phoneType" : {
+          "type" : "string"
+        },
         "phoneId" : {
           "type" : "integer",
           "format" : "int64"
-        },
-        "phoneType" : {
-          "type" : "string"
         }
       }
     },
@@ -1110,15 +1110,6 @@
             "$ref" : "Address"
           }
         },
-        "birthDate" : {
-          "type" : "string"
-        },
-        "updateUser" : {
-          "type" : "string"
-        },
-        "homeId" : {
-          "type" : "string"
-        },
         "identityDocuments" : {
           "$ref" : "IdentityDocument"
         },
@@ -1133,6 +1124,15 @@
           "items" : {
             "$ref" : "Address"
           }
+        },
+        "birthDate" : {
+          "type" : "string"
+        },
+        "updateUser" : {
+          "type" : "string"
+        },
+        "homeId" : {
+          "type" : "string"
         }
       }
     },
@@ -1218,15 +1218,15 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "phoneTypeId" : {
-          "type" : "string"
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64"
         },
         "invalidityReasonId" : {
           "type" : "string"
         },
-        "personId" : {
-          "type" : "integer",
-          "format" : "int64"
+        "phoneTypeId" : {
+          "type" : "string"
         }
       }
     }

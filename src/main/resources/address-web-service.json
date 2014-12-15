@@ -448,17 +448,17 @@
     "AddressValidateIn" : {
       "id" : "AddressValidateIn",
       "description" : "",
-      "required" : [ "addressTypeId", "personId" ],
+      "required" : [ "personId", "addressTypeId" ],
       "extends" : "",
       "properties" : {
-        "addressTypeId" : {
-          "type" : "string",
-          "description" : "type d'adresse"
-        },
         "personId" : {
           "type" : "integer",
           "format" : "int64",
           "description" : "Id de l’abonné"
+        },
+        "addressTypeId" : {
+          "type" : "string",
+          "description" : "type d'adresse"
         }
       }
     },
@@ -609,9 +609,18 @@
     "AddressInvalidateIn" : {
       "id" : "AddressInvalidateIn",
       "description" : "",
-      "required" : [ "pndcategory", "addressTypeId", "invalidityReasonId", "personId" ],
+      "required" : [ "personId", "invalidityReasonId", "pndcategory", "addressTypeId" ],
       "extends" : "",
       "properties" : {
+        "personId" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "Id de l’abonné"
+        },
+        "invalidityReasonId" : {
+          "type" : "string",
+          "description" : "raison d'invalidation"
+        },
         "pndcategory" : {
           "type" : "string",
           "description" : "Code de la catégorie de NPAI"
@@ -619,28 +628,15 @@
         "addressTypeId" : {
           "type" : "string",
           "description" : "Definit le type d'adresse"
-        },
-        "invalidityReasonId" : {
-          "type" : "string",
-          "description" : "raison d'invalidation"
-        },
-        "personId" : {
-          "type" : "integer",
-          "format" : "int64",
-          "description" : "Id de l’abonné"
         }
       }
     },
     "AddressIn" : {
       "id" : "AddressIn",
       "description" : "",
-      "required" : [ "forcingIndicator", "postalCode", "startDate", "personId", "addressType", "street1", "street2", "street3", "street4", "countryId", "city" ],
+      "required" : [ "postalCode", "startDate", "personId", "addressType", "street1", "street2", "street3", "street4", "countryId", "city", "forcingIndicator" ],
       "extends" : "",
       "properties" : {
-        "forcingIndicator" : {
-          "type" : "boolean",
-          "description" : "force l'adresse si celle ci n'est pas vérifiée"
-        },
         "postalCode" : {
           "type" : "string",
           "description" : "Le code postale de la ville"
@@ -681,6 +677,10 @@
         "city" : {
           "type" : "string",
           "description" : "Le nom de la ville"
+        },
+        "forcingIndicator" : {
+          "type" : "boolean",
+          "description" : "force l'adresse si celle ci n'est pas vérifiée"
         }
       }
     }

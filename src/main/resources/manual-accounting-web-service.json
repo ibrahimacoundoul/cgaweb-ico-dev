@@ -251,13 +251,13 @@
           "type" : "integer",
           "format" : "int32"
         },
+        "vatId" : {
+          "type" : "string"
+        },
         "accountingPostId" : {
           "type" : "string"
         },
         "accountingProductId" : {
-          "type" : "string"
-        },
-        "vatId" : {
           "type" : "string"
         },
         "month" : {
@@ -297,12 +297,12 @@
           "type" : "integer",
           "format" : "int64"
         },
+        "accountingReadjustedDate" : {
+          "$ref" : "date-time"
+        },
         "accountingPieceId" : {
           "type" : "integer",
           "format" : "int64"
-        },
-        "accountingReadjustedDate" : {
-          "$ref" : "date-time"
         }
       }
     },
@@ -322,18 +322,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "accountingPieceLabel" : {
-          "type" : "string"
-        },
-        "crmLedgerId" : {
-          "type" : "string"
-        },
-        "entries" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "ManualAccountingEntry"
-          }
-        },
         "accountingDate" : {
           "type" : "string",
           "description" : "Format date attendu yyyymmdd"
@@ -353,6 +341,18 @@
           "type" : "integer",
           "format" : "int64"
         },
+        "accountingPieceLabel" : {
+          "type" : "string"
+        },
+        "crmLedgerId" : {
+          "type" : "string"
+        },
+        "entries" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ManualAccountingEntry"
+          }
+        },
         "comment" : {
           "type" : "string"
         }
@@ -364,9 +364,6 @@
       "extends" : "",
       "properties" : {
         "creationDate" : {
-          "type" : "string"
-        },
-        "accountingPieceLabel" : {
           "type" : "string"
         },
         "accountingDate" : {
@@ -393,14 +390,8 @@
         "validationDate" : {
           "type" : "string"
         },
-        "validationUser" : {
+        "accountingPieceLabel" : {
           "type" : "string"
-        },
-        "manualAccountingEntries" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "ManualAccountingEntry"
-          }
         },
         "accountingPieceId" : {
           "type" : "string"
@@ -410,6 +401,15 @@
         },
         "creationUserId" : {
           "type" : "string"
+        },
+        "validationUser" : {
+          "type" : "string"
+        },
+        "manualAccountingEntries" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ManualAccountingEntry"
+          }
         },
         "comment" : {
           "type" : "string"

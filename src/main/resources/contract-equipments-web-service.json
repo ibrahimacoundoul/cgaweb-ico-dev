@@ -1216,9 +1216,6 @@
             "$ref" : "EquipmentChangeInfo"
           }
         },
-        "techDiagId" : {
-          "type" : "string"
-        },
         "contractId" : {
           "type" : "integer",
           "format" : "int32"
@@ -1248,6 +1245,9 @@
         },
         "skipShipmentFees" : {
           "type" : "boolean"
+        },
+        "techDiagId" : {
+          "type" : "string"
         }
       }
     },
@@ -1489,9 +1489,6 @@
             "$ref" : "EquipmentChangeInfo"
           }
         },
-        "techDiagId" : {
-          "type" : "string"
-        },
         "contractId" : {
           "type" : "integer",
           "format" : "int32"
@@ -1507,6 +1504,9 @@
           "type" : "string"
         },
         "logisticReason" : {
+          "type" : "string"
+        },
+        "techDiagId" : {
           "type" : "string"
         }
       }
@@ -1574,10 +1574,6 @@
       "required" : [ "contractId", "personId", "equipmentConfig", "affectationType", "skipAvailabilityFees" ],
       "extends" : "",
       "properties" : {
-        "skipFees" : {
-          "type" : "boolean",
-          "description" : "Permet d'indiquer que le montant de l'accessoire est gratuit"
-        },
         "contractId" : {
           "type" : "integer",
           "format" : "int32",
@@ -1614,6 +1610,10 @@
         },
         "indPrel" : {
           "type" : "boolean"
+        },
+        "skipFees" : {
+          "type" : "boolean",
+          "description" : "Permet d'indiquer que le montant de l'accessoire est gratuit"
         }
       }
     },
@@ -1638,12 +1638,6 @@
             "$ref" : "Equipment"
           }
         },
-        "techDiagId" : {
-          "type" : "string"
-        },
-        "restitutionType" : {
-          "type" : "string"
-        },
         "contractId" : {
           "type" : "integer",
           "format" : "int32"
@@ -1656,6 +1650,12 @@
           "type" : "string"
         },
         "logisticReason" : {
+          "type" : "string"
+        },
+        "techDiagId" : {
+          "type" : "string"
+        },
+        "restitutionType" : {
           "type" : "string"
         }
       }

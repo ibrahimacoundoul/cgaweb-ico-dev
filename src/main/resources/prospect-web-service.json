@@ -155,15 +155,6 @@
           "type" : "integer",
           "format" : "int64"
         },
-        "civility" : {
-          "type" : "string"
-        },
-        "companyName" : {
-          "type" : "string"
-        },
-        "companyId" : {
-          "type" : "string"
-        },
         "numIdent" : {
           "type" : "string"
         },
@@ -177,6 +168,15 @@
           "type" : "string"
         },
         "lastName" : {
+          "type" : "string"
+        },
+        "civility" : {
+          "type" : "string"
+        },
+        "companyName" : {
+          "type" : "string"
+        },
+        "companyId" : {
           "type" : "string"
         }
       }
@@ -199,12 +199,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "phones" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "PhoneCommon"
-          }
-        },
         "orderId" : {
           "type" : "string"
         },
@@ -219,6 +213,12 @@
         },
         "thirdPayor" : {
           "type" : "boolean"
+        },
+        "phones" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "PhoneCommon"
+          }
         },
         "address" : {
           "$ref" : "AddressCommon"
@@ -247,12 +247,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "phones" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "PhoneCommon"
-          }
-        },
         "person" : {
           "$ref" : "PersonToUpdate"
         },
@@ -264,6 +258,12 @@
         },
         "thirdPayor" : {
           "type" : "boolean"
+        },
+        "phones" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "PhoneCommon"
+          }
         },
         "address" : {
           "$ref" : "AddressCommon"
@@ -289,15 +289,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "civility" : {
-          "type" : "string"
-        },
-        "companyName" : {
-          "type" : "string"
-        },
-        "companyId" : {
-          "type" : "string"
-        },
         "numIdent" : {
           "type" : "string"
         },
@@ -312,6 +303,15 @@
         },
         "lastName" : {
           "type" : "string"
+        },
+        "civility" : {
+          "type" : "string"
+        },
+        "companyName" : {
+          "type" : "string"
+        },
+        "companyId" : {
+          "type" : "string"
         }
       }
     },
@@ -320,9 +320,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "forcingIndicator" : {
-          "type" : "boolean"
-        },
         "postalCode" : {
           "type" : "string"
         },
@@ -343,6 +340,9 @@
         },
         "city" : {
           "type" : "string"
+        },
+        "forcingIndicator" : {
+          "type" : "boolean"
         }
       }
     },

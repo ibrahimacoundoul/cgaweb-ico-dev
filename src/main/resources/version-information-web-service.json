@@ -46,10 +46,10 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "buildNumber" : {
+        "buildDate" : {
           "type" : "string"
         },
-        "buildDate" : {
+        "buildNumber" : {
           "type" : "string"
         },
         "version" : {

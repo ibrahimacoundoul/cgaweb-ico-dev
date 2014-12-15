@@ -256,7 +256,7 @@
     "ConfigurationWithProductsEquipments" : {
       "id" : "ConfigurationWithProductsEquipments",
       "description" : "",
-      "required" : [ "ispId", "sortOrder", "configCategory", "isIspId", "configCategoryLabel" ],
+      "required" : [ "ispId", "sortOrder", "configCategory", "configCategoryLabel", "isIspId" ],
       "extends" : "",
       "properties" : {
         "ispId" : {
@@ -278,13 +278,13 @@
           "type" : "string",
           "description" : "Code catégorie permettant de filtrer les configurations matérielles"
         },
-        "isIspId" : {
-          "type" : "string",
-          "description" : "Indicateur d'éligibilité auprès d'un FAI"
-        },
         "configCategoryLabel" : {
           "type" : "string",
           "description" : "Libellé catégorie permettant de filtrer les configurations matérielles"
+        },
+        "isIspId" : {
+          "type" : "string",
+          "description" : "Indicateur d'éligibilité auprès d'un FAI"
         },
         "equipmentConfig" : {
           "type" : "string"
@@ -555,13 +555,13 @@
         "configCategory" : {
           "type" : "string"
         },
-        "isIspId" : {
+        "configCategoryLabel" : {
           "type" : "string"
         },
         "equipmentConfigLabel" : {
           "type" : "string"
         },
-        "configCategoryLabel" : {
+        "isIspId" : {
           "type" : "string"
         }
       }
@@ -614,12 +614,6 @@
         "action" : {
           "type" : "string"
         },
-        "equipmentTypes" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "EquipmentTypeInput"
-          }
-        },
         "broadcastVectorId" : {
           "type" : "string"
         },
@@ -647,6 +641,12 @@
         },
         "countryId" : {
           "type" : "string"
+        },
+        "equipmentTypes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "EquipmentTypeInput"
+          }
         }
       }
     },
@@ -668,10 +668,10 @@
         "deposit" : {
           "type" : "boolean"
         },
-        "accessorie" : {
+        "rental" : {
           "type" : "boolean"
         },
-        "rental" : {
+        "accessorie" : {
           "type" : "boolean"
         }
       }

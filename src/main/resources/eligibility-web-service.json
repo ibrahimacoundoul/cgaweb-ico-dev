@@ -303,15 +303,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "civility" : {
-          "type" : "string"
-        },
-        "companyName" : {
-          "type" : "string"
-        },
-        "companyId" : {
-          "type" : "string"
-        },
         "numIdent" : {
           "type" : "string"
         },
@@ -325,6 +316,15 @@
           "type" : "string"
         },
         "lastName" : {
+          "type" : "string"
+        },
+        "civility" : {
+          "type" : "string"
+        },
+        "companyName" : {
+          "type" : "string"
+        },
+        "companyId" : {
           "type" : "string"
         }
       }
@@ -390,12 +390,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "phones" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "PhoneCommon"
-          }
-        },
         "commercialOperators" : {
           "type" : "array",
           "uniqueItems" : true,
@@ -421,6 +415,12 @@
         "sponsorId" : {
           "type" : "integer",
           "format" : "int64"
+        },
+        "phones" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "PhoneCommon"
+          }
         },
         "address" : {
           "$ref" : "AddressCommon"
@@ -472,9 +472,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "forcingIndicator" : {
-          "type" : "boolean"
-        },
         "postalCode" : {
           "type" : "string"
         },
@@ -495,6 +492,9 @@
         },
         "city" : {
           "type" : "string"
+        },
+        "forcingIndicator" : {
+          "type" : "boolean"
         }
       }
     },
@@ -526,9 +526,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "cb" : {
-          "$ref" : "CreditCardWithOwner"
-        },
         "iban" : {
           "$ref" : "Iban"
         },
@@ -551,6 +548,9 @@
         },
         "phone" : {
           "$ref" : "EligiblePhoneIn"
+        },
+        "cb" : {
+          "$ref" : "CreditCardWithOwner"
         }
       }
     },

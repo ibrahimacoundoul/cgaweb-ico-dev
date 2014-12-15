@@ -1161,10 +1161,10 @@
           "type" : "integer",
           "format" : "int64"
         },
-        "authorizationDate" : {
+        "authNumber" : {
           "type" : "string"
         },
-        "authNumber" : {
+        "authorizationDate" : {
           "type" : "string"
         }
       }
@@ -1195,15 +1195,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "civility" : {
-          "type" : "string"
-        },
-        "companyName" : {
-          "type" : "string"
-        },
-        "companyId" : {
-          "type" : "string"
-        },
         "numIdent" : {
           "type" : "string"
         },
@@ -1217,6 +1208,15 @@
           "type" : "string"
         },
         "lastName" : {
+          "type" : "string"
+        },
+        "civility" : {
+          "type" : "string"
+        },
+        "companyName" : {
+          "type" : "string"
+        },
+        "companyId" : {
           "type" : "string"
         }
       }
@@ -1262,9 +1262,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "forcingIndicator" : {
-          "type" : "boolean"
-        },
         "postalCode" : {
           "type" : "string"
         },
@@ -1285,6 +1282,9 @@
         },
         "city" : {
           "type" : "string"
+        },
+        "forcingIndicator" : {
+          "type" : "boolean"
         }
       }
     },
@@ -1347,9 +1347,6 @@
             "$ref" : "InitCreditCardPaymentAuthorizationIn"
           }
         },
-        "prospect" : {
-          "$ref" : "InitCreditCardProspectIn"
-        },
         "postalCode" : {
           "type" : "string"
         },
@@ -1359,6 +1356,9 @@
         },
         "countryId" : {
           "type" : "string"
+        },
+        "prospect" : {
+          "$ref" : "InitCreditCardProspectIn"
         }
       }
     },

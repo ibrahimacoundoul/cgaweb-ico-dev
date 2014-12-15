@@ -186,12 +186,6 @@
             "$ref" : "Equipment"
           }
         },
-        "skipPaymentOnAccount" : {
-          "type" : "boolean"
-        },
-        "forceConfirmedContract" : {
-          "type" : "boolean"
-        },
         "orderId" : {
           "type" : "string"
         },
@@ -218,6 +212,12 @@
           "type" : "boolean"
         },
         "skipShipmentFees" : {
+          "type" : "boolean"
+        },
+        "skipPaymentOnAccount" : {
+          "type" : "boolean"
+        },
+        "forceConfirmedContract" : {
           "type" : "boolean"
         },
         "address" : {
@@ -291,15 +291,6 @@
           "type" : "integer",
           "format" : "int64"
         },
-        "civility" : {
-          "type" : "string"
-        },
-        "companyName" : {
-          "type" : "string"
-        },
-        "companyId" : {
-          "type" : "string"
-        },
         "numIdent" : {
           "type" : "string"
         },
@@ -313,6 +304,15 @@
           "type" : "string"
         },
         "lastName" : {
+          "type" : "string"
+        },
+        "civility" : {
+          "type" : "string"
+        },
+        "companyName" : {
+          "type" : "string"
+        },
+        "companyId" : {
           "type" : "string"
         }
       }
@@ -403,9 +403,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "forcingIndicator" : {
-          "type" : "boolean"
-        },
         "postalCode" : {
           "type" : "string"
         },
@@ -426,6 +423,9 @@
         },
         "city" : {
           "type" : "string"
+        },
+        "forcingIndicator" : {
+          "type" : "boolean"
         }
       }
     },

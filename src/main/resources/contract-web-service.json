@@ -2000,13 +2000,13 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "authorizationNumber" : {
+          "type" : "string"
+        },
         "cryptogram" : {
           "type" : "string"
         },
         "expirationDate" : {
-          "type" : "string"
-        },
-        "authorizationNumber" : {
           "type" : "string"
         },
         "creditCardNumber" : {
@@ -2144,13 +2144,13 @@
         "commercialLabel" : {
           "type" : "string"
         },
-        "productType" : {
-          "type" : "string"
-        },
         "productCategory" : {
           "type" : "string"
         },
         "themeId" : {
+          "type" : "string"
+        },
+        "productType" : {
           "type" : "string"
         }
       }
@@ -2362,12 +2362,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "logistics" : {
-          "$ref" : "LogisticsIn"
-        },
-        "paymentCreditCard" : {
-          "$ref" : "CreditCard"
-        },
         "workingDate" : {
           "type" : "string",
           "description" : "Format date attendu yyyymmdd"
@@ -2393,6 +2387,12 @@
         },
         "personModification" : {
           "$ref" : "PersonModification"
+        },
+        "paymentCreditCard" : {
+          "$ref" : "CreditCard"
+        },
+        "logistics" : {
+          "$ref" : "LogisticsIn"
         }
       }
     },
@@ -2473,11 +2473,24 @@
         "freeMethodOfPaymentReason" : {
           "type" : "string"
         },
+        "nonRenewalReason" : {
+          "type" : "string"
+        },
+        "cancellationUser" : {
+          "type" : "string"
+        },
+        "suspensionDate" : {
+          "type" : "string"
+        },
+        "thirdPartyPayerId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
         "distributorId" : {
           "type" : "string"
         },
-        "updateUser" : {
-          "type" : "string"
+        "freeCancellationDate" : {
+          "$ref" : "date-time"
         },
         "isReactivable" : {
           "type" : "boolean"
@@ -2488,21 +2501,8 @@
         "fullValidationStatus" : {
           "type" : "string"
         },
-        "nonRenewalReason" : {
+        "updateUser" : {
           "type" : "string"
-        },
-        "cancellationUser" : {
-          "type" : "string"
-        },
-        "freeCancellationDate" : {
-          "$ref" : "date-time"
-        },
-        "suspensionDate" : {
-          "type" : "string"
-        },
-        "thirdPartyPayerId" : {
-          "type" : "integer",
-          "format" : "int64"
         },
         "duration" : {
           "type" : "integer",
@@ -2528,25 +2528,19 @@
         "ongoingCancellation" : {
           "type" : "boolean"
         },
-        "originLabel" : {
-          "type" : "string"
-        },
-        "commercialOperatorLabel" : {
-          "type" : "string"
-        },
         "reactivableAfterRegul" : {
           "type" : "boolean"
         },
         "digitalSignature" : {
           "type" : "boolean"
         },
+        "majorProductId" : {
+          "type" : "string"
+        },
         "mainCommentText" : {
           "type" : "string"
         },
         "mainCommentDate" : {
-          "type" : "string"
-        },
-        "ongoingCancellationDate" : {
           "type" : "string"
         },
         "methodOfPaymentLabel" : {
@@ -2558,10 +2552,16 @@
         "mainActOfManagementDate" : {
           "type" : "string"
         },
+        "ongoingCancellationDate" : {
+          "type" : "string"
+        },
         "ongoingCancellationCreationDate" : {
           "type" : "string"
         },
-        "majorProductId" : {
+        "originLabel" : {
+          "type" : "string"
+        },
+        "commercialOperatorLabel" : {
           "type" : "string"
         }
       }
@@ -2657,29 +2657,11 @@
         "ongoingCancellation" : {
           "type" : "boolean"
         },
-        "distributorId" : {
-          "type" : "string"
-        },
-        "updateUser" : {
-          "type" : "string"
-        },
-        "isReactivable" : {
-          "type" : "boolean"
-        },
-        "contractActivity" : {
-          "type" : "string"
-        },
-        "fullValidationStatus" : {
-          "type" : "string"
-        },
         "nonRenewalReason" : {
           "type" : "string"
         },
         "cancellationUser" : {
           "type" : "string"
-        },
-        "freeCancellationDate" : {
-          "$ref" : "date-time"
         },
         "suspensionDate" : {
           "type" : "string"
@@ -2691,7 +2673,25 @@
         "digitalSignature" : {
           "type" : "boolean"
         },
+        "distributorId" : {
+          "type" : "string"
+        },
         "ongoingCancellationDate" : {
+          "type" : "string"
+        },
+        "freeCancellationDate" : {
+          "$ref" : "date-time"
+        },
+        "isReactivable" : {
+          "type" : "boolean"
+        },
+        "contractActivity" : {
+          "type" : "string"
+        },
+        "fullValidationStatus" : {
+          "type" : "string"
+        },
+        "updateUser" : {
           "type" : "string"
         },
         "duration" : {
@@ -2826,10 +2826,10 @@
         "distributorId" : {
           "type" : "string"
         },
-        "updateUser" : {
+        "fullValidationStatus" : {
           "type" : "string"
         },
-        "fullValidationStatus" : {
+        "updateUser" : {
           "type" : "string"
         },
         "duration" : {
@@ -3084,12 +3084,12 @@
             "$ref" : "ContractRenewal"
           }
         },
-        "paymentCreditCard" : {
-          "$ref" : "CreditCard"
-        },
         "personId" : {
           "type" : "integer",
           "format" : "int64"
+        },
+        "paymentCreditCard" : {
+          "$ref" : "CreditCard"
         }
       }
     },
@@ -3359,11 +3359,33 @@
         "ongoingCancellation" : {
           "type" : "boolean"
         },
+        "nonRenewalReason" : {
+          "type" : "string"
+        },
+        "cancellationUser" : {
+          "type" : "string"
+        },
+        "suspensionDate" : {
+          "type" : "string"
+        },
+        "thirdPartyPayerId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "reactivableAfterRegul" : {
+          "type" : "boolean"
+        },
+        "digitalSignature" : {
+          "type" : "boolean"
+        },
         "distributorId" : {
           "type" : "string"
         },
-        "updateUser" : {
+        "methodOfPaymentLabel" : {
           "type" : "string"
+        },
+        "freeCancellationDate" : {
+          "$ref" : "date-time"
         },
         "isReactivable" : {
           "type" : "boolean"
@@ -3380,29 +3402,7 @@
         "fullValidationStatus" : {
           "type" : "string"
         },
-        "nonRenewalReason" : {
-          "type" : "string"
-        },
-        "cancellationUser" : {
-          "type" : "string"
-        },
-        "freeCancellationDate" : {
-          "$ref" : "date-time"
-        },
-        "suspensionDate" : {
-          "type" : "string"
-        },
-        "thirdPartyPayerId" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "reactivableAfterRegul" : {
-          "type" : "boolean"
-        },
-        "digitalSignature" : {
-          "type" : "boolean"
-        },
-        "methodOfPaymentLabel" : {
+        "updateUser" : {
           "type" : "string"
         },
         "duration" : {
@@ -3592,13 +3592,10 @@
         "ongoingCancellation" : {
           "type" : "boolean"
         },
-        "contractActivity" : {
-          "type" : "string"
-        },
-        "fullValidationStatus" : {
-          "type" : "string"
-        },
         "suspensionDate" : {
+          "type" : "string"
+        },
+        "majorProductId" : {
           "type" : "string"
         },
         "mainCommentText" : {
@@ -3607,19 +3604,22 @@
         "mainCommentDate" : {
           "type" : "string"
         },
-        "ongoingCancellationDate" : {
-          "type" : "string"
-        },
         "mainActOfManagementId" : {
           "type" : "string"
         },
         "mainActOfManagementDate" : {
           "type" : "string"
         },
+        "ongoingCancellationDate" : {
+          "type" : "string"
+        },
         "ongoingCancellationCreationDate" : {
           "type" : "string"
         },
-        "majorProductId" : {
+        "contractActivity" : {
+          "type" : "string"
+        },
+        "fullValidationStatus" : {
           "type" : "string"
         },
         "origin" : {
@@ -3764,10 +3764,10 @@
         "commercialLabel" : {
           "type" : "string"
         },
-        "productType" : {
+        "productCategory" : {
           "type" : "string"
         },
-        "productCategory" : {
+        "productType" : {
           "type" : "string"
         }
       }

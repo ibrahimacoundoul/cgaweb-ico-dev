@@ -433,6 +433,9 @@
           "type" : "integer",
           "format" : "int32"
         },
+        "needChequeId" : {
+          "type" : "boolean"
+        },
         "statusId" : {
           "type" : "string"
         },
@@ -441,9 +444,6 @@
         },
         "creationUserId" : {
           "type" : "string"
-        },
-        "needChequeId" : {
-          "type" : "boolean"
         }
       }
     },
@@ -525,16 +525,16 @@
           "type" : "integer",
           "format" : "int64"
         },
-        "statusId" : {
-          "type" : "string"
-        },
-        "categoryId" : {
+        "validationuserId" : {
           "type" : "string"
         },
         "modeId" : {
           "type" : "string"
         },
-        "validationuserId" : {
+        "statusId" : {
+          "type" : "string"
+        },
+        "categoryId" : {
           "type" : "string"
         },
         "comment" : {
@@ -566,11 +566,11 @@
           "type" : "integer",
           "format" : "int32"
         },
-        "creationUserId" : {
-          "type" : "string"
-        },
         "needChequeId" : {
           "type" : "boolean"
+        },
+        "creationUserId" : {
+          "type" : "string"
         }
       }
     },
@@ -579,18 +579,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "categories" : {
-          "type" : "array",
-          "items" : {
-            "type" : "string"
-          }
-        },
-        "motives" : {
-          "type" : "array",
-          "items" : {
-            "type" : "string"
-          }
-        },
         "startDate" : {
           "type" : "string",
           "description" : "Format date attendu yyyymmdd"
@@ -606,6 +594,18 @@
         "personId" : {
           "type" : "integer",
           "format" : "int64"
+        },
+        "categories" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "motives" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
         },
         "status" : {
           "type" : "array",

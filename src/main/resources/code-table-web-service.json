@@ -983,11 +983,11 @@
         "genericProduct" : {
           "type" : "boolean"
         },
-        "productCategory" : {
-          "type" : "string"
-        },
         "technicalOffer" : {
           "type" : "boolean"
+        },
+        "productCategory" : {
+          "type" : "string"
         },
         "label" : {
           "type" : "string"
@@ -1064,11 +1064,11 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "isActive" : {
-          "type" : "boolean"
-        },
         "directDebitStatuts" : {
           "type" : "string"
+        },
+        "isActive" : {
+          "type" : "boolean"
         },
         "label" : {
           "type" : "string"
@@ -1111,21 +1111,21 @@
     "PNDCategoriesCodeTable" : {
       "id" : "PNDCategoriesCodeTable",
       "description" : "",
-      "required" : [ "numberOfPND", "marketing", "administration" ],
+      "required" : [ "administration", "marketing", "numberOfPND" ],
       "extends" : "",
       "properties" : {
-        "numberOfPND" : {
-          "type" : "integer",
-          "format" : "int32",
-          "description" : "Nombre de retour PND sur cette catégorie pour effectivement invalider l'adresse"
+        "administration" : {
+          "type" : "boolean",
+          "description" : "Si '1', indique que cette catégorie est de type gestion"
         },
         "marketing" : {
           "type" : "boolean",
           "description" : "Si '1', indique que cette catégorie est de type marketing"
         },
-        "administration" : {
-          "type" : "boolean",
-          "description" : "Si '1', indique que cette catégorie est de type gestion"
+        "numberOfPND" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "Nombre de retour PND sur cette catégorie pour effectivement invalider l'adresse"
         },
         "label" : {
           "type" : "string"
@@ -1356,6 +1356,15 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "isScratchCard" : {
+          "type" : "boolean"
+        },
+        "isMultiple" : {
+          "type" : "boolean"
+        },
+        "isCashOrder" : {
+          "type" : "boolean"
+        },
         "isRefund" : {
           "type" : "boolean"
         },
@@ -1372,15 +1381,6 @@
           "type" : "boolean"
         },
         "isCreditCard" : {
-          "type" : "boolean"
-        },
-        "isScratchCard" : {
-          "type" : "boolean"
-        },
-        "isMultiple" : {
-          "type" : "boolean"
-        },
-        "isCashOrder" : {
           "type" : "boolean"
         },
         "label" : {
@@ -1640,19 +1640,7 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "catCliId" : {
-          "type" : "string"
-        },
-        "catCliLab" : {
-          "type" : "string"
-        },
-        "catCliDetId" : {
-          "type" : "string"
-        },
         "catCliDetLab" : {
-          "type" : "string"
-        },
-        "origId" : {
           "type" : "string"
         },
         "origLab" : {
@@ -1666,6 +1654,18 @@
         },
         "cidentSubCat" : {
           "$ref" : "CodeIdent"
+        },
+        "catCliLab" : {
+          "type" : "string"
+        },
+        "catCliDetId" : {
+          "type" : "string"
+        },
+        "origId" : {
+          "type" : "string"
+        },
+        "catCliId" : {
+          "type" : "string"
         }
       }
     },
@@ -1693,13 +1693,13 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "impaye" : {
-          "type" : "string"
-        },
         "initiativeAbonne" : {
           "type" : "string"
         },
         "initiativeCanal" : {
+          "type" : "string"
+        },
+        "impaye" : {
           "type" : "string"
         },
         "indEngagement" : {

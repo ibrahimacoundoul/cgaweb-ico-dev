@@ -726,12 +726,12 @@
         "encashmentLogicalId" : {
           "type" : "string"
         },
-        "encashmentStatus" : {
-          "type" : "string"
-        },
         "encashmentDate" : {
           "type" : "integer",
           "format" : "int64"
+        },
+        "encashmentStatus" : {
+          "type" : "string"
         },
         "actId" : {
           "type" : "integer",
@@ -1120,10 +1120,10 @@
             "$ref" : "PaymentPerson"
           }
         },
-        "cmc7" : {
+        "encashmentimageid" : {
           "type" : "string"
         },
-        "encashmentimageid" : {
+        "cmc7" : {
           "type" : "string"
         },
         "bankDepositDate" : {

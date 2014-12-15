@@ -1859,10 +1859,10 @@
         "vintageCatalog" : {
           "type" : "string"
         },
-        "defaultCatalog" : {
+        "limitedVersion" : {
           "type" : "boolean"
         },
-        "limitedVersion" : {
+        "defaultCatalog" : {
           "type" : "boolean"
         }
       }
@@ -1967,10 +1967,10 @@
           "type" : "integer",
           "format" : "int32"
         },
-        "voucherLabel" : {
+        "marketingCampaignId" : {
           "type" : "string"
         },
-        "marketingCampaignId" : {
+        "voucherLabel" : {
           "type" : "string"
         }
       }
@@ -2059,13 +2059,13 @@
           "type" : "number",
           "format" : "double"
         },
-        "productType" : {
-          "type" : "string"
-        },
         "productCategory" : {
           "type" : "string"
         },
         "themeId" : {
+          "type" : "string"
+        },
+        "productType" : {
           "type" : "string"
         }
       }
@@ -2170,8 +2170,11 @@
             "type" : "string"
           }
         },
-        "productType" : {
-          "type" : "string"
+        "technicalIds" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ProductTechnicalIds"
+          }
         },
         "productCategory" : {
           "type" : "string"
@@ -2179,11 +2182,8 @@
         "themeId" : {
           "type" : "string"
         },
-        "technicalIds" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "ProductTechnicalIds"
-          }
+        "productType" : {
+          "type" : "string"
         }
       }
     },
@@ -2229,15 +2229,6 @@
             "$ref" : "ProductContractIn"
           }
         },
-        "postalcode" : {
-          "type" : "string"
-        },
-        "linkedContract" : {
-          "type" : "boolean"
-        },
-        "crossOperators" : {
-          "type" : "boolean"
-        },
         "contractId" : {
           "type" : "integer",
           "format" : "int32"
@@ -2248,6 +2239,15 @@
         },
         "countryId" : {
           "type" : "string"
+        },
+        "postalcode" : {
+          "type" : "string"
+        },
+        "linkedContract" : {
+          "type" : "boolean"
+        },
+        "crossOperators" : {
+          "type" : "boolean"
         }
       }
     },
@@ -2407,13 +2407,13 @@
           "type" : "number",
           "format" : "double"
         },
-        "productType" : {
-          "type" : "string"
-        },
         "productCategory" : {
           "type" : "string"
         },
         "themeId" : {
+          "type" : "string"
+        },
+        "productType" : {
           "type" : "string"
         }
       }
