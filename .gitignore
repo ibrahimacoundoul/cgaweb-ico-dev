@@ -2,9 +2,7 @@
 /.project
 /.classpath
 /target
-/kiss-swagger-check-change.bat
-/kiss-swagger-monitoring-dep.jar
-/kissSwaggerDiff-0.0.1-SNAPSHOT.jar
+/kiss-swagger-monitoring.bat
 /kiss-swagger-monitor.sh
 
 
