@@ -6,71 +6,6 @@
   "produces" : [ "application/json" ],
   "apis" : [ {
     "path" : "/eligibility/check",
-    "description" : "checkGlobalEligibility",
-    "operations" : [ {
-      "method" : "POST",
-      "summary" : "Vérification de l’éligibilité commerciale globale",
-      "notes" : "checkGlobalEligibility",
-      "type" : "ResponseWrapper«GlobalEligibilityOut»",
-      "nickname" : "checkGlobalEligibility",
-      "produces" : [ "application/json" ],
-      "parameters" : [ {
-        "name" : "userId",
-        "description" : "Utilisateur effectuant l'opération",
-        "defaultValue" : "",
-        "required" : true,
-        "type" : "string",
-        "paramType" : "query",
-        "allowMultiple" : false
-      }, {
-        "name" : "distributorId",
-        "description" : "Numéro de distributeur",
-        "defaultValue" : "",
-        "required" : false,
-        "type" : "string",
-        "paramType" : "query",
-        "allowMultiple" : false
-      }, {
-        "name" : "contactId",
-        "description" : "Numéro de contact",
-        "defaultValue" : "",
-        "required" : false,
-        "type" : "string",
-        "paramType" : "query",
-        "allowMultiple" : false
-      }, {
-        "name" : "saleDevice",
-        "description" : "Canal via lequel l'opération est effectuée ",
-        "defaultValue" : "",
-        "required" : false,
-        "type" : "string",
-        "paramType" : "query",
-        "allowMultiple" : false
-      }, {
-        "name" : "salesman",
-        "description" : "Vendeur ayant effectué la modification",
-        "defaultValue" : "",
-        "required" : false,
-        "type" : "string",
-        "paramType" : "query",
-        "allowMultiple" : false
-      }, {
-        "name" : "eligibilityIn",
-        "description" : "Informations d'éligibilité",
-        "defaultValue" : "",
-        "required" : false,
-        "type" : "EligibilityIn",
-        "paramType" : "body",
-        "allowMultiple" : false
-      } ],
-      "responseMessages" : [ {
-        "code" : 510,
-        "message" : "ERR_BIZ_COMMON_INVALID_USER, ERR_BIZ_COMMON_INVALID_SALEDEVICE, ERR_BIZ_COMMON_INVALID_COMMERCIAL_OPERATOR, FAIL_TO_FIND_DUPLICATE_PERSON, "
-      } ],
-      "deprecated" : "false"
-    } ]
-  }, {
-    "path" : "/eligibility/tmpcheck",
     "description" : "checkGlobalEligibility2",
     "operations" : [ {
       "method" : "POST",
@@ -136,41 +71,6 @@
     } ]
   } ],
   "models" : {
-    "GlobalEligibilityOut" : {
-      "id" : "GlobalEligibilityOut",
-      "description" : "",
-      "extends" : "",
-      "properties" : {
-        "personErrorMessage" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "ErrorMessage"
-          }
-        },
-        "ibanErrorMessage" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "ErrorMessage"
-          }
-        },
-        "sponsorErrorMessage" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "ErrorMessage"
-          }
-        },
-        "cbErrorMessage" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "ErrorMessage"
-          }
-        },
-        "status" : {
-          "type" : "string",
-          "enum" : [ "OK", "WARNING", "KO" ]
-        }
-      }
-    },
     "PhoneCommon" : {
       "id" : "PhoneCommon",
       "description" : "",
@@ -243,22 +143,6 @@
         }
       }
     },
-    "Iban" : {
-      "id" : "Iban",
-      "description" : "",
-      "extends" : "",
-      "properties" : {
-        "iban" : {
-          "type" : "string"
-        },
-        "bic" : {
-          "type" : "string"
-        },
-        "cpays" : {
-          "type" : "string"
-        }
-      }
-    },
     "GlobalEligibilityOut2" : {
       "id" : "GlobalEligibilityOut2",
       "description" : "",
@@ -288,9 +172,8 @@
             "$ref" : "ErrorMessage"
           }
         },
-        "duplicatedPersonId" : {
-          "type" : "integer",
-          "format" : "int64"
+        "duplicatedPerson" : {
+          "$ref" : "EligibilityPersonOut"
         },
         "status" : {
           "type" : "string",
@@ -349,29 +232,6 @@
         }
       }
     },
-    "CreditCardWithOwner" : {
-      "id" : "CreditCardWithOwner",
-      "description" : "",
-      "extends" : "",
-      "properties" : {
-        "cryptogram" : {
-          "type" : "string"
-        },
-        "expirationDate" : {
-          "type" : "string",
-          "description" : "Format date attendu yyyymm"
-        },
-        "number" : {
-          "type" : "string"
-        },
-        "owner" : {
-          "type" : "string"
-        },
-        "type" : {
-          "type" : "string"
-        }
-      }
-    },
     "DirectDebit" : {
       "id" : "DirectDebit",
       "description" : "",
@@ -427,46 +287,6 @@
         }
       }
     },
-    "ResponseWrapper«GlobalEligibilityOut»" : {
-      "id" : "ResponseWrapper«GlobalEligibilityOut»",
-      "description" : "",
-      "extends" : "",
-      "properties" : {
-        "severity" : {
-          "type" : "string",
-          "enum" : [ "WARN", "ERROR", "FATAL", "SUCCESS" ]
-        },
-        "returnCode" : {
-          "type" : "string"
-        },
-        "message" : {
-          "type" : "string"
-        },
-        "data" : {
-          "$ref" : "GlobalEligibilityOut"
-        }
-      }
-    },
-    "EligiblePerson" : {
-      "id" : "EligiblePerson",
-      "description" : "",
-      "extends" : "",
-      "properties" : {
-        "personId" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "firstName" : {
-          "type" : "string"
-        },
-        "name" : {
-          "type" : "string"
-        },
-        "address" : {
-          "$ref" : "EligibleAddress"
-        }
-      }
-    },
     "AddressCommon" : {
       "id" : "AddressCommon",
       "description" : "",
@@ -498,59 +318,23 @@
         }
       }
     },
-    "EligibleAddress" : {
-      "id" : "EligibleAddress",
+    "EligibilityPersonOut" : {
+      "id" : "EligibilityPersonOut",
       "description" : "",
       "extends" : "",
       "properties" : {
-        "postalCode" : {
+        "firstName" : {
+          "type" : "string"
+        },
+        "lastName" : {
           "type" : "string"
         },
         "personId" : {
           "type" : "integer",
           "format" : "int64"
         },
-        "city" : {
+        "civility" : {
           "type" : "string"
-        },
-        "additionalAddress" : {
-          "type" : "string"
-        },
-        "address" : {
-          "type" : "string"
-        }
-      }
-    },
-    "EligibilityIn" : {
-      "id" : "EligibilityIn",
-      "description" : "",
-      "extends" : "",
-      "properties" : {
-        "iban" : {
-          "$ref" : "Iban"
-        },
-        "commercialOperators" : {
-          "type" : "array",
-          "uniqueItems" : true,
-          "items" : {
-            "type" : "string"
-          }
-        },
-        "email" : {
-          "type" : "string"
-        },
-        "sponsorId" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "eligiblePerson" : {
-          "$ref" : "EligiblePerson"
-        },
-        "phone" : {
-          "$ref" : "EligiblePhoneIn"
-        },
-        "cb" : {
-          "$ref" : "CreditCardWithOwner"
         }
       }
     },
@@ -563,22 +347,6 @@
           "type" : "string"
         },
         "label" : {
-          "type" : "string"
-        }
-      }
-    },
-    "EligiblePhoneIn" : {
-      "id" : "EligiblePhoneIn",
-      "description" : "",
-      "extends" : "",
-      "properties" : {
-        "mobilePhone" : {
-          "type" : "string"
-        },
-        "phonenumber1" : {
-          "type" : "string"
-        },
-        "phonenumber2" : {
           "type" : "string"
         }
       }
