@@ -62,21 +62,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«EncashementOut»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER, "
       } ],
       "deprecated" : "false"
     } ]
@@ -149,21 +136,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«object»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -226,21 +200,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«EncashementOut»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER, "
       } ],
       "deprecated" : "false"
     } ]
@@ -303,21 +264,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«EncashementOut»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER, ERR_BIZ_INVALID_DATE_YYYYMMDD_FIELD, ERR_BIZ_CHEQUE_ALREADY_CASHED, ERR_BIZ_DEPOSIT_DATE_TOO_FAR, "
       } ],
       "deprecated" : "false"
     } ]
@@ -380,21 +328,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«EncashementOut»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER , ERR_BIZ_WS_SUBSCRIBER_OR_CONTRACT_ID_UNKNOWN, ERR_PAYMENT_FROM_CGAWEB_AMOUNT_MUST_BE_POSITIF, ERR_PAYMENT_FROM_CGAWEB_MANDATORY_SHOP_ID, ERR_PAYMENT_FROM_CGAWEB_SHOP_NOT_EXISTS, ERR_BIZ_SUBSCRIPTION_INVALID_SUBSCRIBER, ERR_BIZ_WS_SUBSCRIBER_OR_CONTRACT_ID_UNKNOWN, "
       } ],
       "deprecated" : "false"
     } ]
@@ -457,21 +392,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«long»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -534,21 +456,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«EncashementOut»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER, ERR_BIZ_INVALID_DATE_YYYYMMDD_FIELD, ERR_BIZ_CHEQUE_ALREADY_CASHED, ERR_BIZ_DEPOSIT_DATE_TOO_FAR, "
       } ],
       "deprecated" : "false"
     } ]
@@ -571,18 +480,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«Motive»»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER, "
       } ],
       "deprecated" : "false"
     } ]
@@ -645,21 +544,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«long»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -700,18 +586,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«RejectMotives»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -774,21 +650,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«EncashmentResult»»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER, INVALID_METHOD_PAYMENT, ERR_BIZ_SUBSCRIPTION_INVALID_SUBSCRIBER, "
       } ],
       "deprecated" : "false"
     } ]

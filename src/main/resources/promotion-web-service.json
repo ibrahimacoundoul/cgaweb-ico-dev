@@ -40,18 +40,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«PromotionAdvantage»»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER , ERR_BIZ_SUBSCRIPTION_INVALID_SUBSCRIBER , ERR_BIZ_WS_SUBSCRIBER_OR_CONTRACT_ID_UNKNOWN , ERR_BIZ_PROMOTION_CONTRACT_DOES_NOT_HAVE_PROMOTIONS , ERR_BIZ_PROMOTION_SUBSCRIBER_DOES_NOT_HAVE_ACTIVE_PROMOTIONS ,  "
       } ],
       "deprecated" : "false"
     } ]
@@ -92,18 +82,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«PromotionAdvantage»»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER , ERR_BIZ_SUBSCRIPTION_INVALID_SUBSCRIBER , ERR_BIZ_WS_SUBSCRIBER_OR_CONTRACT_ID_UNKNOWN , ERR_BIZ_PROMOTION_CONTRACT_DOES_NOT_HAVE_PROMOTIONS , ERR_BIZ_PROMOTION_SUBSCRIBER_DOES_NOT_HAVE_ACTIVE_PROMOTIONS , "
       } ],
       "deprecated" : "false"
     } ]
@@ -150,18 +130,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«Promotion»»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER , ERR_PROMOTION_START_END_DATE , ERR_BIZ_COMMON_INVALID_SALEDEVICE , "
       } ],
       "deprecated" : "false"
     } ]
@@ -192,18 +162,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«Promotion»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER , ERR_PROMOTION_ID_UNKNOWN"
       } ],
       "deprecated" : "false"
     } ]
@@ -266,21 +226,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«object»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER , ERR_BIZ_SUBSCRIPTION_INVALID_SUBSCRIBER , ERR_BIZ_WS_SUBSCRIBER_OR_CONTRACT_ID_UNKNOWN "
       } ],
       "deprecated" : "false"
     } ]
@@ -343,21 +290,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«VoucherCheckOut»»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER , ERR_BIZ_INVALID_VOUCHER , ERR_BIZ_VOUCHER_GLOBAL_MAX_AFFECT_REACH"
       } ],
       "deprecated" : "false"
     } ]
@@ -388,18 +322,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«Promotion»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER , ERR_PROMOTION_ID_UNKNOWN"
       } ],
       "deprecated" : "false"
     } ]
@@ -553,10 +477,10 @@
         "promotionId" : {
           "type" : "string"
         },
-        "shortLabel" : {
+        "enddate" : {
           "type" : "string"
         },
-        "enddate" : {
+        "shortLabel" : {
           "type" : "string"
         },
         "description" : {
@@ -637,10 +561,10 @@
         "promotionId" : {
           "type" : "string"
         },
-        "shortLabel" : {
+        "enddate" : {
           "type" : "string"
         },
-        "enddate" : {
+        "shortLabel" : {
           "type" : "string"
         },
         "description" : {

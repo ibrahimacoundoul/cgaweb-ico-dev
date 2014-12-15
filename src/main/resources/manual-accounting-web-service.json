@@ -64,21 +64,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«ManualAccountingEntriesResultOut»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER , "
       } ],
       "deprecated" : "false"
     } ]
@@ -159,18 +146,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ManualAccountingEntriesSearchOut»»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER , "
       } ],
       "deprecated" : "false"
     } ]
@@ -234,21 +211,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«object»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER , "
       } ],
       "deprecated" : "false"
     } ]
@@ -287,13 +251,13 @@
           "type" : "integer",
           "format" : "int32"
         },
+        "vatId" : {
+          "type" : "string"
+        },
         "accountingPostId" : {
           "type" : "string"
         },
         "accountingProductId" : {
-          "type" : "string"
-        },
-        "vatId" : {
           "type" : "string"
         },
         "month" : {
@@ -333,12 +297,12 @@
           "type" : "integer",
           "format" : "int64"
         },
+        "accountingReadjustedDate" : {
+          "$ref" : "date-time"
+        },
         "accountingPieceId" : {
           "type" : "integer",
           "format" : "int64"
-        },
-        "accountingReadjustedDate" : {
-          "$ref" : "date-time"
         }
       }
     },
@@ -377,17 +341,17 @@
           "type" : "integer",
           "format" : "int64"
         },
-        "entries" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "ManualAccountingEntry"
-          }
-        },
         "accountingPieceLabel" : {
           "type" : "string"
         },
         "crmLedgerId" : {
           "type" : "string"
+        },
+        "entries" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "ManualAccountingEntry"
+          }
         },
         "comment" : {
           "type" : "string"
@@ -429,6 +393,15 @@
         "accountingPieceLabel" : {
           "type" : "string"
         },
+        "accountingPieceId" : {
+          "type" : "string"
+        },
+        "statusId" : {
+          "type" : "string"
+        },
+        "creationUserId" : {
+          "type" : "string"
+        },
         "validationUser" : {
           "type" : "string"
         },
@@ -437,15 +410,6 @@
           "items" : {
             "$ref" : "ManualAccountingEntry"
           }
-        },
-        "statusId" : {
-          "type" : "string"
-        },
-        "accountingPieceId" : {
-          "type" : "string"
-        },
-        "creationUserId" : {
-          "type" : "string"
         },
         "comment" : {
           "type" : "string"

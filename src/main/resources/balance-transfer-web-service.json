@@ -6,59 +6,6 @@
   "produces" : [ "application/json" ],
   "apis" : [ {
     "path" : "/balancetransfer",
-    "description" : "getBalanceTransfer",
-    "operations" : [ {
-      "method" : "GET",
-      "summary" : "Remontée du solde transférable",
-      "notes" : "getBalanceTransfer",
-      "type" : "ResponseWrapper«double»",
-      "nickname" : "getBalanceTransfer",
-      "produces" : [ "application/json" ],
-      "parameters" : [ {
-        "name" : "userId",
-        "description" : "Utilisateur effectuant l'opération",
-        "defaultValue" : "",
-        "required" : true,
-        "type" : "string",
-        "paramType" : "query",
-        "allowMultiple" : false
-      }, {
-        "name" : "personId",
-        "description" : "Numéro d'abonne",
-        "defaultValue" : "",
-        "required" : true,
-        "type" : "integer",
-        "format" : "int64",
-        "paramType" : "query",
-        "allowMultiple" : false
-      }, {
-        "name" : "contractId",
-        "description" : "Numéro de contrat",
-        "defaultValue" : "",
-        "required" : true,
-        "type" : "integer",
-        "format" : "int32",
-        "paramType" : "query",
-        "allowMultiple" : false
-      } ],
-      "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«double»"
-      } ],
-      "deprecated" : "false"
-    } ]
-  }, {
-    "path" : "/balancetransfer",
     "description" : "createBalanceTransfer",
     "operations" : [ {
       "method" : "POST",
@@ -117,21 +64,51 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER , "
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/balancetransfer",
+    "description" : "getBalanceTransfer",
+    "operations" : [ {
+      "method" : "GET",
+      "summary" : "Remontée du solde transférable",
+      "notes" : "getBalanceTransfer",
+      "type" : "ResponseWrapper«double»",
+      "nickname" : "getBalanceTransfer",
+      "produces" : [ "application/json" ],
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
       }, {
-        "code" : 404,
-        "message" : "Not Found"
+        "name" : "personId",
+        "description" : "Numéro d'abonne",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int64",
+        "paramType" : "query",
+        "allowMultiple" : false
       }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«ActOfManagementDetailLight»"
+        "name" : "contractId",
+        "description" : "Numéro de contrat",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "integer",
+        "format" : "int32",
+        "paramType" : "query",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER , "
       } ],
       "deprecated" : "false"
     } ]
@@ -155,18 +132,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«Motive»»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER , "
       } ],
       "deprecated" : "false"
     } ]

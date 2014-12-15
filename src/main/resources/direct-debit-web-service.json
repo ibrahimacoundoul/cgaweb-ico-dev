@@ -73,18 +73,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«DirectDebitResult»»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER, ERR_BIZ_INVALID_ABO_PREL_AUTHORIZ, ERR_BIZ_WS_SUBSCRIBER_OR_CONTRACT_ID_UNKNOWN, "
       } ],
       "deprecated" : "false"
     } ]
@@ -149,18 +139,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ForecastedDirectDebitOut»»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER, ERR_BIZ_SUBSCRIPTION_INVALID_SUBSCRIBER, ERR_BIZ_WS_SUBSCRIBER_OR_CONTRACT_ID_UNKNOWN,ERR_TECH_INVALID_DATE, "
       } ],
       "deprecated" : "false"
     } ]
@@ -232,21 +212,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«object»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER, ERR_BIZ_WS_GEN_ILLEGAL_ARG_ERROR, ERR_BIZ_INVALID_FEE_CODE, ERR_BIZ_INVALID_DIRECT_DEBIT_ID, "
       } ],
       "deprecated" : "false"
     } ]
@@ -283,12 +250,6 @@
         "bic" : {
           "type" : "string"
         },
-        "accountingDate" : {
-          "type" : "string"
-        },
-        "directDebitTypeId" : {
-          "type" : "string"
-        },
         "detail" : {
           "type" : "array",
           "items" : {
@@ -299,9 +260,25 @@
           "type" : "number",
           "format" : "double"
         },
+        "accountingDate" : {
+          "type" : "string"
+        },
+        "directDebitTypeId" : {
+          "type" : "string"
+        },
         "rejectId" : {
           "type" : "integer",
           "format" : "int32"
+        },
+        "rejectCode" : {
+          "type" : "string"
+        },
+        "isIntentional" : {
+          "type" : "boolean"
+        },
+        "directDebitId" : {
+          "type" : "integer",
+          "format" : "int64"
         },
         "directDebitTypeLabel" : {
           "type" : "string"
@@ -314,16 +291,6 @@
         },
         "isRepresentable" : {
           "type" : "boolean"
-        },
-        "rejectCode" : {
-          "type" : "string"
-        },
-        "isIntentional" : {
-          "type" : "boolean"
-        },
-        "directDebitId" : {
-          "type" : "integer",
-          "format" : "int64"
         },
         "month" : {
           "type" : "string"
@@ -422,12 +389,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "accountingDate" : {
-          "type" : "string"
-        },
-        "directDebitTypeId" : {
-          "type" : "string"
-        },
         "detail" : {
           "type" : "array",
           "items" : {
@@ -437,6 +398,12 @@
         "amount" : {
           "type" : "number",
           "format" : "double"
+        },
+        "accountingDate" : {
+          "type" : "string"
+        },
+        "directDebitTypeId" : {
+          "type" : "string"
         },
         "directDebitTypeLabel" : {
           "type" : "string"

@@ -139,21 +139,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«ProspectOut»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER, ERR_BIZ_COMMON_INVALID_USER, ERR_BIZ_ADRESS_INVALID_SALEDEVICE_FOR_COUNTRY, ERR_BIZ_SUBSCRIPTION_PHONE_INVALID_NUMBER, ERR_BIZ_SUBSCRIPTION_PHONE_UNREFERENCED_COUNTRY, INVALID_CONTACT_DETAILS, "
       } ],
       "deprecated" : "false"
     } ]
@@ -186,10 +173,10 @@
         "civility" : {
           "type" : "string"
         },
-        "companyId" : {
+        "companyName" : {
           "type" : "string"
         },
-        "companyName" : {
+        "companyId" : {
           "type" : "string"
         }
       }
@@ -215,14 +202,14 @@
         "orderId" : {
           "type" : "string"
         },
+        "person" : {
+          "$ref" : "PersonProspect"
+        },
         "email" : {
           "type" : "string"
         },
         "payment" : {
           "$ref" : "PaymentProspect"
-        },
-        "person" : {
-          "$ref" : "PersonProspect"
         },
         "thirdPayor" : {
           "type" : "boolean"
@@ -249,11 +236,9 @@
         "bic" : {
           "type" : "string"
         },
-        "cryptogram" : {
-          "type" : "string"
-        },
-        "expiracyDate" : {
-          "type" : "string"
+        "directDebitDate" : {
+          "type" : "integer",
+          "format" : "int32"
         }
       }
     },
@@ -262,14 +247,14 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "person" : {
+          "$ref" : "PersonToUpdate"
+        },
         "email" : {
           "type" : "string"
         },
         "payment" : {
           "$ref" : "PaymentProspect"
-        },
-        "person" : {
-          "$ref" : "PersonToUpdate"
         },
         "thirdPayor" : {
           "type" : "boolean"
@@ -322,10 +307,10 @@
         "civility" : {
           "type" : "string"
         },
-        "companyId" : {
+        "companyName" : {
           "type" : "string"
         },
-        "companyName" : {
+        "companyId" : {
           "type" : "string"
         }
       }

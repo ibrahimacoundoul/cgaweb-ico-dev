@@ -4,7 +4,7 @@
   "basePath" : "/",
   "resourcePath" : "fix this",
   "apis" : [ {
-    "path" : "/version",
+    "path" : "/public/version",
     "description" : "getVersionInformation",
     "operations" : [ {
       "method" : "GET",
@@ -14,18 +14,8 @@
       "nickname" : "getVersionInformation",
       "parameters" : [ ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«VersionInformation»"
+        "code" : 510,
+        "message" : "ERR_TECH_GEN_DEFAULT"
       } ],
       "deprecated" : "false"
     } ]

@@ -8,7 +8,7 @@
     "description" : "getAccountingWriting",
     "operations" : [ {
       "method" : "GET",
-      "summary" : "Récupèrer les écritures comptables à partir des informations d'un abonné",
+      "summary" : "Récupère les écritures comptables à partir des informations d'un abonné",
       "notes" : "getAccountingWriting",
       "type" : "ResponseWrapper«List«AccountingWriting»»",
       "nickname" : "getAccountingWriting",
@@ -73,18 +73,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«AccountingWriting»»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER , ERR_BIZ_SUBSCRIPTION_INVALID_SUBSCRIBER , ERR_BIZ_WS_SUBSCRIBER_OR_CONTRACT_ID_UNKNOWN , ERR_BIZ_WS_GEN_ILLEGAL_ARG_ERROR"
       } ],
       "deprecated" : "false"
     } ]
@@ -116,18 +106,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«AccountingPiece»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER ,ERR_TECH_GEN_NULL_ARGUMENT , ERR_BIZ_GEN_RESOURCE_NOT_EXIST"
       } ],
       "deprecated" : "false"
     } ]
@@ -159,18 +139,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«AccountingPiece»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER , ERR_TECH_GEN_NULL_ARGUMENT, ERR_BIZ_GEN_RESOURCE_NOT_EXIST"
       } ],
       "deprecated" : "false"
     } ]
@@ -204,13 +174,13 @@
         "creationDate" : {
           "type" : "string"
         },
-        "accountingDate" : {
-          "type" : "string"
-        },
         "productId" : {
           "type" : "string"
         },
         "productLabel" : {
+          "type" : "string"
+        },
+        "accountingDate" : {
           "type" : "string"
         },
         "operatorId" : {
@@ -255,20 +225,14 @@
           "type" : "number",
           "format" : "float"
         },
+        "accountingPieceLabel" : {
+          "type" : "string"
+        },
         "debit" : {
           "type" : "number",
           "format" : "float"
         },
-        "accountingPieceLabel" : {
-          "type" : "string"
-        },
-        "accountingEntryId" : {
-          "type" : "string"
-        },
-        "accountingEntryGrpId" : {
-          "type" : "string"
-        },
-        "accountingPostLabel" : {
+        "crmLedgerLabel" : {
           "type" : "string"
         },
         "vatRate" : {
@@ -280,13 +244,19 @@
         "axe2Account" : {
           "type" : "string"
         },
-        "crmLedgerLabel" : {
+        "accountingEntryId" : {
           "type" : "string"
         },
-        "rejectLabel" : {
+        "accountingEntryGrpId" : {
+          "type" : "string"
+        },
+        "accountingPostLabel" : {
           "type" : "string"
         },
         "directDebitId" : {
+          "type" : "string"
+        },
+        "rejectLabel" : {
           "type" : "string"
         },
         "month" : {
@@ -308,19 +278,10 @@
         "accountingPieceLabel" : {
           "type" : "string"
         },
-        "crmLedgerLabel" : {
-          "type" : "string"
-        },
-        "crmOperatorId" : {
-          "type" : "string"
-        },
         "crmOperatorLabel" : {
           "type" : "string"
         },
-        "sapOperatorId" : {
-          "type" : "string"
-        },
-        "transfertDate" : {
+        "crmLedgerLabel" : {
           "type" : "string"
         },
         "accountingEntries" : {
@@ -328,6 +289,15 @@
           "items" : {
             "$ref" : "AccountingEntry"
           }
+        },
+        "crmOperatorId" : {
+          "type" : "string"
+        },
+        "sapOperatorId" : {
+          "type" : "string"
+        },
+        "transfertDate" : {
+          "type" : "string"
         }
       }
     },
@@ -359,6 +329,15 @@
       "description" : "",
       "extends" : "",
       "properties" : {
+        "sapOperatorId" : {
+          "type" : "string"
+        },
+        "generalAccount" : {
+          "type" : "string"
+        },
+        "operationalAccount" : {
+          "type" : "string"
+        },
         "budgetingAccount" : {
           "type" : "string"
         },
@@ -372,15 +351,6 @@
           "type" : "string"
         },
         "sapLedgerLabel" : {
-          "type" : "string"
-        },
-        "generalAccount" : {
-          "type" : "string"
-        },
-        "operationalAccount" : {
-          "type" : "string"
-        },
-        "sapOperatorId" : {
           "type" : "string"
         }
       }
@@ -401,13 +371,11 @@
           "type" : "number",
           "format" : "float"
         },
-        "budgetingAccount" : {
-          "type" : "string"
+        "vatRate" : {
+          "type" : "number",
+          "format" : "float"
         },
-        "operationalNature" : {
-          "type" : "string"
-        },
-        "budgetingNature" : {
+        "axe2Account" : {
           "type" : "string"
         },
         "generalAccount" : {
@@ -416,11 +384,13 @@
         "operationalAccount" : {
           "type" : "string"
         },
-        "vatRate" : {
-          "type" : "number",
-          "format" : "float"
+        "budgetingAccount" : {
+          "type" : "string"
         },
-        "axe2Account" : {
+        "operationalNature" : {
+          "type" : "string"
+        },
+        "budgetingNature" : {
           "type" : "string"
         }
       }

@@ -32,18 +32,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«ActOfManagementWithDetails»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -75,18 +65,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ActOfManagementOut»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -118,18 +98,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ActOfManagementOut»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -193,21 +163,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ActOfManagementSearch»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -248,18 +205,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ActOfManagement»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -300,18 +247,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«List«ActOfManagement»»"
+        "code" : 510,
+        "message" : ""
       } ],
       "deprecated" : "false"
     } ]
@@ -422,6 +359,9 @@
         "cancellationUser" : {
           "type" : "string"
         },
+        "distributorId" : {
+          "type" : "string"
+        },
         "salesman" : {
           "type" : "string"
         },
@@ -433,16 +373,13 @@
         },
         "actOfManagementType" : {
           "type" : "string"
-        },
-        "distributorId" : {
-          "type" : "string"
         }
       }
     },
     "ActOfManagementSearch" : {
       "id" : "ActOfManagementSearch",
       "description" : "",
-      "required" : [ "creationDate", "mediaType", "actOfManagementId", "cancellationDate", "personId", "contractId", "renewalSequence", "creationUser", "saleDevice", "contactId", "cancellationUser", "salesman", "actOfManagementType", "distributorId" ],
+      "required" : [ "creationDate", "mediaType", "actOfManagementId", "cancellationDate", "personId", "contractId", "renewalSequence", "creationUser", "saleDevice", "contactId", "cancellationUser", "distributorId", "salesman", "actOfManagementType" ],
       "extends" : "",
       "properties" : {
         "creationDate" : {
@@ -495,6 +432,10 @@
           "type" : "string",
           "description" : "Utilisateur ayant annulé le mouvement"
         },
+        "distributorId" : {
+          "type" : "string",
+          "description" : "Identification du distributeur"
+        },
         "salesman" : {
           "type" : "string",
           "description" : "Id du vendeur lié au mouvement"
@@ -508,10 +449,6 @@
         "actOfManagementType" : {
           "type" : "string",
           "description" : "Typologie du mouvement"
-        },
-        "distributorId" : {
-          "type" : "string",
-          "description" : "Identification du distributeur"
         }
       }
     },
@@ -575,6 +512,12 @@
         "cancellationUser" : {
           "type" : "string"
         },
+        "distributorId" : {
+          "type" : "string"
+        },
+        "actOfManagementCode" : {
+          "type" : "string"
+        },
         "salesMan" : {
           "type" : "string"
         },
@@ -583,12 +526,6 @@
           "items" : {
             "$ref" : "ActOfManagementChange"
           }
-        },
-        "distributorId" : {
-          "type" : "string"
-        },
-        "actOfManagementCode" : {
-          "type" : "string"
         }
       }
     },

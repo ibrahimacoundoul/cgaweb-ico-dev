@@ -64,21 +64,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«GlobalEligibilityOut»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER, ERR_BIZ_COMMON_INVALID_SALEDEVICE, ERR_BIZ_COMMON_INVALID_COMMERCIAL_OPERATOR, FAIL_TO_FIND_DUPLICATE_PERSON, "
       } ],
       "deprecated" : "false"
     } ]
@@ -142,21 +129,8 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«GlobalEligibilityOut2»"
+        "code" : 510,
+        "message" : " "
       } ],
       "deprecated" : "false"
     } ]
@@ -347,10 +321,10 @@
         "civility" : {
           "type" : "string"
         },
-        "companyId" : {
+        "companyName" : {
           "type" : "string"
         },
-        "companyName" : {
+        "companyId" : {
           "type" : "string"
         }
       }
@@ -416,12 +390,6 @@
       "description" : "",
       "extends" : "",
       "properties" : {
-        "email" : {
-          "type" : "string"
-        },
-        "payment" : {
-          "$ref" : "PaymentMeans"
-        },
         "commercialOperators" : {
           "type" : "array",
           "uniqueItems" : true,
@@ -437,6 +405,12 @@
           "items" : {
             "$ref" : "Equipment"
           }
+        },
+        "email" : {
+          "type" : "string"
+        },
+        "payment" : {
+          "$ref" : "PaymentMeans"
         },
         "sponsorId" : {
           "type" : "integer",
@@ -555,15 +529,15 @@
         "iban" : {
           "$ref" : "Iban"
         },
-        "email" : {
-          "type" : "string"
-        },
         "commercialOperators" : {
           "type" : "array",
           "uniqueItems" : true,
           "items" : {
             "type" : "string"
           }
+        },
+        "email" : {
+          "type" : "string"
         },
         "sponsorId" : {
           "type" : "integer",

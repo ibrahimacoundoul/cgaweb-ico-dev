@@ -6,41 +6,6 @@
   "produces" : [ "application/json" ],
   "apis" : [ {
     "path" : "/users",
-    "description" : "getUser",
-    "operations" : [ {
-      "method" : "GET",
-      "summary" : "récupérer les informations d'un utilisateur",
-      "notes" : "getUser",
-      "type" : "ResponseWrapper«UserOut»",
-      "nickname" : "getUser",
-      "produces" : [ "application/json" ],
-      "parameters" : [ {
-        "name" : "userId",
-        "description" : "Utilisateur effectuant l'opération",
-        "defaultValue" : "",
-        "required" : true,
-        "type" : "string",
-        "paramType" : "query",
-        "allowMultiple" : false
-      } ],
-      "responseMessages" : [ {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«UserOut»"
-      } ],
-      "deprecated" : "false"
-    } ]
-  }, {
-    "path" : "/users",
     "description" : "createOrUpdateUser",
     "operations" : [ {
       "method" : "PUT",
@@ -67,21 +32,33 @@
         "allowMultiple" : false
       } ],
       "responseMessages" : [ {
-        "code" : 201,
-        "message" : "Created"
-      }, {
-        "code" : 404,
-        "message" : "Not Found"
-      }, {
-        "code" : 403,
-        "message" : "Forbidden"
-      }, {
-        "code" : 401,
-        "message" : "Unauthorized"
-      }, {
-        "code" : 200,
-        "message" : "OK",
-        "responseModel" : "ResponseWrapper«UserOut»"
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER , ERR_BIZ_COMMON_INVALID_USER_ROLE "
+      } ],
+      "deprecated" : "false"
+    } ]
+  }, {
+    "path" : "/users",
+    "description" : "getUser",
+    "operations" : [ {
+      "method" : "GET",
+      "summary" : "récupérer les informations d'un utilisateur",
+      "notes" : "getUser",
+      "type" : "ResponseWrapper«UserOut»",
+      "nickname" : "getUser",
+      "produces" : [ "application/json" ],
+      "parameters" : [ {
+        "name" : "userId",
+        "description" : "Utilisateur effectuant l'opération",
+        "defaultValue" : "",
+        "required" : true,
+        "type" : "string",
+        "paramType" : "query",
+        "allowMultiple" : false
+      } ],
+      "responseMessages" : [ {
+        "code" : 510,
+        "message" : "ERR_BIZ_COMMON_INVALID_USER , "
       } ],
       "deprecated" : "false"
     } ]
